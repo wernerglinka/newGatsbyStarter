@@ -7,6 +7,7 @@ Create a bare-bones starter site with ESLint/Prettier
 1. Create a new starter with `gatsby new initialgatsby`
 2. Strip to bare minimum, no image, no helmet, etc
 
+```
 module.exports = {
 siteMetadata: {
 title: `Gatsby Starter`,
@@ -14,9 +15,11 @@ description: `yadayadayada`,
 },
 plugins: [],
 }
+```
 
 3. Add eslint and eslint-plugin-prettier
 
+```
 "devDependencies": {
 "eslint": "^5.3.0",
 "eslint-config-airbnb": "^17.1.1",
@@ -27,9 +30,11 @@ plugins: [],
 "eslint-plugin-react": "^7.14.2",
 "prettier": "^1.18.2"
 }
+```
 
 4. Add .eslintrc.js
 
+```
 module.exports = {
 "extends": ["airbnb", "prettier"],
 "plugins": ["prettier"],
@@ -39,6 +44,7 @@ module.exports = {
 "import/prefer-default-export": 0
 },
 };
+```
 
 **this is the new starting setup. ESLint/Prettier now works**
 
@@ -53,7 +59,7 @@ This is done to:
 - Storing state when navigating pages
 - Inject additional data into pages using React Context
 
-> > > This means pages are automatically wrapped into layout and do NOT need to import the layout compponent individually
+> This means pages are automatically wrapped into layout and do NOT need to import the layout compponent individually
 
 ## Add page transitions
 
