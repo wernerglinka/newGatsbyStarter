@@ -9,11 +9,11 @@ Create a bare-bones starter site with ESLint/Prettier
 
 ```
 module.exports = {
-siteMetadata: {
-title: `Gatsby Starter`,
-description: `yadayadayada`,
+  siteMetadata: {
+  title: `Gatsby Starter`,
+  description: `yadayadayada`,
 },
-plugins: [],
+  plugins: [],
 }
 ```
 
@@ -21,14 +21,14 @@ plugins: [],
 
 ```
 "devDependencies": {
-"eslint": "^5.3.0",
-"eslint-config-airbnb": "^17.1.1",
-"eslint-config-prettier": "^6.0.0",
-"eslint-plugin-import": "^2.18.0",
-"eslint-plugin-jsx-a11y": "^6.2.3",
-"eslint-plugin-prettier": "^3.1.0",
-"eslint-plugin-react": "^7.14.2",
-"prettier": "^1.18.2"
+  "eslint": "^5.3.0",
+  "eslint-config-airbnb": "^17.1.1",
+  "eslint-config-prettier": "^6.0.0",
+  "eslint-plugin-import": "^2.18.0",
+  "eslint-plugin-jsx-a11y": "^6.2.3",
+  "eslint-plugin-prettier": "^3.1.0",
+  "eslint-plugin-react": "^7.14.2",
+  "prettier": "^1.18.2"
 }
 ```
 
@@ -36,13 +36,13 @@ plugins: [],
 
 ```
 module.exports = {
-"extends": ["airbnb", "prettier"],
-"plugins": ["prettier"],
-"rules": {
-"prettier/prettier": ["error"],
-"react/jsx-filename-extension": 0,
-"import/prefer-default-export": 0
-},
+  "extends": ["airbnb", "prettier"],
+  "plugins": ["prettier"],
+  "rules": {
+    "prettier/prettier": ["error"],
+    "react/jsx-filename-extension": 0,
+    "import/prefer-default-export": 0
+  },
 };
 ```
 
@@ -63,8 +63,9 @@ This is done to:
 
 ## Add page transitions
 
-Reference: `https://www.framer.com/motion/`
-Reference: `https://github.com/ryanwiemer/gatsby-using-page-transitions`
+Reference: https://www.framer.com/motion/
+
+Reference: https://github.com/ryanwiemer/gatsby-using-page-transitions
 
 ## Add styled components with emotion
 
