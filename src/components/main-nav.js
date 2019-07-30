@@ -2,7 +2,7 @@ import { Link } from "gatsby";
 import React from "react";
 import styled from "@emotion/styled";
 
-import useGetMainNavLinks from "../hooks/use-get-main-nav-links";
+import useGetMainNavLinks from "../hooks/useGetMainNavLinks";
 
 const LinkList = styled.ul`
   list-style: none;

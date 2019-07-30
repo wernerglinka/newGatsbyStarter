@@ -63,3 +63,13 @@ Reference: `https://github.com/ryanwiemer/gatsby-using-page-transitions`
 ## Add styled components with emotion
 
 Reference: https://emotion.sh/docs/styled
+
+## Add markdown content
+
+Install all markdown related plugins:
+
+- gatsby-remark-responsive-iframe
+- gatsby-remark-images
+- gatsby-transformer-remark
+
+Add folder `/src/content/`. This folder will hold all markdown content. The corresponsing page templates are located in `/src/layouts/templates/`
