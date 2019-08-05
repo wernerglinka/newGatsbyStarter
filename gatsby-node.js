@@ -2,12 +2,42 @@ const _ = require("lodash");
 const path = require("path");
 const { createFilePath } = require("gatsby-source-filesystem");
 
+const siteValues = require("./SITE_VALUES");
+
 exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions;
 
+  // query by different content types: blog, news, page etc...
+  // all blog posts are located in src/pages/blogs
+  // all other pages are located in src/pages
   return graphql(`
     {
-      allMarkdownRemark(limit: 1000) {
+      blogs: allMarkdownRemark(
+        filter: { fileAbsolutePath: { glob: "**/src/pages/posts/*.md" } }
+        sort: { order: DESC, fields: frontmatter___date }
+      ) {
+        edges {
+          node {
+            id
+            fields {
+              slug
+            }
+            frontmatter {
+              template
+              title
+            }
+          }
+        }
+        totalCount
+      }
+      pages: allMarkdownRemark(
+        filter: {
+          fileAbsolutePath: {
+            glob: "**/src/pages/*.md|!**/src/pages/posts/*.md"
+          }
+        }
+        sort: { order: DESC, fields: frontmatter___date }
+      ) {
         edges {
           node {
             id
@@ -28,14 +58,15 @@ exports.createPages = ({ actions, graphql }) => {
       return Promise.reject(result.errors);
     }
 
-    const posts = result.data.allMarkdownRemark.edges;
-
-    // TODO: deal with different post types individually
-    // e.g. blogposts needs to be done seperately so paging works
-    // for that type only
+    /**
+     * Build the blog pages
+     * All blog posts are located in 'src/pages/blogs'
+     */
+    const posts = result.data.blogs.edges;
 
     posts.forEach((edge, index) => {
       const id = edge.node.id;
+      // create the previous / next links
       const previous =
         index === posts.length - 1 ? null : posts[index + 1].node;
       const next = index === 0 ? null : posts[index - 1].node;
@@ -46,11 +77,58 @@ exports.createPages = ({ actions, graphql }) => {
         component: path.resolve(
           `src/layouts/templates/${String(edge.node.frontmatter.template)}.js`
         ),
-        // additional data can be passed via context
+        // pass links via page context
         context: {
           id,
           previous,
           next,
+        },
+      });
+    });
+
+    /**
+     * Build the blog index pages
+     * This includes the variables for the full pager
+     */
+    // destructure totalCount variable from result object
+    const totalCount = result.data.blogs.totalCount;
+
+    // Create the blog list pages
+    const blogItemsPerPage = siteValues.list_blogs_per_page;
+    const numPages = Math.ceil(totalCount / blogItemsPerPage);
+
+    Array.from({ length: numPages }).forEach((a, i) => {
+      createPage({
+        path: i === 0 ? "/blog" : `/blog/${i}`,
+        component: path.resolve("./src/layouts/templates/blog.js"),
+        context: {
+          limit: blogItemsPerPage,
+          skip: i * blogItemsPerPage,
+          numPages,
+          currentPage: i + 1,
+        },
+      });
+    });
+
+    /**
+     * Build the site pages
+     * Site pages are all page other than
+     * - blog posts
+     * - news items
+     */
+    const pages = result.data.pages.edges;
+
+    pages.forEach((edge, index) => {
+      const id = edge.node.id;
+
+      createPage({
+        path: edge.node.fields.slug,
+        tags: edge.node.frontmatter.tags,
+        component: path.resolve(
+          `src/layouts/templates/${String(edge.node.frontmatter.template)}.js`
+        ),
+        context: {
+          id,
         },
       });
     });
