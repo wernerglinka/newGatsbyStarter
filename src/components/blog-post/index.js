@@ -21,6 +21,16 @@ const BlogLayout = styled.div`
   }
 `;
 
+const ResponsiveImage = styled.div`
+  width: 100%;
+
+  img {
+    display: block;
+    max-width: 100%;
+    margin: ${props => (props.center ? "0 auto" : "0")};
+  }
+`;
+
 const BlogPost = ({ fields, content }) => {
   const { author } = fields;
 
@@ -37,6 +47,10 @@ const BlogPost = ({ fields, content }) => {
                 </time>
               </p>
             </header>
+            <ResponsiveImage>
+              <img src={fields.featuredimage} alt="" />
+            </ResponsiveImage>
+
             <div dangerouslySetInnerHTML={{ __html: content }} />
           </article>
         </section>
