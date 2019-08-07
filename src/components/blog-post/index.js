@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled from "@emotion/styled";
 
+import Head from "../head";
 import Container from "../styles/container";
 import Headline from "../styles/page-headline";
 import Bio from "../bio";
@@ -34,32 +35,40 @@ const ResponsiveImage = styled.div`
 const BlogPost = ({ fields, content }) => {
   const { author } = fields;
 
+  const siteMetadata = {
+    title: fields.title,
+    description: fields.description,
+  };
+
   return (
-    <Container>
-      <BlogLayout>
-        <section id="content">
-          <article itemScope itemType="http://schema.org/BlogPosting">
-            <header>
-              <Headline itemProp="headline">{fields.title}</Headline>
-              <p>
-                <time itemProp="datePublished" dateTime={fields.date}>
-                  {fields.date}
-                </time>
-              </p>
-            </header>
-            <ResponsiveImage>
-              <img src={fields.featuredimage} alt="" />
-            </ResponsiveImage>
+    <>
+      <Head metaData={siteMetadata} />
+      <Container>
+        <BlogLayout>
+          <section id="content">
+            <article itemScope itemType="http://schema.org/BlogPosting">
+              <header>
+                <Headline itemProp="headline">{fields.title}</Headline>
+                <p>
+                  <time itemProp="datePublished" dateTime={fields.date}>
+                    {fields.date}
+                  </time>
+                </p>
+              </header>
+              <ResponsiveImage>
+                <img src={fields.featuredimage} alt="" />
+              </ResponsiveImage>
 
-            <div dangerouslySetInnerHTML={{ __html: content }} />
-          </article>
-        </section>
+              <div dangerouslySetInnerHTML={{ __html: content }} />
+            </article>
+          </section>
 
-        <aside id="sidebar">
-          <Bio author={author} />
-        </aside>
-      </BlogLayout>
-    </Container>
+          <aside id="sidebar">
+            <Bio author={author} />
+          </aside>
+        </BlogLayout>
+      </Container>
+    </>
   );
 };
 

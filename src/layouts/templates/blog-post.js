@@ -1,9 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { kebabCase } from "lodash";
 import { graphql, Link } from "gatsby";
 import styled from "@emotion/styled";
-
 import PostBody from "../../components/blog-post";
 
 const NextPreviousPager = styled.ul`
@@ -21,12 +19,14 @@ const BlogPageTemplate = props => {
   const {
     pageContext: { previous, next },
   } = props;
+
   // deconstruct all post fields
   const {
     data: {
       markdownRemark: { frontmatter: fields },
     },
   } = props;
+
   // deconstruct post body
   const {
     data: {
@@ -62,8 +62,26 @@ BlogPageTemplate.propTypes = {
   data: PropTypes.shape({
     markdownRemark: PropTypes.shape({
       frontmatter: PropTypes.object,
+      html: PropTypes.string,
     }),
-  }).isRequired,
+  }),
+  pageContext: PropTypes.shape({
+    previous: PropTypes.shape(),
+    next: PropTypes.shape(),
+  }),
+};
+
+BlogPageTemplate.defaultProps = {
+  data: {
+    markdownRemark: {
+      frontmatter: null,
+      html: null,
+    },
+  },
+  pageContext: {
+    previous: null,
+    next: null,
+  },
 };
 
 export default BlogPageTemplate;
