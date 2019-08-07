@@ -10,7 +10,6 @@ const HomePageTemplate = ({
     markdownRemark: { frontmatter: fields },
   },
 }) => {
-  console.log(fields);
   return (
     <Container>
       <Headline>{fields.title}</Headline>

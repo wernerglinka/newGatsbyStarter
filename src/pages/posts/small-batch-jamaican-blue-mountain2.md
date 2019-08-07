@@ -3,7 +3,9 @@ template: "blog-post"
 title: "Just in: small batch of Jamaican Blue Mountain in store next week"
 author: [Leroy Sané]
 date: 2017-03-04T15:04:10.000Z
-featuredpost: true
+featuredPost: true
+featuredImage: Industrial/image9_wimmud
+altText: "this is an alternate text"
 description: >-
   We’re proud to announce that we’ll be offering a small batch of Jamaica Blue
   Mountain coffee beans in our store next week.

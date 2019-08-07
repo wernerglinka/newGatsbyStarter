@@ -1,0 +1,17 @@
+{
+  "title": "New Gatsby Starter",
+  "description": "yada yada yada",
+  "faviconURL": "/favicon.ico",
+  "canonicalURL": "https://www.perimeterx.com",
+  "pageURL": "https://www.perimeterx.com",
+  "imageURL": "/default-thumb.png",
+  "cloudinaryBaseURL": "https://res.cloudinary.com/glinkaco/image/upload",
+  "tnDefaultWidth": 400,
+  "social": {
+    "siteOwner": "PerimeterX",
+    "twitterHandle": "perimeterx"
+  },
+  "validate": {
+    "ms": "1234567890"
+  }
+}

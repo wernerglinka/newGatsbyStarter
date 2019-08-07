@@ -20,7 +20,8 @@ class BlogIndex extends React.Component {
     data: PropTypes.shape({
       allMarkdownRemark: PropTypes.shape({
         edges: PropTypes.array.isRequired
-      }).isRequired
+      }).isRequired,
+      allSite: PropTypes.shape().isRequired,
     }).isRequired
   }
 
@@ -31,14 +32,19 @@ class BlogIndex extends React.Component {
   render() {
     // Get the posts object
     const { data: { allMarkdownRemark: { edges: posts } } } = this.props;
+    // Get image base URL and default thumbnail width
+    const { data: { allSite: { edges: siteMetaData } } } = this.props;
+    const imageData = siteMetaData[0].node.siteMetadata;
     // Get pager info from page context
     const { pageContext : { numPages, currentPage}} = this.props;
+
+    console.log(imageData);
 
     return (
       <Container>
         <Headline>Blogposts</Headline>
         <ul>
-          {posts.map(({ node }) => <PostPreview post={node} key={node.fields.slug} />)}
+          {posts.map(({ node }) => <PostPreview post={node} imageData={imageData} key={node.fields.slug} />)}
         </ul>
 
         {numPages > 1 ? <Pager numPages={numPages} currentPage={currentPage} pageType="blog" /> : null}
@@ -68,6 +74,18 @@ export const pageQuery = graphql`
             title
             date(formatString: "MMMM DD, YYYY")
             author
+            featuredImage
+            altText
+          }
+        }
+      }
+    }
+    allSite {
+      edges {
+        node {
+          siteMetadata {
+            cloudinaryBaseURL
+            tnDefaultWidth
           }
         }
       }

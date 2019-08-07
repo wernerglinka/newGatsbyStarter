@@ -1,9 +1,7 @@
 module.exports = {
-  siteMetadata: {
-    title: "Gatsby  Starter",
-    description: "yadayadayada",
-  },
+  siteMetadata: require("./site-metadata.json"),
   plugins: [
+    `gatsby-plugin-react-helmet`,
     "gatsby-plugin-layout",
     "gatsby-plugin-emotion",
     "gatsby-transformer-json",

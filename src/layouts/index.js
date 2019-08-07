@@ -6,6 +6,8 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ThemeProvider } from "emotion-theming";
 import theme from "./theme";
 // components
+import useSiteMetadata from "../hooks/useSiteMetadata";
+import Head from "../components/head";
 import Header from "../components/header";
 // global reset etc...
 import "./global.css";
@@ -30,23 +32,28 @@ const variants = {
   },
 };
 
-const Layout = ({ children, location }) => (
-  <ThemeProvider theme={theme}>
-    <Header />
-    <AnimatePresence>
-      <motion.main
-        key={location.pathname}
-        variants={variants}
-        initial="initial"
-        animate="enter"
-        exit="exit"
-        id="main"
-      >
-        {children}
-      </motion.main>
-    </AnimatePresence>
-  </ThemeProvider>
-);
+const Layout = ({ children, location }) => {
+  const siteMetadata = useSiteMetadata();
+
+  return (
+    <ThemeProvider theme={theme}>
+      <Head metaData={siteMetadata} />
+      <Header />
+      <AnimatePresence>
+        <motion.main
+          key={location.pathname}
+          variants={variants}
+          initial="initial"
+          animate="enter"
+          exit="exit"
+          id="main"
+        >
+          {children}
+        </motion.main>
+      </AnimatePresence>
+    </ThemeProvider>
+  );
+};
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
