@@ -1,12 +1,26 @@
 ---
 template: blog-post
+draft: false
+
+# Metadata
 title: Making sense of the SCAA’s new Flavor Wheel
+description: The Coffee Taster’s Flavor Wheel, the official resource used by coffee tasters, has been revised for the first time this year.
+
+# Breadcrumbs
+breadcrumbs:
+  - name: Home
+    path: "/"
+  - name: Blog
+    path: "/blog/"
+  - name: "Making sense of the SCAA’s new Flavor Wheel"
+
+# Fields
 author: [Albert Einstein, Alexandria Ocasio-Cortez]
 date: 2016-12-19T15:04:10.000Z
 featuredPost: false
-featuredImage: /img/flavor_wheel.jpg
+featuredImage:
 altText: "this is an alternate text"
-description: The Coffee Taster’s Flavor Wheel, the official resource used by coffee tasters, has been revised for the first time this year.
+
 tags:
   - flavor
   - tasting

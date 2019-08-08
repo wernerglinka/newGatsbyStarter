@@ -10,6 +10,7 @@ const useSiteMetadata = () => {
           description
           faviconURL
           imageURL
+          cloudinaryBaseURL
           social {
             siteOwner
             twitterHandle

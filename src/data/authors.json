@@ -2,43 +2,43 @@
   {
     "name": "Administrator",
     "title": "Administrator",
-    "avatar": "default.jpg",
+    "avatar": "authors/default_rhezlf.jpg",
     "bio": "Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Nulla vitae elit libero, a pharetra augue. Donec id elit non mi porta gravida at eget metus."
   },
   {
     "name": "Barack Obama",
     "title": "President",
-    "avatar": "barack-obama.jpg",
+    "avatar": "authors/barack-obama_yvcczg.jpg",
     "bio": "Barack Hussein Obama II, born August 4, 1961) is an American attorney and politician who served as the 44th president of the United States from 2009 to 2017. A member of the Democratic Party, he was the first African American to be elected to the presidency. He previously served as a senator from Illinois from 2005 to 2008."
   },
   {
     "name": "Angela Merkel",
     "title": "Bundeskanzlerin",
-    "avatar": "angela-merkel.jpg",
+    "avatar": "authors/angela-merkel_s6w2xd.jpg",
     "bio": "Angela Dorothea Merkel, (born 17 July 1954) is a German politician serving as Chancellor of Germany since 2005. She served as the leader of the centre-right Christian Democratic Union (CDU) from 2000 to 2018. Merkel has been widely described as the de facto leader of the European Union, the most powerful woman in the world, and by many commentators as the leader of the Free World."
   },
   {
     "name": "Albert Einstein",
     "title": "Theoretical Physicist",
-    "avatar": "albert-einstein.jpg",
+    "avatar": "authors/albert-einstein_hn8tvz.jpg",
     "bio": "Albert Einstein, (14 March 1879 – 18 April 1955) was a German-born theoretical physicist who developed the theory of relativity, one of the two pillars of modern physics (alongside quantum mechanics). His work is also known for its influence on the philosophy of science. He is best known to the general public for his mass–energy equivalence formula E = mc2, which has been dubbed 'the world's most famous equation'. He received the 1921 Nobel Prize in Physics 'for his services to theoretical physics, and especially for his discovery of the law of the photoelectric effect', a pivotal step in the development of quantum theory."
   },
   {
     "name": "Marie Curie",
     "title": "Physicist and Chemist",
-    "avatar": "marie-curie.jpg",
+    "avatar": "authors/marie-curie_hyrlgf.jpg",
     "bio": "Marie Skłodowska Curie, born Maria Salomea Skłodowska (7 November 1867 – 4 July 1934) was a Polish and naturalized-French physicist and chemist who conducted pioneering research on radioactivity. She was the first woman to win a Nobel Prize, the first person and only woman to win twice, the only person to win a Nobel Prize in two different sciences, and was part of the Curie family legacy of five Nobel Prizes. She was also the first woman to become a professor at the University of Paris, and in 1995 became the first woman to be entombed on her own merits in the Panthéon in Paris."
   },
   {
     "name": "Alexandria Ocasio-Cortez",
     "title": "U.S. Representative for New York's 14th congressional district",
-    "avatar": "alexandria-ocasio-cortez.jpg",
+    "avatar": "authors/alexandria-ocasio-cortez_dmc4lk.jpg",
     "bio": "Alexandria Ocasio-Cortez (born October 13, 1989) is an American politician, activist, and community organizer. A member of the Democratic Party, she has been the U.S. Representative for New York's 14th congressional district since January 3, 2019."
   },
   {
     "name": "Leroy Sané",
     "title": "German Professional Footballer",
-    "avatar": "leroy-sane.jpg",
+    "avatar": "authors/leroy-sane_n0qvda.jpg",
     "bio": "Leroy Aziz Sané (born 11 January 1996) is a German professional footballer who plays as a winger and as an attacking midfielder for Premier League club Manchester City and the German national team. He made his professional debut for Schalke 04 in 2014 and transferred to Manchester City in 2016 for an initial £37 million fee. He was voted PFA Young Player of the Year in 2017–18 after helping City win the Premier League and EFL Cup. Sané made his senior international debut for Germany in November 2015 and was part of their squad that reached the semi-finals of UEFA Euro 2016."
   }
 ]

@@ -1,12 +1,26 @@
 ---
 template: blog-post
+draft: false
+
+# Metadata
 title: A beginners’ guide to brewing with Chemex
-author: [Angela Merkel, Barack Obama]
-date: 2017-01-11T15:04:10.000Z
-featuredPost: false
-featuredImage: /Industrial/image4_uu7nmg.jpg
-altText: "this is an alternate text"
 description: Brewing with a Chemex probably seems like a complicated, time-consuming ordeal, but once you get used to the process, it becomes a soothing ritual that's worth the effort every time.
+
+# Breadcrumbs
+breadcrumbs:
+  - name: Home
+    path: "/"
+  - name: Blog
+    path: "/blog/"
+  - name: "A beginners’ guide to brewing with Chemex"
+
+# Fields
+date: 2017-01-11T15:04:10.000Z
+author: [Angela Merkel, Barack Obama]
+featuredPost: false
+featuredImage: Industrial/image4_uu7nmg.jpg
+altText: "this is an alternate text"
+
 tags:
   - brewing
   - chemex

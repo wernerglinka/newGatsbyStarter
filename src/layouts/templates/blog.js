@@ -38,8 +38,6 @@ class BlogIndex extends React.Component {
     // Get pager info from page context
     const { pageContext : { numPages, currentPage}} = this.props;
 
-    console.log(imageData);
-
     return (
       <Container>
         <Headline>Blogposts</Headline>
@@ -59,7 +57,7 @@ export default BlogIndex;
 export const pageQuery = graphql`
   query ($skip: Int!, $limit: Int!) {
     allMarkdownRemark(
-      filter: { fileAbsolutePath: { glob: "**/src/pages/posts/*.md" } }
+      filter: { fileAbsolutePath: { glob: "**/src/pages/posts/**/*.md" },frontmatter: { draft: { ne: true } } }
       sort: { fields: [frontmatter___date], order: DESC }
       limit: $limit
       skip: $skip

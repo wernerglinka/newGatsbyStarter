@@ -9,8 +9,9 @@ import theme from "./theme";
 import useSiteMetadata from "../hooks/useSiteMetadata";
 import Head from "../components/head";
 import Header from "../components/header";
+import Breadcrumbs from "../components/breadcrumbs";
 // global reset etc...
-import "./global.css";
+import "./global.scss";
 
 // page transition setup
 const duration = 0.35;
@@ -35,9 +36,13 @@ const variants = {
 const Layout = ({ children, location }) => {
   const siteMetadata = useSiteMetadata();
 
+  const {
+    pageContext: { breadcrumbs },
+  } = children.props;
+
   return (
     <ThemeProvider theme={theme}>
-      <Head metaData={siteMetadata} />
+      <Head metaData={siteMetadata} location={location} />
       <Header />
       <AnimatePresence>
         <motion.main
@@ -48,6 +53,7 @@ const Layout = ({ children, location }) => {
           exit="exit"
           id="main"
         >
+          {breadcrumbs && <Breadcrumbs pathData={breadcrumbs} />}
           {children}
         </motion.main>
       </AnimatePresence>

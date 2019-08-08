@@ -4,7 +4,13 @@ import PropTypes from "prop-types";
 
 import useSiteMetadata from "../hooks/useSiteMetadata";
 
-const Head = ({ metaData }) => {
+/**
+ * Head
+ * Builds the page head section using default values from  sitemetadata
+ */
+
+const Head = ({ metaData, location }) => {
+  const pagePath = location.href;
   // deconstruct the passed-in meta data
   const {
     canonicalURL,
@@ -20,7 +26,6 @@ const Head = ({ metaData }) => {
   // get the default data
   const defaultSiteMetadata = useSiteMetadata();
   const {
-    canonicalURL: defaultCanonicalURL,
     description: defaultdescription,
     faviconURL: defaultFaviconURL,
     imageURL: defaultImageURL,
@@ -32,7 +37,7 @@ const Head = ({ metaData }) => {
 
   // use default meta data if the particular meta data is not passed in
   const metadata = {
-    canonicalURL: canonicalURL || defaultCanonicalURL,
+    canonicalURL: canonicalURL || pagePath,
     description: description || defaultdescription,
     faviconURL: faviconURL || defaultFaviconURL,
     imageURL: imageURL || defaultImageURL,
@@ -55,10 +60,12 @@ const Head = ({ metaData }) => {
 
       <title>{metadata.title} | PerimeterX</title>
       <meta name="description" content={metadata.description} />
-      <meta name="msvalidate.01" content={metadata.validate.ms} />
+      {metadata.validate.ms && (
+        <meta name="msvalidate.01" content={metadata.validate.ms} />
+      )}
 
-      <link rel="canonical" href={canonicalURL} />
-      <link rel="shortcut icon" href={faviconURL} />
+      <link rel="canonical" href={metadata.canonicalURL} />
+      <link rel="shortcut icon" href={metadata.faviconURL} />
 
       <meta name="twitter:card" content="summary" />
       <meta name="twitter:site" content={metadata.social.twitterHandle} />
@@ -92,6 +99,9 @@ Head.propTypes = {
     faviconURL: PropTypes.string,
     social: PropTypes.shape(),
   }),
+  location: PropTypes.shape({
+    href: PropTypes.string,
+  }),
 };
 
 Head.defaultProps = {
@@ -104,6 +114,9 @@ Head.defaultProps = {
     canonicalURL: null,
     faviconURL: null,
     social: null,
+  },
+  location: {
+    href: null,
   },
 };
 

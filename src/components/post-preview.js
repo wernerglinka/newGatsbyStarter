@@ -7,17 +7,17 @@ const PostPreview = ({ post, imageData }) => {
   const title = post.frontmatter.title || post.fields.slug;
   const blogAuthor = post.frontmatter.author.join(", ");
   const thumbnail = post.frontmatter.featuredImage;
-  const altText = post.frontmatter.alt;
+  const altText = post.frontmatter.altText;
   const { tnDefaultWidth, cloudinaryBaseURL } = imageData;
 
-  console.log(post);
+  console.log(post.frontmatter);
 
   return (
     <li>
       {thumbnail && (
         <CloudinaryImage
           baseURL={cloudinaryBaseURL}
-          tnDefaultWidth={tnDefaultWidth}
+          width={tnDefaultWidth}
           img={thumbnail}
           auto={false}
           alt={altText}

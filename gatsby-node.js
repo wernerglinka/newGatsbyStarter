@@ -13,7 +13,10 @@ exports.createPages = ({ actions, graphql }) => {
   return graphql(`
     {
       blogs: allMarkdownRemark(
-        filter: { fileAbsolutePath: { glob: "**/src/pages/posts/*.md" } }
+        filter: {
+          fileAbsolutePath: { glob: "**/src/pages/posts/**/*.md" }
+          frontmatter: { draft: { ne: true } }
+        }
         sort: { order: DESC, fields: frontmatter___date }
       ) {
         edges {
@@ -25,6 +28,10 @@ exports.createPages = ({ actions, graphql }) => {
             frontmatter {
               template
               title
+              breadcrumbs {
+                name
+                path
+              }
             }
           }
         }
@@ -33,7 +40,7 @@ exports.createPages = ({ actions, graphql }) => {
       pages: allMarkdownRemark(
         filter: {
           fileAbsolutePath: {
-            glob: "**/src/pages/*.md|!**/src/pages/posts/*.md"
+            glob: "**/src/pages/*.md|!**/src/pages/posts/**/*.md"
           }
         }
         sort: { order: DESC, fields: frontmatter___date }
@@ -47,6 +54,10 @@ exports.createPages = ({ actions, graphql }) => {
             frontmatter {
               template
               title
+              breadcrumbs {
+                name
+                path
+              }
             }
           }
         }
@@ -70,6 +81,8 @@ exports.createPages = ({ actions, graphql }) => {
       const previous =
         index === posts.length - 1 ? null : posts[index + 1].node;
       const next = index === 0 ? null : posts[index - 1].node;
+      // inject frontmatter breadcrumbs into the page context so we access in layout
+      const breadcrumbs = edge.node.frontmatter.breadcrumbs;
 
       createPage({
         path: edge.node.fields.slug,
@@ -82,6 +95,7 @@ exports.createPages = ({ actions, graphql }) => {
           id,
           previous,
           next,
+          breadcrumbs,
         },
       });
     });
@@ -93,9 +107,20 @@ exports.createPages = ({ actions, graphql }) => {
     // destructure totalCount variable from result object
     const totalCount = result.data.blogs.totalCount;
 
-    // Create the blog list pages
+    // create the blog list pages
     const blogItemsPerPage = siteValues.list_blogs_per_page;
     const numPages = Math.ceil(totalCount / blogItemsPerPage);
+
+    // create blog landing page breadcrumbs
+    const breadcrumbs = [
+      {
+        name: "Home",
+        path: "/",
+      },
+      {
+        name: "Blog",
+      },
+    ];
 
     Array.from({ length: numPages }).forEach((a, i) => {
       createPage({
@@ -106,6 +131,7 @@ exports.createPages = ({ actions, graphql }) => {
           skip: i * blogItemsPerPage,
           numPages,
           currentPage: i + 1,
+          breadcrumbs,
         },
       });
     });
@@ -120,6 +146,8 @@ exports.createPages = ({ actions, graphql }) => {
 
     pages.forEach((edge, index) => {
       const id = edge.node.id;
+      // inject frontmatter breadcrumbs into the page context so we access in layout
+      const breadcrumbs = edge.node.frontmatter.breadcrumbs;
 
       createPage({
         path: edge.node.fields.slug,
@@ -129,6 +157,7 @@ exports.createPages = ({ actions, graphql }) => {
         ),
         context: {
           id,
+          breadcrumbs,
         },
       });
     });

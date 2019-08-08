@@ -1,13 +1,25 @@
 ---
 template: "blog-post"
+draft: false
+
+# Metadata
 title: "Just in: small batch of Jamaican Blue Mountain in store next week"
+description: We’re proud to announce that we’ll be offering a small batch of Jamaica Blue Mountain coffee beans in our store next week.
+
+# Breadcrumbs
+breadcrumbs:
+  - name: Home
+    path: "/"
+  - name: Blog
+    path: "/blog/"
+  - name: "Just in: small batch of Jamaican Blue Mountain in store next week"
+
+# Fields
 author: [Leroy Sané]
 date: 2017-02-04T15:04:10.000Z
 featuredPost: true
 altText: "this is an alternate text"
-description: >-
-  We’re proud to announce that we’ll be offering a small batch of Jamaica Blue
-  Mountain coffee beans in our store next week.
+
 tags:
   - jamaica
   - green beans

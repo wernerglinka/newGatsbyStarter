@@ -98,6 +98,10 @@ export const pageQuery = graphql`
         description
         tags
         featuredImage
+        breadcrumbs {
+          name
+          path
+        }
       }
     }
   }
