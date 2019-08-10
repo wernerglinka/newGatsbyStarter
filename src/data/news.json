@@ -1,0 +1,200 @@
+[
+  {
+    "name_org": "Forbes",
+    "news_org_logo": "forbes.jpg",
+    "news_org_logo_wide": false,
+    "news_title": "A Massive Bump In Data Breaches Is Stoking Bot-Driven Attacks...",
+    "news_url": "https://www.forbes.com/sites/forbestechcouncil/2018/10/09/a-massive-bump-in-data-breaches-is-stoking-bot-driven-attacks-on-retailers/#4eec79ee66d8",
+    "news_date": "2018-10-06",
+    "news_type": "article"
+  },
+  {
+    "name_org": "Forbes",
+    "news_org_logo": "forbes.jpg",
+    "news_org_logo_wide": false,
+    "news_title": "Protect Your Site From Stealth Scraping Through Google Search",
+    "news_url": "https://www.forbes.com/sites/forbestechcouncil/2018/06/11/protect-your-site-from-stealth-scraping-through-google-search/#11cccc822188",
+    "news_date": "2018-06-11",
+    "news_type": "article"
+  },
+  {
+    "name_org": "Forbes",
+    "news_org_logo": "forbes.jpg",
+    "news_org_logo_wide": false,
+    "news_title": "Five Easy Ways To Identify Bot Attacks On Your Site",
+    "news_url": "https://www.forbes.com/sites/forbestechcouncil/2018/02/28/five-easy-ways-to-identify-bot-attacks-on-your-site/#5339528f8fa3",
+    "news_date": "2018-02-28",
+    "news_type": "article"
+  },
+  {
+    "name_org": "NBR",
+    "news_org_logo": "nightlybusinessreport.png",
+    "news_org_logo_wide": false,
+    "news_title": "PerimeterX CTO on @CNBC Nightly Business",
+    "news_url": "https://www.youtube.com/watch?v=qGcLTcIGaMQ&feature=youtu.be&t=1377",
+    "news_date": "2018-02-15",
+    "news_type": "video"
+  },
+  {
+    "name_org": "TechCrunch",
+    "news_org_logo": "techcrunch.png",
+    "news_org_logo_wide": true,
+    "news_title": "The state of Israel’s cybersecurity market",
+    "news_url": "https://techcrunch.com/2018/01/14/the-state-of-israels-cybersecurity-market/",
+    "news_date": "2018-01-14",
+    "news_type": "podcast"
+  },
+  {
+    "name_org": "Fortune",
+    "news_org_logo": "fortune.png",
+    "news_org_logo_wide": true,
+    "news_title": "These 100 Companies Are Leading the Way in A.I.",
+    "news_url": "http://fortune.com/2018/01/08/artificial-intelligence-ai-companies-invest-startups/",
+    "news_date": "2018-01-08",
+    "news_type": "article"
+  },
+  {
+    "name_org": "CBInsights",
+    "news_org_logo": "cbinsights.jpeg",
+    "news_org_logo_wide": false,
+    "news_title": "AI 100: The Artificial Intelligence Startups Redefining Industries",
+    "news_url": "https://www.cbinsights.com/research/artificial-intelligence-top-startups/",
+    "news_date": "2017-12-12",
+    "news_type": "article"
+  },
+  {
+    "name_org": "Forbes",
+    "news_org_logo": "forbes.jpg",
+    "news_org_logo_wide": false,
+    "news_title": "How Companies Are Getting Ready For Holiday Shoppers",
+    "news_url": "https://www.forbes.com/sites/forbescommunicationscouncil/2017/12/08/how-companies-are-getting-ready-for-holiday-shoppers/#353d8ac87e61",
+    "news_date": "2017-12-11",
+    "news_type": "article"
+  },
+  {
+    "name_org": "New York Times",
+    "news_org_logo": "new-york-times.jpg",
+    "news_org_logo_wide": false,
+    "news_title": "Can’t Find Any Fingerlings? Bots Snap Up Popular Christmas Toys...",
+    "news_url": "https://www.forbes.com/sites/forbescommunicationscouncil/2017/12/08/how-companies-are-getting-ready-for-holiday-shoppers/#353d8ac87e61",
+    "news_date": "2017-12-06",
+    "news_type": "article"
+  },
+  {
+    "name_org": "NewsWeek",
+    "news_org_logo": "newsweek.png",
+    "news_org_logo_wide": true,
+    "news_title": "'Grinch Bots' are stealing Christmas toys from kids",
+    "news_url": "http://www.newsweek.com/bots-are-stealing-presents-christmas-season-735430",
+    "news_date": "2017-12-05",
+    "news_type": "article"
+  },
+  {
+    "name_org": "consumerReports",
+    "news_org_logo": "consumerReports.jpg",
+    "news_org_logo_wide": false,
+    "news_title": "Hot Holiday Toys and the Bots That Stole Christmas",
+    "news_url": "https://www.consumerreports.org/online-shopping/hot-holiday-toys-and-the-bots-that-stole-christmas-holiday-shopping/",
+    "news_date": "2017-10-31",
+    "news_type": "article"
+  },
+  {
+    "name_org": "infoSecurityGroup",
+    "news_org_logo": "infosecuritygroup.png",
+    "news_org_logo_wide": false,
+    "news_title": "Simple Social Login for Users and Attackers.",
+    "news_url": "https://www.infosecurity-magazine.com/opinions/simple-social-login-users-attackers/",
+    "news_date": "2017-10-18",
+    "news_type": "article"
+  },
+  {
+    "name_org": "digitalCommerce360",
+    "news_org_logo": "digitalCommerce360.jpg",
+    "news_org_logo_wide": false,
+    "news_title": "Six ways bots will attack e‑commerce sites this holiday ...",
+    "news_url": "https://www.digitalcommerce360.com/2017/09/28/six-ways-bots-will-attack-e-commerce-sites-this-holiday-season/",
+    "news_date": "2017-09-28",
+    "news_type": "article"
+  },
+  {
+    "name_org": "DARKReading",
+    "news_org_logo": "darkreading.jpeg",
+    "news_org_logo_wide": false,
+    "news_title": "How to Live by the Code of Good Bots",
+    "news_url": "https://www.darkreading.com/cloud/how-to-live-by-the-code-of-good-bots/a/d-id/1329979",
+    "news_date": "2017-09-27",
+    "news_type": "article"
+  },
+  {
+    "name_org": "eWeek",
+    "news_org_logo": "eweek.png",
+    "news_org_logo_wide": true,
+    "news_title": "12 Security Startups That Raised New Funding in July 2017",
+    "news_url": "http://www.eweek.com/security/12-security-startups-that-raised-new-funding-in-july-2017",
+    "news_date": "2017-08-04",
+    "news_type": "article"
+  },
+  {
+    "name_org": "siliconANGLE",
+    "news_org_logo": "silicon-angle.png",
+    "news_org_logo_wide": false,
+    "news_title": "With $23M in new funding, PerimeterX sets out to protect...",
+    "news_url": "https://siliconangle.com/blog/2017/07/25/23m-fresh-funding-perimeterx-sets-protect-web-bots/",
+    "news_date": "2017-07-25",
+    "news_type": "article"
+  },
+  {
+    "name_org": "reuters",
+    "news_org_logo": "reuters.jpg",
+    "news_org_logo_wide": false,
+    "news_title": "Israel security firm PerimeterX raises $23 mln ...",
+    "news_url": "http://in.reuters.com/article/cyber-perimeterx-fundraising-idINL5N1KG2U4",
+    "news_date": "2017-07-25",
+    "news_type": "article"
+  },
+  {
+    "name_org": "globes",
+    "news_org_logo": "globes-english.png",
+    "news_org_logo_wide": false,
+    "news_title": "Cyber security co PerimeterX raises $23m",
+    "news_url": "http://www.globes.co.il/en/article-cyber-security-co-perimeterx-raises-23m-1001198610",
+    "news_date": "2017-07-25",
+    "news_type": "article"
+  },
+  {
+    "name_org": "Fortune",
+    "news_org_logo": "fortune.png",
+    "news_org_logo_wide": false,
+    "news_title": "Fake News Fighter Raises $23 Million to Battle Bots",
+    "news_url": "http://fortune.com/2017/07/25/security-startup-bot-fake-news/",
+    "news_date": "2017-07-26",
+    "news_type": "article"
+  },
+  {
+    "name_org": "cyberscoop",
+    "news_org_logo": "cyberscoop.png",
+    "news_org_logo_wide": false,
+    "news_title": "Anti-bot security firm PerimeterX lands...",
+    "news_url": "https://www.cyberscoop.com/perimeterx-series-b-canaan-partners/",
+    "news_date": "2017-07-25",
+    "news_type": "article"
+  },
+  {
+    "name_org": "DARKReading",
+    "news_org_logo": "darkreading.jpeg",
+    "news_org_logo_wide": false,
+    "news_title": "Bots Make Lousy Dates, But Not Cheap Ones",
+    "news_url": "http://www.darkreading.com/endpoint/bots-make-lousy-dates-but-not-cheap-ones-/a/d-id/1329426",
+    "news_date": "2017-07-24",
+    "news_type": "article"
+  },
+  {
+    "name_org": "DARKReading",
+    "news_org_logo": "darkreading.jpeg",
+    "news_org_logo_wide": false,
+    "news_title": "Why Detecting Bot Attacks Is Becoming More Difficult",
+    "news_url": "http://www.darkreading.com/threat-intelligence/invisible-invaders-why-detecting-bot-attacks-is-becoming-more-difficult/a/d-id/1329090",
+    "news_date": "2017-06-19",
+    "news_type": "article"
+  }
+]
