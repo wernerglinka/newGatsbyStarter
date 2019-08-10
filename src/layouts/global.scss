@@ -7,3 +7,20 @@ li {
 img {
   max-width: 100%;
 }
+
+/* Modali overwrites */
+.modali-content {
+  position: relative;
+  padding: 50px 30px 30px;
+
+  .modali-close-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 15px;
+    background: none;
+  }
+  .modali-header {
+    padding: 0;
+  }
+}

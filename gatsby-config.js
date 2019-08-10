@@ -1,5 +1,5 @@
 module.exports = {
-  siteMetadata: require("./site-metadata.json"),
+  siteMetadata: require("./src/data/site-metadata.json"),
   plugins: [
     "gatsby-plugin-sass",
     "gatsby-plugin-react-helmet",
@@ -34,13 +34,6 @@ module.exports = {
           },
           "gatsby-remark-responsive-iframe",
         ],
-      },
-    },
-    {
-      resolve: "gatsby-plugin-portal",
-      options: {
-        key: "modal-root",
-        id: "modal-root",
       },
     },
   ],

@@ -1,8 +1,24 @@
-/* global YT */
+/* global window, document, YT */
 import React, { useEffect, useRef } from "react";
 import PropTypes from "prop-types";
+import styled from "@emotion/styled";
 
-function ModalVideo({ videoID, closeModal }) {
+const VideoWrapper = styled.div`
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  padding-top: 25px;
+  height: 0;
+
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+`;
+
+const ModalVideo = ({ videoID }) => {
   let youTubeTarget = useRef();
   let player;
 
@@ -80,21 +96,14 @@ function ModalVideo({ videoID, closeModal }) {
   }, []); // this only runs once as the empty array never changes
 
   return (
-    <div className="responsive-wrapper">
-      <div className="video-container">
-        <div
-          ref={e => {
-            youTubeTarget = e;
-          }}
-        />
-      </div>
-    </div>
+    <VideoWrapper>
+        <div ref={e => { youTubeTarget = e }} /> {/* eslint-disable-line */}
+    </VideoWrapper>
   );
-}
+};
 
 ModalVideo.propTypes = {
   videoID: PropTypes.string.isRequired,
-  closeModal: PropTypes.func.isRequired,
 };
 
 export default ModalVideo;

@@ -1,0 +1,12 @@
+[
+  {
+    "modalID": "modal1",
+    "title": "This modal Title",
+    "subTitle": "This modal sub title",
+    "modalContent": "This is a <em>content</em> string <strong>with some</strong> html in it"
+  },
+  {
+    "modalID": "modal2",
+    "videoID": "o6rBK0BqL2w"
+  }
+]

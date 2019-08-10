@@ -2,7 +2,7 @@ const _ = require("lodash");
 const path = require("path");
 const { createFilePath } = require("gatsby-source-filesystem");
 
-const siteValues = require("./SITE_VALUES");
+const siteValues = require("./src/data/site-globals");
 
 exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions;

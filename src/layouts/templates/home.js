@@ -1,39 +1,66 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Link, graphql } from "gatsby";
+import paragraphs from "lines-to-paragraphs";
 
-import { FiX } from "react-icons/fi";
-import Modal from "../../components/modal/Modal";
-import ModalVideo from "../../components/modal/ModalVideo";
-import useToggle from "../../components/modal/useToggle";
+import Modali, { useModali } from "modali";
+import ContentModal from "./modals/ModalContent";
+import VideoModal from "./modals/ModalVideo";
 
 import Container from "../../components/styles/container";
 import Headline from "../../components/styles/page-headline";
 
-const HomePageTemplate = ({
-  data: {
+const HomePageTemplate = ({ data }) => {
+  const [exampleModal, toggleExampleModal] = useModali({ animated: true });
+  const [exampleModal2, toggleExampleModal2] = useModali({ animated: true });
+
+  const {
     markdownRemark: { frontmatter: fields },
-  },
-}) => {
-  const { isShown, hide, show } = useToggle();
+  } = data;
+
+  // this page template has 2 modals
+  // modal content is defined in /src/data/modals.json
+  // modal templates are located in /src/layouts/templates/modal
+
+  // get the modal content data for modalID: "modal1"
+  const thisModalData = data.textModal.edges[0].node;
+
+  // get the modal content data for modalID: "modal2"
+  const videoID = data.videoModal.edges[0].node.videoID;
+
+  console.log(thisModalData);
+
   return (
     <Container>
       <Headline>{fields.title}</Headline>
       <p>{fields.heading}</p>
       <p>{fields.subheading}</p>
-      <Link to="/page-2/">Go to page 2</Link>
-      <div dangerouslySetInnerHTML={{ __html: fields.pagecontent }} />
+      <p>
+        <Link to="/page-2/">Go to page 2</Link>
+      </p>
 
-      <button type="button" onClick={show}>
-        Open a Video Modal
-      </button>
+      <div>
+        <button type="button" onClick={toggleExampleModal}>
+          Click me to open the video modal
+        </button>
 
-      {isShown && (
-        <Modal>
-          <ModalVideo closeModal={hide} videoID="IsaYnLROaNU" />
-          <FiX className="closeModal" type="button" onClick={hide} />
-        </Modal>
-      )}
+        <Modali.Modal {...exampleModal}>
+          <VideoModal videoID={videoID} />
+        </Modali.Modal>
+      </div>
+
+      <div>
+        <button type="button" onClick={toggleExampleModal2}>
+          Click me to open the text modal
+        </button>
+        <Modali.Modal {...exampleModal2}>
+          <ContentModal modalData={thisModalData} />
+        </Modali.Modal>
+      </div>
+
+      <div
+        dangerouslySetInnerHTML={{ __html: paragraphs(fields.pagecontent) }}
+      />
     </Container>
   );
 };
@@ -42,6 +69,12 @@ HomePageTemplate.propTypes = {
   data: PropTypes.shape({
     markdownRemark: PropTypes.shape({
       frontmatter: PropTypes.object,
+    }),
+    textModal: PropTypes.shape({
+      edges: PropTypes.array,
+    }),
+    videoModal: PropTypes.shape({
+      edges: PropTypes.array,
     }),
   }).isRequired,
 };
@@ -56,6 +89,24 @@ export const pageQuery = graphql`
         heading
         subheading
         pagecontent
+      }
+    }
+    # query for a specifi modalID
+    textModal: allModalsJson(filter: { modalID: { eq: "modal1" } }) {
+      edges {
+        node {
+          title
+          subTitle
+          modalContent
+        }
+      }
+    }
+    # query for a specifi modalID
+    videoModal: allModalsJson(filter: { modalID: { eq: "modal2" } }) {
+      edges {
+        node {
+          videoID
+        }
       }
     }
   }

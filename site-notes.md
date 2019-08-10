@@ -77,8 +77,14 @@ Install all markdown related plugins:
 - gatsby-remark-responsive-iframe
 - gatsby-remark-images
 - gatsby-transformer-remark
+- lines-to-paragraphs
 
 Add folder `/src/pages/`. This folder will hold all markdown content. The corresponsing page templates are located in `/src/layouts/templates/`
+
+The `lines-to-paragraphs` node module allows to have frontmatter fields with multiple paragraphs:
+
+" >- One paragraph, every line between text is converted to a <br>"
+" |- Multiple paragraphs, every line between text is converted to a new paragraph"
 
 ### Separate Page Building According to Content Type
 
@@ -130,3 +136,22 @@ Initial metadata are fetched from `site-metadata.json`. Every page overwrites wh
 ## Add Breadcrumbs
 
 Every page has a breadcrumbs object in its frontmatter so we can use the real page title and have the ability to manipulate the breadcrumb.
+
+## Add a Modal
+
+Reference: https://upmostly.com/tutorials/modal-components-react-custom-hooks
+Reference: https://github.com/upmostly/modali
+
+Install:
+
+- modali
+
+### How to build a modal from frontmatter?
+
+Just like other parts of the page but modal data would be props for a modal component. So every modal type would have a corresponding component that acts like a template.
+We could also use a JSON file for modals so we can reuse the data.
+
+## Add Infinite Scrolling
+
+Reference: https://upmostly.com/tutorials/build-an-infinite-scroll-component-in-react-using-react-hooks
+Reference: https://github.com/Upmostly/react-hooks-infinite-scroll
