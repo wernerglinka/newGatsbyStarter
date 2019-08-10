@@ -62,6 +62,9 @@ exports.createPages = ({ actions, graphql }) => {
           }
         }
       }
+      news: allNewsJson {
+        totalNewsCount: totalCount
+      }
     }
   `).then(result => {
     if (result.errors) {
@@ -132,6 +135,33 @@ exports.createPages = ({ actions, graphql }) => {
           numPages,
           currentPage: i + 1,
           breadcrumbs,
+        },
+      });
+    });
+
+    /**
+     * section for creating news lists
+     */
+    // destructure totalCount variable from result object
+    const {
+      data: {
+        news: { totalNewsCount },
+      },
+    } = result;
+
+    // Create the news list pages
+    const newsItemsPerPage = 6;
+    const numNewsPages = Math.ceil(totalNewsCount / newsItemsPerPage);
+
+    Array.from({ length: numNewsPages }).forEach((a, i) => {
+      createPage({
+        path: i === 0 ? "/news" : `/news/${i}`,
+        component: path.resolve("./src/layouts/templates/news.js"),
+        context: {
+          limit: newsItemsPerPage,
+          skip: i * newsItemsPerPage,
+          numNewsPages,
+          currentNewsPage: i + 1,
         },
       });
     });
