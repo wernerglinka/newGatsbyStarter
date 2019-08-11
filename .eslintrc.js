@@ -8,6 +8,7 @@ module.exports = {
     "react/jsx-one-expression-per-line": 0,
     "react/forbid-prop-types": 0,
     "react/jsx-wrap-multilines": 0,
+    "react/destructuring-assignment": 0,
   },
 };
 
