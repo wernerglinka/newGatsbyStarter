@@ -27,12 +27,15 @@ const useInfiniteScroll = callback => {
   }
 
   useEffect(() => {
-    window.addEventListener("touchend", debounce(handleScroll, 200));
     window.addEventListener("scroll", debounce(handleScroll, 200));
-    return () => () => {
-      window.removeEventListener("touchend", debounce(handleScroll, 200));
+    return () =>
       window.removeEventListener("scroll", debounce(handleScroll, 200));
-    };
+  }, []);
+
+  useEffect(() => {
+    window.addEventListener("touchend", debounce(handleScroll, 200));
+    return () =>
+      window.removeEventListener("touchend", debounce(handleScroll, 200));
   }, []);
 
   useEffect(() => {
