@@ -5,6 +5,7 @@ import React, { useState, useRef } from "react";
 import { graphql } from "gatsby";
 import PropTypes from "prop-types";
 import styled from "@emotion/styled";
+import { AssertionError } from "assert";
 import Container from "../../components/styles/container";
 import useInfiniteScroll from "../../hooks/useInfiniteScroll";
 
@@ -58,25 +59,39 @@ const NewsListPage = props => {
   const allNewsListLength = allNewsList.length;
   const chunk = 6;
   const displayLengthRef = useRef(chunk);
+  let addItems;
 
   let listItemsToDisplay = allNewsList.slice(0, chunk);
   const [listItems, setListItems] = useState(listItemsToDisplay);
-  const [isFetching, setIsFetching] = useInfiniteScroll(fetchMoreListItems);
+  const [
+    fetchingDone,
+    setFetchingDone,
+    isFetching,
+    setIsFetching,
+  ] = useInfiniteScroll(fetchMoreListItems);
 
   // Todo: add case for last chunk of items and then test on touch device
   function fetchMoreListItems() {
-    console.log(displayLengthRef);
     const displayLength = displayLengthRef.current;
-    if (displayLength < allNewsListLength) {
-      listItemsToDisplay = allNewsList.slice(
-        displayLength,
-        displayLength + chunk
-      );
-      displayLengthRef.current += chunk;
+    const remainingItems = allNewsListLength - displayLength;
 
-      setListItems(prevState => [...prevState, ...listItemsToDisplay]);
-      setIsFetching(false);
+    if (remainingItems > 0) {
+      if (remainingItems > chunk) {
+        addItems = chunk;
+      } else {
+        addItems = remainingItems;
+        setFetchingDone(true);
+      }
     }
+
+    listItemsToDisplay = allNewsList.slice(
+      displayLength,
+      displayLength + addItems
+    );
+    displayLengthRef.current += addItems;
+
+    setListItems(prevState => [...prevState, ...listItemsToDisplay]);
+    setIsFetching(false);
   }
 
   return (
@@ -101,7 +116,7 @@ const NewsListPage = props => {
           </li>
         ))}
       </NewsList>
-      {isFetching && "Fetching more list items..."}
+      {!fetchingDone && isFetching && "Fetching more list items..."}
     </Container>
   );
 };
