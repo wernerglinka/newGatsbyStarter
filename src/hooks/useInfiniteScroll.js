@@ -17,8 +17,16 @@ const useInfiniteScroll = callback => {
   };
 
   function handleScroll() {
+    // Safari report 0 for document.documentElement.scrollTop. This fix
+    // will use the right scrollTop for all browsers
+    const scrollTop = Math.max(
+      window.pageYOffset,
+      document.documentElement.scrollTop,
+      document.body.scrollTop
+    );
+
     if (
-      window.innerHeight + document.documentElement.scrollTop !==
+      window.innerHeight + scrollTop !==
         document.documentElement.offsetHeight ||
       isFetching
     )
@@ -27,9 +35,9 @@ const useInfiniteScroll = callback => {
   }
 
   useEffect(() => {
-    window.addEventListener("scroll", debounce(handleScroll, 200));
+    window.addEventListener("scroll", debounce(handleScroll, 100));
     return () =>
-      window.removeEventListener("scroll", debounce(handleScroll, 200));
+      window.removeEventListener("scroll", debounce(handleScroll, 100));
   }, []);
 
   useEffect(() => {
