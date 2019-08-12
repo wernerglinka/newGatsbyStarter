@@ -6,6 +6,16 @@ const useInfiniteScroll = callback => {
   const [isFetching, setIsFetching] = useState(false);
   const [fetchingDone, setFetchingDone] = useState(false);
 
+  const debounce = (func, delay) => {
+    let inDebounce;
+    return function() {
+      clearTimeout(inDebounce);
+      inDebounce = setTimeout(() => {
+        func.apply(this, arguments);
+      }, delay);
+    };
+  };
+
   function handleScroll() {
     if (
       window.innerHeight + document.documentElement.scrollTop !==
@@ -17,8 +27,12 @@ const useInfiniteScroll = callback => {
   }
 
   useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    window.addEventListener("touchend", debounce(handleScroll, 200));
+    window.addEventListener("scroll", debounce(handleScroll, 200));
+    return () => () => {
+      window.removeEventListener("touchend", debounce(handleScroll, 200));
+      window.removeEventListener("scroll", debounce(handleScroll, 200));
+    };
   }, []);
 
   useEffect(() => {
