@@ -1,4 +1,5 @@
 /* global document, window */
+/* inspired by:  https://upmostly.com/tutorials/build-an-infinite-scroll-component-in-react-using-react-hooks */
 
 import React, { useState, useRef } from "react";
 import { graphql } from "gatsby";
@@ -62,14 +63,13 @@ const NewsListPage = props => {
   const [listItems, setListItems] = useState(listItemsToDisplay);
   const [isFetching, setIsFetching] = useInfiniteScroll(fetchMoreListItems);
 
-  // Todo: display length is updated after rendering so displayLength is "one step" behind
-  // need to use a ref
+  // Todo: add case for last chunk of items and then test on touch device
   function fetchMoreListItems() {
     console.log(displayLengthRef);
     const displayLength = displayLengthRef.current;
     if (displayLength < allNewsListLength) {
       listItemsToDisplay = allNewsList.slice(
-        displayLength + 1,
+        displayLength,
         displayLength + chunk
       );
       displayLengthRef.current += chunk;
