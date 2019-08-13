@@ -34,15 +34,15 @@ const SecondPageTemplate = ({
         controls
       >
         <source
-          src="http://res.cloudinary.com/glinkaco/video/upload/v1565046696/Industrial/industrial_acjl8w.webm"
+          src="https://res.cloudinary.com/glinkaco/video/upload/v1565046696/Industrial/industrial_acjl8w.webm"
           type="video/webm"
         />
         <source
-          src="http://res.cloudinary.com/glinkaco/video/upload/v1565046696/Industrial/industrial_acjl8w.ogv"
+          src="https://res.cloudinary.com/glinkaco/video/upload/v1565046696/Industrial/industrial_acjl8w.ogv"
           type="video/ogg"
         />
         <source
-          src="http://res.cloudinary.com/glinkaco/video/upload/v1565046696/Industrial/industrial_acjl8w.mp4"
+          src="https://res.cloudinary.com/glinkaco/video/upload/v1565046696/Industrial/industrial_acjl8w.mp4"
           type="video/mp4"
         />
       </video>
