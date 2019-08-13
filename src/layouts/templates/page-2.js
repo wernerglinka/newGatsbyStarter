@@ -25,6 +25,8 @@ const SecondPageTemplate = ({
     <p>{fields.heading}</p>
     <Link to="/">Go back to the homepage</Link>
 
+    <p>Video is served from Cloudinary</p>
+
     <VideoContainer>
       {/* eslint jsx-a11y/media-has-caption:0 */}
       <video
