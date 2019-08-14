@@ -1,192 +1,237 @@
 [
   {
-    "Solutions": {
-      "By Thread": [
-        {
-          "name": "Account Abuse",
-          "link": "/solutions/account-abuse/"
-        },
-        {
-          "name": "Carding",
-          "link": "/solutions/carding/"
-        },
-        {
-          "name": "Checkout Abuse",
-          "link": "/solutions/checkout-abuse/"
-        },
-        {
-          "name": "Digital Skimming",
-          "link": "/solutions/digital-skimming/"
-        },
-        {
-          "name": "Marketing Fraud",
-          "link": "/solutions/marketing-fraud/"
-        },
-        {
-          "name": "PII Harvesting",
-          "link": "/solutions/pii-harvesting/"
-        },
-        {
-          "name": "Supply Chain Attack",
-          "link": "/solutions/supply-chain-attack/"
-        },
-        {
-          "name": "Web Scraping",
-          "link": "/solutions/web-scraping/"
-        }
-      ],
-      "By Industry": [
-        {
-          "name": "eCommerce",
-          "link": "/solutions/ecommerce/"
-        },
-        {
-          "name": "Travel/Hospitality",
-          "link": "/solutions/travel-hospitality/"
-        },
-        {
-          "name": "Media",
-          "link": "/solutions/media/"
-        }
-      ],
-      "By Role": [
-        {
-          "name": "Security",
-          "link": "/solutions/security/"
-        },
-        {
-          "name": "Compliance",
-          "link": "/solutions/compliance/"
-        },
-        {
-          "name": "Marketing/Digital",
-          "link": "/solutions/marketing-digital/"
-        }
-      ]
-    },
-    "Products": {
-      "Bot Defender": [
-        {
-          "name": "Overview",
-          "link": "/products/bot-defender/overview/"
-        },
-        {
-          "name": "Comparison",
-          "link": "/products/bot-defender/comparison/"
-        },
-        {
-          "name": "Customer Stories",
-          "link": "/products/bot-defender/customer-stories/"
-        },
-        {
-          "name": "Technical Details",
-          "link": "/products/bot-defender/technical-details/"
-        },
-        {
-          "name": "Technology/Platform",
-          "link": "/products/bot-defender/technology-platform/"
-        },
-        {
-          "name": "Services",
-          "link": "/products/bot-defender/services/"
-        },
-        {
-          "name": "Pricing - talk to sales",
-          "link": "/products/bot-defender/pricing/"
-        }
-      ],
-      "Code Defender": [
-        {
-          "name": "Overview",
-          "link": "/products/code-defender/overview/"
-        },
-        {
-          "name": "Comparison",
-          "link": "/products/code-defender/comparison/"
-        },
-        {
-          "name": "Customer Stories",
-          "link": "/products/code-defender/customer-stories/"
-        },
-        {
-          "name": "Technical Details",
-          "link": "/products/code-defender/technical-details/"
-        },
-        {
-          "name": "Technology/Platform",
-          "link": "/products/code-defender/technology-platform/"
-        },
-        {
-          "name": "Services",
-          "link": "/products/code-defender/services/"
-        },
-        {
-          "name": "Pricing - talk to sales",
-          "link": "/products/code-defender/pricing/"
-        }
-      ],
-      "Page Defender": [
-        {
-          "name": "Overview",
-          "link": "/products/page-defender/overview/"
-        },
-        {
-          "name": "Comparison",
-          "link": "/products/page-defender/comparison/"
-        },
-        {
-          "name": "Customer Stories",
-          "link": "/products/page-defender/customer-stories/"
-        },
-        {
-          "name": "Technical Details",
-          "link": "/products/page-defender/technical-details/"
-        },
-        {
-          "name": "Technology/Platform",
-          "link": "/products/page-defender/technology-platform/"
-        },
-        {
-          "name": "Services",
-          "link": "/products/page-defender/services/"
-        },
-        {
-          "name": "Pricing - talk to sales",
-          "link": "/products/page-defender/pricing/"
-        }
-      ]
-    },
-    "Resources": {
-      "By Type": [
-        {
-          "name": "Webinars/Videos",
-          "link": "/resources/webinars-videos/"
-        },
-        {
-          "name": "Analyst Reports",
-          "link": "/resources/analyst-reports/"
-        },
-        {
-          "name": "Application/Solution Briefs",
-          "link": "/resources/application-solution-briefs/"
-        },
-        {
-          "name": "White Papers",
-          "link": "/resources/white-papers/"
-        },
-        {
-          "name": "Data Sheets",
-          "link": "/resources/data-sheets/"
-        },
-        {
-          "name": "Infographics",
-          "link": "/resources/infographics/"
-        },
-        {
-          "name": "See All Resources",
-          "link": "/resources/all-resources/"
-        }
-      ]
-    }
+    "name": "Solutions",
+    "data": [
+      {
+        "name": "By Thread",
+        "data": [
+          {
+            "name": "Account Abuse",
+            "link": "/solutions/account-abuse/"
+          },
+          {
+            "name": "Carding",
+            "link": "/solutions/carding/"
+          },
+          {
+            "name": "Checkout Abuse",
+            "link": "/solutions/checkout-abuse/"
+          },
+          {
+            "name": "Digital Skimming",
+            "link": "/solutions/digital-skimming/"
+          },
+          {
+            "name": "Marketing Fraud",
+            "link": "/solutions/marketing-fraud/"
+          },
+          {
+            "name": "PII Harvesting",
+            "link": "/solutions/pii-harvesting/"
+          },
+          {
+            "name": "Supply Chain Attack",
+            "link": "/solutions/supply-chain-attack/"
+          },
+          {
+            "name": "Web Scraping",
+            "link": "/solutions/web-scraping/"
+          }
+        ]
+      },
+      {
+        "name": "By Industry",
+        "data": [
+          {
+            "name": "eCommerce",
+            "link": "/solutions/ecommerce/"
+          },
+          {
+            "name": "Travel/Hospitality",
+            "link": "/solutions/travel-hospitality/"
+          },
+          {
+            "name": "Media",
+            "link": "/solutions/media/"
+          }
+        ]
+      },
+      {
+        "name": "By Role",
+        "data": [
+          {
+            "name": "Security",
+            "link": "/solutions/security/"
+          },
+          {
+            "name": "Compliance",
+            "link": "/solutions/compliance/"
+          },
+          {
+            "name": "Marketing/Digital",
+            "link": "/solutions/marketing-digital/"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Products",
+    "data": [
+      {
+        "name": "Bot Defender",
+        "data": [
+          {
+            "name": "Overview",
+            "link": "/products/bot-defender/overview/"
+          },
+          {
+            "name": "Comparison",
+            "link": "/products/bot-defender/comparison/"
+          },
+          {
+            "name": "Customer Stories",
+            "link": "/products/bot-defender/customer-stories/"
+          },
+          {
+            "name": "Technical Details",
+            "link": "/products/bot-defender/technical-details/"
+          },
+          {
+            "name": "Technology/Platform",
+            "link": "/products/bot-defender/technology-platform/"
+          },
+          {
+            "name": "Services",
+            "link": "/products/bot-defender/services/"
+          },
+          {
+            "name": "Pricing - talk to sales",
+            "link": "/products/bot-defender/pricing/"
+          }
+        ]
+      },
+      {
+        "name": "Code Defender",
+        "data": [
+          {
+            "name": "Overview",
+            "link": "/products/code-defender/overview/"
+          },
+          {
+            "name": "Comparison",
+            "link": "/products/code-defender/comparison/"
+          },
+          {
+            "name": "Customer Stories",
+            "link": "/products/code-defender/customer-stories/"
+          },
+          {
+            "name": "Technical Details",
+            "link": "/products/code-defender/technical-details/"
+          },
+          {
+            "name": "Technology/Platform",
+            "link": "/products/code-defender/technology-platform/"
+          },
+          {
+            "name": "Services",
+            "link": "/products/code-defender/services/"
+          },
+          {
+            "name": "Pricing - talk to sales",
+            "link": "/products/code-defender/pricing/"
+          }
+        ]
+      },
+      {
+        "name": "Page Defender",
+        "data": [
+          {
+            "name": "Overview",
+            "link": "/products/page-defender/overview/"
+          },
+          {
+            "name": "Comparison",
+            "link": "/products/page-defender/comparison/"
+          },
+          {
+            "name": "Customer Stories",
+            "link": "/products/page-defender/customer-stories/"
+          },
+          {
+            "name": "Technical Details",
+            "link": "/products/page-defender/technical-details/"
+          },
+          {
+            "name": "Technology/Platform",
+            "link": "/products/page-defender/technology-platform/"
+          },
+          {
+            "name": "Services",
+            "link": "/products/page-defender/services/"
+          },
+          {
+            "name": "Pricing - talk to sales",
+            "link": "/products/page-defender/pricing/"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Resources",
+    "data": [
+      {
+        "name": "By Type",
+        "data": [
+          {
+            "name": "Webinars/Videos",
+            "link": "/resources/webinars-videos/"
+          },
+          {
+            "name": "Analyst Reports",
+            "link": "/resources/analyst-reports/"
+          },
+          {
+            "name": "Application/Solution Briefs",
+            "link": "/resources/application-solution-briefs/"
+          },
+          {
+            "name": "White Papers",
+            "link": "/resources/white-papers/"
+          },
+          {
+            "name": "Data Sheets",
+            "link": "/resources/data-sheets/"
+          },
+          {
+            "name": "Infographics",
+            "link": "/resources/infographics/"
+          },
+          {
+            "name": "See All Resources",
+            "link": "/resources/all-resources/"
+          }
+        ]
+      },
+      {
+        "name": "Blog",
+        "data": [
+          {
+            "name": "By Topic",
+            "link": "/blog/by-topic/"
+          },
+          {
+            "name": "by Author",
+            "link": "/blog/by-author"
+          },
+          {
+            "name": "Ass All Blog Posts",
+            "link": "/blog/"
+          }
+        ]
+      }
+    ]
   }
 ]

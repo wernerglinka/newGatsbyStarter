@@ -23,17 +23,13 @@ const LinkList = styled.ul`
 
 const DesktopMain = props => {
   const allLinks = useGetMainNavLinks();
+
+  console.log(allLinks);
+
+
   return (
     <div>
-        <LinkList>
-            {allLinks.map(({ node }) => (
-              <li key={node.name}>
-                <Link to={node.link} activeClassName="active">
-                  {node.name}
-                </Link>
-              </li>
-            ))}
-          </LinkList>
+        szdxfcgvhjkl
     </div>
   );
 };

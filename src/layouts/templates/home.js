@@ -28,8 +28,6 @@ const HomePageTemplate = ({ data }) => {
   // get the modal content data for modalID: "modal2"
   const videoID = data.videoModal.edges[0].node.videoID;
 
-  console.log(thisModalData);
-
   return (
     <Container>
       <Headline>{fields.title}</Headline>

@@ -5,7 +5,7 @@ import React from "react";
 import styled from "@emotion/styled";
 
 import logo from "../images/logo.png";
-import MainNav from "./main-nav";
+import MainNav from "./navigation/main-nav";
 
 const PageHeader = styled.header`
   padding: 20px;

@@ -6,8 +6,14 @@ const useGetMainNavLinks = () => {
       allNavigationJson {
         edges {
           node {
-            link
             name
+            data {
+              data {
+                link
+                name
+              }
+              name
+            }
           }
         }
       }
