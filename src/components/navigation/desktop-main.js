@@ -39,9 +39,10 @@ const DesktopMain = () => {
 
   // create the top level menu
   const topLevelMenu = [];
-  topLevelMenu.push(allLinks.allSolutionsJson.edges[0].node.label);
-  topLevelMenu.push(allLinks.allProductsJson.edges[0].node.label);
-  topLevelMenu.push(allLinks.allResourcesJson.edges[0].node.label);
+  const temp = Object.values(allLinks);
+  temp.forEach((item, i) => {
+    topLevelMenu.push(temp[i].edges[0].node.label);
+  });
 
   // build the megamenu content
   const solutionsMegaMenu = processLists(allLinks.allSolutionsJson.edges);
