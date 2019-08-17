@@ -22,7 +22,7 @@
     "link": "/resources/white-papers/"
   },
   {
-    "break": true
+    "category": " "
   },
   {
     "name": "Data Sheets",
@@ -48,7 +48,7 @@
     "link": "/blog/by-author"
   },
   {
-    "name": "Ass All Blog Posts",
+    "name": "See All Blog Posts",
     "link": "/blog/"
   }
 ]

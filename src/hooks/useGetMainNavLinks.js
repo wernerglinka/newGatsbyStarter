@@ -29,7 +29,6 @@ const useGetMainNavLinks = () => {
             link
             name
             label
-            break
             category
           }
         }

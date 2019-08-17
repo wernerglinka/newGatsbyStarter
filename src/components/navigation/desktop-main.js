@@ -1,8 +1,8 @@
 /* global document */
 
 import React, { useState, useEffect } from "react";
-import PropTypes from "prop-types";
 import styled from "@emotion/styled";
+import uuid from "uuid/v4";
 import useGetMainNavLinks from "../../hooks/useGetMainNavLinks";
 import processLists from "./process-lists";
 
@@ -27,6 +27,10 @@ const MegaMenuPane = styled.div`
   display: relative;
 `;
 
+/**
+ * DesktopMain
+ * Component to render the main menu
+ */
 const DesktopMain = () => {
   const [menuState, setMenuState] = useState({
     solutionsMenuIsActive: false,
@@ -39,16 +43,22 @@ const DesktopMain = () => {
 
   // create the top level menu
   const topLevelMenu = [];
+  // turn object into an array
   const temp = Object.values(allLinks);
   temp.forEach((item, i) => {
+    // extract the main menu items
     topLevelMenu.push(temp[i].edges[0].node.label);
   });
 
-  // build the megamenu content
+  // build the megamenu content for menu items
   const solutionsMegaMenu = processLists(allLinks.allSolutionsJson.edges);
   const productsMegaMenu = processLists(allLinks.allProductsJson.edges);
   const resourcesMegaMenu = processLists(allLinks.allResourcesJson.edges);
 
+  /**
+   * handleOutsideClick()
+   * Function to close main menu when click outside of the nav
+   */
   function handleOutsideClick(e) {
     // only close nav megamenu when clicked outside the nav
     if (e.target.closest("nav")) return;
@@ -60,6 +70,10 @@ const DesktopMain = () => {
     });
   }
 
+  /**
+   * handleMenuSelection()
+   * Function to open/close main menu mega menus
+   */
   function handleMenuSelection(e) {
     const target = e.target.innerHTML.toLowerCase();
     switch (target) {
@@ -120,6 +134,7 @@ const DesktopMain = () => {
             onClick={handleMenuSelection}
             onKeyDown={handleMenuSelection}
             role="menuitem"
+            tabIndex="0"
           >
             {mainMenuItem}
           </li>
@@ -127,13 +142,25 @@ const DesktopMain = () => {
       </MainMenu>
 
       {menuState.solutionsMenuIsActive && (
-        <MegaMenuPane>{solutionsMegaMenu.map(list => list)}</MegaMenuPane>
+        <MegaMenuPane>
+          {solutionsMegaMenu.map(list => (
+            <div key={uuid()}>{list}</div>
+          ))}
+        </MegaMenuPane>
       )}
       {menuState.productsMenuIsActive && (
-        <MegaMenuPane>{productsMegaMenu.map(list => list)}</MegaMenuPane>
+        <MegaMenuPane>
+          {productsMegaMenu.map(list => (
+            <div key={uuid()}>{list}</div>
+          ))}
+        </MegaMenuPane>
       )}
       {menuState.resourcesMenuIsActive && (
-        <MegaMenuPane>{resourcesMegaMenu.map(list => list)}</MegaMenuPane>
+        <MegaMenuPane>
+          {resourcesMegaMenu.map(list => (
+            <div key={uuid()}>{list}</div>
+          ))}
+        </MegaMenuPane>
       )}
     </nav>
   );

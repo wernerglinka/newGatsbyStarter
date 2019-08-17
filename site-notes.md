@@ -133,6 +133,8 @@ Install:
 
 Initial metadata are fetched from `site-metadata.json`. Every page overwrites what's necessary.
 
+When using an empty **category** field to force a new UL in a megamenu the category must have a space as value! E.g. `"category": " "`
+
 ## Add Breadcrumbs
 
 Every page has a breadcrumbs object in its frontmatter so we can use the real page title and have the ability to manipulate the breadcrumb.
