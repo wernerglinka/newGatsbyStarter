@@ -1,0 +1,54 @@
+[
+  {
+    "label": "Resources"
+  },
+  {
+    "category": "By Type"
+  },
+  {
+    "name": "Webinars/Videos",
+    "link": "/resources/webinars-videos/"
+  },
+  {
+    "name": "Analyst Reports",
+    "link": "/resources/analyst-reports/"
+  },
+  {
+    "name": "Application/Solution Briefs",
+    "link": "/resources/application-solution-briefs/"
+  },
+  {
+    "name": "White Papers",
+    "link": "/resources/white-papers/"
+  },
+  {
+    "break": true
+  },
+  {
+    "name": "Data Sheets",
+    "link": "/resources/data-sheets/"
+  },
+  {
+    "name": "Infographics",
+    "link": "/resources/infographics/"
+  },
+  {
+    "name": "See All Resources",
+    "link": "/resources/all-resources/"
+  },
+  {
+    "category": "Blog"
+  },
+  {
+    "name": "By Topic",
+    "link": "/blog/by-topic/"
+  },
+  {
+    "name": "by Author",
+    "link": "/blog/by-author"
+  },
+  {
+    "name": "Ass All Blog Posts",
+    "link": "/blog/"
+  }
+]

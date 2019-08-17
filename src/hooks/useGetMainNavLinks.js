@@ -3,23 +3,40 @@ import { useStaticQuery, graphql } from "gatsby";
 const useGetMainNavLinks = () => {
   const data = useStaticQuery(graphql`
     query HeaderQuery {
-      allNavigationJson {
+      allSolutionsJson {
         edges {
           node {
+            link
             name
-            data {
-              data {
-                link
-                name
-              }
-              name
-            }
+            label
+            category
+          }
+        }
+      }
+      allProductsJson {
+        edges {
+          node {
+            link
+            name
+            label
+            category
+          }
+        }
+      }
+      allResourcesJson {
+        edges {
+          node {
+            link
+            name
+            label
+            break
+            category
           }
         }
       }
     }
   `);
-  return data.allNavigationJson.edges;
+  return data;
 };
 
 export default useGetMainNavLinks;

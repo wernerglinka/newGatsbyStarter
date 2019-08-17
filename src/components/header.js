@@ -18,6 +18,7 @@ const HeaderInner = styled.div`
   justify-content: space-between;
   max-width: ${props => props.theme.maxContentWidth};
   margin: 0 auto;
+  align-items: flex-start;
 
   .mainLogo {
     display: block;

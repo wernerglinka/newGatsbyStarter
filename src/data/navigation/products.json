@@ -1,0 +1,98 @@
+[
+  {
+    "label": "Products"
+  },
+  {
+    "category": "Bot Defender"
+  },
+  {
+    "name": "Overview",
+    "link": "/products/bot-defender/overview/"
+  },
+  {
+    "name": "Comparison",
+    "link": "/products/bot-defender/comparison/"
+  },
+  {
+    "name": "Customer Stories",
+    "link": "/products/bot-defender/customer-stories/"
+  },
+  {
+    "name": "Technical Details",
+    "link": "/products/bot-defender/technical-details/"
+  },
+  {
+    "name": "Technology/Platform",
+    "link": "/products/bot-defender/technology-platform/"
+  },
+  {
+    "name": "Services",
+    "link": "/products/bot-defender/services/"
+  },
+  {
+    "name": "Pricing - talk to sales",
+    "link": "/products/bot-defender/pricing/"
+  },
+  {
+    "category": "Code Defender"
+  },
+  {
+    "name": "Overview",
+    "link": "/products/code-defender/overview/"
+  },
+  {
+    "name": "Comparison",
+    "link": "/products/code-defender/comparison/"
+  },
+  {
+    "name": "Customer Stories",
+    "link": "/products/code-defender/customer-stories/"
+  },
+  {
+    "name": "Technical Details",
+    "link": "/products/code-defender/technical-details/"
+  },
+  {
+    "name": "Technology/Platform",
+    "link": "/products/code-defender/technology-platform/"
+  },
+  {
+    "name": "Services",
+    "link": "/products/code-defender/services/"
+  },
+  {
+    "name": "Pricing - talk to sales",
+    "link": "/products/code-defender/pricing/"
+  },
+  {
+    "category": "Page Defender"
+  },
+  {
+    "name": "Overview",
+    "link": "/products/page-defender/overview/"
+  },
+  {
+    "name": "Comparison",
+    "link": "/products/page-defender/comparison/"
+  },
+  {
+    "name": "Customer Stories",
+    "link": "/products/page-defender/customer-stories/"
+  },
+  {
+    "name": "Technical Details",
+    "link": "/products/page-defender/technical-details/"
+  },
+  {
+    "name": "Technology/Platform",
+    "link": "/products/page-defender/technology-platform/"
+  },
+  {
+    "name": "Services",
+    "link": "/products/page-defender/services/"
+  },
+  {
+    "name": "Pricing - talk to sales",
+    "link": "/products/page-defender/pricing/"
+  }
+]

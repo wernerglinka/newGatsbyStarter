@@ -1,0 +1,70 @@
+[
+  {
+    "label": "Solutions"
+  },
+  {
+    "category": "By Thread"
+  },
+  {
+    "name": "Account Abuse",
+    "link": "/solutions/account-abuse/"
+  },
+  {
+    "name": "Carding",
+    "link": "/solutions/carding/"
+  },
+  {
+    "name": "Checkout Abuse",
+    "link": "/solutions/checkout-abuse/"
+  },
+  {
+    "name": "Digital Skimming",
+    "link": "/solutions/digital-skimming/"
+  },
+  {
+    "name": "Marketing Fraud",
+    "link": "/solutions/marketing-fraud/"
+  },
+  {
+    "name": "PII Harvesting",
+    "link": "/solutions/pii-harvesting/"
+  },
+  {
+    "name": "Supply Chain Attack",
+    "link": "/solutions/supply-chain-attack/"
+  },
+  {
+    "name": "Web Scraping",
+    "link": "/solutions/web-scraping/"
+  },
+  {
+    "category": "By Industry"
+  },
+  {
+    "name": "eCommerce",
+    "link": "/solutions/ecommerce/"
+  },
+  {
+    "name": "Travel/Hospitality",
+    "link": "/solutions/travel-hospitality/"
+  },
+  {
+    "name": "Media",
+    "link": "/solutions/media/"
+  },
+  {
+    "category": "By Role"
+  },
+  {
+    "name": "Security",
+    "link": "/solutions/security/"
+  },
+  {
+    "name": "Compliance",
+    "link": "/solutions/compliance/"
+  },
+  {
+    "name": "Marketing/Digital",
+    "link": "/solutions/marketing-digital/"
+  }
+]
