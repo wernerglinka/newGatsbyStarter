@@ -2,9 +2,9 @@
 
 import React, { useState, useEffect } from "react";
 import styled from "@emotion/styled";
-import uuid from "uuid/v4";
 import useGetMainNavLinks from "../../hooks/useGetMainNavLinks";
 import processLists from "./process-lists";
+import PaintMenuPane from "./render-menu-pane";
 
 const MainMenu = styled.ul`
   list-style: none;
@@ -21,10 +21,6 @@ const MainMenu = styled.ul`
       }
     }
   }
-`;
-
-const MegaMenuPane = styled.div`
-  display: relative;
 `;
 
 /**
@@ -141,27 +137,18 @@ const DesktopMain = () => {
         ))}
       </MainMenu>
 
-      {menuState.solutionsMenuIsActive && (
-        <MegaMenuPane>
-          {solutionsMegaMenu.map(list => (
-            <div key={uuid()}>{list}</div>
-          ))}
-        </MegaMenuPane>
-      )}
-      {menuState.productsMenuIsActive && (
-        <MegaMenuPane>
-          {productsMegaMenu.map(list => (
-            <div key={uuid()}>{list}</div>
-          ))}
-        </MegaMenuPane>
-      )}
-      {menuState.resourcesMenuIsActive && (
-        <MegaMenuPane>
-          {resourcesMegaMenu.map(list => (
-            <div key={uuid()}>{list}</div>
-          ))}
-        </MegaMenuPane>
-      )}
+      <PaintMenuPane
+        megaMenu={solutionsMegaMenu}
+        isVisible={menuState.solutionsMenuIsActive}
+      />
+      <PaintMenuPane
+        megaMenu={productsMegaMenu}
+        isVisible={menuState.productsMenuIsActive}
+      />
+      <PaintMenuPane
+        megaMenu={resourcesMegaMenu}
+        isVisible={menuState.resourcesMenuIsActive}
+      />
     </nav>
   );
 };

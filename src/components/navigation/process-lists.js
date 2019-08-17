@@ -10,19 +10,12 @@ function renderList(list) {
   return (
     <ul>
       {list.map(listItem => (
-        <>
-          {!listItem.break && (
-            <li
-              key={uuid()}
-              className={listItem.category ? "categoryTitle" : null}
-            >
-              {listItem.category && listItem.category}
-              {!listItem.category && (
-                <Link to={listItem.link}>{listItem.name}</Link>
-              )}
-            </li>
+        <li key={uuid()} className={listItem.category ? "categoryTitle" : null}>
+          {listItem.category && listItem.category}
+          {!listItem.category && (
+            <Link to={listItem.link}>{listItem.name}</Link>
           )}
-        </>
+        </li>
       ))}
     </ul>
   );
