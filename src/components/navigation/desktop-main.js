@@ -6,12 +6,26 @@ import useGetMainNavLinks from "../../hooks/useGetMainNavLinks";
 import processLists from "./process-lists";
 import PaintMenuPane from "./render-menu-pane";
 
+const Navigation = styled.nav`
+  flex: 1 1 50%;
+  height: 100%;
+`;
+
 const MainMenu = styled.ul`
+  display: flex;
+  justify-content: flex-start;
+  height: 100%;
   list-style: none;
 
-  li {
-    display: inline-block;
-    padding: 0 20px;
+  > li {
+    position: relative;
+    height: 100%;
+    padding: 40px 0 0;
+    margin: 0 30px;
+
+    &:hover {
+      cursor: pointer;
+    }
 
     a {
       text-decoration: none;
@@ -32,6 +46,9 @@ const DesktopMain = () => {
     solutionsMenuIsActive: false,
     productsMenuIsActive: false,
     resourcesMenuIsActive: false,
+    solutionsMenuHover: false,
+    productionsMenuHover: false,
+    resourcesMenuHover: false,
   });
 
   // get all nav links from the data layer
@@ -71,7 +88,11 @@ const DesktopMain = () => {
    * Function to open/close main menu mega menus
    */
   function handleMenuSelection(e) {
-    const target = e.target.innerHTML.toLowerCase();
+    // the target has the label and the html for the mega menu in its innerhtml
+    let target = e.target.innerHTML.toLowerCase();
+    const discardIndex = target.indexOf("<div");
+    // use only the label, mega menu html has been removed
+    target = target.substring(0, discardIndex);
     switch (target) {
       case "solutions":
         if (menuState.solutionsMenuIsActive) {
@@ -113,6 +134,51 @@ const DesktopMain = () => {
     }
   }
 
+  /**
+   * handleMouseEnter
+   * Function to open maimain menu mega menus
+   */
+  function handleMouseEnter(e) {
+    // the target has the label and the html for the mega menu in its innerhtml
+    let target = e.target.innerHTML.toLowerCase();
+    const discardIndex = target.indexOf("<div");
+    // use only the label, mega menu html has been removed
+    target = target.substring(0, discardIndex);
+
+    console.log(`entering: ${target}`);
+
+    switch (target) {
+      case "solutions":
+        setMenuState({ ...menuState, solutionsMenuHover: true });
+        break;
+      case "products":
+        setMenuState({ ...menuState, productsMenuHover: true });
+        break;
+      case "resources":
+        setMenuState({ ...menuState, resourcesMenuHover: true });
+        break;
+      default:
+    }
+  }
+
+  /**
+   * handleMouseLeave
+   * Function to open maimain menu mega menus
+   */
+  function handleMouseLeave(e) {
+    let target = e.target.innerHTML.toLowerCase();
+    const discardIndex = target.indexOf("<div");
+    // use only the label, mega menu html has been removed
+    target = target.substring(0, discardIndex);
+    console.log(`leaving: ${target}`);
+    setMenuState({
+      ...menuState,
+      solutionsMenuHover: false,
+      productsMenuHover: false,
+      resourcesMenuHover: false,
+    });
+  }
+
   // listen for click outside of the main nav items
   useEffect(() => {
     document.addEventListener("click", handleOutsideClick);
@@ -122,34 +188,52 @@ const DesktopMain = () => {
   }, []);
 
   return (
-    <nav>
+    <Navigation>
       <MainMenu>
-        {topLevelMenu.map(mainMenuItem => (
-          <li
-            key={mainMenuItem}
-            onClick={handleMenuSelection}
-            onKeyDown={handleMenuSelection}
-            role="menuitem"
-            tabIndex="0"
-          >
-            {mainMenuItem}
-          </li>
-        ))}
+        {topLevelMenu.map(mainMenuItem => {
+          return (
+            <li
+              key={mainMenuItem}
+              onClick={handleMenuSelection}
+              onKeyDown={handleMenuSelection}
+              onMouseEnter={handleMouseEnter}
+              onMouseLeave={handleMouseLeave}
+              role="menuitem"
+              tabIndex="0"
+            >
+              {mainMenuItem}
+              {mainMenuItem === "Solutions" && (
+                <PaintMenuPane
+                  megaMenu={solutionsMegaMenu}
+                  isVisible={
+                    menuState.solutionsMenuIsActive ||
+                    menuState.solutionsMenuHover
+                  }
+                />
+              )}
+              {mainMenuItem === "Products" && (
+                <PaintMenuPane
+                  megaMenu={productsMegaMenu}
+                  isVisible={
+                    menuState.productsMenuIsActive ||
+                    menuState.productsMenuHover
+                  }
+                />
+              )}
+              {mainMenuItem === "Resources" && (
+                <PaintMenuPane
+                  megaMenu={resourcesMegaMenu}
+                  isVisible={
+                    menuState.resourcesMenuIsActive ||
+                    menuState.resourcesMenuHover
+                  }
+                />
+              )}
+            </li>
+          );
+        })}
       </MainMenu>
-
-      <PaintMenuPane
-        megaMenu={solutionsMegaMenu}
-        isVisible={menuState.solutionsMenuIsActive}
-      />
-      <PaintMenuPane
-        megaMenu={productsMegaMenu}
-        isVisible={menuState.productsMenuIsActive}
-      />
-      <PaintMenuPane
-        megaMenu={resourcesMegaMenu}
-        isVisible={menuState.resourcesMenuIsActive}
-      />
-    </nav>
+    </Navigation>
   );
 };
 

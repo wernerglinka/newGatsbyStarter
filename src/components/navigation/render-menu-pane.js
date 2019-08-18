@@ -2,18 +2,19 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled from "@emotion/styled";
 import uuid from "uuid/v4";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 
-const MegaMenuPane = styled.div`
-  position: fixed;
-  top: 100px;
+const MegaMenuPane = styled(motion.div)`
+  position: absolute;
+  top: 100%;
   left: 0;
   width: 100%;
-  z-index: 100;
+  z-index: 1000;
   display: flex;
   justify-content: flex-start;
   background-color: #f8f8f8;
   padding: 50px;
+  pointer-events: none;
 
   ul {
     list-style: none;
@@ -21,28 +22,31 @@ const MegaMenuPane = styled.div`
   }
 `;
 
-const PaintMenuPane = ({ megaMenu, isVisible }) => (
-  <AnimatePresence>
-    {isVisible && (
-      <motion.div
-        key="child"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-      >
-        <MegaMenuPane key={uuid()}>
-          {megaMenu.map(list => (
-            <div key={uuid()}>{list}</div>
-          ))}
-        </MegaMenuPane>
-      </motion.div>
-    )}
-  </AnimatePresence>
-);
+const PaintMenuPane = ({ megaMenu, isVisible }) => {
+  const variants = {
+    visible: { opacity: 1 },
+    hidden: { opacity: 0 },
+  };
+  return (
+    <MegaMenuPane
+      key="child"
+      animate={isVisible ? "visible" : "hidden"}
+      variants={variants}
+    >
+      {megaMenu.map(list => (
+        <div key={uuid()}>{list}</div>
+      ))}
+    </MegaMenuPane>
+  );
+};
 
 PaintMenuPane.propTypes = {
   megaMenu: PropTypes.array.isRequired,
-  isVisible: PropTypes.bool.isRequired,
+  isVisible: PropTypes.bool,
+};
+
+PaintMenuPane.defaultProps = {
+  isVisible: false,
 };
 
 export default PaintMenuPane;

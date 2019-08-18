@@ -48,7 +48,11 @@ const Head = ({ metaData, location }) => {
   };
 
   return (
-    <Helmet>
+    <Helmet
+      htmlAttributes={{
+        lang: "en",
+      }}
+    >
       <meta charset="utf-8" />
       <meta httpEquiv="x-ua-compatible" content="ie=edge" />
       <meta name="HandheldFriendly" content="True" />
