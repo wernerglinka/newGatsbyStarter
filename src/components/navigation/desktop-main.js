@@ -55,9 +55,26 @@ const DesktopMain = () => {
     productsMenuIsActive: false,
     resourcesMenuIsActive: false,
     solutionsMenuHover: false,
-    productionsMenuHover: false,
+    productsMenuHover: false,
     resourcesMenuHover: false,
   });
+
+  const resetActive = {
+    solutionsMenuIsActive: false,
+    productsMenuIsActive: false,
+    resourcesMenuIsActive: false,
+  };
+
+  const resetHover = {
+    solutionsMenuHover: false,
+    productsMenuHover: false,
+    resourcesMenuHover: false,
+  };
+
+  const resetAll = {
+    ...resetActive,
+    ...resetHover,
+  };
 
   // get all nav links from the data layer
   const allLinks = useGetMainNavLinks();
@@ -78,6 +95,7 @@ const DesktopMain = () => {
   const solutionsMegaMenu = processLists(allLinks.allSolutionsJson.edges);
   const productsMegaMenu = processLists(allLinks.allProductsJson.edges);
   const resourcesMegaMenu = processLists(allLinks.allResourcesJson.edges);
+  const getStartedMegaMenu = processLists(allLinks.allGetStartedJson.edges);
 
   /**
    * handleOutsideClick()
@@ -88,9 +106,7 @@ const DesktopMain = () => {
     if (e.target.closest("nav")) return;
     setMenuState({
       ...menuState,
-      solutionsMenuIsActive: false,
-      productsMenuIsActive: false,
-      resourcesMenuIsActive: false,
+      ...resetActive,
     });
   }
 
@@ -107,36 +123,42 @@ const DesktopMain = () => {
     switch (target) {
       case "solutions":
         if (menuState.solutionsMenuIsActive) {
-          setMenuState({ ...menuState, solutionsMenuIsActive: false });
+          setMenuState({
+            ...menuState,
+            ...resetAll,
+          });
         } else {
           setMenuState({
             ...menuState,
+            ...resetActive,
             solutionsMenuIsActive: true,
-            productsMenuIsActive: false,
-            resourcesMenuIsActive: false,
           });
         }
         break;
       case "products":
         if (menuState.productsMenuIsActive) {
-          setMenuState({ ...menuState, productsMenuIsActive: false });
+          setMenuState({
+            ...menuState,
+            ...resetAll,
+          });
         } else {
           setMenuState({
             ...menuState,
-            solutionsMenuIsActive: false,
+            ...resetActive,
             productsMenuIsActive: true,
-            resourcesMenuIsActive: false,
           });
         }
         break;
       case "resources":
         if (menuState.resourcesMenuIsActive) {
-          setMenuState({ ...menuState, resourcesMenuIsActive: false });
+          setMenuState({
+            ...menuState,
+            ...resetAll,
+          });
         } else {
           setMenuState({
             ...menuState,
-            solutionsMenuIsActive: false,
-            productsMenuIsActive: false,
+            ...resetActive,
             resourcesMenuIsActive: true,
           });
         }
@@ -148,6 +170,9 @@ const DesktopMain = () => {
   /**
    * handleMouseEnter
    * Function to open maimain menu mega menus
+   *
+   * This implementation is identical to PX' current website in that hover over any item
+   * resets the clicked state.
    */
   function handleMouseEnter(e) {
     // the target has the label and the html for the mega menu in its innerhtml
@@ -156,17 +181,27 @@ const DesktopMain = () => {
     // use only the label, mega menu html has been removed
     target = target.substring(0, discardIndex);
 
-    console.log(`entering: ${target}`);
-
     switch (target) {
       case "solutions":
-        setMenuState({ ...menuState, solutionsMenuHover: true });
+        setMenuState({
+          ...menuState,
+          ...resetActive,
+          solutionsMenuHover: true,
+        });
         break;
       case "products":
-        setMenuState({ ...menuState, productsMenuHover: true });
+        setMenuState({
+          ...menuState,
+          ...resetActive,
+          productsMenuHover: true,
+        });
         break;
       case "resources":
-        setMenuState({ ...menuState, resourcesMenuHover: true });
+        setMenuState({
+          ...menuState,
+          ...resetActive,
+          resourcesMenuHover: true,
+        });
         break;
       default:
     }
@@ -179,9 +214,7 @@ const DesktopMain = () => {
   function handleMouseLeave(e) {
     setMenuState({
       ...menuState,
-      solutionsMenuHover: false,
-      productsMenuHover: false,
-      resourcesMenuHover: false,
+      ...resetHover,
     });
   }
 
@@ -209,6 +242,7 @@ const DesktopMain = () => {
             >
               {mainMenuItem.class && <MenuCTA>{mainMenuItem.name}</MenuCTA>}
               {!mainMenuItem.class && mainMenuItem.name}
+
               {mainMenuItem.name === "Solutions" && (
                 <PaintMenuPane
                   megaMenu={solutionsMegaMenu}

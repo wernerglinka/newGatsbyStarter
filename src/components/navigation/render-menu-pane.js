@@ -14,6 +14,7 @@ const MegaMenuPane = styled(motion.div)`
   justify-content: flex-start;
   background-color: #f8f8f8;
   padding: 50px;
+  display: none;
 
   ul {
     list-style: none;
