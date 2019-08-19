@@ -19,6 +19,9 @@ li {
 img {
   max-width: 100%;
 }
+:focus {
+  outline: 0;
+}
 
 /* Modali overwrites */
 .modali-content {

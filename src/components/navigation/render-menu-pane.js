@@ -16,6 +16,26 @@ const MegaMenuPane = styled(motion.div)`
   padding: 50px;
   display: none;
 
+  > div {
+    flex: 0 0 20%;
+
+    &:last-child {
+      flex: 0 0 30%;
+      margin-left: auto;
+    }
+  }
+
+  .promoContainer {
+    display: flex;
+  }
+  .promoImage,
+  .promoProse {
+    flex: 0 0 50%;
+  }
+  .promoImage {
+    padding: 0 30px;
+  }
+
   ul {
     list-style: none;
     padding-left: 50px;

@@ -8,15 +8,15 @@
   },
   {
     "name": "Technical Product Details",
-    "link": "/"
+    "link": "/products/"
   },
   {
     "name": "Technology Platform Overview",
-    "link": "/"
+    "link": "/products/"
   },
   {
     "name": "Purchase Options",
-    "link": "/"
+    "link": "/products/"
   },
   {
     "name": "All Resources",
@@ -27,29 +27,40 @@
   },
   {
     "name": "Watch a Recorded Demo",
-    "link": "/"
+    "link": "/products/"
   },
   {
     "name": "Request a Demo",
-    "link": "/"
+    "link": "/products/"
   },
   {
     "category": "Connect "
   },
   {
     "name": "Speak to a Security Expert",
-    "link": "/"
+    "link": "/products/"
   },
   {
     "name": "Get a Threat Assessment",
-    "link": "/"
+    "link": "/products/"
   },
   {
     "name": "Become a Partner",
-    "link": "/"
+    "link": "/products/"
   },
   {
     "name": "Call Us at 1-833-STOP-BOT",
-    "link": "/"
+    "link": "tel:1-833-786-7268",
+    "external": true
+  },
+  {
+    "category": " "
+  },
+  {
+    "promo": {
+      "image": "fl_strip_profile,q_auto,w_auto,f_auto,c_scale/w_200/document_thumbnails/PX_Page_Defender_Datasheet_oh7aoh.jpg",
+      "action": "download",
+      "prose": "White Paper on the New Generation of Invisible Bot Attacks (PDF)"
+    }
   }
 ]

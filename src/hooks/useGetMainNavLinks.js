@@ -14,6 +14,11 @@ const useGetMainNavLinks = () => {
             name
             label
             category
+            promo {
+              image
+              action
+              prose
+            }
           }
         }
       }
@@ -25,6 +30,11 @@ const useGetMainNavLinks = () => {
             label
             category
             subCategory
+            promo {
+              image
+              action
+              prose
+            }
           }
         }
       }
@@ -35,15 +45,28 @@ const useGetMainNavLinks = () => {
             name
             label
             category
+            promo {
+              image
+              action
+              prose
+            }
           }
         }
       }
       allGetStartedJson {
         edges {
           node {
+            link
+            name
             category
             label
             class
+            external
+            promo {
+              image
+              action
+              prose
+            }
           }
         }
       }

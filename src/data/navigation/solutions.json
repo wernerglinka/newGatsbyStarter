@@ -66,5 +66,15 @@
   {
     "name": "Marketing/Digital",
     "link": "/solutions/marketing-digital/"
+  },
+  {
+    "category": " "
+  },
+  {
+    "promo": {
+      "image": "fl_strip_profile,q_auto,w_auto,f_auto,c_scale/w_200/document_thumbnails/PX_Page_Defender_Datasheet_oh7aoh.jpg",
+      "action": "download",
+      "prose": "White Paper on the New Generation of Invisible Bot Attacks (PDF)"
+    }
   }
 ]

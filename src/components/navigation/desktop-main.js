@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from "react";
 import styled from "@emotion/styled";
 import useGetMainNavLinks from "../../hooks/useGetMainNavLinks";
+import useSiteMetadata from "../../hooks/useSiteMetadata";
 import processLists from "./process-lists";
 import PaintMenuPane from "./render-menu-pane";
 
@@ -49,11 +50,13 @@ const MenuCTA = styled.button`
  * DesktopMain
  * Component to render the main menu
  */
-const DesktopMain = () => {
+const DesktopMain = props => {
+  const defaultSiteMetadata = useSiteMetadata();
   const [menuState, setMenuState] = useState({
     solutionsMenuIsActive: false,
     productsMenuIsActive: false,
     resourcesMenuIsActive: false,
+    getStartedMenuIsActive: false,
     solutionsMenuHover: false,
     productsMenuHover: false,
     resourcesMenuHover: false,
@@ -63,6 +66,7 @@ const DesktopMain = () => {
     solutionsMenuIsActive: false,
     productsMenuIsActive: false,
     resourcesMenuIsActive: false,
+    getStartedMenuIsActive: false,
   };
 
   const resetHover = {
@@ -119,7 +123,11 @@ const DesktopMain = () => {
     let target = e.target.innerHTML.toLowerCase();
     const discardIndex = target.indexOf("<div");
     // use only the label, mega menu html has been removed
-    target = target.substring(0, discardIndex);
+    if (discardIndex !== -1) {
+      target = target.substring(0, discardIndex);
+    } else {
+      target = target.replace(/ /g, "_");
+    }
     switch (target) {
       case "solutions":
         if (menuState.solutionsMenuIsActive) {
@@ -160,6 +168,20 @@ const DesktopMain = () => {
             ...menuState,
             ...resetActive,
             resourcesMenuIsActive: true,
+          });
+        }
+        break;
+      case "get_started":
+        if (menuState.getStartedMenuIsActive) {
+          setMenuState({
+            ...menuState,
+            ...resetAll,
+          });
+        } else {
+          setMenuState({
+            ...menuState,
+            ...resetActive,
+            getStartedMenuIsActive: true,
           });
         }
         break;
@@ -269,6 +291,12 @@ const DesktopMain = () => {
                     menuState.resourcesMenuIsActive ||
                     menuState.resourcesMenuHover
                   }
+                />
+              )}
+              {mainMenuItem.name === "Get Started" && (
+                <PaintMenuPane
+                  megaMenu={getStartedMegaMenu}
+                  isVisible={menuState.getStartedMenuIsActive}
                 />
               )}
             </li>
