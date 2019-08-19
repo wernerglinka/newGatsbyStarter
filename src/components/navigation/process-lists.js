@@ -9,14 +9,23 @@ import uuid from "uuid/v4";
 function renderList(list) {
   return (
     <ul>
-      {list.map(listItem => (
-        <li key={uuid()} className={listItem.category ? "categoryTitle" : null}>
-          {listItem.category && listItem.category}
-          {!listItem.category && (
-            <Link to={listItem.link}>{listItem.name}</Link>
-          )}
-        </li>
-      ))}
+      {list.map(listItem => {
+        return (
+          <li
+            key={uuid()}
+            className={
+              (listItem.category ? "categoryTitle" : null) ||
+              (listItem.subCategory ? "subCategoryTitle" : null)
+            }
+          >
+            {listItem.category && listItem.category}
+            {!listItem.category && listItem.subCategory}
+            {!listItem.category && !listItem.subCategory && (
+              <Link to={listItem.link}>{listItem.name}</Link>
+            )}
+          </li>
+        );
+      })}
     </ul>
   );
 }

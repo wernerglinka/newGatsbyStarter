@@ -18,13 +18,16 @@ const MainMenu = styled.ul`
   list-style: none;
 
   > li {
-    position: relative;
     height: 100%;
     padding: 40px 0 0;
     margin: 0 30px;
 
     &:hover {
       cursor: pointer;
+    }
+
+    &:last-child {
+      margin-left: auto;
     }
 
     a {
@@ -35,6 +38,11 @@ const MainMenu = styled.ul`
       }
     }
   }
+`;
+
+const MenuCTA = styled.button`
+  border: 1px solid #333;
+  padding: 5px 20px;
 `;
 
 /**
@@ -166,11 +174,6 @@ const DesktopMain = () => {
    * Function to open maimain menu mega menus
    */
   function handleMouseLeave(e) {
-    let target = e.target.innerHTML.toLowerCase();
-    const discardIndex = target.indexOf("<div");
-    // use only the label, mega menu html has been removed
-    target = target.substring(0, discardIndex);
-    console.log(`leaving: ${target}`);
     setMenuState({
       ...menuState,
       solutionsMenuHover: false,

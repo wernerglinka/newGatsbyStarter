@@ -1,0 +1,55 @@
+[
+  {
+    "label": "Get Started",
+    "class": "btn"
+  },
+  {
+    "category": "Learn "
+  },
+  {
+    "name": "Technical Product Details",
+    "link": "/"
+  },
+  {
+    "name": "Technology Platform Overview",
+    "link": "/"
+  },
+  {
+    "name": "Purchase Options",
+    "link": "/"
+  },
+  {
+    "name": "All Resources",
+    "link": "/resources/all-resources/"
+  },
+  {
+    "category": "Try "
+  },
+  {
+    "name": "Watch a Recorded Demo",
+    "link": "/"
+  },
+  {
+    "name": "Request a Demo",
+    "link": "/"
+  },
+  {
+    "category": "Connect "
+  },
+  {
+    "name": "Speak to a Security Expert",
+    "link": "/"
+  },
+  {
+    "name": "Get a Threat Assessment",
+    "link": "/"
+  },
+  {
+    "name": "Become a Partner",
+    "link": "/"
+  },
+  {
+    "name": "Call Us at 1-833-STOP-BOT",
+    "link": "/"
+  }
+]

@@ -119,6 +119,8 @@ The **CloudinaryImage** component is used to request and render images from Clou
 
 Images will be listed in frontmatter by their names only, e.g. _authors/barack-obama_yvcczg.jpg_ . This is the Cloudinary File name. All other parts of the url will be composed with the **CloudinaryImage** component.
 
+Example of url: "https://res.cloudinary.com/glinkaco/image/upload/fl_strip_profile,q_auto,w_auto,f_auto,c_scale/w_800/Industrial/image8_uifn1f.jpg"
+
 ## Add Draft Pages
 
 Add a draft value to the frontmatter of a markdown page. Add a filter in gatsby-node.js
