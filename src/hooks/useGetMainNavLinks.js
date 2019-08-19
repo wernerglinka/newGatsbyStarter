@@ -38,6 +38,15 @@ const useGetMainNavLinks = () => {
           }
         }
       }
+      allGetStartedJson {
+        edges {
+          node {
+            category
+            label
+            class
+          }
+        }
+      }
     }
   `);
   return data;

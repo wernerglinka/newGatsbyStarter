@@ -68,7 +68,10 @@ const DesktopMain = () => {
   const temp = Object.values(allLinks);
   temp.forEach((item, i) => {
     // extract the main menu items
-    topLevelMenu.push(temp[i].edges[0].node.label);
+    topLevelMenu.push({
+      name: temp[i].edges[0].node.label,
+      class: temp[i].edges[0].node.class,
+    });
   });
 
   // build the megamenu content for menu items
@@ -196,7 +199,7 @@ const DesktopMain = () => {
         {topLevelMenu.map(mainMenuItem => {
           return (
             <li
-              key={mainMenuItem}
+              key={mainMenuItem.name}
               onClick={handleMenuSelection}
               onKeyDown={handleMenuSelection}
               onMouseEnter={handleMouseEnter}
@@ -204,8 +207,9 @@ const DesktopMain = () => {
               role="menuitem"
               tabIndex="0"
             >
-              {mainMenuItem}
-              {mainMenuItem === "Solutions" && (
+              {mainMenuItem.class && <MenuCTA>{mainMenuItem.name}</MenuCTA>}
+              {!mainMenuItem.class && mainMenuItem.name}
+              {mainMenuItem.name === "Solutions" && (
                 <PaintMenuPane
                   megaMenu={solutionsMegaMenu}
                   isVisible={
@@ -214,7 +218,7 @@ const DesktopMain = () => {
                   }
                 />
               )}
-              {mainMenuItem === "Products" && (
+              {mainMenuItem.name === "Products" && (
                 <PaintMenuPane
                   megaMenu={productsMegaMenu}
                   isVisible={
@@ -223,7 +227,7 @@ const DesktopMain = () => {
                   }
                 />
               )}
-              {mainMenuItem === "Resources" && (
+              {mainMenuItem.name === "Resources" && (
                 <PaintMenuPane
                   megaMenu={resourcesMegaMenu}
                   isVisible={
