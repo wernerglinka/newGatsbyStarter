@@ -234,6 +234,7 @@ const DesktopMain = () => {
             <li
               key={mainMenuItem.name}
               onClick={handleMenuSelection}
+              onTouchStart={handleMenuSelection}
               onKeyDown={handleMenuSelection}
               onMouseEnter={handleMouseEnter}
               onMouseLeave={handleMouseLeave}
