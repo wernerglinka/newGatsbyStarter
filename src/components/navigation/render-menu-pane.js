@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import styled from "@emotion/styled";
 import uuid from "uuid/v4";
 import { motion } from "framer-motion";
+import Container from "../styles/container";
 
 const MegaMenuPane = styled(motion.div)`
   position: absolute;
@@ -10,18 +11,22 @@ const MegaMenuPane = styled(motion.div)`
   left: 0;
   width: 100%;
   z-index: 1000;
-  display: flex;
-  justify-content: flex-start;
+
   background-color: #f8f8f8;
   padding: 50px;
   display: none;
 
   > div {
-    flex: 0 0 20%;
+    display: flex;
+    justify-content: flex-start;
 
-    &:last-child {
-      flex: 0 0 30%;
-      margin-left: auto;
+    > div {
+      flex: 0 0 20%;
+
+      &:last-child {
+        flex: 0 0 30%;
+        margin-left: auto;
+      }
     }
   }
 
@@ -35,10 +40,14 @@ const MegaMenuPane = styled(motion.div)`
   .promoImage {
     padding: 0 30px;
   }
+  .promoProse {
+    h3 {
+      margin-top: 0;
+    }
+  }
 
   ul {
     list-style: none;
-    padding-left: 50px;
   }
 
   li {
@@ -73,9 +82,11 @@ const PaintMenuPane = ({ megaMenu, isVisible }) => {
       animate={isVisible ? "visible" : "hidden"}
       variants={variants}
     >
-      {megaMenu.map(list => (
-        <div key={uuid()}>{list}</div>
-      ))}
+      <Container>
+        {megaMenu.map(list => (
+          <div key={uuid()}>{list}</div>
+        ))}
+      </Container>
     </MegaMenuPane>
   );
 };

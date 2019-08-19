@@ -6,6 +6,7 @@ import useGetMainNavLinks from "../../hooks/useGetMainNavLinks";
 import useSiteMetadata from "../../hooks/useSiteMetadata";
 import processLists from "./process-lists";
 import PaintMenuPane from "./render-menu-pane";
+import getChildren from "../../utilities/getChildren";
 
 const Navigation = styled.nav`
   flex: 1 1 50%;
@@ -23,14 +24,15 @@ const MainMenu = styled.ul`
     padding: 40px 0 0;
     margin: 0 30px;
 
+    &.active {
+      border-bottom: 10px solid #999;
+    }
     &:hover {
       cursor: pointer;
     }
-
     &:last-child {
       margin-left: auto;
     }
-
     a {
       text-decoration: none;
 
@@ -101,6 +103,15 @@ const DesktopMain = props => {
   const resourcesMegaMenu = processLists(allLinks.allResourcesJson.edges);
   const getStartedMegaMenu = processLists(allLinks.allGetStartedJson.edges);
 
+  function resetActiveClass() {
+    let children = [];
+    // reset active class from all LIs
+    children = getChildren(document.getElementById("mainMenu"));
+    children.forEach(thisOne => {
+      thisOne.classList.remove("active");
+    });
+  }
+
   /**
    * handleOutsideClick()
    * Function to close main menu when click outside of the nav
@@ -108,6 +119,7 @@ const DesktopMain = props => {
   function handleOutsideClick(e) {
     // only close nav megamenu when clicked outside the nav
     if (e.target.closest("nav")) return;
+    resetActiveClass();
     setMenuState({
       ...menuState,
       ...resetActive,
@@ -131,11 +143,17 @@ const DesktopMain = props => {
     switch (target) {
       case "solutions":
         if (menuState.solutionsMenuIsActive) {
+          // remove active class from LI
+          e.target.classList.remove("active");
           setMenuState({
             ...menuState,
             ...resetAll,
           });
         } else {
+          // reset active class from all LIs
+          resetActiveClass();
+          // add active class to LI
+          e.target.classList.add("active");
           setMenuState({
             ...menuState,
             ...resetActive,
@@ -145,11 +163,17 @@ const DesktopMain = props => {
         break;
       case "products":
         if (menuState.productsMenuIsActive) {
+          // remove active class from LI
+          e.target.classList.remove("active");
           setMenuState({
             ...menuState,
             ...resetAll,
           });
         } else {
+          // reset active class from all LIs
+          resetActiveClass();
+          // add active class to LI
+          e.target.classList.add("active");
           setMenuState({
             ...menuState,
             ...resetActive,
@@ -159,11 +183,17 @@ const DesktopMain = props => {
         break;
       case "resources":
         if (menuState.resourcesMenuIsActive) {
+          // remove active class from LI
+          e.target.classList.remove("active");
           setMenuState({
             ...menuState,
             ...resetAll,
           });
         } else {
+          // reset active class from all LIs
+          resetActiveClass();
+          // add active class to LI
+          e.target.classList.add("active");
           setMenuState({
             ...menuState,
             ...resetActive,
@@ -205,6 +235,10 @@ const DesktopMain = props => {
 
     switch (target) {
       case "solutions":
+        // reset active class from all LIs
+        resetActiveClass();
+        // add active class to LI
+        e.target.classList.add("active");
         setMenuState({
           ...menuState,
           ...resetActive,
@@ -212,6 +246,10 @@ const DesktopMain = props => {
         });
         break;
       case "products":
+        // reset active class from all LIs
+        resetActiveClass();
+        // add active class to LI
+        e.target.classList.add("active");
         setMenuState({
           ...menuState,
           ...resetActive,
@@ -219,6 +257,10 @@ const DesktopMain = props => {
         });
         break;
       case "resources":
+        // reset active class from all LIs
+        resetActiveClass();
+        // add active class to LI
+        e.target.classList.add("active");
         setMenuState({
           ...menuState,
           ...resetActive,
@@ -234,6 +276,13 @@ const DesktopMain = props => {
    * Function to open maimain menu mega menus
    */
   function handleMouseLeave(e) {
+    if (
+      !menuState.solutionsMenuIsActive &&
+      !menuState.productsMenuIsActive &&
+      !menuState.resourcesMenuIsActive
+    ) {
+      resetActiveClass();
+    }
     setMenuState({
       ...menuState,
       ...resetHover,
@@ -250,7 +299,7 @@ const DesktopMain = props => {
 
   return (
     <Navigation>
-      <MainMenu>
+      <MainMenu id="mainMenu">
         {topLevelMenu.map(mainMenuItem => {
           return (
             <li
