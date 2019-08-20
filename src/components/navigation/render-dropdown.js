@@ -11,6 +11,7 @@ const Dropdown = styled(motion.ul)`
   list-style: none;
   background: #ccc;
   padding: 10px 0;
+  display: none;
 
   li {
     white-space: nowrap;
