@@ -18,11 +18,17 @@ const PageHeader = styled.header`
   margin-bottom: 50px;
 `;
 
+const HeaderTop = styled.div`
+  height: ${props => props.theme.headerTopMenuHeight};
+  max-width: ${props => props.theme.maxContentWidth};
+  margin: 0 auto;
+`;
+
 const HeaderInner = styled.div`
   display: flex;
   justify-content: space-between;
   max-width: ${props => props.theme.maxContentWidth};
-  height: 100%;
+  height: ${props => props.theme.headerNavHeight};
   margin: 0 auto;
   align-items: center;
 
@@ -33,7 +39,9 @@ const HeaderInner = styled.div`
 
 const Header = () => (
   <PageHeader>
-    <DesktopTopMenu />
+    <HeaderTop>
+      <DesktopTopMenu />
+    </HeaderTop>
     <HeaderInner>
       <img className="mainLogo" src={logo} alt="Logo" />
       <DesktopMainMenu />

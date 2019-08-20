@@ -29,7 +29,6 @@ const MegaMenuPane = styled(motion.div)`
       }
     }
   }
-
   .promoContainer {
     display: flex;
   }
@@ -45,11 +44,9 @@ const MegaMenuPane = styled(motion.div)`
       margin-top: 0;
     }
   }
-
   ul {
     list-style: none;
   }
-
   li {
     padding: 5px 0;
 
@@ -64,12 +61,12 @@ const MegaMenuPane = styled(motion.div)`
 `;
 
 /**
- * PaintMenuPane()
+ * RenderMenuPane()
  * Component to render a mega menu. Menu panes are animated into/from view
  * with framer-motion and stuled with emotion
  *
  */
-const PaintMenuPane = ({ megaMenu, isVisible }) => {
+const RenderMenuPane = ({ megaMenu, isVisible }) => {
   const variants = {
     visible: {
       opacity: 1,
@@ -97,13 +94,13 @@ const PaintMenuPane = ({ megaMenu, isVisible }) => {
   );
 };
 
-PaintMenuPane.propTypes = {
+RenderMenuPane.propTypes = {
   megaMenu: PropTypes.array.isRequired,
   isVisible: PropTypes.bool,
 };
 
-PaintMenuPane.defaultProps = {
+RenderMenuPane.defaultProps = {
   isVisible: false,
 };
 
-export default PaintMenuPane;
+export default RenderMenuPane;

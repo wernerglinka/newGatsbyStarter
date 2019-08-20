@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react";
 import styled from "@emotion/styled";
 import useGetMainNavLinks from "../../hooks/useGetMainMenuLinks";
 import processLists from "./process-mega-menu-lists";
-import PaintMenuPane from "./render-mega-menu";
+import RenderMegaMenu from "./render-mega-menu";
 import getChildren from "../../utilities/getChildren";
 
 const Navigation = styled.nav`
@@ -121,6 +121,7 @@ const DesktopMain = () => {
    * Function to close main menu when click outside of the nav
    */
   function handleOutsideClick(e) {
+    e.target.closest("nav");
     // only close nav megamenu when clicked outside the nav
     if (e.target.closest("nav")) return;
     resetActiveClass();
@@ -313,7 +314,7 @@ const DesktopMain = () => {
               {!mainMenuItem.class && mainMenuItem.name}
 
               {mainMenuItem.name === "Solutions" && (
-                <PaintMenuPane
+                <RenderMegaMenu
                   megaMenu={solutionsMegaMenu}
                   isVisible={
                     menuState.solutionsMenuIsActive ||
@@ -322,7 +323,7 @@ const DesktopMain = () => {
                 />
               )}
               {mainMenuItem.name === "Products" && (
-                <PaintMenuPane
+                <RenderMegaMenu
                   megaMenu={productsMegaMenu}
                   isVisible={
                     menuState.productsMenuIsActive ||
@@ -331,7 +332,7 @@ const DesktopMain = () => {
                 />
               )}
               {mainMenuItem.name === "Resources" && (
-                <PaintMenuPane
+                <RenderMegaMenu
                   megaMenu={resourcesMegaMenu}
                   isVisible={
                     menuState.resourcesMenuIsActive ||
@@ -340,7 +341,7 @@ const DesktopMain = () => {
                 />
               )}
               {mainMenuItem.name === "Get Started" && (
-                <PaintMenuPane
+                <RenderMegaMenu
                   megaMenu={getStartedMegaMenu}
                   isVisible={menuState.getStartedMenuIsActive}
                 />
