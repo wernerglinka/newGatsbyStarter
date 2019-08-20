@@ -1,7 +1,7 @@
 import { useStaticQuery, graphql } from "gatsby";
 
 /**
- * Query to get all main nav data
+ * Query to get all main menu data
  * The main nav has various main sections and a promo section called Get Started
  */
 const useGetMainNavLinks = () => {

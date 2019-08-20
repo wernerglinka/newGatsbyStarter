@@ -2,10 +2,9 @@
 
 import React, { useState, useEffect } from "react";
 import styled from "@emotion/styled";
-import useGetMainNavLinks from "../../hooks/useGetMainNavLinks";
-import useSiteMetadata from "../../hooks/useSiteMetadata";
-import processLists from "./process-lists";
-import PaintMenuPane from "./render-menu-pane";
+import useGetMainNavLinks from "../../hooks/useGetMainMenuLinks";
+import processLists from "./process-mega-menu-lists";
+import PaintMenuPane from "./render-mega-menu";
 import getChildren from "../../utilities/getChildren";
 
 const Navigation = styled.nav`
@@ -52,8 +51,7 @@ const MenuCTA = styled.button`
  * DesktopMain
  * Component to render the main menu
  */
-const DesktopMain = props => {
-  const defaultSiteMetadata = useSiteMetadata();
+const DesktopMain = () => {
   const [menuState, setMenuState] = useState({
     solutionsMenuIsActive: false,
     productsMenuIsActive: false,
@@ -64,6 +62,8 @@ const DesktopMain = props => {
     resourcesMenuHover: false,
   });
 
+  // convenience packaging for all status flags so we can use spread syntax below
+  // where approriate... less typing
   const resetActive = {
     solutionsMenuIsActive: false,
     productsMenuIsActive: false,
@@ -85,7 +85,7 @@ const DesktopMain = props => {
   // get all nav links from the data layer
   const allLinks = useGetMainNavLinks();
 
-  // create the top level menu
+  // create the top level menu items
   const topLevelMenu = [];
   // turn object into an array
   const temp = Object.values(allLinks);
@@ -103,6 +103,10 @@ const DesktopMain = props => {
   const resourcesMegaMenu = processLists(allLinks.allResourcesJson.edges);
   const getStartedMegaMenu = processLists(allLinks.allGetStartedJson.edges);
 
+  /**
+   * resetActiveClass()
+   * Helper function to remove the class "active" from all top main menu items
+   */
   function resetActiveClass() {
     let children = [];
     // reset active class from all LIs
@@ -133,25 +137,26 @@ const DesktopMain = props => {
   function handleMenuSelection(e) {
     // the target has the label and the html for the mega menu in its innerhtml
     let target = e.target.innerHTML.toLowerCase();
-    const discardIndex = target.indexOf("<div");
+
     // use only the label, mega menu html has been removed
+    const discardIndex = target.indexOf("<div");
     if (discardIndex !== -1) {
       target = target.substring(0, discardIndex);
     } else {
       target = target.replace(/ /g, "_");
     }
+
+    // reset all li active class then set the class for the selected li below
+    resetActiveClass();
+
     switch (target) {
       case "solutions":
         if (menuState.solutionsMenuIsActive) {
-          // remove active class from LI
-          e.target.classList.remove("active");
           setMenuState({
             ...menuState,
             ...resetAll,
           });
         } else {
-          // reset active class from all LIs
-          resetActiveClass();
           // add active class to LI
           e.target.classList.add("active");
           setMenuState({
@@ -163,15 +168,11 @@ const DesktopMain = props => {
         break;
       case "products":
         if (menuState.productsMenuIsActive) {
-          // remove active class from LI
-          e.target.classList.remove("active");
           setMenuState({
             ...menuState,
             ...resetAll,
           });
         } else {
-          // reset active class from all LIs
-          resetActiveClass();
           // add active class to LI
           e.target.classList.add("active");
           setMenuState({
@@ -183,15 +184,11 @@ const DesktopMain = props => {
         break;
       case "resources":
         if (menuState.resourcesMenuIsActive) {
-          // remove active class from LI
-          e.target.classList.remove("active");
           setMenuState({
             ...menuState,
             ...resetAll,
           });
         } else {
-          // reset active class from all LIs
-          resetActiveClass();
           // add active class to LI
           e.target.classList.add("active");
           setMenuState({
@@ -229,13 +226,13 @@ const DesktopMain = props => {
   function handleMouseEnter(e) {
     // the target has the label and the html for the mega menu in its innerhtml
     let target = e.target.innerHTML.toLowerCase();
-    const discardIndex = target.indexOf("<div");
+
     // use only the label, mega menu html has been removed
+    const discardIndex = target.indexOf("<div");
     target = target.substring(0, discardIndex);
 
     switch (target) {
       case "solutions":
-        // reset active class from all LIs
         resetActiveClass();
         // add active class to LI
         e.target.classList.add("active");
@@ -246,7 +243,6 @@ const DesktopMain = props => {
         });
         break;
       case "products":
-        // reset active class from all LIs
         resetActiveClass();
         // add active class to LI
         e.target.classList.add("active");
@@ -257,7 +253,6 @@ const DesktopMain = props => {
         });
         break;
       case "resources":
-        // reset active class from all LIs
         resetActiveClass();
         // add active class to LI
         e.target.classList.add("active");
@@ -289,7 +284,9 @@ const DesktopMain = props => {
     });
   }
 
-  // listen for click outside of the main nav items
+  /**
+   * listen for click outside of the main nav items
+   */
   useEffect(() => {
     document.addEventListener("click", handleOutsideClick);
     return () => {

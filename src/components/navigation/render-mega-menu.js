@@ -63,6 +63,12 @@ const MegaMenuPane = styled(motion.div)`
   }
 `;
 
+/**
+ * PaintMenuPane()
+ * Component to render a mega menu. Menu panes are animated into/from view
+ * with framer-motion and stuled with emotion
+ *
+ */
 const PaintMenuPane = ({ megaMenu, isVisible }) => {
   const variants = {
     visible: {

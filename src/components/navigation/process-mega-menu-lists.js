@@ -5,7 +5,7 @@ import useSiteMetadata from "../../hooks/useSiteMetadata";
 
 /**
  * renderList()
- * Function to render a jsx UL
+ * Renders either a link list or a promo section to be displayed in a mega menu
  */
 function renderList(list) {
   // get the cloudinary base url from the site meta data
@@ -61,13 +61,15 @@ function renderList(list) {
 
 /**
  * getLists()
- * Function to process all menu data into categorized lists.
- * These lists will be used in the nav mega menus
+ * Function to package individual menu lists and a promo section into a mega menu data array.
  */
 function getLists(allLists) {
   const processedLists = [];
   let lists = [];
 
+  // - Ignore the label
+  // - Separate into individual lists when we see a category member
+  // - Return aa Array with all content for a single mega menu pane
   allLists.forEach(({ node }, i, array) => {
     if (!node.label) {
       if (node.category && i > 1) {

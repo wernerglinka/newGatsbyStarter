@@ -1,0 +1,25 @@
+[
+  {
+    "label": "About"
+  },
+  {
+    "name": "Who We Are",
+    "link": "/about/who-we-are/"
+  },
+  {
+    "name": "Careers",
+    "link": "/about/careers/"
+  },
+  {
+    "name": "In the News",
+    "link": "/about/news/1/"
+  },
+  {
+    "name": "Partners",
+    "link": "/about/partners/"
+  },
+  {
+    "name": "Events",
+    "link": "/about-events/"
+  }
+]

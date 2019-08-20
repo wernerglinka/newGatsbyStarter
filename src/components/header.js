@@ -5,7 +5,8 @@ import React from "react";
 import styled from "@emotion/styled";
 
 import logo from "../images/logo.png";
-import MainNav from "./navigation/main-nav";
+import DesktopMainMenu from "./navigation/main-menu-desktop";
+import DesktopTopMenu from "./navigation/top-menu-desktop";
 
 const PageHeader = styled.header`
   position: fixed;
@@ -32,9 +33,10 @@ const HeaderInner = styled.div`
 
 const Header = () => (
   <PageHeader>
+    <DesktopTopMenu />
     <HeaderInner>
       <img className="mainLogo" src={logo} alt="Logo" />
-      <MainNav />
+      <DesktopMainMenu />
     </HeaderInner>
   </PageHeader>
 );
