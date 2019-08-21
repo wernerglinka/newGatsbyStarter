@@ -9,13 +9,10 @@
     "@emotion/core": "^10.0.10",
     "@emotion/styled": "^10.0.10",
     "emotion-theming": "^10.0.10",
-    "framer-motion": "^1.2.4",
     "gatsby": "^2.13.39",
     "gatsby-plugin-draft": "0.0.4",
     "gatsby-plugin-emotion": "^4.1.2",
     "gatsby-plugin-layout": "^1.1.2",
-    "gatsby-plugin-modal-routing": "^1.0.2",
-    "gatsby-plugin-portal": "^1.0.7",
     "gatsby-plugin-react-helmet": "^3.1.3",
     "gatsby-plugin-sass": "^2.1.4",
     "gatsby-plugin-sharp": "^2.2.9",
@@ -36,6 +33,8 @@
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.1",
     "react-icons": "^3.7.0",
+    "react-spring": "^8.0.27",
+    "react-transition-group": "^4.2.2",
     "uuid": "^3.3.2"
   },
   "devDependencies": {

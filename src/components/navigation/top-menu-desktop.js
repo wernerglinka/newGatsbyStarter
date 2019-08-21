@@ -1,10 +1,11 @@
 /* global document */
-import React, { Fragment, useState, useEffect } from "react";
+import React, { Fragment, useState, useEffect, useContext } from "react";
 import { Link } from "gatsby";
 import styled from "@emotion/styled";
 import uuid from "uuid/v4";
 import useGetTopMenuLinks from "../../hooks/useGetTopMenuLinks";
 import RenderDropdown from "./render-dropdown";
+import { MenuContext } from "../menu-context";
 
 const TopMenu = styled.ul`
   height: 100%;
@@ -28,6 +29,9 @@ const TopMenu = styled.ul`
  * Component to render the top menu
  */
 const DesktopTop = () => {
+  // menu state is stored in MenuContext see src/components/menu-context.js
+  const sharedMenuState = useContext(MenuContext);
+
   // use state object to is easy to extend
   const [menuState, setMenuState] = useState({
     aboutMenuIsActive: false,

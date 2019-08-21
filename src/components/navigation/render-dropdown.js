@@ -3,15 +3,18 @@ import { Link } from "gatsby";
 import PropTypes from "prop-types";
 import styled from "@emotion/styled";
 import uuid from "uuid/v4";
-import { motion } from "framer-motion";
 
-const Dropdown = styled(motion.ul)`
+const Dropdown = styled.ul`
   position: absolute;
   z-index: 1000;
   list-style: none;
   background: #ccc;
   padding: 10px 0;
   display: none;
+
+  &.open {
+    display: block;
+  }
 
   li {
     white-space: nowrap;
@@ -30,25 +33,8 @@ const Dropdown = styled(motion.ul)`
  *
  */
 const RenderDropdown = ({ menu, isVisible }) => {
-  const variants = {
-    visible: {
-      opacity: 1,
-      display: "block",
-    },
-    hidden: {
-      opacity: 0,
-      transitionEnd: {
-        display: "none",
-      },
-    },
-  };
-
   return (
-    <Dropdown
-      key={uuid()}
-      animate={isVisible ? "visible" : "hidden"}
-      variants={variants}
-    >
+    <Dropdown className={isVisible ? "open" : null}>
       {menu.map(
         ({ node }) =>
           !node.label && (

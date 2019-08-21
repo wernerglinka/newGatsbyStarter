@@ -63,8 +63,7 @@ This is done to:
 
 ## Add Ppage Transitions
 
-Reference: `https://www.framer.com/motion/`
-Reference: `https://github.com/ryanwiemer/gatsby-using-page-transitions`
+Reference: `https://scotch.io/tutorials/animated-page-transitions-in-gatsby-websites`
 
 ## Add Styled Components with Emotion
 

@@ -1,11 +1,12 @@
 /* global document */
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import styled from "@emotion/styled";
 import useGetMainNavLinks from "../../hooks/useGetMainMenuLinks";
 import processLists from "./process-mega-menu-lists";
 import RenderMegaMenu from "./render-mega-menu";
 import getChildren from "../../utilities/getChildren";
+import { MenuContext } from "../menu-context";
 
 const Navigation = styled.nav`
   flex: 1 1 50%;
@@ -52,6 +53,9 @@ const MenuCTA = styled.button`
  * Component to render the main menu
  */
 const DesktopMain = () => {
+  // menu state is stored in MenuContext see src/components/menu-context.js
+  const sharedMenuState = useContext(MenuContext);
+
   const [menuState, setMenuState] = useState({
     solutionsMenuIsActive: false,
     productsMenuIsActive: false,

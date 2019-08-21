@@ -2,19 +2,21 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled from "@emotion/styled";
 import uuid from "uuid/v4";
-import { motion } from "framer-motion";
 import Container from "../styles/container";
 
-const MegaMenuPane = styled(motion.div)`
+const MegaMenuPane = styled.div`
   position: absolute;
   top: 99%;
   left: 0;
   width: 100%;
   z-index: 1000;
-
   background-color: #f8f8f8;
   padding: 50px;
   display: none;
+
+  &.open {
+    display: flex;
+  }
 
   > div {
     display: flex;
@@ -67,24 +69,8 @@ const MegaMenuPane = styled(motion.div)`
  *
  */
 const RenderMenuPane = ({ megaMenu, isVisible }) => {
-  const variants = {
-    visible: {
-      opacity: 1,
-      display: "flex",
-    },
-    hidden: {
-      opacity: 0,
-      transitionEnd: {
-        display: "none",
-      },
-    },
-  };
   return (
-    <MegaMenuPane
-      key="child"
-      animate={isVisible ? "visible" : "hidden"}
-      variants={variants}
-    >
+    <MegaMenuPane className={isVisible ? "open" : null}>
       <Container>
         {megaMenu.map(list => (
           <div key={uuid()}>{list}</div>
