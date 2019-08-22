@@ -19,12 +19,16 @@ const PageHeader = styled.header`
 `;
 
 const HeaderTop = styled.div`
+  position: relative;
+  z-index: 2;
   height: ${props => props.theme.headerTopMenuHeight};
   max-width: ${props => props.theme.maxContentWidth};
   margin: 0 auto;
 `;
 
 const HeaderInner = styled.div`
+  position: relative;
+  z-index: 1;
   display: flex;
   justify-content: space-between;
   max-width: ${props => props.theme.maxContentWidth};

@@ -47,7 +47,7 @@ class PageTransition extends React.PureComponent {
 }
 
 PageTransition.propTypes = {
-  children: PropTypes.shape().isRequired,
+  children: PropTypes.array.isRequired,
   location: PropTypes.shape().isRequired,
 };
 

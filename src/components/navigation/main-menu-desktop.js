@@ -1,12 +1,13 @@
 /* global document */
 
-import React, { useState, useEffect, useContext } from "react";
+import React, { useState, useEffect, useContext, useRef } from "react";
 import styled from "@emotion/styled";
 import useGetMainNavLinks from "../../hooks/useGetMainMenuLinks";
 import processLists from "./process-mega-menu-lists";
 import RenderMegaMenu from "./render-mega-menu";
 import getChildren from "../../utilities/getChildren";
 import { MenuContext } from "../menu-context";
+import useMenuState from "../../hooks/useMenuState";
 
 const Navigation = styled.nav`
   flex: 1 1 50%;
@@ -54,17 +55,9 @@ const MenuCTA = styled.button`
  */
 const DesktopMain = () => {
   // menu state is stored in MenuContext see src/components/menu-context.js
-  const sharedMenuState = useContext(MenuContext);
-
-  const [menuState, setMenuState] = useState({
-    solutionsMenuIsActive: false,
-    productsMenuIsActive: false,
-    resourcesMenuIsActive: false,
-    getStartedMenuIsActive: false,
-    solutionsMenuHover: false,
-    productsMenuHover: false,
-    resourcesMenuHover: false,
-  });
+  const [menuState, setMenuState] = useContext(MenuContext);
+  const mainMenuRef = useRef();
+  const { toggleMenuState, hoverMenuState, resetMenuState } = useMenuState();
 
   // convenience packaging for all status flags so we can use spread syntax below
   // where approriate... less typing
@@ -125,14 +118,9 @@ const DesktopMain = () => {
    * Function to close main menu when click outside of the nav
    */
   function handleOutsideClick(e) {
-    e.target.closest("nav");
-    // only close nav megamenu when clicked outside the nav
-    if (e.target.closest("nav")) return;
+    if (mainMenuRef.current.contains(e.target)) return;
     resetActiveClass();
-    setMenuState({
-      ...menuState,
-      ...resetActive,
-    });
+    resetMenuState(resetAll);
   }
 
   /**
@@ -156,66 +144,19 @@ const DesktopMain = () => {
 
     switch (target) {
       case "solutions":
-        if (menuState.solutionsMenuIsActive) {
-          setMenuState({
-            ...menuState,
-            ...resetAll,
-          });
-        } else {
-          // add active class to LI
-          e.target.classList.add("active");
-          setMenuState({
-            ...menuState,
-            ...resetActive,
-            solutionsMenuIsActive: true,
-          });
-        }
+        e.target.classList.add("active");
+        toggleMenuState(resetAll, "solutions");
         break;
       case "products":
-        if (menuState.productsMenuIsActive) {
-          setMenuState({
-            ...menuState,
-            ...resetAll,
-          });
-        } else {
-          // add active class to LI
-          e.target.classList.add("active");
-          setMenuState({
-            ...menuState,
-            ...resetActive,
-            productsMenuIsActive: true,
-          });
-        }
+        e.target.classList.add("active");
+        toggleMenuState(resetAll, "products");
         break;
       case "resources":
-        if (menuState.resourcesMenuIsActive) {
-          setMenuState({
-            ...menuState,
-            ...resetAll,
-          });
-        } else {
-          // add active class to LI
-          e.target.classList.add("active");
-          setMenuState({
-            ...menuState,
-            ...resetActive,
-            resourcesMenuIsActive: true,
-          });
-        }
+        e.target.classList.add("active");
+        toggleMenuState(resetAll, "resources");
         break;
       case "get_started":
-        if (menuState.getStartedMenuIsActive) {
-          setMenuState({
-            ...menuState,
-            ...resetAll,
-          });
-        } else {
-          setMenuState({
-            ...menuState,
-            ...resetActive,
-            getStartedMenuIsActive: true,
-          });
-        }
+        toggleMenuState(resetAll, "getStarted");
         break;
       default:
     }
@@ -239,33 +180,18 @@ const DesktopMain = () => {
     switch (target) {
       case "solutions":
         resetActiveClass();
-        // add active class to LI
         e.target.classList.add("active");
-        setMenuState({
-          ...menuState,
-          ...resetActive,
-          solutionsMenuHover: true,
-        });
+        hoverMenuState(resetAll, "solutions");
         break;
       case "products":
         resetActiveClass();
-        // add active class to LI
         e.target.classList.add("active");
-        setMenuState({
-          ...menuState,
-          ...resetActive,
-          productsMenuHover: true,
-        });
+        hoverMenuState(resetAll, "products");
         break;
       case "resources":
         resetActiveClass();
-        // add active class to LI
         e.target.classList.add("active");
-        setMenuState({
-          ...menuState,
-          ...resetActive,
-          resourcesMenuHover: true,
-        });
+        hoverMenuState(resetAll, "resources");
         break;
       default:
     }
@@ -283,10 +209,7 @@ const DesktopMain = () => {
     ) {
       resetActiveClass();
     }
-    setMenuState({
-      ...menuState,
-      ...resetHover,
-    });
+    resetMenuState(resetHover);
   }
 
   /**
@@ -299,9 +222,13 @@ const DesktopMain = () => {
     };
   }, []);
 
+  useEffect(() => {
+    console.log(menuState);
+  }, [menuState]);
+
   return (
     <Navigation>
-      <MainMenu id="mainMenu">
+      <MainMenu id="mainMenu" ref={mainMenuRef}>
         {topLevelMenu.map(mainMenuItem => {
           return (
             <li

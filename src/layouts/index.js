@@ -3,7 +3,7 @@ import React from "react";
 import PropTypes from "prop-types";
 // theming
 import { ThemeProvider } from "emotion-theming";
-
+import PageTransition from "../components/transition";
 import theme from "./theme";
 // components
 import useSiteMetadata from "../hooks/useSiteMetadata";
@@ -26,9 +26,10 @@ const Layout = ({ children, location }) => {
       <ThemeProvider theme={theme}>
         <Head metaData={siteMetadata} location={location} />
         <Header />
-
-        {breadcrumbs && <Breadcrumbs pathData={breadcrumbs} />}
-        {children}
+        <PageTransition location={location}>
+          {breadcrumbs && <Breadcrumbs pathData={breadcrumbs} />}
+          {children}
+        </PageTransition>
       </ThemeProvider>
     </MenuContextProvider>
   );
