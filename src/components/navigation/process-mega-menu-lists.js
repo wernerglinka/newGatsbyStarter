@@ -36,7 +36,8 @@ function renderList(list) {
             key={uuid()}
             className={
               (listItem.category ? "categoryTitle" : null) ||
-              (listItem.subCategory ? "subCategoryTitle" : null)
+              (listItem.subCategory ? "subCategoryTitle" : null) ||
+              (listItem.empty ? "empty" : null)
             }
           >
             {listItem.category && listItem.category}
@@ -44,7 +45,8 @@ function renderList(list) {
             {!listItem.category &&
               !listItem.subCategory &&
               !listItem.external &&
-              !listItem.promo && (
+              !listItem.promo &&
+              !listItem.empty && (
                 <Link to={listItem.link}>{listItem.name}</Link>
               )}
             {!listItem.category && !listItem.subCategory && listItem.external && (

@@ -1,4 +1,5 @@
-import React from "react";
+/* global document */
+import React, { useEffect } from "react";
 import PropTypes from "prop-types";
 import { Link, graphql } from "gatsby";
 import paragraphs from "lines-to-paragraphs";
@@ -28,6 +29,12 @@ const HomePageTemplate = ({ data }) => {
   // get the modal content data for modalID: "modal2"
   const videoID = data.videoModal.edges[0].node.videoID;
 
+  useEffect(() => {
+    document.addEventListener("click", function() {
+      console.log("Clicked alright");
+    });
+  });
+
   return (
     <Container>
       <Headline>{fields.title}</Headline>
@@ -35,6 +42,9 @@ const HomePageTemplate = ({ data }) => {
       <p>{fields.subheading}</p>
       <p>
         <Link to="/page-2/">Go to page 2</Link>
+      </p>
+      <p>
+        <Link to="/solutions/">Go to Solutions</Link>
       </p>
 
       <div>

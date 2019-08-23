@@ -59,8 +59,9 @@ const DesktopTop = () => {
    * Function to close main menu when click outside of the nav
    */
   function handleOutsideClick(e) {
-    if (topMenuRef.current.contains(e.target)) return;
-    resetMenuState(resetAll);
+    if (!topMenuRef.current.contains(e.target)) {
+      // resetMenuState(resetAll);
+    }
   }
 
   /**
@@ -82,7 +83,7 @@ const DesktopTop = () => {
   });
 
   return (
-    <TopMenu id="topMenu">
+    <TopMenu id="topMenu" ref={topMenuRef}>
       {processedTopMenu.map(item => (
         <Fragment key={uuid()}>
           {item[0].node.link && (
@@ -105,7 +106,6 @@ const DesktopTop = () => {
               onMouseLeave={() => resetMenuState(resetHover)}
               role="menuitem"
               tabIndex="0"
-              ref={topMenuRef}
             >
               {item[0].node.label}
 

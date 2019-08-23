@@ -10,6 +10,7 @@ import DesktopTopMenu from "./navigation/top-menu-desktop";
 
 const PageHeader = styled.header`
   position: fixed;
+  z-index: 1000;
   top: 0;
   left: 0;
   width: 100%;
@@ -47,7 +48,9 @@ const Header = () => (
       <DesktopTopMenu />
     </HeaderTop>
     <HeaderInner>
-      <img className="mainLogo" src={logo} alt="Logo" />
+      <a href="/">
+        <img className="mainLogo" src={logo} alt="Logo" />
+      </a>
       <DesktopMainMenu />
     </HeaderInner>
   </PageHeader>

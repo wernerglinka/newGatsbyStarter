@@ -59,6 +59,9 @@ const MegaMenuPane = styled.div`
       font-weight: bold;
       padding-top: 15px;
     }
+    &.empty {
+      height: 20px;
+    }
   }
 `;
 

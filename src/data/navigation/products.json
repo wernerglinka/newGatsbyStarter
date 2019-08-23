@@ -7,15 +7,15 @@
   },
   {
     "name": "Overview",
-    "link": "/products/bot-defender/overview/"
+    "link": "/products/bot-defender/"
   },
   {
     "name": "Resources",
     "link": "/products/bot-defender/resources/"
   },
   {
-    "name": "Technical Details",
-    "link": "/products/bot-defender/technical-details/"
+    "name": "Technical Specifications",
+    "link": "/products/bot-defender/technical-specifications/"
   },
   {
     "name": "Case Studies",
@@ -34,15 +34,15 @@
   },
   {
     "name": "Overview",
-    "link": "/products/code-defender/overview/"
+    "link": "/products/code-defender/"
   },
   {
     "name": "Resources",
     "link": "/products/code-defender/resources/"
   },
   {
-    "name": "Technical Details",
-    "link": "/products/code-defender/technical-details/"
+    "name": "Technical Specifications",
+    "link": "/products/code-defender/technical-specifications/"
   },
   {
     "name": "Case Studies",
@@ -52,27 +52,34 @@
     "subCategory": "Technology"
   },
   {
-    "name": "Overview",
-    "link": "/products/technology/"
+    "name": "Technology Platform",
+    "link": "/products/technology-platform/"
   },
   {
     "category": "Page Defender"
   },
   {
     "name": "Overview",
-    "link": "/products/page-defender/overview/"
+    "link": "/products/page-defender/"
   },
   {
     "name": "Resources",
     "link": "/products/page-defender/resources/"
   },
   {
-    "name": "Technical Details",
-    "link": "/products/page-defender/technical-details/"
+    "name": "Technical Specifications",
+    "link": "/products/page-defender/technical-specifications/"
   },
   {
     "name": "Case Studies",
     "link": "/products/page-defender/case-studies/"
+  },
+  {
+    "empty": true
+  },
+  {
+    "name": "All Products",
+    "link": "/products/"
   },
   {
     "category": " "

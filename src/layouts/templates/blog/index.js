@@ -5,10 +5,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
-import PostPreview from "../../components/post-preview";
-import Pager from "../../components/pager";
-import Container from "../../components/styles/container";
-import Headline from "../../components/styles/page-headline";
+import PostPreview from "../../../components/post-preview";
+import Pager from "../../../components/pager";
+import Container from "../../../components/styles/container";
+import Headline from "../../../components/styles/page-headline";
 
 /**
  * Listing page for Blogposts

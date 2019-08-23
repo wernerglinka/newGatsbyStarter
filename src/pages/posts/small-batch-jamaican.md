@@ -1,5 +1,5 @@
 ---
-template: "blog-post"
+template: "blog/blog-post"
 draft: false
 
 # Metadata

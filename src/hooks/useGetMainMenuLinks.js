@@ -14,6 +14,7 @@ const useGetMainNavLinks = () => {
             name
             label
             category
+            empty
             promo {
               image
               action
@@ -30,6 +31,7 @@ const useGetMainNavLinks = () => {
             label
             category
             subCategory
+            empty
             promo {
               image
               action

@@ -118,9 +118,10 @@ const DesktopMain = () => {
    * Function to close main menu when click outside of the nav
    */
   function handleOutsideClick(e) {
-    if (mainMenuRef.current.contains(e.target)) return;
-    resetActiveClass();
-    resetMenuState(resetAll);
+    if (!mainMenuRef.current.contains(e.target)) {
+      resetActiveClass();
+      resetMenuState(resetAll);
+    }
   }
 
   /**
@@ -221,10 +222,6 @@ const DesktopMain = () => {
       document.removeEventListener("click", handleOutsideClick);
     };
   }, []);
-
-  useEffect(() => {
-    console.log(menuState);
-  }, [menuState]);
 
   return (
     <Navigation>

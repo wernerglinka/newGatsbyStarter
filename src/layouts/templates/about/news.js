@@ -2,8 +2,8 @@ import React from "react";
 import { graphql } from "gatsby";
 import PropTypes from "prop-types";
 import styled from "@emotion/styled";
-import Pager from "../../components/pager";
-import Container from "../../components/styles/container";
+import Pager from "../../../components/pager";
+import Container from "../../../components/styles/container";
 
 const NewsList = styled.ul`
   width: 100%;
