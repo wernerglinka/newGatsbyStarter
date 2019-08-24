@@ -1,6 +1,8 @@
 import React from "react";
+import { Link } from "gatsby";
 import PropTypes from "prop-types";
 import styled from "@emotion/styled";
+import uuid from "uuid/v4";
 
 const BreadcrumbsList = styled.ul`
   list-style: none;
@@ -34,9 +36,9 @@ const Breadcrumbs = ({ pathData }) => {
   return (
     <BreadcrumbsList>
       {pathData.map((partial, i) => (
-        <li key={i}>
+        <li key={uuid()}>
           {partial.path ? (
-            <a href={partial.path}>{partial.name}</a>
+            <Link to={partial.path}>{partial.name}</Link>
           ) : (
             <span>{partial.name}</span>
           )}
