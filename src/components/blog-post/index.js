@@ -2,10 +2,10 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled from "@emotion/styled";
 
-import Head from "./head";
-import Container from "./styles/container";
-import Headline from "./styles/page-headline";
-import Bio from "./bio";
+import Head from "../head";
+import Container from "../styles/container";
+import Headline from "../styles/page-headline";
+import Bio from "../bio";
 
 const BlogLayout = styled.div`
   display: flex;

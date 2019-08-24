@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect, useContext, useRef } from "react";
 import styled from "@emotion/styled";
-import useGetMainNavLinks from "../../hooks/useGetMainMenuLinks";
+import useMainNavLinks from "../../hooks/useMainMenuLinks";
 import processLists from "./process-mega-menu-lists";
 import RenderMegaMenu from "./render-mega-menu";
 import getChildren from "../../utilities/getChildren";
@@ -80,7 +80,7 @@ const DesktopMain = () => {
   };
 
   // get all nav links from the data layer
-  const allLinks = useGetMainNavLinks();
+  const allLinks = useMainNavLinks();
 
   // create the top level menu items
   const topLevelMenu = [];

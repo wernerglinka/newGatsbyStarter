@@ -4,7 +4,7 @@ import { useStaticQuery, graphql } from "gatsby";
  * Query to get all top menu data
  * The main nav has various main sections and a promo section called Get Started
  */
-const useGetTopMenuLinks = () => {
+const useTopMenuLinks = () => {
   const data = useStaticQuery(graphql`
     query TopMenuLinksQuery {
       allAboutJson {
@@ -38,4 +38,4 @@ const useGetTopMenuLinks = () => {
   return data;
 };
 
-export default useGetTopMenuLinks;
+export default useTopMenuLinks;

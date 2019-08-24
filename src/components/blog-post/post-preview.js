@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Link } from "gatsby";
-import CloudinaryImage from "./cloudinary-image";
+import CloudinaryImage from "../cloudinary-image";
 
 const PostPreview = ({ post, imageData }) => {
   const title = post.frontmatter.title || post.fields.slug;

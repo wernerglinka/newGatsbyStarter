@@ -15,7 +15,7 @@ const PageHeader = styled.header`
   left: 0;
   width: 100%;
   height: ${props => props.theme.headerHeight};
-  background-color: #f0f0f0;
+  background-color: ${props => props.theme.headerBackground};
   margin-bottom: 50px;
 `;
 

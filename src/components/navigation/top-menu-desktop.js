@@ -9,7 +9,7 @@ import React, {
 import { Link } from "gatsby";
 import styled from "@emotion/styled";
 import uuid from "uuid/v4";
-import useGetTopMenuLinks from "../../hooks/useGetTopMenuLinks";
+import useTopMenuLinks from "../../hooks/useTopMenuLinks";
 import RenderDropdown from "./render-dropdown";
 import { MenuContext } from "../menu-context";
 import useMenuState from "../../hooks/useMenuState";
@@ -75,7 +75,7 @@ const DesktopTop = () => {
   }, []);
 
   // build top level menu items
-  const allLinks = useGetTopMenuLinks();
+  const allLinks = useTopMenuLinks();
   const processedTopMenu = [];
 
   Object.values(allLinks).forEach(({ edges: items }) => {

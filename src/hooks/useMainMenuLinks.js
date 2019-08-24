@@ -4,7 +4,7 @@ import { useStaticQuery, graphql } from "gatsby";
  * Query to get all main menu data
  * The main nav has various main sections and a promo section called Get Started
  */
-const useGetMainNavLinks = () => {
+const useMainNavLinks = () => {
   const data = useStaticQuery(graphql`
     query HeaderQuery {
       allSolutionsJson {
@@ -77,4 +77,4 @@ const useGetMainNavLinks = () => {
   return data;
 };
 
-export default useGetMainNavLinks;
+export default useMainNavLinks;

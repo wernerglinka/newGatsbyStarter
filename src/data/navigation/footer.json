@@ -1,0 +1,17 @@
+[
+  {
+    "name": "Sitemap",
+    "category": "sitemap"
+  },
+  {
+    "name": "Privacy Policy",
+    "link": "/privacy/"
+  },
+  {
+    "name": "Legal Policies",
+    "link": "/legal-policies/"
+  },
+  {
+    "category": "copyright"
+  }
+]
