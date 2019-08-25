@@ -29,7 +29,7 @@ function renderList(list) {
     );
   }
   return (
-    <ul>
+    <ul key={uuid()}>
       {list.map(listItem => {
         return (
           <li

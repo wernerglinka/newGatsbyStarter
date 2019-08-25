@@ -11,11 +11,17 @@ const MegaMenuPane = styled.div`
   width: 100%;
   z-index: 1000;
   background-color: #f8f8f8;
-  padding: 50px;
-  display: none;
+  padding: 0 50px;
+  display: flex;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
 
   &.open {
-    display: flex;
+    max-height: 400px;
+    opacity: 1;
+    padding: 50px;
   }
 
   > div {
