@@ -12,17 +12,15 @@ export const MenuContext = createContext([{}, () => {}]);
  */
 export const MenuContextProvider = ({ children }) => {
   const [menuState, setMenuState] = useState({
-    menu: {
-      aboutMenuIsActive: false,
-      aboutMenuHover: false,
-      solutionsMenuIsActive: false,
-      productsMenuIsActive: false,
-      resourcesMenuIsActive: false,
-      getStartedMenuIsActive: false,
-      solutionsMenuHover: false,
-      productsMenuHover: false,
-      resourcesMenuHover: false,
-    },
+    aboutMenuIsActive: false,
+    aboutMenuHover: false,
+    solutionsMenuIsActive: false,
+    productsMenuIsActive: false,
+    resourcesMenuIsActive: false,
+    getStartedMenuIsActive: false,
+    solutionsMenuHover: false,
+    productsMenuHover: false,
+    resourcesMenuHover: false,
   });
 
   return (

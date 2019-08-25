@@ -1,3 +1,4 @@
+/* global previousPath */
 import { Link } from "gatsby";
 import PropTypes from "prop-types";
 import React from "react";
@@ -42,26 +43,24 @@ const HeaderInner = styled.div`
   }
 `;
 
-const Header = () => (
-  <PageHeader>
-    <HeaderTop>
-      <DesktopTopMenu />
-    </HeaderTop>
-    <HeaderInner>
-      <a href="/">
-        <img className="mainLogo" src={logo} alt="Logo" />
-      </a>
-      <DesktopMainMenu />
-    </HeaderInner>
-  </PageHeader>
-);
-
-Header.propTypes = {
-  siteTitle: PropTypes.string,
+const Header = () => {
+  return (
+    <PageHeader>
+      <HeaderTop>
+        <DesktopTopMenu />
+      </HeaderTop>
+      <HeaderInner>
+        <Link to="/">
+          <img className="mainLogo" src={logo} alt="Logo" />
+        </Link>
+        <DesktopMainMenu />
+      </HeaderInner>
+    </PageHeader>
+  );
 };
 
-Header.defaultProps = {
-  siteTitle: ``,
-};
+Header.propTypes = {};
+
+Header.defaultProps = {};
 
 export default Header;

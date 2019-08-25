@@ -59,9 +59,63 @@ const DesktopTop = () => {
    * Function to close main menu when click outside of the nav
    */
   function handleOutsideClick(e) {
-    if (!topMenuRef.current.contains(e.target)) {
+    if (topMenuRef.current && !topMenuRef.current.contains(e.target)) {
       // resetMenuState(resetAll);
     }
+  }
+
+  /**
+   * handleMenuSelection()
+   * Function to open/close main menu mega menus
+   */
+  function handleMenuSelection(e) {
+    // the target has the label and the html for the dropdown in its innerHTML
+    let target = e.target.innerHTML.toLowerCase();
+
+    // use only the label, mega menu html has been removed
+    const discardIndex = target.indexOf("<ul");
+    if (discardIndex !== -1) {
+      target = target.substring(0, discardIndex);
+    } else {
+      target = target.replace(/ /g, "_");
+    }
+
+    switch (target) {
+      case "about":
+        toggleMenuState(resetAll, "about");
+        break;
+      default:
+    }
+  }
+
+  /**
+   * handleMouseEnter
+   * Function to open maimain menu mega menus
+   *
+   * This implementation is identical to PX' current website in that hover over any item
+   * resets the clicked state.
+   */
+  function handleMouseEnter(e) {
+    // the target has the label and the html for the dropdown in its innerHTML
+    let target = e.target.innerHTML.toLowerCase();
+
+    const discardIndex = target.indexOf("<ul");
+    target = target.substring(0, discardIndex);
+
+    switch (target) {
+      case "about":
+        hoverMenuState(resetAll, "about");
+        break;
+      default:
+    }
+  }
+
+  /**
+   * handleMouseLeave
+   * Function to open maimain menu mega menus
+   */
+  function handleMouseLeave(e) {
+    resetMenuState(resetHover);
   }
 
   /**
@@ -99,11 +153,11 @@ const DesktopTop = () => {
           {!item[0].node.link && (
             <li
               key={uuid()}
-              onClick={() => toggleMenuState(resetAll, "about")}
-              onTouchStart={() => toggleMenuState(resetActive, "about")}
-              onKeyDown={() => toggleMenuState(resetActive, "about")}
-              onMouseEnter={() => hoverMenuState(resetHover, "about")}
-              onMouseLeave={() => resetMenuState(resetHover)}
+              onClick={handleMenuSelection}
+              onTouchStart={handleMenuSelection}
+              onKeyDown={handleMenuSelection}
+              onMouseEnter={handleMouseEnter}
+              onMouseLeave={handleMouseLeave}
               role="menuitem"
               tabIndex="0"
             >

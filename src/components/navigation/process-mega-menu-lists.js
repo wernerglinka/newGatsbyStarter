@@ -2,6 +2,8 @@ import React from "react";
 import { Link } from "gatsby";
 import uuid from "uuid/v4";
 import useSiteMetadata from "../../hooks/useSiteMetadata";
+import { MenuContext } from "../menu-context";
+import useMenuState from "../../hooks/useMenuState";
 
 /**
  * renderList()
@@ -12,6 +14,26 @@ function renderList(list) {
   const defaultSiteMetadata = useSiteMetadata();
   // build the promo independently from the link lists
   const megaMenuPromo = list[1].promo;
+
+  // close the menus when Link is clicked and new content is loaded
+  const { resetMenuState } = useMenuState();
+
+  const resetAll = {
+    aboutMenuIsActive: false,
+    aboutMenuHover: false,
+    solutionsMenuIsActive: false,
+    productsMenuIsActive: false,
+    resourcesMenuIsActive: false,
+    getStartedMenuIsActive: false,
+    solutionsMenuHover: false,
+    productsMenuHover: false,
+    resourcesMenuHover: false,
+  };
+
+  function handleClick() {
+    resetMenuState(resetAll);
+  }
+
   if (megaMenuPromo) {
     return (
       <div className="promoContainer">
@@ -47,7 +69,9 @@ function renderList(list) {
               !listItem.external &&
               !listItem.promo &&
               !listItem.empty && (
-                <Link to={listItem.link}>{listItem.name}</Link>
+                <Link to={listItem.link} onClick={handleClick}>
+                  {listItem.name}
+                </Link>
               )}
             {!listItem.category && !listItem.subCategory && listItem.external && (
               <a href={listItem.link} target="_blank" rel="noopener noreferrer">

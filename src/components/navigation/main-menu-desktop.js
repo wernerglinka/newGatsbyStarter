@@ -24,6 +24,8 @@ const MainMenu = styled.ul`
     height: 100%;
     padding: 40px 0 0;
     margin: 0 30px;
+    border-bottom: 10px solid transparent;
+    transition: all 0.5s ease-in-out;
 
     &.active {
       border-bottom: 10px solid #999;

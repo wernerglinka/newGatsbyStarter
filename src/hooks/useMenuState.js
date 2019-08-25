@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { MenuContext } from "../components/menu-context";
 
 const useMenuState = () => {
-  const [menuState, setMenuState] = useContext(MenuContext);
+  const [_, setMenuState] = useContext(MenuContext);
 
   function toggleMenuState(menuObj, menuItem) {
     switch (menuItem) {
