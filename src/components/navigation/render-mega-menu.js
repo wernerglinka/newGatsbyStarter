@@ -78,6 +78,8 @@ const MegaMenuPane = styled.div`
  *
  */
 const RenderMenuPane = ({ megaMenu, isVisible }) => {
+  console.log("Render Mega Menu");
+
   return (
     <MegaMenuPane className={isVisible ? "open" : null}>
       <Container>

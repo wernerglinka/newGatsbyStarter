@@ -33,11 +33,10 @@ const Dropdown = styled.ul`
 
 /**
  * RenderDropdown()
- * Component to render a dropdown. Dropdown are animated into/from view
- * with framer-motion and styled with emotion
- *
+ * Component to render a dropdown.
  */
 const RenderDropdown = ({ menu, isVisible }) => {
+  console.log("Render Dropdown");
   // close the menus when Link is clicked and new content is loaded
   const { resetMenuState } = useMenuState();
 

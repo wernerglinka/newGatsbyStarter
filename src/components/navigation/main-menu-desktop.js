@@ -81,27 +81,6 @@ const DesktopMain = () => {
     ...resetHover,
   };
 
-  // get all nav links from the data layer
-  const allLinks = useMainNavLinks();
-
-  // create the top level menu items
-  const topLevelMenu = [];
-  // turn object into an array
-  const temp = Object.values(allLinks);
-  temp.forEach((item, i) => {
-    // extract the main menu items
-    topLevelMenu.push({
-      name: temp[i].edges[0].node.label,
-      class: temp[i].edges[0].node.class,
-    });
-  });
-
-  // build the megamenu content for menu items
-  const solutionsMegaMenu = processLists(allLinks.allSolutionsJson.edges);
-  const productsMegaMenu = processLists(allLinks.allProductsJson.edges);
-  const resourcesMegaMenu = processLists(allLinks.allResourcesJson.edges);
-  const getStartedMegaMenu = processLists(allLinks.allGetStartedJson.edges);
-
   /**
    * resetActiveClass()
    * Helper function to remove the class "active" from all top main menu items
@@ -120,9 +99,9 @@ const DesktopMain = () => {
    * Function to close main menu when click outside of the nav
    */
   function handleOutsideClick(e) {
-    if (!mainMenuRef.current.contains(e.target)) {
-      resetActiveClass();
-      resetMenuState(resetAll);
+    if (mainMenuRef.current && !mainMenuRef.current.contains(e.target)) {
+      // resetActiveClass();
+      // resetMenuState(resetAll);
     }
   }
 
@@ -202,9 +181,10 @@ const DesktopMain = () => {
 
   /**
    * handleMouseLeave
-   * Function to open maimain menu mega menus
+   * Function to close mega menus after hover
    */
   function handleMouseLeave(e) {
+    // don't reset the active class if one of the mega menus has been clicked
     if (
       !menuState.solutionsMenuIsActive &&
       !menuState.productsMenuIsActive &&
@@ -224,6 +204,27 @@ const DesktopMain = () => {
       document.removeEventListener("click", handleOutsideClick);
     };
   }, []);
+
+  // get all nav links from the data layer
+  const allLinks = useMainNavLinks();
+
+  // create the top level menu items
+  const topLevelMenu = [];
+  // turn object into an array
+  const temp = Object.values(allLinks);
+  temp.forEach((item, i) => {
+    // extract the main menu items
+    topLevelMenu.push({
+      name: temp[i].edges[0].node.label,
+      class: temp[i].edges[0].node.class,
+    });
+  });
+
+  // build the megamenu content for menu items
+  const solutionsMegaMenu = processLists(allLinks.allSolutionsJson.edges);
+  const productsMegaMenu = processLists(allLinks.allProductsJson.edges);
+  const resourcesMegaMenu = processLists(allLinks.allResourcesJson.edges);
+  const getStartedMegaMenu = processLists(allLinks.allGetStartedJson.edges);
 
   return (
     <Navigation>

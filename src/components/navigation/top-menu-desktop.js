@@ -24,6 +24,7 @@ const TopMenu = styled.ul`
   > li {
     position: relative;
     padding: 20px;
+    cursor: pointer;
   }
 
   a {
@@ -56,7 +57,7 @@ const DesktopTop = () => {
 
   /**
    * handleOutsideClick()
-   * Function to close main menu when click outside of the nav
+   * Function to close top menu when click outside of the dropdown
    */
   function handleOutsideClick(e) {
     if (topMenuRef.current && !topMenuRef.current.contains(e.target)) {
@@ -71,7 +72,6 @@ const DesktopTop = () => {
   function handleMenuSelection(e) {
     // the target has the label and the html for the dropdown in its innerHTML
     let target = e.target.innerHTML.toLowerCase();
-
     // use only the label, mega menu html has been removed
     const discardIndex = target.indexOf("<ul");
     if (discardIndex !== -1) {
@@ -143,13 +143,15 @@ const DesktopTop = () => {
           {item[0].node.link && (
             <li key={uuid()}>
               {item[0].node.external ? (
+                // external link uses <a>
                 <a href={item[0].node.link}>{item[0].node.label}</a>
               ) : (
+                // internal link use Gatsby Link
                 <Link to={item[0].node.link}>{item[0].node.label}</Link>
               )}
             </li>
           )}
-
+          {/* not a link must have a dropdown */}
           {!item[0].node.link && (
             <li
               key={uuid()}
