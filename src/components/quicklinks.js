@@ -8,6 +8,7 @@ import {
   FiClipboard,
 } from "react-icons/fi";
 import styled from "@emotion/styled";
+import uuid from "uuid/v4";
 import useQuicklinks from "../hooks/useQuickLinks";
 
 const QuicklinksList = styled.ul`
@@ -52,12 +53,10 @@ const Quicklinks = ({ moveOver }) => {
     allQuicklinksJson: { edges: quicklinks },
   } = useQuicklinks();
 
-  console.log(quicklinks);
-
   return (
     <QuicklinksList className={moveOver ? "moveLeft" : null}>
       {quicklinks.map(({ node }) => (
-        <li>
+        <li key={uuid()}>
           <Link to={node.link}>
             {node.icon === "message-square" && <FiMessageSquare />}
             {node.icon === "alert-triangle" && <FiAlertTriangle />}
