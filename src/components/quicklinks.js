@@ -12,8 +12,9 @@ import useQuicklinks from "../hooks/useQuickLinks";
 
 const QuicklinksList = styled.ul`
   position: fixed;
-  right: 0;
-  bottom: 0;
+  right: 20px;
+  bottom: 20px;
+  z-index: 1;
   display: flex;
   justify-content: flex-start;
   list-style: none;

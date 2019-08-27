@@ -3,6 +3,7 @@ import React from "react";
 import PropTypes from "prop-types";
 // theming
 import { ThemeProvider } from "emotion-theming";
+import { animateScroll } from "react-scroll";
 import PageTransition from "../components/transition";
 import theme from "./theme";
 // components
@@ -186,6 +187,9 @@ const Layout = ({ children, location }) => {
         </PageTransition>
         <Footer />
         <Quicklinks />
+        <button type="button" onClick={() => animateScroll.scrollToTop()}>
+          TO TOP
+        </button>
       </ThemeProvider>
     </MenuContextProvider>
   );
