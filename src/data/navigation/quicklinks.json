@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Contact Us",
+    "link": "/contact-us/",
+    "icon": "message-square"
+  },
+  {
+    "name": "Under Attack?",
+    "link": "/under-attack",
+    "icon": "alert-triangle"
+  },
+  {
+    "name": "Request a Demo",
+    "link": "/request-demo",
+    "icon": "thumbs-up"
+  },
+  {
+    "name": "Purchase Options",
+    "link": "/purchase-options/",
+    "icon": "clipboard"
+  }
+]

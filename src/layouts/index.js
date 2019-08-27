@@ -11,6 +11,7 @@ import Head from "../components/head";
 import Header from "../components/header";
 import Breadcrumbs from "../components/breadcrumbs";
 import Footer from "../components/page-sections/footer";
+import Quicklinks from "../components/quicklinks";
 import { MenuContextProvider } from "../components/menu-context";
 // global reset etc...
 import "./global.scss";
@@ -184,6 +185,7 @@ const Layout = ({ children, location }) => {
           {children}
         </PageTransition>
         <Footer />
+        <Quicklinks />
       </ThemeProvider>
     </MenuContextProvider>
   );
