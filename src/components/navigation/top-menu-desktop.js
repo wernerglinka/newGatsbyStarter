@@ -40,13 +40,16 @@ const DesktopTop = () => {
   const topMenuRef = useRef();
   const [state, dispatch] = getMenuState();
 
+  console.log(state);
+
   /**
    * handleOutsideClick()
    * Function to close top menu when click outside of the dropdown
    */
   function handleOutsideClick(e) {
     if (topMenuRef.current && !topMenuRef.current.contains(e.target)) {
-      // dispatch({ type: "RESET", where: "top" });
+      dispatch({ type: "RESET", where: "top" });
+      console.log("outside click");
     }
   }
 

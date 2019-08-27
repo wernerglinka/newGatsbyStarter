@@ -96,7 +96,7 @@ const mainResetState = {
 const topResetState = {
   aboutMenu: {
     active: false,
-    fixed: false,
+    hover: false,
     id: "aboutMenu",
     where: "top",
   },
@@ -106,25 +106,23 @@ const reducer = (state, action) => {
   const newState = {};
   let keys;
   let key;
+  let menuID;
 
   switch (action.type) {
     case "START_HOVER":
-      keys = Object.keys(state);
-      for (key of keys) {
-        if (state[key].id === action.id) {
-          newState[key] = {
-            active: state[key].active,
-            hover: true,
-            id: state[key].id,
-            where: state[key].where,
-          };
-          return { ...state, ...initialState, ...newState };
-        }
+      menuID = state[action.id].id;
+      if (menuID) {
+        newState[menuID] = {
+          active: state[menuID].active,
+          hover: true,
+          id: state[menuID].id,
+          where: state[menuID].where,
+        };
+        return { ...state, ...initialState, ...newState };
       }
       return state;
 
     case "END_HOVER":
-      console.log("END_HOVER");
       keys = Object.keys(state);
       for (key of keys) {
         newState[key] = {
@@ -137,17 +135,15 @@ const reducer = (state, action) => {
       return { ...state, ...newState };
 
     case "TOGGLE":
-      keys = Object.keys(state);
-      for (key of keys) {
-        if (state[key].id === action.id) {
-          newState[key] = {
-            active: !state[key].active,
-            hover: false,
-            id: state[key].id,
-            where: state[key].where,
-          };
-          return { ...state, ...initialState, ...newState };
-        }
+      menuID = state[action.id].id;
+      if (menuID) {
+        newState[menuID] = {
+          active: !state[menuID].active,
+          hover: false,
+          id: state[menuID].id,
+          where: state[menuID].where,
+        };
+        return { ...state, ...initialState, ...newState };
       }
       return state;
 

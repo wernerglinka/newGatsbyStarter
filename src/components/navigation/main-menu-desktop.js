@@ -59,7 +59,6 @@ const DesktopMain = () => {
   const mainMenuRef = useRef();
   const [state, dispatch] = getMenuState();
 
-  console.log(state);
   /**
    * resetActiveClass()
    * Helper function to remove the class "active" from all top main menu items
