@@ -2,8 +2,7 @@ import React from "react";
 import { Link } from "gatsby";
 import uuid from "uuid/v4";
 import useSiteMetadata from "../../hooks/useSiteMetadata";
-import { MenuContext } from "../menu-context";
-import useMenuState from "../../hooks/useMenuState";
+import { getMenuState } from "../menu-context";
 
 /**
  * renderList()
@@ -16,22 +15,10 @@ function renderList(list) {
   const megaMenuPromo = list[1].promo;
 
   // close the menus when Link is clicked and new content is loaded
-  const { resetMenuState } = useMenuState();
-
-  const resetAll = {
-    aboutMenuIsActive: false,
-    aboutMenuHover: false,
-    solutionsMenuIsActive: false,
-    productsMenuIsActive: false,
-    resourcesMenuIsActive: false,
-    getStartedMenuIsActive: false,
-    solutionsMenuHover: false,
-    productsMenuHover: false,
-    resourcesMenuHover: false,
-  };
+  const [state, dispatch] = getMenuState();
 
   function handleClick() {
-    resetMenuState(resetAll);
+    dispatch({ type: "RESET", where: "all" });
   }
 
   if (megaMenuPromo) {

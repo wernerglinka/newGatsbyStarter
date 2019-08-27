@@ -3,7 +3,7 @@ import { Link } from "gatsby";
 import PropTypes from "prop-types";
 import styled from "@emotion/styled";
 import uuid from "uuid/v4";
-import useMenuState from "../../hooks/useMenuState";
+import { getMenuState } from "../menu-context";
 
 const Dropdown = styled.ul`
   position: absolute;
@@ -36,25 +36,11 @@ const Dropdown = styled.ul`
  * Component to render a dropdown.
  */
 const RenderDropdown = ({ menu, isVisible }) => {
-  console.log("Render Dropdown");
   // close the menus when Link is clicked and new content is loaded
-  const { resetMenuState } = useMenuState();
-
-  const resetAll = {
-    aboutMenuIsActive: false,
-    aboutMenuHover: false,
-    solutionsMenuIsActive: false,
-    productsMenuIsActive: false,
-    resourcesMenuIsActive: false,
-    getStartedMenuIsActive: false,
-    solutionsMenuHover: false,
-    productsMenuHover: false,
-    resourcesMenuHover: false,
-  };
+  const [state, dispatch] = getMenuState();
 
   function handleClick() {
-    resetMenuState(resetAll);
-    console.log("HandleClick");
+    dispatch({ type: "RESET", where: "all" });
   }
 
   return (

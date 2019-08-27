@@ -11,8 +11,7 @@ import styled from "@emotion/styled";
 import uuid from "uuid/v4";
 import useTopMenuLinks from "../../hooks/useTopMenuLinks";
 import RenderDropdown from "./render-dropdown";
-import { MenuContext } from "../menu-context";
-import useMenuState from "../../hooks/useMenuState";
+import { getMenuState } from "../menu-context";
 
 const TopMenu = styled.ul`
   height: 100%;
@@ -38,22 +37,8 @@ const TopMenu = styled.ul`
  */
 const DesktopTop = () => {
   // menu state is stored in MenuContext see src/components/menu-context.js
-  const [menuState, setMenuState] = useContext(MenuContext);
   const topMenuRef = useRef();
-  const { toggleMenuState, hoverMenuState, resetMenuState } = useMenuState();
-
-  const resetActive = {
-    aboutMenuIsActive: false,
-  };
-
-  const resetHover = {
-    aboutMenuHover: false,
-  };
-
-  const resetAll = {
-    ...resetActive,
-    ...resetHover,
-  };
+  const [state, dispatch] = getMenuState();
 
   /**
    * handleOutsideClick()
@@ -61,7 +46,7 @@ const DesktopTop = () => {
    */
   function handleOutsideClick(e) {
     if (topMenuRef.current && !topMenuRef.current.contains(e.target)) {
-      // resetMenuState(resetAll);
+      // dispatch({ type: "RESET", where: "top" });
     }
   }
 
@@ -82,7 +67,7 @@ const DesktopTop = () => {
 
     switch (target) {
       case "about":
-        toggleMenuState(resetAll, "about");
+        dispatch({ type: "TOGGLE", id: "aboutMenu" });
         break;
       default:
     }
@@ -104,7 +89,7 @@ const DesktopTop = () => {
 
     switch (target) {
       case "about":
-        hoverMenuState(resetAll, "about");
+        dispatch({ type: "START_HOVER", id: "aboutMenu" });
         break;
       default:
     }
@@ -115,7 +100,7 @@ const DesktopTop = () => {
    * Function to open maimain menu mega menus
    */
   function handleMouseLeave(e) {
-    resetMenuState(resetHover);
+    dispatch({ type: "END_HOVER" });
   }
 
   /**
@@ -167,9 +152,7 @@ const DesktopTop = () => {
 
               <RenderDropdown
                 menu={item}
-                isVisible={
-                  menuState.aboutMenuIsActive || menuState.aboutMenuHover
-                }
+                isVisible={state.aboutMenu.active || state.aboutMenu.hover}
               />
             </li>
           )}

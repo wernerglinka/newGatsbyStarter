@@ -8,7 +8,8 @@ module.exports = {
     "react/jsx-one-expression-per-line": 0,
     "react/forbid-prop-types": 0,
     "react/jsx-wrap-multilines": 0,
-    "no-unused-expressions": 0
+    "no-unused-expressions": 0,
+    "no-restricted-syntax": 0
   },
 };
 

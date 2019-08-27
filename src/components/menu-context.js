@@ -1,35 +1,20 @@
-import React, { createContext, useState } from "react";
+import React, { createContext, useContext, useReducer } from "react";
 import PropTypes from "prop-types";
 
-/**
- * Initial menu context
- */
-export const MenuContext = createContext([{}, () => {}]);
+export const MenuContext = createContext();
 
-/**
- * Context provider for page menus
- *
- */
-export const MenuContextProvider = ({ children }) => {
-  const [menuState, setMenuState] = useState({
-    aboutMenuIsActive: false,
-    aboutMenuHover: false,
-    solutionsMenuIsActive: false,
-    productsMenuIsActive: false,
-    resourcesMenuIsActive: false,
-    getStartedMenuIsActive: false,
-    solutionsMenuHover: false,
-    productsMenuHover: false,
-    resourcesMenuHover: false,
-  });
-
+export const MenuContextProvider = ({ reducer, initialState, children }) => {
   return (
-    <MenuContext.Provider value={[menuState, setMenuState]}>
+    <MenuContext.Provider value={useReducer(reducer, initialState)}>
       {children}
     </MenuContext.Provider>
   );
 };
 
 MenuContextProvider.propTypes = {
-  children: PropTypes.object.isRequired,
+  reducer: PropTypes.func.isRequired,
+  initialState: PropTypes.object.isRequired,
+  children: PropTypes.shape().isRequired,
 };
+
+export const getMenuState = () => useContext(MenuContext);

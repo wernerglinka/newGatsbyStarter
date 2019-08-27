@@ -6,8 +6,7 @@ import useMainNavLinks from "../../hooks/useMainMenuLinks";
 import processLists from "./process-mega-menu-lists";
 import RenderMegaMenu from "./render-mega-menu";
 import getChildren from "../../utilities/getChildren";
-import { MenuContext } from "../menu-context";
-import useMenuState from "../../hooks/useMenuState";
+import { getMenuState } from "../menu-context";
 
 const Navigation = styled.nav`
   flex: 1 1 50%;
@@ -57,30 +56,10 @@ const MenuCTA = styled.button`
  */
 const DesktopMain = () => {
   // menu state is stored in MenuContext see src/components/menu-context.js
-  const [menuState, setMenuState] = useContext(MenuContext);
   const mainMenuRef = useRef();
-  const { toggleMenuState, hoverMenuState, resetMenuState } = useMenuState();
+  const [state, dispatch] = getMenuState();
 
-  // convenience packaging for all status flags so we can use spread syntax below
-  // where approriate... less typing
-  const resetActive = {
-    solutionsMenuIsActive: false,
-    productsMenuIsActive: false,
-    resourcesMenuIsActive: false,
-    getStartedMenuIsActive: false,
-  };
-
-  const resetHover = {
-    solutionsMenuHover: false,
-    productsMenuHover: false,
-    resourcesMenuHover: false,
-  };
-
-  const resetAll = {
-    ...resetActive,
-    ...resetHover,
-  };
-
+  console.log(state);
   /**
    * resetActiveClass()
    * Helper function to remove the class "active" from all top main menu items
@@ -100,8 +79,8 @@ const DesktopMain = () => {
    */
   function handleOutsideClick(e) {
     if (mainMenuRef.current && !mainMenuRef.current.contains(e.target)) {
-      // resetActiveClass();
-      // resetMenuState(resetAll);
+      resetActiveClass();
+      dispatch({ type: "RESET", where: "main" });
     }
   }
 
@@ -127,18 +106,18 @@ const DesktopMain = () => {
     switch (target) {
       case "solutions":
         e.target.classList.add("active");
-        toggleMenuState(resetAll, "solutions");
+        dispatch({ type: "TOGGLE", id: "solutionsMenu" });
         break;
       case "products":
         e.target.classList.add("active");
-        toggleMenuState(resetAll, "products");
+        dispatch({ type: "TOGGLE", id: "productsMenu" });
         break;
       case "resources":
         e.target.classList.add("active");
-        toggleMenuState(resetAll, "resources");
+        dispatch({ type: "TOGGLE", id: "resourcesMenu" });
         break;
       case "get_started":
-        toggleMenuState(resetAll, "getStarted");
+        dispatch({ type: "TOGGLE", id: "getStartedMenu" });
         break;
       default:
     }
@@ -159,21 +138,23 @@ const DesktopMain = () => {
     const discardIndex = target.indexOf("<div");
     target = target.substring(0, discardIndex);
 
+    // reset all li active class then set the class for the selected li below
+
     switch (target) {
       case "solutions":
         resetActiveClass();
         e.target.classList.add("active");
-        hoverMenuState(resetAll, "solutions");
+        dispatch({ type: "START_HOVER", id: "solutionsMenu" });
         break;
       case "products":
         resetActiveClass();
         e.target.classList.add("active");
-        hoverMenuState(resetAll, "products");
+        dispatch({ type: "START_HOVER", id: "productsMenu" });
         break;
       case "resources":
         resetActiveClass();
         e.target.classList.add("active");
-        hoverMenuState(resetAll, "resources");
+        dispatch({ type: "START_HOVER", id: "resourcesMenu" });
         break;
       default:
     }
@@ -186,13 +167,13 @@ const DesktopMain = () => {
   function handleMouseLeave(e) {
     // don't reset the active class if one of the mega menus has been clicked
     if (
-      !menuState.solutionsMenuIsActive &&
-      !menuState.productsMenuIsActive &&
-      !menuState.resourcesMenuIsActive
+      !state.solutionsMenu.active &&
+      !state.productsMenu.active &&
+      !state.resourcesMenu.active
     ) {
       resetActiveClass();
     }
-    resetMenuState(resetHover);
+    dispatch({ type: "END_HOVER" });
   }
 
   /**
@@ -248,8 +229,7 @@ const DesktopMain = () => {
                 <RenderMegaMenu
                   megaMenu={solutionsMegaMenu}
                   isVisible={
-                    menuState.solutionsMenuIsActive ||
-                    menuState.solutionsMenuHover
+                    state.solutionsMenu.active || state.solutionsMenu.hover
                   }
                 />
               )}
@@ -257,8 +237,7 @@ const DesktopMain = () => {
                 <RenderMegaMenu
                   megaMenu={productsMegaMenu}
                   isVisible={
-                    menuState.productsMenuIsActive ||
-                    menuState.productsMenuHover
+                    state.productsMenu.active || state.productsMenu.hover
                   }
                 />
               )}
@@ -266,15 +245,14 @@ const DesktopMain = () => {
                 <RenderMegaMenu
                   megaMenu={resourcesMegaMenu}
                   isVisible={
-                    menuState.resourcesMenuIsActive ||
-                    menuState.resourcesMenuHover
+                    state.resourcesMenu.active || state.resourcesMenu.hover
                   }
                 />
               )}
               {mainMenuItem.name === "Get Started" && (
                 <RenderMegaMenu
                   megaMenu={getStartedMegaMenu}
-                  isVisible={menuState.getStartedMenuIsActive}
+                  isVisible={state.getStartedMenu.active}
                 />
               )}
             </li>
