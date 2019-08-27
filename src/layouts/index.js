@@ -4,6 +4,7 @@ import PropTypes from "prop-types";
 // theming
 import { ThemeProvider } from "emotion-theming";
 import { animateScroll } from "react-scroll";
+import styled from "@emotion/styled";
 import PageTransition from "../components/transition";
 import theme from "./theme";
 // components
@@ -14,160 +15,27 @@ import Breadcrumbs from "../components/breadcrumbs";
 import Footer from "../components/page-sections/footer";
 import Quicklinks from "../components/quicklinks";
 import { MenuContextProvider } from "../components/menu-context";
+import reducer, { initialState } from "../components/manage-menu-state";
 // global reset etc...
 import "./global.scss";
 
-const initialState = {
-  solutionsMenu: {
-    active: false,
-    hover: false,
-    id: "solutionsMenu",
-    where: "main",
-  },
-  productsMenu: {
-    active: false,
-    hover: false,
-    id: "productsMenu",
-    where: "main",
-  },
-  resourcesMenu: {
-    active: false,
-    hover: false,
-    id: "resourcesMenu",
-    where: "main",
-  },
-  getStartedMenu: {
-    active: false,
-    id: "getStartedMenu",
-    where: "main",
-  },
-  aboutMenu: {
-    active: false,
-    hover: false,
-    id: "aboutMenu",
-    where: "top",
-  },
-};
+const ToTop = styled.button`
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #000;
+  border-radius: 20px;
+  line-height: 40px;
+  text-align: center;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
 
-const initialHoverState = {
-  solutionsMenu: {
-    hover: false,
-    id: "solutionsMenu",
-  },
-  productsMenu: {
-    hover: false,
-    id: "productsMenu",
-  },
-  resourcesMenu: {
-    hover: false,
-    id: "resourcesMenu",
-  },
-  aboutMenu: {
-    hover: false,
-    id: "aboutMenu",
-  },
-};
-
-const mainResetState = {
-  solutionsMenu: {
-    active: false,
-    fixed: false,
-    id: "solutionsMenu",
-    where: "main",
-  },
-  productsMenu: {
-    active: false,
-    fixed: false,
-    id: "productsMenu",
-    where: "main",
-  },
-  resourcesMenu: {
-    active: false,
-    fixed: false,
-    id: "resourcesMenu",
-    where: "main",
-  },
-  getStartedMenu: {
-    active: false,
-    fixed: false,
-    id: "getStartedMenu",
-    where: "main",
-  },
-};
-
-const topResetState = {
-  aboutMenu: {
-    active: false,
-    hover: false,
-    id: "aboutMenu",
-    where: "top",
-  },
-};
-
-const reducer = (state, action) => {
-  const newState = {};
-  let keys;
-  let key;
-  let menuID;
-
-  switch (action.type) {
-    case "START_HOVER":
-      menuID = state[action.id].id;
-      if (menuID) {
-        newState[menuID] = {
-          active: state[menuID].active,
-          hover: true,
-          id: state[menuID].id,
-          where: state[menuID].where,
-        };
-        return { ...state, ...initialState, ...newState };
-      }
-      return state;
-
-    case "END_HOVER":
-      keys = Object.keys(state);
-      for (key of keys) {
-        newState[key] = {
-          active: state[key].active,
-          hover: false,
-          id: state[key].id,
-          where: state[key].where,
-        };
-      }
-      return { ...state, ...newState };
-
-    case "TOGGLE":
-      menuID = state[action.id].id;
-      if (menuID) {
-        newState[menuID] = {
-          active: !state[menuID].active,
-          hover: false,
-          id: state[menuID].id,
-          where: state[menuID].where,
-        };
-        return { ...state, ...initialState, ...newState };
-      }
-      return state;
-
-    case "RESET":
-      switch (action.where) {
-        case "top":
-          return { ...state, ...topResetState };
-        case "main":
-          return { ...state, ...mainResetState };
-        case "all":
-          return { ...state, ...initialState };
-        default:
-          return state;
-      }
-
-    case "RESET_ALL":
-      return { ...state, ...initialState };
-
-    default:
-      return state;
+  &.isVisible {
+    opacity: 1;
   }
-};
+`;
 
 const Layout = ({ children, location }) => {
   const siteMetadata = useSiteMetadata();
@@ -175,6 +43,8 @@ const Layout = ({ children, location }) => {
   const {
     pageContext: { breadcrumbs },
   } = children.props;
+
+  const toTopIsVisible = false;
 
   return (
     <MenuContextProvider initialState={initialState} reducer={reducer}>
@@ -186,10 +56,10 @@ const Layout = ({ children, location }) => {
           {children}
         </PageTransition>
         <Footer />
-        <Quicklinks />
-        <button type="button" onClick={() => animateScroll.scrollToTop()}>
+        <Quicklinks moveOver={toTopIsVisible} />
+        <ToTop type="button" onClick={() => animateScroll.scrollToTop()}>
           TO TOP
-        </button>
+        </ToTop>
       </ThemeProvider>
     </MenuContextProvider>
   );

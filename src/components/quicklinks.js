@@ -18,6 +18,11 @@ const QuicklinksList = styled.ul`
   display: flex;
   justify-content: flex-start;
   list-style: none;
+  transition: all 0.5s ease-in-out;
+
+  &.moveLeft {
+    right: 80px;
+  }
 
   li {
     border: 1px solid #000;
@@ -42,7 +47,7 @@ const QuicklinksList = styled.ul`
   }
 `;
 
-const Quicklinks = () => {
+const Quicklinks = ({ moveOver }) => {
   const {
     allQuicklinksJson: { edges: quicklinks },
   } = useQuicklinks();
@@ -50,7 +55,7 @@ const Quicklinks = () => {
   console.log(quicklinks);
 
   return (
-    <QuicklinksList>
+    <QuicklinksList className={moveOver ? "moveLeft" : null}>
       {quicklinks.map(({ node }) => (
         <li>
           <Link to={node.link}>
@@ -64,6 +69,10 @@ const Quicklinks = () => {
       ))}
     </QuicklinksList>
   );
+};
+
+Quicklinks.propTypes = {
+  moveOver: PropTypes.bool.isRequired,
 };
 
 export default Quicklinks;
