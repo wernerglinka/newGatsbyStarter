@@ -10,8 +10,6 @@ const PostPreview = ({ post, imageData }) => {
   const altText = post.frontmatter.altText;
   const { tnDefaultWidth, cloudinaryBaseURL } = imageData;
 
-  console.log(post.frontmatter);
-
   return (
     <li>
       {thumbnail && (

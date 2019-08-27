@@ -7,7 +7,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled from "@emotion/styled";
 import getAuthorInfo from "./getAuthorInfo";
-import useGetAllAuthors from "../../hooks/useGetAllAuthors";
+import useGetAllAuthors from "../../hooks/useAllAuthors";
 import useSiteMetadata from "../../hooks/useSiteMetadata";
 import CloudinaryImage from "../cloudinary-image";
 

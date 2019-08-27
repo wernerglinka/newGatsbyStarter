@@ -1,8 +1,10 @@
 import React from "react";
+import propTypes from "prop-types";
 import uuid from "uuid/v4";
 import styled from "@emotion/styled";
 import useMainNavLinks from "../../../hooks/useMainMenuLinks";
 import processLists from "../../navigation/process-mega-menu-lists";
+import removePromo from "../../../utilities/remove-promo";
 
 const MenuPanesWrapper = styled.div`
   background-color: ${props => props.theme.footerBackground};
@@ -31,20 +33,6 @@ const MenuPane = styled.div`
     }
   }
 `;
-
-/**
- * removePromo()
- * Removes the promo data from a menu
- */
-function removePromo(menu) {
-  menu.forEach(menuItem => {
-    const index = menu.indexOf(menuItem);
-    if (menuItem.props.className === "promoContainer") {
-      menu.splice(index, 1);
-    }
-  });
-  return menu;
-}
 
 /**
  * FooterSitemap()
@@ -97,6 +85,10 @@ const FooterSitemap = ({ isVisible }) => {
       ))}
     </MenuPanesWrapper>
   );
+};
+
+FooterSitemap.propTypes = {
+  isVisible: propTypes.bool.isRequired,
 };
 
 export default FooterSitemap;

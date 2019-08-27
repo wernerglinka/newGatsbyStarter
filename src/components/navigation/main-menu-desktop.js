@@ -1,6 +1,6 @@
 /* global document */
 
-import React, { useState, useEffect, useContext, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import styled from "@emotion/styled";
 import useMainNavLinks from "../../hooks/useMainMenuLinks";
 import processLists from "./process-mega-menu-lists";

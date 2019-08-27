@@ -8,6 +8,7 @@
     "@emotion/cache": "^10.0.14",
     "@emotion/core": "^10.0.10",
     "@emotion/styled": "^10.0.10",
+    "child_process": "^1.0.2",
     "emotion-theming": "^10.0.10",
     "gatsby": "^2.13.39",
     "gatsby-plugin-draft": "0.0.4",

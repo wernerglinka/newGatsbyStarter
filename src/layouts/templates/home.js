@@ -12,12 +12,20 @@ import VideoModal from "./modals/ModalVideo";
 import Container from "../../components/styles/container";
 import Headline from "../../components/styles/page-headline";
 
+// import page sections
+import GetStarted from "../../components/page-sections/get-started";
+import EventPromo from "../../components/page-sections/event-promo";
+
 const HomePageTemplate = ({ data }) => {
   const [exampleModal, toggleExampleModal] = useModali({ animated: true });
   const [exampleModal2, toggleExampleModal2] = useModali({ animated: true });
 
   const {
     markdownRemark: { frontmatter: fields },
+  } = data;
+
+  const {
+    markdownRemark: { html },
   } = data;
 
   // this page template has 2 modals
@@ -35,12 +43,10 @@ const HomePageTemplate = ({ data }) => {
       <Headline>{fields.title}</Headline>
       <p>{fields.heading}</p>
       <p>{fields.subheading}</p>
-
       <p>
         <Link to="/solutions/">Go to Solutions</Link>
         <FiArrowRight />
       </p>
-
       <div>
         <button type="button" onClick={toggleExampleModal}>
           Click me to open the video modal
@@ -50,7 +56,6 @@ const HomePageTemplate = ({ data }) => {
           <VideoModal videoID={videoID} />
         </Modali.Modal>
       </div>
-
       <div>
         <button type="button" onClick={toggleExampleModal2}>
           Click me to open the text modal
@@ -59,10 +64,11 @@ const HomePageTemplate = ({ data }) => {
           <ContentModal modalData={thisModalData} />
         </Modali.Modal>
       </div>
+      {/* eslint-ignore-line */}
+      <div dangerouslySetInnerHTML={{ __html: paragraphs(html) }} />
 
-      <div
-        dangerouslySetInnerHTML={{ __html: paragraphs(fields.pagecontent) }}
-      />
+      <EventPromo />
+      <GetStarted />
     </Container>
   );
 };
@@ -71,6 +77,7 @@ HomePageTemplate.propTypes = {
   data: PropTypes.shape({
     markdownRemark: PropTypes.shape({
       frontmatter: PropTypes.object,
+      html: PropTypes.string,
     }),
     textModal: PropTypes.shape({
       edges: PropTypes.array,
@@ -86,11 +93,12 @@ export default HomePageTemplate;
 export const pageQuery = graphql`
   query HomePageTemplate {
     markdownRemark(frontmatter: { template: { eq: "home" } }) {
+      html
       frontmatter {
         title
         heading
         subheading
-        pagecontent
+        hasEventPromo
       }
     }
     # query for a specifi modalID
