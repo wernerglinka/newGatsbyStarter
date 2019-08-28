@@ -8,11 +8,8 @@ const CloudinaryImage = ({ baseURL, width, img, auto, alt }) => {
   const defaultString = `fl_strip_profile,q_auto,w_${width},f_auto`;
   // compose image url: baseURL and tnDefaultWidth is defined in siteMetadata, img comes from page frontmatter
   const imageSrc = `${baseURL}/${auto ? autoString : defaultString}/${img}`;
-  return (
-    <div>
-      <img src={imageSrc} alt={alt} sizes="100vw" />
-    </div>
-  );
+
+  return <img src={imageSrc} alt={alt} sizes="100vw" />;
 };
 
 CloudinaryImage.defaultProps = {

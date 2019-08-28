@@ -15,6 +15,7 @@ import Headline from "../../components/styles/page-headline";
 // import page sections
 import GetStarted from "../../components/page-sections/get-started";
 import EventPromo from "../../components/page-sections/event-promo";
+import EventPromoSlidein from "../../components/page-sections/event-promo-slidein";
 
 const HomePageTemplate = ({ data }) => {
   const [exampleModal, toggleExampleModal] = useModali({ animated: true });
@@ -23,8 +24,6 @@ const HomePageTemplate = ({ data }) => {
   const {
     markdownRemark: { frontmatter: fields },
   } = data;
-
-  console.log(fields.hasEventPromo);
 
   const {
     markdownRemark: { html },
@@ -71,6 +70,7 @@ const HomePageTemplate = ({ data }) => {
 
       {fields.hasEventPromo && <EventPromo />}
       <GetStarted />
+      <EventPromoSlidein />
     </Container>
   );
 };
