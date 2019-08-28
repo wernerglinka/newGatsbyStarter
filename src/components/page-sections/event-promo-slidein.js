@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "@emotion/styled";
 import uuid from "uuid/v4";
 import { FiChevronRight } from "react-icons/fi";
@@ -7,53 +7,41 @@ import Container from "../styles/container";
 import CloudinaryImage from "../cloudinary-image";
 import siteMetaData from "../../hooks/useSiteMetadata";
 
-const PageSection = styled.section`
-  background-size: cover;
-  background-repeat: no-repeat;
+const WidgetWrapper = `
+  position: fixed;
+  right: 0;
 `;
 
-const SectionContent = styled.div`
-  display: flex;
-  justify-content: center;
-`;
+const WidgetTrigger = `
+  width: 40px;
+  background-color: #666;
 
-const LogoColumn = styled.div`
-  flex: 0 0 40%;
-  padding: 5px;
-  img {
-    display: block;
-    width: 50%;
-  }
-  div {
-  }
-`;
-
-const Description = styled.div`
-  flex: 0 0 40%;
-  padding: 5px;
-  color: #fff;
-
-  a {
+  p {
+    transform: rotate(90deg);
     color: #fff;
-    text-decoration: none;
-    font-size: 12px;
   }
 `;
 
-const UnderLogo = styled.p`
-  color: #fff;
-  margin: 0;
+const WidgetContent = styled.div`
+  div:first-child {
+    background-repeat: no-repeat;
+    background-position: top left;
+  }
 `;
 
-const EventPromo = () => {
+const EventPromoSlidein = () => {
+  const [widgetIsVisible, setWidgetVisibility] = useState(false);
   const { cloudinaryBaseURL } = siteMetaData();
   const eventData = useEventPromo();
   const backgroundImage = `${cloudinaryBaseURL}/${eventData[0].node.backgroundImage}`;
   return (
-    <PageSection style={{ backgroundImage: `url(${backgroundImage})` }}>
+    <WidgetWrapper style={{ backgroundImage: `url(${backgroundImage})` }}>
+      <WidgetTrigger>
+        <p>Trigger here...</p>
+      </WidgetTrigger>
       {eventData.map(({ node }) => (
-        <SectionContent key={uuid()}>
-          <LogoColumn>
+        <WidgetContent key={uuid()}>
+          <div>
             {node.logo && (
               <CloudinaryImage
                 baseURL={cloudinaryBaseURL}
@@ -63,21 +51,21 @@ const EventPromo = () => {
                 alt=""
               />
             )}
-            <UnderLogo>
+            <div>
               {node.eventLocation} | {node.eventDates}
-            </UnderLogo>
-          </LogoColumn>
-          <Description>
+            </div>
+          </div>
+          <div>
             <h3>{node.eventProse}</h3>
             <a href={node.eventLink} target="_blank" rel="noopener noreferrer">
               {node.eventLinkText}
               <FiChevronRight />
             </a>
-          </Description>
-        </SectionContent>
+          </div>
+        </WidgetContent>
       ))}
-    </PageSection>
+    </WidgetWrapper>
   );
 };
 
-export default EventPromo;
+export default EventPromoSlidein;

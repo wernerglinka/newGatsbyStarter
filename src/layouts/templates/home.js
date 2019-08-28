@@ -24,6 +24,8 @@ const HomePageTemplate = ({ data }) => {
     markdownRemark: { frontmatter: fields },
   } = data;
 
+  console.log(fields.hasEventPromo);
+
   const {
     markdownRemark: { html },
   } = data;
@@ -67,7 +69,7 @@ const HomePageTemplate = ({ data }) => {
       {/* eslint-ignore-line */}
       <div dangerouslySetInnerHTML={{ __html: paragraphs(html) }} />
 
-      <EventPromo />
+      {fields.hasEventPromo && <EventPromo />}
       <GetStarted />
     </Container>
   );
