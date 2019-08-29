@@ -26,6 +26,7 @@ const TextContainer = styled.div`
 
   .longText {
     position: absolute;
+    z-index: 1;
     width: 400px;
     padding: 20px;
     background-color: #f8f8f8;
@@ -43,6 +44,7 @@ const TextContainer = styled.div`
       position: absolute;
       top: 5px;
       right: 5px;
+      cursor: pointer;
     }
   }
 
@@ -85,8 +87,6 @@ const TextContainer = styled.div`
 `;
 
 const ShortText = styled.div`
-  position: relative;
-  z-index: 2;
   width: 160px;
   height: 120px;
   overflow: hidden;
@@ -96,6 +96,7 @@ const ShortText = styled.div`
     cursor: pointer;
     border: none;
     background: none;
+    cursor: pointer;
   }
 `;
 
@@ -130,13 +131,11 @@ const HowPXWorks = () => {
   );
   const HowToHeader = () => <h1>{howToData[0].node.header}</h1>;
   const HowToLink = () => (
-    <ButtonLink to={howToData[0].node.link}>
-      {howToData[0].node.linkText}
-    </ButtonLink>
+    <Link to={howToData[0].node.link}>{howToData[0].node.linkText}</Link>
   );
 
   function handleReadMore(e) {
-    const textPaneID = e.target.getAttribute("id");
+    const textPaneID = e.target.getAttribute("parentid");
     switch (textPaneID) {
       case "deploy":
         showTextPane({ ...textPane, ...hideAllTextPanes, deploy: true });
@@ -155,7 +154,9 @@ const HowPXWorks = () => {
     }
   }
 
-  function closeTextPane() {}
+  function closeTextPane() {
+    showTextPane({ ...textPane, ...hideAllTextPanes });
+  }
 
   useEffect(() => {
     console.log(textPane);
@@ -183,17 +184,16 @@ const HowPXWorks = () => {
                   onClick={handleReadMore}
                   onTouchStart={handleReadMore}
                   onKeyDown={handleReadMore}
-                  parentid={`point${i}`}
+                  parentid={point.name.toLowerCase()}
                   tabIndex="0"
                   type="button"
                 >
                   ...Read More
                 </button>
               </ShortText>
-
               <div
                 className={`longText ${
-                  textPane[point.name] ? "isVisible" : null
+                  textPane[point.name.toLowerCase()] ? "isVisible" : null
                 }`}
               >
                 <FiX onClick={closeTextPane} />
