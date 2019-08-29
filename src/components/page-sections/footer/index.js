@@ -2,7 +2,7 @@ import { Link } from "gatsby";
 import PropTypes from "prop-types";
 import React, { useState } from "react";
 import uuid from "uuid/v4";
-
+import { animateScroll } from "react-scroll";
 import styled from "@emotion/styled";
 import Container from "../../styles/container";
 import useFooterLinks from "../../../hooks/useFooterLinks";
@@ -52,6 +52,12 @@ const Footer = props => {
   const copyrightYear = new Date().getFullYear();
   const copyrightNotice = `© ${copyrightYear} PerimeterX, Inc. PerimeterX and the PerimeterX logo are trademarks of PerimeterX`;
 
+  function handleClick() {
+    setSitemapState(!sitemapVisible);
+    // just raise the footer so user can see that there is now more to see
+    animateScroll.scrollMore(100);
+  }
+
   return (
     <FooterContainer>
       <Container>
@@ -67,8 +73,9 @@ const Footer = props => {
                   <div
                     role="button"
                     tabIndex="0"
-                    onClick={() => setSitemapState(!sitemapVisible)}
-                    onKeyDown={() => setSitemapState(!sitemapVisible)}
+                    onClick={handleClick}
+                    onTouchStart={handleClick}
+                    onKeyDown={handleClick}
                     className={sitemapVisible ? "open" : "closed"}
                   >
                     {footerItem.name}

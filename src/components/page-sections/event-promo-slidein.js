@@ -1,4 +1,4 @@
-/* global document */
+/* global document, localStorage */
 import React, { useState, useEffect } from "react";
 import styled from "@emotion/styled";
 import uuid from "uuid/v4";
@@ -80,16 +80,32 @@ const WidgetContent = styled.div`
   }
 `;
 
+/**
+ * Event promo widget
+ */
 const EventPromoSlidein = () => {
   const [widgetIsVisible, setWidgetVisibility] = useState(false);
   const { cloudinaryBaseURL } = siteMetaData();
   const eventData = useEventPromo();
   const backgroundImage = `${cloudinaryBaseURL}/${eventData[0].node.backgroundImage}`;
 
+  /**
+   * The event promo is shown to the user automatically, after a slight delay,
+   * for a short period of time. A flag in localStorage will be set so the user
+   * only sees this automatically once. However, the slideout can always be
+   * shown by clicking on the tab.
+   */
   useEffect(() => {
-    setTimeout(function() {
-      setWidgetVisibility(true);
-    }, 3000);
+    const alreadySeen = localStorage.getItem("promoHasBeenSeen");
+    if (!alreadySeen) {
+      setTimeout(function() {
+        setWidgetVisibility(true);
+        setTimeout(function() {
+          setWidgetVisibility(false);
+          localStorage.setItem("promoHasBeenSeen", "true");
+        }, 3000);
+      }, 3000);
+    }
   }, []);
 
   return (

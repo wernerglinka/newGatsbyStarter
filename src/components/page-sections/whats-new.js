@@ -116,7 +116,13 @@ const WhatsNew = () => {
                   </p>
                   <p>
                     {slide.external ? (
-                      <a href="slide.link">{slide.linkText}</a>
+                      <a
+                        href="slide.link"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {slide.linkText}
+                      </a>
                     ) : (
                       <Link to={slide.link}>{slide.linkText}</Link>
                     )}
