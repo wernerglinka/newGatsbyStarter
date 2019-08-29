@@ -3,6 +3,7 @@ import styled from "@emotion/styled";
 import uuid from "uuid/v4";
 import { FiChevronRight } from "react-icons/fi";
 import useEventPromo from "../../hooks/useEventPromo";
+import Container from "../styles/container";
 import CloudinaryImage from "../cloudinary-image";
 import siteMetaData from "../../hooks/useSiteMetadata";
 

@@ -16,6 +16,7 @@ import Headline from "../../components/styles/page-headline";
 import GetStarted from "../../components/page-sections/get-started";
 import EventPromo from "../../components/page-sections/event-promo";
 import EventPromoSlidein from "../../components/page-sections/event-promo-slidein";
+import HowPXWorks from "../../components/page-sections/how-px-works";
 
 const HomePageTemplate = ({ data }) => {
   const [exampleModal, toggleExampleModal] = useModali({ animated: true });
@@ -68,9 +69,10 @@ const HomePageTemplate = ({ data }) => {
       {/* eslint-ignore-line */}
       <div dangerouslySetInnerHTML={{ __html: paragraphs(html) }} />
 
+      <HowPXWorks />
       {fields.hasEventPromo && <EventPromo />}
       <GetStarted />
-      <EventPromoSlidein />
+      {fields.hasEventPromo && <EventPromoSlidein />}
     </Container>
   );
 };

@@ -1,0 +1,29 @@
+[
+  {
+    "header": "How the PX Platform Works",
+    "image": "page_sections/how-px-works/overview_xm3zgl.png",
+    "imageSmall": "page_sections/how-px-works/overview-small_vn4ap4.png",
+    "link": "/products/",
+    "linkText": "View PX Products"
+  },
+  {
+    "name": "Deploy",
+    "shortText": "Nulla vitae elit libero, a pharetra augue. Cum sociis nato",
+    "text": "Nulla vitae elit libero, a pharetra augue. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla non metus auctor fringilla. Nullam quis risus eget urna mollis ornare vel eu leo. Nullam quis risus eget urna mollis ornare vel eu leo. Etiam porta sem malesuada magna mollis euismod. Aenean lacinia bibendum nulla sed consectetur."
+  },
+  {
+    "name": "Sense",
+    "shortText": "Nulla vitae elit libero, a pharetra augue. Cum sociis nato",
+    "text": "Nulla vitae elit libero, a pharetra augue. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla non metus auctor fringilla. Nullam quis risus eget urna mollis ornare vel eu leo. Nullam quis risus eget urna mollis ornare vel eu leo. Etiam porta sem malesuada magna mollis euismod. Aenean lacinia bibendum nulla sed consectetur."
+  },
+  {
+    "name": "Detect",
+    "shortText": "Nulla vitae elit libero, a pharetra augue. Cum sociis nato",
+    "text": "Nulla vitae elit libero, a pharetra augue. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla non metus auctor fringilla. Nullam quis risus eget urna mollis ornare vel eu leo. Nullam quis risus eget urna mollis ornare vel eu leo. Etiam porta sem malesuada magna mollis euismod. Aenean lacinia bibendum nulla sed consectetur."
+  },
+  {
+    "name": "Enforce",
+    "shortText": "Nulla vitae elit libero, a pharetra augue. Cum sociis nato",
+    "text": "Nulla vitae elit libero, a pharetra augue. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla non metus auctor fringilla. Nullam quis risus eget urna mollis ornare vel eu leo. Nullam quis risus eget urna mollis ornare vel eu leo. Etiam porta sem malesuada magna mollis euismod. Aenean lacinia bibendum nulla sed consectetur."
+  }
+]

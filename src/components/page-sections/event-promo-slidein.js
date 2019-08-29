@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 import styled from "@emotion/styled";
 import uuid from "uuid/v4";
-import { FiChevronRight } from "react-icons/fi";
+import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 import useEventPromo from "../../hooks/useEventPromo";
 import CloudinaryImage from "../cloudinary-image";
 import siteMetaData from "../../hooks/useSiteMetadata";
@@ -11,11 +11,12 @@ const WidgetWrapper = styled.div`
   position: fixed;
   right: 0;
   top: 200px;
+  z-index: 1000;
   height: 240px;
   width: 370px;
   padding-left: 40px;
   transform: translateX(330px);
-  transition: right 0.5 ease-in-out;
+  transition: all 0.5s ease-in-out;
 
   &.open {
     transform: translateX(0);
@@ -29,12 +30,14 @@ const WidgetTrigger = styled.div`
   bottom: 0;
   width: 40px;
   background-color: #666;
+  cursor: pointer;
 
   p {
     transform: rotate(90deg);
     color: #fff;
     white-space: nowrap;
     padding: 20px 0;
+    pointer-events: none;
   }
 
   svg {
@@ -42,6 +45,12 @@ const WidgetTrigger = styled.div`
     left: 15px;
     bottom: 20px;
     color: #fff;
+    transition: all 0.5s ease-in-out;
+    pointer-events: none;
+
+    &.open {
+      transform: rotate(180deg);
+    }
   }
 `;
 
@@ -84,10 +93,10 @@ const EventPromoSlidein = () => {
   }, []);
 
   return (
-    <WidgetWrapper className={widgetIsVisible ? "open" : "closed"}>
+    <WidgetWrapper className={widgetIsVisible ? "open" : null}>
       <WidgetTrigger onClick={() => setWidgetVisibility(!widgetIsVisible)}>
         <p>EVENT: {eventData[0].node.name}</p>
-        <FiChevronRight />
+        <FiChevronLeft className={widgetIsVisible ? "open" : null} />
       </WidgetTrigger>
       {eventData.map(({ node }) => (
         <WidgetContent
