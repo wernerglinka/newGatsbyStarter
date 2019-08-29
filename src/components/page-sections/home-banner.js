@@ -30,8 +30,6 @@ const HomeBanner = () => {
 
   const homeBannerData = useHomeBanner();
 
-  console.log(homeBannerData);
-
   return (
     <PageSection
       style={{
