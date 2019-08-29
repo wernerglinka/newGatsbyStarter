@@ -1,0 +1,55 @@
+[
+  {
+    "header": "What's New",
+    "sectionLink": "/resources/",
+    "sectionLinkText": "See All Resources"
+  },
+  {
+    "image": "page_sections/whats-new/navigating-bot-risk_xoqqgt.png",
+    "category": "Webinar",
+    "text": "Navigating the Bot Risk Landscape",
+    "link": "https://www.brighttalk.com/webcast/17706/366075",
+    "linkText": "Watch Webinar",
+    "external": "true"
+  },
+  {
+    "image": "page_sections/whats-new/pageseal-px_dgirbg.png",
+    "category": "Blog",
+    "text": "From Founding of PageSeal to Integration with PerimeterX",
+    "link": "/blog/from-pageseal-to-perimeterx/",
+    "linkText": "Read Blogpost",
+    "external": "false"
+  },
+  {
+    "image": "page_sections/whats-new/8-top-threats_y2vtyu.jpg",
+    "category": "Infographic",
+    "text": "8 Top Threats Against eCommerce",
+    "link": "http://go.perimeterx.com/rs/001-VJX-104/images/PX-Top-Threats-Ecommerce-Infographic.pdf",
+    "linkText": "Read Infographic",
+    "external": "true"
+  },
+  {
+    "image": "page_sections/whats-new/ecommerce-threats-2018_krrzq9.jpg",
+    "category": "Whitepaper",
+    "text": "eCommerce Threats 2018",
+    "link": "https://www.brighttalk.com/webcast/17706/366075",
+    "linkText": "Read Whitepaper",
+    "external": "true"
+  },
+  {
+    "image": "page_sections/whats-new/black-hat-2019_tuwlsm.jpg",
+    "category": "Blog",
+    "text": "Black Hat 2019: Majority of Security Experts Would Use Bots to Gain an Unfair Advantage",
+    "link": "/blog/security-experts-unfair-advantage/",
+    "linkText": "Read Blogpost",
+    "external": "false"
+  },
+  {
+    "image": "page_sections/whats-new/gen-4-bots-whitepaper_a8yxwx.jpg",
+    "category": "Whitepaper",
+    "text": "The New Generation of Invisible Bot Attacks - How to Detect and Stop them",
+    "link": "/resources/4th-gen-bots-whitepaper/",
+    "linkText": "Read Whitepaper",
+    "external": "false"
+  }
+]

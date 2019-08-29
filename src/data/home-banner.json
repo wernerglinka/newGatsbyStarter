@@ -1,0 +1,25 @@
+[
+  {
+    "title": "The Platform for Web Security at Scale",
+    "subTitle": "PerimeterX products help companies discover risks, prevent attacks, and act with confidence to win in the digital world.",
+    "backgroundImage": "page_sections/home-page-banner/banner-temp_ovnv5t.jpg",
+    "featuredListTitle": "Featured Products",
+    "featuredList": [
+      {
+        "link": "/products/bot-defender/",
+        "linkTitle": "PerimeterX Bot Defender",
+        "isNew": "false"
+      },
+      {
+        "link": "/products/code-defender/",
+        "linkTitle": "PerimeterX code Defender",
+        "isNew": "false"
+      },
+      {
+        "link": "/products/page-defender/",
+        "linkTitle": "PerimeterX Page Defender",
+        "isNew": "true"
+      }
+    ]
+  }
+]

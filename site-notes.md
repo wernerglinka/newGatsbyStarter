@@ -61,7 +61,7 @@ This is done to:
 
 > > > This means pages are automatically wrapped into layout and do NOT need to import the layout component individually
 
-## Add Ppage Transitions
+## Add Page Transitions
 
 Reference: `https://scotch.io/tutorials/animated-page-transitions-in-gatsby-websites`
 

@@ -14,6 +14,7 @@ const PageSection = styled.section`
 const SectionContent = styled.div`
   display: flex;
   justify-content: center;
+  margin: 20px 0;
 `;
 
 const LogoColumn = styled.div`

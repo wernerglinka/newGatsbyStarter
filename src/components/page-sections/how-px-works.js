@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import propTypes from "prop-types";
 import { Link } from "gatsby";
 import styled from "@emotion/styled";
@@ -157,10 +157,6 @@ const HowPXWorks = () => {
   function closeTextPane() {
     showTextPane({ ...textPane, ...hideAllTextPanes });
   }
-
-  useEffect(() => {
-    console.log(textPane);
-  }, [textPane]);
 
   return (
     <PageSection>

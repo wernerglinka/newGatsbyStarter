@@ -2,7 +2,7 @@ import { useStaticQuery, graphql } from "gatsby";
 
 const usePXWorks = () => {
   const data = useStaticQuery(graphql`
-    query HoPXWorksQuery {
+    query HowPXWorksQuery {
       allHowPxWorksJson {
         edges {
           node {

@@ -17,6 +17,10 @@ import GetStarted from "../../components/page-sections/get-started";
 import EventPromo from "../../components/page-sections/event-promo";
 import EventPromoSlidein from "../../components/page-sections/event-promo-slidein";
 import HowPXWorks from "../../components/page-sections/how-px-works";
+import WhatsNew from "../../components/page-sections/whats-new";
+import OurCustomers from "../../components/page-sections/our-customers";
+import WhyPX from "../../components/page-sections/why-perimeterx";
+import HomeBanner from "../../components/page-sections/home-banner";
 
 const HomePageTemplate = ({ data }) => {
   const [exampleModal, toggleExampleModal] = useModali({ animated: true });
@@ -42,13 +46,14 @@ const HomePageTemplate = ({ data }) => {
 
   return (
     <Container>
-      <Headline>{fields.title}</Headline>
-      <p>{fields.heading}</p>
-      <p>{fields.subheading}</p>
-      <p>
-        <Link to="/solutions/">Go to Solutions</Link>
-        <FiArrowRight />
-      </p>
+      <HomeBanner />
+      <WhyPX />
+      <OurCustomers />
+      <WhatsNew />
+      <HowPXWorks />
+      {fields.hasEventPromo && <EventPromo />}
+      <GetStarted />
+
       <div>
         <button type="button" onClick={toggleExampleModal}>
           Click me to open the video modal
@@ -66,12 +71,7 @@ const HomePageTemplate = ({ data }) => {
           <ContentModal modalData={thisModalData} />
         </Modali.Modal>
       </div>
-      {/* eslint-ignore-line */}
-      <div dangerouslySetInnerHTML={{ __html: paragraphs(html) }} />
 
-      <HowPXWorks />
-      {fields.hasEventPromo && <EventPromo />}
-      <GetStarted />
       {fields.hasEventPromo && <EventPromoSlidein />}
     </Container>
   );

@@ -9,8 +9,9 @@ import Container from "../styles/container";
 
 const PageSection = styled.section`
   width: 100%;
-  border: 1px solid #000;
+  border: 1px solid #ccc;
   padding: 50px;
+  margin: 20px 0;
 `;
 
 const SectionContent = styled.div`
