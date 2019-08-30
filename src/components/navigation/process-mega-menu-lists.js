@@ -82,15 +82,19 @@ function getLists(allLists) {
 
   // - Ignore the label
   // - Separate into individual lists when we see a category member
-  // - Return aa Array with all content for a single mega menu pane
+  // - Return an Array with all content for a single mega menu pane
   allLists.forEach(({ node }, i, array) => {
     if (!node.label) {
+      // only start a new list in the middle of the list
       if (node.category && i > 1) {
+        // render this sublist and then push to processedLists
         processedLists.push(renderList(lists));
         lists = [];
       }
       lists.push(node);
 
+      // at the end of the list there is no category item to look for
+      // so just process the last list
       if (i === array.length - 1) {
         processedLists.push(renderList(lists));
       }

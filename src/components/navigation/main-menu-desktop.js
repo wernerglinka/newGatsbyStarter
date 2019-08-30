@@ -221,8 +221,12 @@ const DesktopMain = () => {
               role="menuitem"
               tabIndex="0"
             >
-              {mainMenuItem.class && <MenuCTA>{mainMenuItem.name}</MenuCTA>}
-              {!mainMenuItem.class && mainMenuItem.name}
+              {/* class btn indicates the CTA button */}
+              {mainMenuItem.class === "btn" && (
+                <MenuCTA>{mainMenuItem.name}</MenuCTA>
+              )}
+              {/* no class btn indicates just a regular menu item */}
+              {!(mainMenuItem.class === "btn") && mainMenuItem.name}
 
               {mainMenuItem.name === "Solutions" && (
                 <RenderMegaMenu

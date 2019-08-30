@@ -7,6 +7,7 @@ import uuid from "uuid/v4";
 import CloudinaryImage from "../cloudinary-image";
 import siteMetaData from "../../hooks/useSiteMetadata";
 import useWhyPX from "../../hooks/useWhyPX";
+import Fade from "../fade";
 
 const PageSection = styled.section`
   width: 100%;
@@ -31,12 +32,6 @@ const TabPane = styled.div`
   top: 0;
   left: 0;
   padding: 10px 20px 20px;
-  opacity: 0;
-  transition: all 0.5s ease-in-out;
-
-  &.isVisible {
-    opacity: 1;
-  }
 
   ul {
     margin: 0 0 20px 20px;
@@ -99,19 +94,17 @@ const WhyPX = () => {
           {whyPXContent.map(
             ({ node: content }, i) =>
               !content.sectionHeader && (
-                <TabPane
-                  key={uuid()}
-                  id={`tabPane${i}`}
-                  className={tabsState[`tabPane${i}`] ? "isVisible" : null}
-                >
-                  <h2>{content.title}</h2>
-                  <ul>
-                    {content.features.map(listItem => (
-                      <li key={uuid()}>{listItem}</li>
-                    ))}
-                  </ul>
-                  <Link to={content.link}>{content.linkText}</Link>
-                </TabPane>
+                <Fade key={uuid()} show={tabsState[`tabPane${i}`]}>
+                  <TabPane id={`tabPane${i}`}>
+                    <h2>{content.title}</h2>
+                    <ul>
+                      {content.features.map(listItem => (
+                        <li key={uuid()}>{listItem}</li>
+                      ))}
+                    </ul>
+                    <Link to={content.link}>{content.linkText}</Link>
+                  </TabPane>
+                </Fade>
               )
           )}
         </TabPanes>

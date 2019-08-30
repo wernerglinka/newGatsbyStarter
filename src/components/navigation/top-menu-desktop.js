@@ -136,7 +136,7 @@ const DesktopTop = () => {
               )}
             </li>
           )}
-          {/* not a link must have a dropdown */}
+          {/* not a link - must have a dropdown */}
           {!item[0].node.link && (
             <li
               key={uuid()}

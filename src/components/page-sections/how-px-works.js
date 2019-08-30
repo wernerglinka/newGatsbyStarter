@@ -7,6 +7,7 @@ import { FiX } from "react-icons/fi";
 import useHowPXWorks from "../../hooks/useHowPXWorks";
 import CloudinaryImage from "../cloudinary-image";
 import siteMetaData from "../../hooks/useSiteMetadata";
+import Fade from "../fade";
 
 const PageSection = styled.section`
   position: relative;
@@ -20,25 +21,21 @@ const PageSection = styled.section`
 
 const TextContainer = styled.div`
   position: absolute;
+
+  &.selected {
+    /*prevent other textcontainers to overlay the emerging long text pane*/
+    z-index: 1;
+  }
   h3 {
     margin: 0 0 10px;
   }
 
   .longText {
     position: absolute;
-    z-index: 1;
+    z-index: 10;
     width: 400px;
     padding: 20px;
     background-color: #f8f8f8;
-    opacity: 0;
-    transition: all 0.5s ease-in-out;
-    pointer-events: none;
-
-    &.isVisible {
-      opacity: 1;
-      z-index: 2;
-      pointer-events: auto;
-    }
 
     svg {
       position: absolute;
@@ -53,8 +50,8 @@ const TextContainer = styled.div`
     left: 5%;
 
     .longText {
-      top: 0;
-      left: 0;
+      top: -10px;
+      left: -10px;
     }
   }
   &#sense {
@@ -100,13 +97,6 @@ const ShortText = styled.div`
   }
 `;
 
-const ButtonLink = styled(props => <Link {...props} />)`
-  display: inline-block;
-  padding: 10px 30px;
-  border: 1px solid #000;
-  text-decoration: none;
-`;
-
 /**
  * How PX Platform Works Component
  */
@@ -117,7 +107,6 @@ const HowPXWorks = () => {
     detect: false,
     enforce: false,
   };
-
   const [textPane, showTextPane] = useState(hideAllTextPanes);
 
   const { cloudinaryBaseURL } = siteMetaData();
@@ -166,13 +155,17 @@ const HowPXWorks = () => {
         width={500}
         img={howToData[0].node.image}
         auto={false}
-        alt="howToData[0].node.header"
+        alt={howToData[0].node.header}
       />
       <HowToLink />
       {howToData.map(
         ({ node: point }, i) =>
           !point.header && (
-            <TextContainer id={point.name.toLowerCase()} key={uuid()}>
+            <TextContainer
+              id={point.name.toLowerCase()}
+              key={uuid()}
+              className={textPane[point.name.toLowerCase()] ? "selected" : null}
+            >
               <ShortText>
                 <h3>{point.name}</h3>
                 {point.shortText}
@@ -187,15 +180,13 @@ const HowPXWorks = () => {
                   ...Read More
                 </button>
               </ShortText>
-              <div
-                className={`longText ${
-                  textPane[point.name.toLowerCase()] ? "isVisible" : null
-                }`}
-              >
-                <FiX onClick={closeTextPane} />
-                <h3>{point.name}</h3>
-                {point.text}
-              </div>
+              <Fade show={textPane[point.name.toLowerCase()]}>
+                <div className="longText">
+                  <FiX onClick={closeTextPane} />
+                  <h3>{point.name}</h3>
+                  {point.text}
+                </div>
+              </Fade>
             </TextContainer>
           )
       )}
