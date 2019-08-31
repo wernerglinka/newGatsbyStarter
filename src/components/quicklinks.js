@@ -52,7 +52,7 @@ const Quicklinks = ({ moveOver }) => {
     allQuicklinksJson: { edges: quicklinks },
   } = useStaticQuery(
     graphql`
-      query QuickLinksQuery1 {
+      query QuickLinksQuery {
         allQuicklinksJson {
           edges {
             node {

@@ -3,11 +3,10 @@ import WhatsNewSlider from "react-slick";
 import "slick-carousel/slick/slick.css";
 // import "slick-carousel/slick/slick-theme.css";
 import propTypes from "prop-types";
-import { Link } from "gatsby";
+import { Link, useStaticQuery, graphql } from "gatsby";
 import styled from "@emotion/styled";
 import uuid from "uuid/v4";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
-import useWhatsNew from "../../hooks/useWhatsNew";
 import CloudinaryImage from "../cloudinary-image";
 import siteMetaData from "../../hooks/useSiteMetadata";
 
@@ -71,8 +70,28 @@ const SlickButtonFix = ({ currentSlide, slideCount, children, ...props }) => (
  * What's New Component
  */
 const WhatsNew = () => {
+  const {
+    allWhatsNewJson: { edges: whatsNewData },
+  } = useStaticQuery(graphql`
+    query WhatsNewQuery1 {
+      allWhatsNewJson {
+        edges {
+          node {
+            header
+            sectionLink
+            sectionLinkText
+            linkText
+            category
+            external
+            image
+            link
+            text
+          }
+        }
+      }
+    }
+  `);
   const { cloudinaryBaseURL } = siteMetaData();
-  const whatsNewData = useWhatsNew();
   const sliderSettings = {
     dots: false,
     infinite: true,
