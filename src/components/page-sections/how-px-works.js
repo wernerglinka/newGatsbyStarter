@@ -143,7 +143,7 @@ const HowPXWorks = () => {
     }
   }
 
-  function closeTextPane() {
+  function closeTextPane(e) {
     showTextPane({ ...textPane, ...hideAllTextPanes });
   }
 
@@ -163,7 +163,7 @@ const HowPXWorks = () => {
           !point.header && (
             <TextContainer
               id={point.name.toLowerCase()}
-              key={uuid()}
+              key={point.name}
               className={textPane[point.name.toLowerCase()] ? "selected" : null}
             >
               <ShortText>
@@ -180,13 +180,18 @@ const HowPXWorks = () => {
                   ...Read More
                 </button>
               </ShortText>
-              <Fade show={textPane[point.name.toLowerCase()]}>
-                <div className="longText">
-                  <FiX onClick={closeTextPane} />
-                  <h3>{point.name}</h3>
-                  {point.text}
-                </div>
-              </Fade>
+              <div>
+                <Fade show={textPane[point.name.toLowerCase()]}>
+                  <div className="longText">
+                    <FiX
+                      id={point.name.toLowerCase()}
+                      onClick={closeTextPane}
+                    />
+                    <h3>{point.name}</h3>
+                    {point.text}
+                  </div>
+                </Fade>
+              </div>
             </TextContainer>
           )
       )}

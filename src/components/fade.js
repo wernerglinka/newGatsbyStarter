@@ -25,15 +25,16 @@ const Fade = ({ show, children }) => {
   const [render, setRender] = useState(show);
 
   useEffect(() => {
-    if (show) setRender(true);
+    if (show) {
+      setRender(true);
+    }
   }, [show]);
 
   const onAnimationEnd = () => {
-    console.log("animationEnd");
-    if (!show) setRender(false);
+    if (!show) {
+      setRender(false);
+    }
   };
-
-  console.log(show);
 
   return (
     render && (

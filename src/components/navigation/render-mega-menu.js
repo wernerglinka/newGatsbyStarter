@@ -81,8 +81,8 @@ const RenderMenuPane = ({ megaMenu, isVisible }) => {
   return (
     <MegaMenuPane className={isVisible ? "open" : null}>
       <Container>
-        {megaMenu.map(list => (
-          <div key={uuid()}>{list}</div>
+        {megaMenu.map((list, i) => (
+          <div key={i}>{list}</div>
         ))}
       </Container>
     </MegaMenuPane>

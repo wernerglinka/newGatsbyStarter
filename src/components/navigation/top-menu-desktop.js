@@ -46,7 +46,7 @@ const DesktopTop = () => {
    */
   function handleOutsideClick(e) {
     if (topMenuRef.current && !topMenuRef.current.contains(e.target)) {
-      // dispatch({ type: "RESET", where: "top" });
+      dispatch({ type: "RESET", where: "top" });
     }
   }
 
@@ -124,9 +124,9 @@ const DesktopTop = () => {
   return (
     <TopMenu id="topMenu" ref={topMenuRef}>
       {processedTopMenu.map(item => (
-        <Fragment key={uuid()}>
+        <Fragment key={item[0].node.link}>
           {item[0].node.link && (
-            <li key={uuid()}>
+            <li>
               {item[0].node.external ? (
                 // external link uses <a>
                 <a href={item[0].node.link}>{item[0].node.label}</a>
@@ -139,7 +139,7 @@ const DesktopTop = () => {
           {/* not a link - must have a dropdown */}
           {!item[0].node.link && (
             <li
-              key={uuid()}
+              key={item[0].node.label}
               onClick={handleMenuSelection}
               onTouchStart={handleMenuSelection}
               onKeyDown={handleMenuSelection}

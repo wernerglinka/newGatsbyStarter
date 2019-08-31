@@ -75,7 +75,7 @@ const WhyPX = () => {
           {whyPXContent.map(
             ({ node: tabText }, i) =>
               !tabText.sectionHeader && (
-                <li key={uuid()}>
+                <li key={tabText.tab}>
                   <button
                     type="button"
                     onClick={manageTabs}
@@ -94,7 +94,7 @@ const WhyPX = () => {
           {whyPXContent.map(
             ({ node: content }, i) =>
               !content.sectionHeader && (
-                <Fade key={uuid()} show={tabsState[`tabPane${i}`]}>
+                <Fade key={content.title} show={tabsState[`tabPane${i}`]}>
                   <TabPane id={`tabPane${i}`}>
                     <h2>{content.title}</h2>
                     <ul>

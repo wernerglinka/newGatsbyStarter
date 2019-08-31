@@ -39,10 +39,10 @@ function renderList(list) {
   }
   return (
     <ul key={uuid()}>
-      {list.map(listItem => {
+      {list.map((listItem, i) => {
         return (
           <li
-            key={uuid()}
+            key={`${listItem.link}${i}`}
             className={
               (listItem.category ? "categoryTitle" : null) ||
               (listItem.subCategory ? "subCategoryTitle" : null) ||

@@ -48,7 +48,7 @@ const RenderDropdown = ({ menu, isVisible }) => {
       {menu.map(
         ({ node }) =>
           !node.label && (
-            <li key={uuid()}>
+            <li key={node.link}>
               <Link to={node.link} onClick={handleClick}>
                 {node.name}
               </Link>
