@@ -1,0 +1,83 @@
+# Bug List
+
+- components/navigation/top-menu-desktop.js line 63
+  When this line is uncommented then clicks in the megamenus will not work. This line resets the state of the About dropdown in the MenuContext. Same as in main-menu-desktop.
+
+  In addition the About dropdown animation doesn't work. If I use the react tools and set isVisible in them, then the animation is executed.
+
+  > > > > > Looks like the top menu is always re-rendered so the an imation doesn't work.
+
+  Answer:
+
+  First of all, avoid using random keys.
+
+There are a lot of ways to write keys, and some will perform better than others.
+
+To understand how the keys we've chosen impacts on performance, it's necessary to understand React's Reconciliation Algorithm.
+
+https://reactjs.org/docs/reconciliation.html
+
+tl;dr Introduces a heuristic for comparing Virtual DOM trees to make this comparison O(n), with n the nodes of this VDOM tree. This heuristic can be split in these points:
+
+Components of different type will create a new tree: This means that, while comparing the old tree with the new one, if the reconciler encounters that a node did change its type (e.g. <Button /> to <NotButton />), will cause to our Button to be unmounted with its children as well, and NotButton to be mounted with its children, as well.
+We can hint React on how instances are preserved on VDOM, by avoiding recreating them. These hints are provided by us with keys.: After deciding if the instance in a node should be preserved (because its type remains the same), the reconciler will iterate on that node's children to compare them.
+Supose now that we have this:
+
+<div>
+  <Button title="One" />
+  <Button title="Two" />
+</div>
+And we'd like to add a Button to the DOM on the next render, say
+
+<div>
+  <Button title="Zero" />
+  <Button title="One" />
+  <Button title="Two" />
+</div>
+The algorithm will go as follows:
+
+Compares <divs> in both VDOMs. Since these have the same type, we don't need to recreate the new tree. Props are the same so there are no changes to apply to the DOM at this point.
+Button One compares against Zero. Reconciler detects that here was a props change, then updates the DOM with this title.
+Button Two compares against One. Reconcilier also detects a props change here and uses the DOM to write this change.
+Detects that a new Button is added as last child, so creates a new Button instance at VDOM and write this change at DOM.
+Notice that these has many operations on the DOM, because it compared components by their index.
+
+Now, we can fix this behavior by letting know to our reconciler that these instances should be reused. Now, let's have this:
+
+<div>
+  <Button title="One" key="One" />
+  <Button title="Two" key="Two" />
+</div>
+And we'd like to add a Button to the DOM on the next render, say
+
+<div>
+  <Button title="Zero" key="Zero" />
+  <Button title="One" key="One" />
+  <Button title="Two" key"Two" />
+</div>
+The algorithm will go as follows:
+
+Compares <divs> in both VDOMs. Since these have the same type, we don't need to recreate the new tree. Props are the same so there are no changes to apply to the DOM at this point.
+Takes the first child of childrens. 'It's a Button', says the reconciler. 'And has a key' ('One'). Then, seeks for a children whose key is the same in the new children list. 'Oh, I encountered it!' but the reconciler realizes that there is no change on its props. Then, no DOM operations will be needed for this one.
+The same scenario occurs with the second Button, it will compare by keys instead of by index. Realizes that it's the same instance and no props were changed, so React decides to not apply changes on the DOM.
+For the Button with 'Zero' key, since there no exists a child with the same key, realizes that an instance should be created at VDOM, and this change should be written on DOM.
+So, using keys by predictable contents helps the reconciler to perform less operations on the DOM. Healthy keys are those that can be inferred from the object that is being mapped, like a name, or an id or even an url if we are transforming urls to <imgs />.
+
+What about key=index? Will have no effect, since by default, reconciler compares by position, i.e. its index.
+
+These keys should be globally unique? Not necessarily. These should be unique among siblings, so reconciler can distinguish them while iterating by a node's children.
+
+What about random keys? These should be avoided at all costs. If a key changes on every render, this will be keeping React destroying and creating instances on the VDOM (and hence, making extra writes on the DOM) since a component with a key wasn't found among the new children, but a new one with the same type.
+
+If the render output is like
+
+<div>
+  <Button key={randomGenerator()} />
+</div>
+Then, each time render is executed (e.g. due a props/state change, or even if it's parent is being re-rendered and our shouldComponentUpdate returns true), a new randomGenerator() key will be generated. This will go like:
+
+'Hey! I've found a Button with a F67BMkd== key, but none was found in the next one. I'll delete it.' 'Oh! I've encountered a Button with a SHDSA++5 key! Let's create a new one'.
+
+Whenever the reconciler tells that an instance should be deleted and unmounted, its internal state will be lost; even if we mount it again. The instance at VDOM will not be preserved in this case.
+
+The Button was the same, but the reconciler did a mess at DOM.

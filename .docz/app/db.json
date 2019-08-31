@@ -1,0 +1,1949 @@
+{
+  "config": {
+    "title": "Gatsby Starter Generic",
+    "description": "A starter",
+    "menu": [],
+    "version": "1.0.0",
+    "repository": null,
+    "native": false,
+    "themeConfig": {},
+    "separator": "-"
+  },
+  "entries": [
+    {
+      "key": "README.md",
+      "value": {
+        "id": "04c6e90faac2675aa89e2176d2eec7d8",
+        "filepath": "README.md",
+        "fullpath": "/Users/wernerglinka/Documents/Projects/1-SANDBOXES/gatsby-sandbox/newGatsbyStarter/README.md",
+        "link": "",
+        "slug": "readme",
+        "route": "/readme",
+        "name": "Readme",
+        "menu": "",
+        "headings": [
+          {
+            "slug": "my-gatsby-starter",
+            "depth": 1,
+            "value": "My Gatsby Starter"
+          }
+        ]
+      }
+    },
+    {
+      "key": "src/docs/index.mdx",
+      "value": {
+        "name": "Hello  World",
+        "route": "/",
+        "id": "13a8a147f67d34248cdc424d524520a5",
+        "filepath": "src/docs/index.mdx",
+        "fullpath": "/Users/wernerglinka/Documents/Projects/1-SANDBOXES/gatsby-sandbox/newGatsbyStarter/src/docs/index.mdx",
+        "link": "",
+        "slug": "src-docs-index",
+        "menu": "",
+        "headings": [
+          {
+            "slug": "sdfghjkl",
+            "depth": 1,
+            "value": "sDfghjkl"
+          },
+          {
+            "slug": "asdfghjkl-vbnm",
+            "depth": 2,
+            "value": "ASDFGHJKL: vbnm,."
+          }
+        ]
+      }
+    },
+    {
+      "key": "src/pages/index.md",
+      "value": {
+        "template": "home",
+        "title": "my home page",
+        "heading": "home page heading",
+        "subheading": "home page subheading",
+        "hasEventPromo": true,
+        "id": "3e962c3925fb76bbbf85793868d9e1d0",
+        "filepath": "src/pages/index.md",
+        "fullpath": "/Users/wernerglinka/Documents/Projects/1-SANDBOXES/gatsby-sandbox/newGatsbyStarter/src/pages/index.md",
+        "link": "",
+        "slug": "src-pages-index",
+        "route": "/src-pages-index",
+        "name": "Index",
+        "menu": "",
+        "headings": []
+      }
+    },
+    {
+      "key": "src/pages/about/careers.md",
+      "value": {
+        "template": "about/careers",
+        "page_id": "careers",
+        "title": "Careers",
+        "heading": "Careers Page",
+        "breadcrumbs": [
+          {
+            "name": "Home",
+            "path": "/"
+          },
+          {
+            "name": "About",
+            "path": "/who-we-are/"
+          },
+          {
+            "name": "Careers"
+          }
+        ],
+        "id": "fed59bb9b37c762b48901d8c19e2210f",
+        "filepath": "src/pages/about/careers.md",
+        "fullpath": "/Users/wernerglinka/Documents/Projects/1-SANDBOXES/gatsby-sandbox/newGatsbyStarter/src/pages/about/careers.md",
+        "link": "",
+        "slug": "src-pages-about-careers",
+        "route": "/src-pages-about-careers",
+        "name": "Careers",
+        "menu": "",
+        "headings": []
+      }
+    },
+    {
+      "key": "src/pages/about/events.md",
+      "value": {
+        "template": "about/events",
+        "page_id": "events",
+        "title": "Events",
+        "heading": "Events Page",
+        "breadcrumbs": [
+          {
+            "name": "Home",
+            "path": "/"
+          },
+          {
+            "name": "About",
+            "path": "/who-we-are/"
+          },
+          {
+            "name": "Events"
+          }
+        ],
+        "id": "b5ffa28833033937b4f7cbc94d8f2081",
+        "filepath": "src/pages/about/events.md",
+        "fullpath": "/Users/wernerglinka/Documents/Projects/1-SANDBOXES/gatsby-sandbox/newGatsbyStarter/src/pages/about/events.md",
+        "link": "",
+        "slug": "src-pages-about-events",
+        "route": "/src-pages-about-events",
+        "name": "Events",
+        "menu": "",
+        "headings": []
+      }
+    },
+    {
+      "key": "src/pages/about/partners.md",
+      "value": {
+        "template": "about/partners",
+        "page_id": "partners",
+        "title": "Partners",
+        "heading": "Partners Page",
+        "breadcrumbs": [
+          {
+            "name": "Home",
+            "path": "/"
+          },
+          {
+            "name": "About",
+            "path": "/who-we-are/"
+          },
+          {
+            "name": "Partners"
+          }
+        ],
+        "id": "1f3f83c4a4819cb8b1a2365f5a79bd5b",
+        "filepath": "src/pages/about/partners.md",
+        "fullpath": "/Users/wernerglinka/Documents/Projects/1-SANDBOXES/gatsby-sandbox/newGatsbyStarter/src/pages/about/partners.md",
+        "link": "",
+        "slug": "src-pages-about-partners",
+        "route": "/src-pages-about-partners",
+        "name": "Partners",
+        "menu": "",
+        "headings": []
+      }
+    },
+    {
+      "key": "src/pages/about/who-we-are.md",
+      "value": {
+        "template": "about/who-we-are",
+        "page_id": "who-we-are",
+        "title": "Who We Are",
+        "heading": "Who We Are Page",
+        "breadcrumbs": [
+          {
+            "name": "Home",
+            "path": "/"
+          },
+          {
+            "name": "About",
+            "path": "/who-we-are/"
+          },
+          {
+            "name": "Who We Are"
+          }
+        ],
+        "id": "10c9326ae828c5b81e105032b12241c2",
+        "filepath": "src/pages/about/who-we-are.md",
+        "fullpath": "/Users/wernerglinka/Documents/Projects/1-SANDBOXES/gatsby-sandbox/newGatsbyStarter/src/pages/about/who-we-are.md",
+        "link": "",
+        "slug": "src-pages-about-who-we-are",
+        "route": "/src-pages-about-who-we-are",
+        "name": "Who we are",
+        "menu": "",
+        "headings": []
+      }
+    },
+    {
+      "key": "src/pages/posts/beginners-guide-chemex3.md",
+      "value": {
+        "template": "blog/blog-post",
+        "draft": false,
+        "title": "A beginners’ guide to brewing with Chemex",
+        "description": "Brewing with a Chemex probably seems like a complicated, time-consuming ordeal, but once you get used to the process, it becomes a soothing ritual that's worth the effort every time.",
+        "breadcrumbs": [
+          {
+            "name": "Home",
+            "path": "/"
+          },
+          {
+            "name": "Blog",
+            "path": "/blog/"
+          },
+          {
+            "name": "A beginners’ guide to brewing with Chemex"
+          }
+        ],
+        "date": "2017-01-11T15:04:10.000Z",
+        "author": [
+          "Angela Merkel",
+          "Barack Obama"
+        ],
+        "featuredPost": false,
+        "featuredImage": "Industrial/image4_uu7nmg.jpg",
+        "altText": "this is an alternate text",
+        "tags": [
+          "brewing",
+          "chemex"
+        ],
+        "id": "5995d31cb1fd863d538bf1a65500c4de",
+        "filepath": "src/pages/posts/beginners-guide-chemex3.md",
+        "fullpath": "/Users/wernerglinka/Documents/Projects/1-SANDBOXES/gatsby-sandbox/newGatsbyStarter/src/pages/posts/beginners-guide-chemex3.md",
+        "link": "",
+        "slug": "src-pages-posts-beginners-guide-chemex3",
+        "route": "/src-pages-posts-beginners-guide-chemex3",
+        "name": "Beginners guide chemex3",
+        "menu": "",
+        "headings": [
+          {
+            "slug": "the-little-secrets-of-chemex-brewing",
+            "depth": 2,
+            "value": "The little secrets of Chemex brewing"
+          }
+        ]
+      }
+    },
+    {
+      "key": "src/pages/posts/beginners-guide.md",
+      "value": {
+        "template": "blog/blog-post",
+        "draft": false,
+        "title": "A beginners’ guide to brewing with Chemex",
+        "description": "Brewing with a Chemex probably seems like a complicated, time-consuming ordeal, but once you get used to the process, it becomes a soothing ritual that's worth the effort every time.",
+        "breadcrumbs": [
+          {
+            "name": "Home",
+            "path": "/"
+          },
+          {
+            "name": "Blog",
+            "path": "/blog/"
+          },
+          {
+            "name": "A beginners’ guide to brewing with Chemex"
+          }
+        ],
+        "author": [
+          "Angela Merkel",
+          "Barack Obama"
+        ],
+        "date": "2017-01-05T15:04:10.000Z",
+        "featuredPost": false,
+        "featuredImage": "Industrial/image8_uifn1f.jpg",
+        "altText": "this is an alternate text",
+        "tags": [
+          "brewing",
+          "chemex"
+        ],
+        "id": "88d818376c1b8d25d703b06b0f43d190",
+        "filepath": "src/pages/posts/beginners-guide.md",
+        "fullpath": "/Users/wernerglinka/Documents/Projects/1-SANDBOXES/gatsby-sandbox/newGatsbyStarter/src/pages/posts/beginners-guide.md",
+        "link": "",
+        "slug": "src-pages-posts-beginners-guide",
+        "route": "/src-pages-posts-beginners-guide",
+        "name": "Beginners guide",
+        "menu": "",
+        "headings": [
+          {
+            "slug": "the-little-secrets-of-chemex-brewing",
+            "depth": 2,
+            "value": "The little secrets of Chemex brewing"
+          }
+        ]
+      }
+    },
+    {
+      "key": "src/pages/posts/guide-brewing-with-chemex.md",
+      "value": {
+        "template": "blog/blog-post",
+        "draft": false,
+        "title": "A beginners’ guide to brewing with Chemex",
+        "description": "Brewing with a Chemex probably seems like a complicated, time-consuming ordeal, but once you get used to the process, it becomes a soothing ritual that's worth the effort every time.",
+        "breadcrumbs": [
+          {
+            "name": "Home",
+            "path": "/"
+          },
+          {
+            "name": "Blog",
+            "path": "/blog/"
+          },
+          {
+            "name": "A beginners’ guide to brewing with Chemex"
+          }
+        ],
+        "author": [
+          "Angela Merkel",
+          "Barack Obama"
+        ],
+        "date": "2017-01-04T15:04:10.000Z",
+        "featuredPost": false,
+        "featuredImage": null,
+        "altText": "this is an alternate text",
+        "tags": [
+          "brewing",
+          "chemex"
+        ],
+        "id": "1b281823b28900f7ba336e58df56bbd5",
+        "filepath": "src/pages/posts/guide-brewing-with-chemex.md",
+        "fullpath": "/Users/wernerglinka/Documents/Projects/1-SANDBOXES/gatsby-sandbox/newGatsbyStarter/src/pages/posts/guide-brewing-with-chemex.md",
+        "link": "",
+        "slug": "src-pages-posts-guide-brewing-with-chemex",
+        "route": "/src-pages-posts-guide-brewing-with-chemex",
+        "name": "Guide brewing with chemex",
+        "menu": "",
+        "headings": [
+          {
+            "slug": "the-little-secrets-of-chemex-brewing",
+            "depth": 2,
+            "value": "The little secrets of Chemex brewing"
+          }
+        ]
+      }
+    },
+    {
+      "key": "src/pages/posts/jamaican-blue-mountain.md",
+      "value": {
+        "template": "blog/blog-post",
+        "draft": false,
+        "title": "Just in: small batch of Jamaican Blue Mountain in store next week",
+        "description": "We’re proud to announce that we’ll be offering a small batch of Jamaica Blue Mountain coffee beans in our store next week.",
+        "breadcrumbs": [
+          {
+            "name": "Home",
+            "path": "/"
+          },
+          {
+            "name": "Blog",
+            "path": "/blog/"
+          },
+          {
+            "name": "Just in: small batch of Jamaican Blue Mountain in store next week"
+          }
+        ],
+        "author": [
+          "Leroy Sané"
+        ],
+        "date": "2017-02-04T15:04:10.000Z",
+        "featuredPost": true,
+        "altText": "this is an alternate text",
+        "tags": [
+          "jamaica",
+          "green beans",
+          "flavor",
+          "tasting"
+        ],
+        "id": "d9f8932d091553604feee788374e38e7",
+        "filepath": "src/pages/posts/jamaican-blue-mountain.md",
+        "fullpath": "/Users/wernerglinka/Documents/Projects/1-SANDBOXES/gatsby-sandbox/newGatsbyStarter/src/pages/posts/jamaican-blue-mountain.md",
+        "link": "",
+        "slug": "src-pages-posts-jamaican-blue-mountain",
+        "route": "/src-pages-posts-jamaican-blue-mountain",
+        "name": "Jamaican blue mountain",
+        "menu": "",
+        "headings": [
+          {
+            "slug": "a-little-history",
+            "depth": 2,
+            "value": "A little history"
+          },
+          {
+            "slug": "what-you-need-to-know-before-trying",
+            "depth": 2,
+            "value": "What you need to know before trying"
+          }
+        ]
+      }
+    },
+    {
+      "key": "src/pages/posts/making-sense-flavor-wheel.md",
+      "value": {
+        "template": "blog/blog-post",
+        "draft": false,
+        "title": "Making sense of the SCAA’s new Flavor Wheel",
+        "description": "The Coffee Taster’s Flavor Wheel, the official resource used by coffee tasters, has been revised for the first time this year.",
+        "breadcrumbs": [
+          {
+            "name": "Home",
+            "path": "/"
+          },
+          {
+            "name": "Blog",
+            "path": "/blog/"
+          },
+          {
+            "name": "Making sense of the SCAA’s new Flavor Wheel"
+          }
+        ],
+        "author": [
+          "Albert Einstein",
+          "Alexandria Ocasio-Cortez"
+        ],
+        "date": "2016-12-17T15:04:10.000Z",
+        "featuredPost": false,
+        "featuredImage": null,
+        "altText": "this is an alternate text",
+        "tags": [
+          "flavor",
+          "tasting"
+        ],
+        "id": "1b8515051a487b779b5008a9f6ee739a",
+        "filepath": "src/pages/posts/making-sense-flavor-wheel.md",
+        "fullpath": "/Users/wernerglinka/Documents/Projects/1-SANDBOXES/gatsby-sandbox/newGatsbyStarter/src/pages/posts/making-sense-flavor-wheel.md",
+        "link": "",
+        "slug": "src-pages-posts-making-sense-flavor-wheel",
+        "route": "/src-pages-posts-making-sense-flavor-wheel",
+        "name": "Making sense flavor wheel",
+        "menu": "",
+        "headings": [
+          {
+            "slug": "what-the-updates-mean-to-you",
+            "depth": 2,
+            "value": "What the updates mean to you"
+          }
+        ]
+      }
+    },
+    {
+      "key": "src/pages/posts/making-sense-scaa-new-flavor-wheel3.md",
+      "value": {
+        "template": "blog/blog-post",
+        "draft": false,
+        "title": "Making sense of the SCAA’s new Flavor Wheel",
+        "description": "The Coffee Taster’s Flavor Wheel, the official resource used by coffee tasters, has been revised for the first time this year.",
+        "breadcrumbs": [
+          {
+            "name": "Home",
+            "path": "/"
+          },
+          {
+            "name": "Blog",
+            "path": "/blog/"
+          },
+          {
+            "name": "Making sense of the SCAA’s new Flavor Wheel"
+          }
+        ],
+        "author": [
+          "Albert Einstein",
+          "Alexandria Ocasio-Cortez"
+        ],
+        "date": "2016-12-31T15:04:10.000Z",
+        "featuredPost": false,
+        "featuredImage": null,
+        "altText": "this is an alternate text",
+        "tags": [
+          "flavor",
+          "tasting"
+        ],
+        "id": "7710a7ada14ffc0f143e8bcfb80f9c6a",
+        "filepath": "src/pages/posts/making-sense-scaa-new-flavor-wheel3.md",
+        "fullpath": "/Users/wernerglinka/Documents/Projects/1-SANDBOXES/gatsby-sandbox/newGatsbyStarter/src/pages/posts/making-sense-scaa-new-flavor-wheel3.md",
+        "link": "",
+        "slug": "src-pages-posts-making-sense-scaa-new-flavor-wheel3",
+        "route": "/src-pages-posts-making-sense-scaa-new-flavor-wheel3",
+        "name": "Making sense scaa new flavor wheel3",
+        "menu": "",
+        "headings": [
+          {
+            "slug": "what-the-updates-mean-to-you",
+            "depth": 2,
+            "value": "What the updates mean to you"
+          }
+        ]
+      }
+    },
+    {
+      "key": "src/pages/posts/making-sense-scaa.md",
+      "value": {
+        "template": "blog/blog-post",
+        "draft": false,
+        "title": "Making sense of the SCAA’s new Flavor Wheel",
+        "description": "The Coffee Taster’s Flavor Wheel, the official resource used by coffee tasters, has been revised for the first time this year.",
+        "breadcrumbs": [
+          {
+            "name": "Home",
+            "path": "/"
+          },
+          {
+            "name": "Blog",
+            "path": "/blog/"
+          },
+          {
+            "name": "Making sense of the SCAA’s new Flavor Wheel"
+          }
+        ],
+        "author": [
+          "Albert Einstein",
+          "Alexandria Ocasio-Cortez"
+        ],
+        "date": "2016-12-19T15:04:10.000Z",
+        "featuredPost": false,
+        "featuredImage": null,
+        "altText": "this is an alternate text",
+        "tags": [
+          "flavor",
+          "tasting"
+        ],
+        "id": "558ca4958e8cae6f9b1ad70cd20278ec",
+        "filepath": "src/pages/posts/making-sense-scaa.md",
+        "fullpath": "/Users/wernerglinka/Documents/Projects/1-SANDBOXES/gatsby-sandbox/newGatsbyStarter/src/pages/posts/making-sense-scaa.md",
+        "link": "",
+        "slug": "src-pages-posts-making-sense-scaa",
+        "route": "/src-pages-posts-making-sense-scaa",
+        "name": "Making sense scaa",
+        "menu": "",
+        "headings": [
+          {
+            "slug": "what-the-updates-mean-to-you",
+            "depth": 2,
+            "value": "What the updates mean to you"
+          }
+        ]
+      }
+    },
+    {
+      "key": "src/pages/posts/small-batch-jamaican-blue-mountain2.md",
+      "value": {
+        "template": "blog/blog-post",
+        "draft": false,
+        "title": "Just in: small batch of Jamaican Blue Mountain in store next week",
+        "description": "We’re proud to announce that we’ll be offering a small batch of Jamaica Blue Mountain coffee beans in our store next week.",
+        "breadcrumbs": [
+          {
+            "name": "Home",
+            "path": "/"
+          },
+          {
+            "name": "Blog",
+            "path": "/blog/"
+          },
+          {
+            "name": "Just in: small batch of Jamaican Blue Mountain in store next week"
+          }
+        ],
+        "author": [
+          "Leroy Sané"
+        ],
+        "date": "2017-03-04T15:04:10.000Z",
+        "featuredPost": true,
+        "featuredImage": "Industrial/image9_wimmud",
+        "altText": "this is an alternate text",
+        "tags": [
+          "jamaica",
+          "green beans",
+          "flavor",
+          "tasting"
+        ],
+        "id": "2bd86b0c43cec2743b39251ce837d0fb",
+        "filepath": "src/pages/posts/small-batch-jamaican-blue-mountain2.md",
+        "fullpath": "/Users/wernerglinka/Documents/Projects/1-SANDBOXES/gatsby-sandbox/newGatsbyStarter/src/pages/posts/small-batch-jamaican-blue-mountain2.md",
+        "link": "",
+        "slug": "src-pages-posts-small-batch-jamaican-blue-mountain2",
+        "route": "/src-pages-posts-small-batch-jamaican-blue-mountain2",
+        "name": "Small batch jamaican blue mountain2",
+        "menu": "",
+        "headings": [
+          {
+            "slug": "a-little-history",
+            "depth": 2,
+            "value": "A little history"
+          },
+          {
+            "slug": "what-you-need-to-know-before-trying",
+            "depth": 2,
+            "value": "What you need to know before trying"
+          }
+        ]
+      }
+    },
+    {
+      "key": "src/pages/posts/small-batch-jamaican.md",
+      "value": {
+        "template": "blog/blog-post",
+        "draft": false,
+        "title": "Just in: small batch of Jamaican Blue Mountain in store next week",
+        "description": "We’re proud to announce that we’ll be offering a small batch of Jamaica Blue Mountain coffee beans in our store next week.",
+        "breadcrumbs": [
+          {
+            "name": "Home",
+            "path": "/"
+          },
+          {
+            "name": "Blog",
+            "path": "/blog/"
+          },
+          {
+            "name": "Just in: small batch of Jamaican Blue Mountain in store next week"
+          }
+        ],
+        "author": [
+          "Leroy Sané"
+        ],
+        "date": "2017-04-04T15:04:10.000Z",
+        "featuredPost": true,
+        "featuredImage": "Industrial/image5_ptxd3a",
+        "altText": "this is an alternate text",
+        "tags": [
+          "jamaica",
+          "green beans",
+          "flavor",
+          "tasting"
+        ],
+        "id": "63a47ee047e29d406dfce757cfefa2ef",
+        "filepath": "src/pages/posts/small-batch-jamaican.md",
+        "fullpath": "/Users/wernerglinka/Documents/Projects/1-SANDBOXES/gatsby-sandbox/newGatsbyStarter/src/pages/posts/small-batch-jamaican.md",
+        "link": "",
+        "slug": "src-pages-posts-small-batch-jamaican",
+        "route": "/src-pages-posts-small-batch-jamaican",
+        "name": "Small batch jamaican",
+        "menu": "",
+        "headings": [
+          {
+            "slug": "a-little-history",
+            "depth": 2,
+            "value": "A little history"
+          },
+          {
+            "slug": "what-you-need-to-know-before-trying",
+            "depth": 2,
+            "value": "What you need to know before trying"
+          }
+        ]
+      }
+    },
+    {
+      "key": "src/pages/products/index.md",
+      "value": {
+        "template": "products/index",
+        "page_id": "products",
+        "title": "Products",
+        "heading": "Products Landing Page",
+        "breadcrumbs": [
+          {
+            "name": "Home",
+            "path": "/"
+          },
+          {
+            "name": "Products"
+          }
+        ],
+        "id": "dcb1dc08215a1369039141be1553908f",
+        "filepath": "src/pages/products/index.md",
+        "fullpath": "/Users/wernerglinka/Documents/Projects/1-SANDBOXES/gatsby-sandbox/newGatsbyStarter/src/pages/products/index.md",
+        "link": "",
+        "slug": "src-pages-products-index",
+        "route": "/src-pages-products-index",
+        "name": "Index",
+        "menu": "",
+        "headings": []
+      }
+    },
+    {
+      "key": "src/pages/resources/analyst-reports.md",
+      "value": {
+        "template": "resources/analyst-reports",
+        "page_id": "analyst-reports",
+        "title": "Analyst Reports",
+        "heading": "Analyst Reports Page",
+        "breadcrumbs": [
+          {
+            "name": "Home",
+            "path": "/"
+          },
+          {
+            "name": "Resources",
+            "path": "/resources/"
+          },
+          {
+            "name": "Analyst Reports"
+          }
+        ],
+        "id": "7aa085a7bb9942221849b5518d437732",
+        "filepath": "src/pages/resources/analyst-reports.md",
+        "fullpath": "/Users/wernerglinka/Documents/Projects/1-SANDBOXES/gatsby-sandbox/newGatsbyStarter/src/pages/resources/analyst-reports.md",
+        "link": "",
+        "slug": "src-pages-resources-analyst-reports",
+        "route": "/src-pages-resources-analyst-reports",
+        "name": "Analyst reports",
+        "menu": "",
+        "headings": []
+      }
+    },
+    {
+      "key": "src/pages/resources/application-solution-briefs.md",
+      "value": {
+        "template": "resources/application-solution-briefs",
+        "page_id": "application-solution-briefs",
+        "title": "Application & Solution Briefs",
+        "heading": "Application & Solution Briefs Page",
+        "breadcrumbs": [
+          {
+            "name": "Home",
+            "path": "/"
+          },
+          {
+            "name": "Resources",
+            "path": "/resources/"
+          },
+          {
+            "name": "Application & Solution Briefs"
+          }
+        ],
+        "id": "88952fa5fdee4b661977034c19fcdb28",
+        "filepath": "src/pages/resources/application-solution-briefs.md",
+        "fullpath": "/Users/wernerglinka/Documents/Projects/1-SANDBOXES/gatsby-sandbox/newGatsbyStarter/src/pages/resources/application-solution-briefs.md",
+        "link": "",
+        "slug": "src-pages-resources-application-solution-briefs",
+        "route": "/src-pages-resources-application-solution-briefs",
+        "name": "Application solution briefs",
+        "menu": "",
+        "headings": []
+      }
+    },
+    {
+      "key": "src/pages/resources/customer-success.md",
+      "value": {
+        "template": "resources/customer-success",
+        "page_id": "customer-success",
+        "title": "Customer Success",
+        "heading": "Customer Success Page",
+        "breadcrumbs": [
+          {
+            "name": "Home",
+            "path": "/"
+          },
+          {
+            "name": "Resources",
+            "path": "/resources/"
+          },
+          {
+            "name": "Customer Success"
+          }
+        ],
+        "id": "2ca7475327ff4f2a34e78718ff961ec3",
+        "filepath": "src/pages/resources/customer-success.md",
+        "fullpath": "/Users/wernerglinka/Documents/Projects/1-SANDBOXES/gatsby-sandbox/newGatsbyStarter/src/pages/resources/customer-success.md",
+        "link": "",
+        "slug": "src-pages-resources-customer-success",
+        "route": "/src-pages-resources-customer-success",
+        "name": "Customer success",
+        "menu": "",
+        "headings": []
+      }
+    },
+    {
+      "key": "src/pages/resources/data-sheets.md",
+      "value": {
+        "template": "resources/data-sheets",
+        "page_id": "data-sheets",
+        "title": "Data Sheets",
+        "heading": "Data Sheets Page",
+        "breadcrumbs": [
+          {
+            "name": "Home",
+            "path": "/"
+          },
+          {
+            "name": "Resources",
+            "path": "/resources/"
+          },
+          {
+            "name": "Data Sheets"
+          }
+        ],
+        "id": "6d0c062bc0652c80e189729808433bfa",
+        "filepath": "src/pages/resources/data-sheets.md",
+        "fullpath": "/Users/wernerglinka/Documents/Projects/1-SANDBOXES/gatsby-sandbox/newGatsbyStarter/src/pages/resources/data-sheets.md",
+        "link": "",
+        "slug": "src-pages-resources-data-sheets",
+        "route": "/src-pages-resources-data-sheets",
+        "name": "Data sheets",
+        "menu": "",
+        "headings": []
+      }
+    },
+    {
+      "key": "src/pages/resources/index.md",
+      "value": {
+        "template": "resources/index",
+        "page_id": "resources",
+        "title": "Resources",
+        "heading": "Resources Landing Page",
+        "breadcrumbs": [
+          {
+            "name": "Home",
+            "path": "/"
+          },
+          {
+            "name": "Resources"
+          }
+        ],
+        "id": "a3077dbd50b0ad59b495153c7bf6c15b",
+        "filepath": "src/pages/resources/index.md",
+        "fullpath": "/Users/wernerglinka/Documents/Projects/1-SANDBOXES/gatsby-sandbox/newGatsbyStarter/src/pages/resources/index.md",
+        "link": "",
+        "slug": "src-pages-resources-index",
+        "route": "/src-pages-resources-index",
+        "name": "Index",
+        "menu": "",
+        "headings": []
+      }
+    },
+    {
+      "key": "src/pages/resources/infographics.md",
+      "value": {
+        "template": "resources/infographics",
+        "page_id": "infographics",
+        "title": "Infographics",
+        "heading": "Infographics Page",
+        "breadcrumbs": [
+          {
+            "name": "Home",
+            "path": "/"
+          },
+          {
+            "name": "Resources",
+            "path": "/resources/"
+          },
+          {
+            "name": "Infographics"
+          }
+        ],
+        "id": "c67298699947ac7140424acc0239bb50",
+        "filepath": "src/pages/resources/infographics.md",
+        "fullpath": "/Users/wernerglinka/Documents/Projects/1-SANDBOXES/gatsby-sandbox/newGatsbyStarter/src/pages/resources/infographics.md",
+        "link": "",
+        "slug": "src-pages-resources-infographics",
+        "route": "/src-pages-resources-infographics",
+        "name": "Infographics",
+        "menu": "",
+        "headings": []
+      }
+    },
+    {
+      "key": "src/pages/resources/services.md",
+      "value": {
+        "template": "resources/services",
+        "page_id": "services",
+        "title": "Services Videos",
+        "heading": "Services Page",
+        "breadcrumbs": [
+          {
+            "name": "Home",
+            "path": "/"
+          },
+          {
+            "name": "Resources",
+            "path": "/resources/"
+          },
+          {
+            "name": "Services"
+          }
+        ],
+        "id": "40c2a3f69588e06f5d5ab2dc550d18a7",
+        "filepath": "src/pages/resources/services.md",
+        "fullpath": "/Users/wernerglinka/Documents/Projects/1-SANDBOXES/gatsby-sandbox/newGatsbyStarter/src/pages/resources/services.md",
+        "link": "",
+        "slug": "src-pages-resources-services",
+        "route": "/src-pages-resources-services",
+        "name": "Services",
+        "menu": "",
+        "headings": []
+      }
+    },
+    {
+      "key": "src/pages/resources/webinars-videos.md",
+      "value": {
+        "template": "resources/webinars-videos",
+        "page_id": "webinars-videos",
+        "title": "Webinars Videos",
+        "heading": "Webinars Videos Page",
+        "breadcrumbs": [
+          {
+            "name": "Home",
+            "path": "/"
+          },
+          {
+            "name": "Resources",
+            "path": "/resources/"
+          },
+          {
+            "name": "Webinars Videos"
+          }
+        ],
+        "id": "185abc19337dec138479793188c0bcfe",
+        "filepath": "src/pages/resources/webinars-videos.md",
+        "fullpath": "/Users/wernerglinka/Documents/Projects/1-SANDBOXES/gatsby-sandbox/newGatsbyStarter/src/pages/resources/webinars-videos.md",
+        "link": "",
+        "slug": "src-pages-resources-webinars-videos",
+        "route": "/src-pages-resources-webinars-videos",
+        "name": "Webinars videos",
+        "menu": "",
+        "headings": []
+      }
+    },
+    {
+      "key": "src/pages/resources/white-papers.md",
+      "value": {
+        "template": "resources/white-papers",
+        "page_id": "white-papers",
+        "title": "White Papers",
+        "heading": "White Papers",
+        "breadcrumbs": [
+          {
+            "name": "Home",
+            "path": "/"
+          },
+          {
+            "name": "Resources",
+            "path": "/resources/"
+          },
+          {
+            "name": "White Papers"
+          }
+        ],
+        "id": "101138b0b4c642c2212ee1099b39ee6d",
+        "filepath": "src/pages/resources/white-papers.md",
+        "fullpath": "/Users/wernerglinka/Documents/Projects/1-SANDBOXES/gatsby-sandbox/newGatsbyStarter/src/pages/resources/white-papers.md",
+        "link": "",
+        "slug": "src-pages-resources-white-papers",
+        "route": "/src-pages-resources-white-papers",
+        "name": "White papers",
+        "menu": "",
+        "headings": []
+      }
+    },
+    {
+      "key": "src/pages/solutions/account-abuse.md",
+      "value": {
+        "template": "solutions/account-abuse",
+        "page_id": "account-abuse",
+        "title": "Account Abuse",
+        "heading": "Account Abuse Page",
+        "breadcrumbs": [
+          {
+            "name": "Home",
+            "path": "/"
+          },
+          {
+            "name": "Solutions",
+            "path": "/solutions/"
+          },
+          {
+            "name": "Account Abuse"
+          }
+        ],
+        "id": "b4b01240389ced758e1175be3015e1e1",
+        "filepath": "src/pages/solutions/account-abuse.md",
+        "fullpath": "/Users/wernerglinka/Documents/Projects/1-SANDBOXES/gatsby-sandbox/newGatsbyStarter/src/pages/solutions/account-abuse.md",
+        "link": "",
+        "slug": "src-pages-solutions-account-abuse",
+        "route": "/src-pages-solutions-account-abuse",
+        "name": "Account abuse",
+        "menu": "",
+        "headings": []
+      }
+    },
+    {
+      "key": "src/pages/solutions/carding.md",
+      "value": {
+        "template": "solutions/carding",
+        "page_id": "carding",
+        "title": "Carding",
+        "heading": "Carding Page",
+        "breadcrumbs": [
+          {
+            "name": "Home",
+            "path": "/"
+          },
+          {
+            "name": "Solutions",
+            "path": "/solutions/"
+          },
+          {
+            "name": "Carding"
+          }
+        ],
+        "id": "873876d16cefba285687ff07e0256623",
+        "filepath": "src/pages/solutions/carding.md",
+        "fullpath": "/Users/wernerglinka/Documents/Projects/1-SANDBOXES/gatsby-sandbox/newGatsbyStarter/src/pages/solutions/carding.md",
+        "link": "",
+        "slug": "src-pages-solutions-carding",
+        "route": "/src-pages-solutions-carding",
+        "name": "Carding",
+        "menu": "",
+        "headings": []
+      }
+    },
+    {
+      "key": "src/pages/solutions/checkout-abuse.md",
+      "value": {
+        "template": "solutions/checkout-abuse",
+        "page_id": "checkout-abuse",
+        "title": "Checkout Abuse",
+        "heading": "Checkout Abuse Page",
+        "breadcrumbs": [
+          {
+            "name": "Home",
+            "path": "/"
+          },
+          {
+            "name": "Solutions",
+            "path": "/solutions/"
+          },
+          {
+            "name": "Checkout Abuse"
+          }
+        ],
+        "id": "9e5efc5ac7dc34058f6eeb37356f3b21",
+        "filepath": "src/pages/solutions/checkout-abuse.md",
+        "fullpath": "/Users/wernerglinka/Documents/Projects/1-SANDBOXES/gatsby-sandbox/newGatsbyStarter/src/pages/solutions/checkout-abuse.md",
+        "link": "",
+        "slug": "src-pages-solutions-checkout-abuse",
+        "route": "/src-pages-solutions-checkout-abuse",
+        "name": "Checkout abuse",
+        "menu": "",
+        "headings": []
+      }
+    },
+    {
+      "key": "src/pages/solutions/compliance.md",
+      "value": {
+        "template": "solutions/compliance",
+        "page_id": "compliance",
+        "title": "Compliance",
+        "heading": "Compliance Page",
+        "breadcrumbs": [
+          {
+            "name": "Home",
+            "path": "/"
+          },
+          {
+            "name": "Solutions",
+            "path": "/solutions/"
+          },
+          {
+            "name": "Compliance"
+          }
+        ],
+        "id": "7c5fcd480d247c9f4bdd2351884f5870",
+        "filepath": "src/pages/solutions/compliance.md",
+        "fullpath": "/Users/wernerglinka/Documents/Projects/1-SANDBOXES/gatsby-sandbox/newGatsbyStarter/src/pages/solutions/compliance.md",
+        "link": "",
+        "slug": "src-pages-solutions-compliance",
+        "route": "/src-pages-solutions-compliance",
+        "name": "Compliance",
+        "menu": "",
+        "headings": []
+      }
+    },
+    {
+      "key": "src/pages/solutions/digital-marketing.md",
+      "value": {
+        "template": "solutions/digital-marketing",
+        "page_id": "digital-marketing",
+        "title": "Digital Marketing",
+        "heading": "Digital Marketing Page",
+        "breadcrumbs": [
+          {
+            "name": "Home",
+            "path": "/"
+          },
+          {
+            "name": "Solutions",
+            "path": "/solutions/"
+          },
+          {
+            "name": "Digital Marketing"
+          }
+        ],
+        "id": "937ee0a47969ce9d2c4dce157bf2f163",
+        "filepath": "src/pages/solutions/digital-marketing.md",
+        "fullpath": "/Users/wernerglinka/Documents/Projects/1-SANDBOXES/gatsby-sandbox/newGatsbyStarter/src/pages/solutions/digital-marketing.md",
+        "link": "",
+        "slug": "src-pages-solutions-digital-marketing",
+        "route": "/src-pages-solutions-digital-marketing",
+        "name": "Digital marketing",
+        "menu": "",
+        "headings": []
+      }
+    },
+    {
+      "key": "src/pages/solutions/digital-skimming.md",
+      "value": {
+        "template": "solutions/digital-skimming",
+        "page_id": "digital-skimming",
+        "title": "Digital Skimming",
+        "heading": "Digital Skimming Page",
+        "breadcrumbs": [
+          {
+            "name": "Home",
+            "path": "/"
+          },
+          {
+            "name": "Solutions",
+            "path": "/solutions/"
+          },
+          {
+            "name": "Digital Skimming"
+          }
+        ],
+        "id": "d11c227fcc1836ce36ad7688197f7f55",
+        "filepath": "src/pages/solutions/digital-skimming.md",
+        "fullpath": "/Users/wernerglinka/Documents/Projects/1-SANDBOXES/gatsby-sandbox/newGatsbyStarter/src/pages/solutions/digital-skimming.md",
+        "link": "",
+        "slug": "src-pages-solutions-digital-skimming",
+        "route": "/src-pages-solutions-digital-skimming",
+        "name": "Digital skimming",
+        "menu": "",
+        "headings": []
+      }
+    },
+    {
+      "key": "src/pages/solutions/ecommerce.md",
+      "value": {
+        "template": "solutions/ecommerce",
+        "page_id": "ecommerce",
+        "title": "eCommerce",
+        "heading": "eCommerce Page",
+        "breadcrumbs": [
+          {
+            "name": "Home",
+            "path": "/"
+          },
+          {
+            "name": "Solutions",
+            "path": "/solutions/"
+          },
+          {
+            "name": "eCommerce"
+          }
+        ],
+        "id": "dbf366334386f191bad867cdc9469b45",
+        "filepath": "src/pages/solutions/ecommerce.md",
+        "fullpath": "/Users/wernerglinka/Documents/Projects/1-SANDBOXES/gatsby-sandbox/newGatsbyStarter/src/pages/solutions/ecommerce.md",
+        "link": "",
+        "slug": "src-pages-solutions-ecommerce",
+        "route": "/src-pages-solutions-ecommerce",
+        "name": "Ecommerce",
+        "menu": "",
+        "headings": []
+      }
+    },
+    {
+      "key": "src/pages/solutions/index.md",
+      "value": {
+        "template": "solutions/index",
+        "page_id": "solutions",
+        "title": "Solutions",
+        "heading": "Solutions Landing Page",
+        "breadcrumbs": [
+          {
+            "name": "Home",
+            "path": "/"
+          },
+          {
+            "name": "Solutions"
+          }
+        ],
+        "id": "a0b1cd9c7ab97398ee714b23b20ae8ad",
+        "filepath": "src/pages/solutions/index.md",
+        "fullpath": "/Users/wernerglinka/Documents/Projects/1-SANDBOXES/gatsby-sandbox/newGatsbyStarter/src/pages/solutions/index.md",
+        "link": "",
+        "slug": "src-pages-solutions-index",
+        "route": "/src-pages-solutions-index",
+        "name": "Index",
+        "menu": "",
+        "headings": []
+      }
+    },
+    {
+      "key": "src/pages/solutions/marketing-fraud.md",
+      "value": {
+        "template": "solutions/marketing-fraud",
+        "page_id": "marketing-fraud",
+        "title": "Marketing Fraud",
+        "heading": "Marketing Fraud Page",
+        "breadcrumbs": [
+          {
+            "name": "Home",
+            "path": "/"
+          },
+          {
+            "name": "Solutions",
+            "path": "/solutions/"
+          },
+          {
+            "name": "Marketing Fraud"
+          }
+        ],
+        "id": "d2885c440e2a2596019a5ff2dd80b4c5",
+        "filepath": "src/pages/solutions/marketing-fraud.md",
+        "fullpath": "/Users/wernerglinka/Documents/Projects/1-SANDBOXES/gatsby-sandbox/newGatsbyStarter/src/pages/solutions/marketing-fraud.md",
+        "link": "",
+        "slug": "src-pages-solutions-marketing-fraud",
+        "route": "/src-pages-solutions-marketing-fraud",
+        "name": "Marketing fraud",
+        "menu": "",
+        "headings": []
+      }
+    },
+    {
+      "key": "src/pages/solutions/media.md",
+      "value": {
+        "template": "solutions/media",
+        "page_id": "media",
+        "title": "Media",
+        "heading": "Media Page",
+        "breadcrumbs": [
+          {
+            "name": "Home",
+            "path": "/"
+          },
+          {
+            "name": "Solutions",
+            "path": "/solutions/"
+          },
+          {
+            "name": "Media"
+          }
+        ],
+        "id": "7df8baf8f35460cfd5af304cec0ad132",
+        "filepath": "src/pages/solutions/media.md",
+        "fullpath": "/Users/wernerglinka/Documents/Projects/1-SANDBOXES/gatsby-sandbox/newGatsbyStarter/src/pages/solutions/media.md",
+        "link": "",
+        "slug": "src-pages-solutions-media",
+        "route": "/src-pages-solutions-media",
+        "name": "Media",
+        "menu": "",
+        "headings": []
+      }
+    },
+    {
+      "key": "src/pages/solutions/pii-harvesting.md",
+      "value": {
+        "template": "solutions/pii-harvesting",
+        "page_id": "pii-harvesting",
+        "title": "PII Harvesting",
+        "heading": "PII Harvesting Page",
+        "breadcrumbs": [
+          {
+            "name": "Home",
+            "path": "/"
+          },
+          {
+            "name": "Solutions",
+            "path": "/solutions/"
+          },
+          {
+            "name": "PII Harvesting"
+          }
+        ],
+        "id": "9ebce7798df1aca6d0eda47758ea9a84",
+        "filepath": "src/pages/solutions/pii-harvesting.md",
+        "fullpath": "/Users/wernerglinka/Documents/Projects/1-SANDBOXES/gatsby-sandbox/newGatsbyStarter/src/pages/solutions/pii-harvesting.md",
+        "link": "",
+        "slug": "src-pages-solutions-pii-harvesting",
+        "route": "/src-pages-solutions-pii-harvesting",
+        "name": "Pii harvesting",
+        "menu": "",
+        "headings": []
+      }
+    },
+    {
+      "key": "src/pages/solutions/security.md",
+      "value": {
+        "template": "solutions/security",
+        "page_id": "security",
+        "title": "Security",
+        "heading": "Security Page",
+        "breadcrumbs": [
+          {
+            "name": "Home",
+            "path": "/"
+          },
+          {
+            "name": "Solutions",
+            "path": "/solutions/"
+          },
+          {
+            "name": "Security"
+          }
+        ],
+        "id": "0607ac83e7e42609898861bca9888703",
+        "filepath": "src/pages/solutions/security.md",
+        "fullpath": "/Users/wernerglinka/Documents/Projects/1-SANDBOXES/gatsby-sandbox/newGatsbyStarter/src/pages/solutions/security.md",
+        "link": "",
+        "slug": "src-pages-solutions-security",
+        "route": "/src-pages-solutions-security",
+        "name": "Security",
+        "menu": "",
+        "headings": []
+      }
+    },
+    {
+      "key": "src/pages/solutions/supply-chain-attack.md",
+      "value": {
+        "template": "solutions/supply-chain-attack",
+        "page_id": "supply-chain-attack",
+        "title": "Supply Chain Attack",
+        "heading": "Supply Chain Attack Page",
+        "breadcrumbs": [
+          {
+            "name": "Home",
+            "path": "/"
+          },
+          {
+            "name": "Solutions",
+            "path": "/solutions/"
+          },
+          {
+            "name": "Supply Chain Attack"
+          }
+        ],
+        "id": "d99c31910b22ae1614d368e37e60c9c6",
+        "filepath": "src/pages/solutions/supply-chain-attack.md",
+        "fullpath": "/Users/wernerglinka/Documents/Projects/1-SANDBOXES/gatsby-sandbox/newGatsbyStarter/src/pages/solutions/supply-chain-attack.md",
+        "link": "",
+        "slug": "src-pages-solutions-supply-chain-attack",
+        "route": "/src-pages-solutions-supply-chain-attack",
+        "name": "Supply chain attack",
+        "menu": "",
+        "headings": []
+      }
+    },
+    {
+      "key": "src/pages/solutions/travel-hospitality.md",
+      "value": {
+        "template": "solutions/travel-hospitality",
+        "page_id": "travel_hospitality",
+        "title": "Travel/Hospitality",
+        "heading": "Travel and Hospitality Page",
+        "breadcrumbs": [
+          {
+            "name": "Home",
+            "path": "/"
+          },
+          {
+            "name": "Solutions",
+            "path": "/solutions/"
+          },
+          {
+            "name": "Travel and Hospitality"
+          }
+        ],
+        "id": "494a6928d9e1a70aae38469bf9add328",
+        "filepath": "src/pages/solutions/travel-hospitality.md",
+        "fullpath": "/Users/wernerglinka/Documents/Projects/1-SANDBOXES/gatsby-sandbox/newGatsbyStarter/src/pages/solutions/travel-hospitality.md",
+        "link": "",
+        "slug": "src-pages-solutions-travel-hospitality",
+        "route": "/src-pages-solutions-travel-hospitality",
+        "name": "Travel hospitality",
+        "menu": "",
+        "headings": []
+      }
+    },
+    {
+      "key": "src/pages/solutions/web-scraping.md",
+      "value": {
+        "template": "solutions/web-scraping",
+        "page_id": "web-scraping-page",
+        "title": "Web Scraping",
+        "heading": "Web Scraping Page",
+        "breadcrumbs": [
+          {
+            "name": "Home",
+            "path": "/"
+          },
+          {
+            "name": "Solutions",
+            "path": "/solutions/"
+          },
+          {
+            "name": "Web Scraping"
+          }
+        ],
+        "id": "727cd94a8458819e6b4f57aeb0769f79",
+        "filepath": "src/pages/solutions/web-scraping.md",
+        "fullpath": "/Users/wernerglinka/Documents/Projects/1-SANDBOXES/gatsby-sandbox/newGatsbyStarter/src/pages/solutions/web-scraping.md",
+        "link": "",
+        "slug": "src-pages-solutions-web-scraping",
+        "route": "/src-pages-solutions-web-scraping",
+        "name": "Web scraping",
+        "menu": "",
+        "headings": []
+      }
+    },
+    {
+      "key": "src/pages/products/bot-defender/case-studies.md",
+      "value": {
+        "template": "products/bot-defender/case-studies",
+        "page_id": "bot-defender-case-studies",
+        "title": "Bot Defender Case Studies",
+        "heading": "Bot Defender Case Studies Page",
+        "breadcrumbs": [
+          {
+            "name": "Home",
+            "path": "/"
+          },
+          {
+            "name": "Products",
+            "path": "/products/"
+          },
+          {
+            "name": "Bot Defender",
+            "path": "/products/bot-defender/"
+          },
+          {
+            "name": "Case Studies"
+          }
+        ],
+        "id": "2bc94f60e779ac73ce964661a3d57f6d",
+        "filepath": "src/pages/products/bot-defender/case-studies.md",
+        "fullpath": "/Users/wernerglinka/Documents/Projects/1-SANDBOXES/gatsby-sandbox/newGatsbyStarter/src/pages/products/bot-defender/case-studies.md",
+        "link": "",
+        "slug": "src-pages-products-bot-defender-case-studies",
+        "route": "/src-pages-products-bot-defender-case-studies",
+        "name": "Case studies",
+        "menu": "",
+        "headings": []
+      }
+    },
+    {
+      "key": "src/pages/products/bot-defender/index.md",
+      "value": {
+        "template": "products/bot-defender/index",
+        "page_id": "bot-defender-overview",
+        "title": "Bot Defender Overview",
+        "heading": "Bot Defender Overview Page",
+        "breadcrumbs": [
+          {
+            "name": "Home",
+            "path": "/"
+          },
+          {
+            "name": "Products",
+            "path": "/products/"
+          },
+          {
+            "name": "Bot Defender"
+          }
+        ],
+        "id": "5a76b9ac4b725b77e182f5ea9567cfe9",
+        "filepath": "src/pages/products/bot-defender/index.md",
+        "fullpath": "/Users/wernerglinka/Documents/Projects/1-SANDBOXES/gatsby-sandbox/newGatsbyStarter/src/pages/products/bot-defender/index.md",
+        "link": "",
+        "slug": "src-pages-products-bot-defender-index",
+        "route": "/src-pages-products-bot-defender-index",
+        "name": "Index",
+        "menu": "",
+        "headings": []
+      }
+    },
+    {
+      "key": "src/pages/products/bot-defender/resources.md",
+      "value": {
+        "template": "products/bot-defender/resources",
+        "page_id": "bot-defender-resources",
+        "title": "Bot Defender Resources",
+        "heading": "Bot Defender Resources Page",
+        "breadcrumbs": [
+          {
+            "name": "Home",
+            "path": "/"
+          },
+          {
+            "name": "Products",
+            "path": "/products/"
+          },
+          {
+            "name": "Bot Defender",
+            "path": "/products/bot-defender/"
+          },
+          {
+            "name": "Resources"
+          }
+        ],
+        "id": "4125222888d09e7aaa69f2a764e29b0b",
+        "filepath": "src/pages/products/bot-defender/resources.md",
+        "fullpath": "/Users/wernerglinka/Documents/Projects/1-SANDBOXES/gatsby-sandbox/newGatsbyStarter/src/pages/products/bot-defender/resources.md",
+        "link": "",
+        "slug": "src-pages-products-bot-defender-resources",
+        "route": "/src-pages-products-bot-defender-resources",
+        "name": "Resources",
+        "menu": "",
+        "headings": []
+      }
+    },
+    {
+      "key": "src/pages/products/bot-defender/technical-specifications.md",
+      "value": {
+        "template": "products/bot-defender/technical-specifications",
+        "page_id": "bot-defender-technical-specifications",
+        "title": "Bot Defender Technical Specifications",
+        "heading": "Bot Defender Technical Specifications Page",
+        "breadcrumbs": [
+          {
+            "name": "Home",
+            "path": "/"
+          },
+          {
+            "name": "Products",
+            "path": "/products/"
+          },
+          {
+            "name": "Bot Defender",
+            "path": "/products/bot-defender/"
+          },
+          {
+            "name": "Technical Specifications"
+          }
+        ],
+        "id": "8ba30b3f035941324aa949893e4860c9",
+        "filepath": "src/pages/products/bot-defender/technical-specifications.md",
+        "fullpath": "/Users/wernerglinka/Documents/Projects/1-SANDBOXES/gatsby-sandbox/newGatsbyStarter/src/pages/products/bot-defender/technical-specifications.md",
+        "link": "",
+        "slug": "src-pages-products-bot-defender-technical-specifications",
+        "route": "/src-pages-products-bot-defender-technical-specifications",
+        "name": "Technical specifications",
+        "menu": "",
+        "headings": []
+      }
+    },
+    {
+      "key": "src/pages/products/services/index.md",
+      "value": {
+        "template": "products/services/index",
+        "page_id": "products-services",
+        "title": "Services",
+        "heading": "Services Page",
+        "breadcrumbs": [
+          {
+            "name": "Home",
+            "path": "/"
+          },
+          {
+            "name": "Products",
+            "path": "/products/"
+          },
+          {
+            "name": "Services"
+          }
+        ],
+        "id": "f61bafffd20642a25b388de4f62ad669",
+        "filepath": "src/pages/products/services/index.md",
+        "fullpath": "/Users/wernerglinka/Documents/Projects/1-SANDBOXES/gatsby-sandbox/newGatsbyStarter/src/pages/products/services/index.md",
+        "link": "",
+        "slug": "src-pages-products-services-index",
+        "route": "/src-pages-products-services-index",
+        "name": "Index",
+        "menu": "",
+        "headings": []
+      }
+    },
+    {
+      "key": "src/pages/products/page-defender/case-studies.md",
+      "value": {
+        "template": "products/page-defender/case-studies",
+        "page_id": "page-defender-case-studies",
+        "title": "Page Defender Case Studies",
+        "heading": "Page Defender Case Studies Page",
+        "breadcrumbs": [
+          {
+            "name": "Home",
+            "path": "/"
+          },
+          {
+            "name": "Products",
+            "path": "/products/"
+          },
+          {
+            "name": "Page Defender",
+            "path": "/products/page-defender/"
+          },
+          {
+            "name": "Case Studies"
+          }
+        ],
+        "id": "577a98e56a59f3714739317753fbbd17",
+        "filepath": "src/pages/products/page-defender/case-studies.md",
+        "fullpath": "/Users/wernerglinka/Documents/Projects/1-SANDBOXES/gatsby-sandbox/newGatsbyStarter/src/pages/products/page-defender/case-studies.md",
+        "link": "",
+        "slug": "src-pages-products-page-defender-case-studies",
+        "route": "/src-pages-products-page-defender-case-studies",
+        "name": "Case studies",
+        "menu": "",
+        "headings": []
+      }
+    },
+    {
+      "key": "src/pages/products/page-defender/index.md",
+      "value": {
+        "template": "products/page-defender/index",
+        "page_id": "page-defender-overview",
+        "title": "Page Defender Overview",
+        "heading": "Page Defender Overview Page",
+        "breadcrumbs": [
+          {
+            "name": "Home",
+            "path": "/"
+          },
+          {
+            "name": "Products",
+            "path": "/products/"
+          },
+          {
+            "name": "Page Defender"
+          }
+        ],
+        "id": "cfd440a8f6f97b1a802d6014be5fdcda",
+        "filepath": "src/pages/products/page-defender/index.md",
+        "fullpath": "/Users/wernerglinka/Documents/Projects/1-SANDBOXES/gatsby-sandbox/newGatsbyStarter/src/pages/products/page-defender/index.md",
+        "link": "",
+        "slug": "src-pages-products-page-defender-index",
+        "route": "/src-pages-products-page-defender-index",
+        "name": "Index",
+        "menu": "",
+        "headings": []
+      }
+    },
+    {
+      "key": "src/pages/products/page-defender/resources.md",
+      "value": {
+        "template": "products/page-defender/resources",
+        "page_id": "page-defender-resources",
+        "title": "Page Defender Resources",
+        "heading": "Page Defender Resources Page",
+        "breadcrumbs": [
+          {
+            "name": "Home",
+            "path": "/"
+          },
+          {
+            "name": "Products",
+            "path": "/products/"
+          },
+          {
+            "name": "Page Defender",
+            "path": "/products/page-defender/"
+          },
+          {
+            "name": "Resources"
+          }
+        ],
+        "id": "90fcf674d3ac120f44cffc377f1f853f",
+        "filepath": "src/pages/products/page-defender/resources.md",
+        "fullpath": "/Users/wernerglinka/Documents/Projects/1-SANDBOXES/gatsby-sandbox/newGatsbyStarter/src/pages/products/page-defender/resources.md",
+        "link": "",
+        "slug": "src-pages-products-page-defender-resources",
+        "route": "/src-pages-products-page-defender-resources",
+        "name": "Resources",
+        "menu": "",
+        "headings": []
+      }
+    },
+    {
+      "key": "src/pages/products/page-defender/technical-specifications.md",
+      "value": {
+        "template": "products/page-defender/technical-specifications",
+        "page_id": "page-defender-technical-specifications",
+        "title": "Page Defender Technical Specifications",
+        "heading": "Page Defender Technical Specifications Page",
+        "breadcrumbs": [
+          {
+            "name": "Home",
+            "path": "/"
+          },
+          {
+            "name": "Products",
+            "path": "/products/"
+          },
+          {
+            "name": "Page Defender",
+            "path": "/products/page-defender/"
+          },
+          {
+            "name": "Technical Specifications"
+          }
+        ],
+        "id": "4d68bf501150ba19f9835384f27b8781",
+        "filepath": "src/pages/products/page-defender/technical-specifications.md",
+        "fullpath": "/Users/wernerglinka/Documents/Projects/1-SANDBOXES/gatsby-sandbox/newGatsbyStarter/src/pages/products/page-defender/technical-specifications.md",
+        "link": "",
+        "slug": "src-pages-products-page-defender-technical-specifications",
+        "route": "/src-pages-products-page-defender-technical-specifications",
+        "name": "Technical specifications",
+        "menu": "",
+        "headings": []
+      }
+    },
+    {
+      "key": "src/pages/products/code-defender/case-studies.md",
+      "value": {
+        "template": "products/code-defender/case-studies",
+        "page_id": "code-defender-case-studies",
+        "title": "Code Defender Case Studies",
+        "heading": "Code Defender Case Studies Page",
+        "breadcrumbs": [
+          {
+            "name": "Home",
+            "path": "/"
+          },
+          {
+            "name": "Products",
+            "path": "/products/"
+          },
+          {
+            "name": "Code Defender",
+            "path": "/products/code-defender/"
+          },
+          {
+            "name": "Case Studies"
+          }
+        ],
+        "id": "e5dddd0b573a67be786d9a48757220e7",
+        "filepath": "src/pages/products/code-defender/case-studies.md",
+        "fullpath": "/Users/wernerglinka/Documents/Projects/1-SANDBOXES/gatsby-sandbox/newGatsbyStarter/src/pages/products/code-defender/case-studies.md",
+        "link": "",
+        "slug": "src-pages-products-code-defender-case-studies",
+        "route": "/src-pages-products-code-defender-case-studies",
+        "name": "Case studies",
+        "menu": "",
+        "headings": []
+      }
+    },
+    {
+      "key": "src/pages/products/code-defender/index.md",
+      "value": {
+        "template": "products/code-defender/index",
+        "page_id": "code-defender-overview",
+        "title": "Code Defender Overview",
+        "heading": "Code Defender Overview Page",
+        "breadcrumbs": [
+          {
+            "name": "Home",
+            "path": "/"
+          },
+          {
+            "name": "Products",
+            "path": "/products/"
+          },
+          {
+            "name": "Code Defender"
+          }
+        ],
+        "id": "b237d4326da7982faed778937065857a",
+        "filepath": "src/pages/products/code-defender/index.md",
+        "fullpath": "/Users/wernerglinka/Documents/Projects/1-SANDBOXES/gatsby-sandbox/newGatsbyStarter/src/pages/products/code-defender/index.md",
+        "link": "",
+        "slug": "src-pages-products-code-defender-index",
+        "route": "/src-pages-products-code-defender-index",
+        "name": "Index",
+        "menu": "",
+        "headings": []
+      }
+    },
+    {
+      "key": "src/pages/products/code-defender/resources.md",
+      "value": {
+        "template": "products/code-defender/resources",
+        "page_id": "code-defender-resources",
+        "title": "Code Defender Resources",
+        "heading": "Code Defender Resources Page",
+        "breadcrumbs": [
+          {
+            "name": "Home",
+            "path": "/"
+          },
+          {
+            "name": "Products",
+            "path": "/products/"
+          },
+          {
+            "name": "Code Defender",
+            "path": "/products/code-defender/"
+          },
+          {
+            "name": "Resources"
+          }
+        ],
+        "id": "d07e7058fff1badc3b47dfdb5af34c81",
+        "filepath": "src/pages/products/code-defender/resources.md",
+        "fullpath": "/Users/wernerglinka/Documents/Projects/1-SANDBOXES/gatsby-sandbox/newGatsbyStarter/src/pages/products/code-defender/resources.md",
+        "link": "",
+        "slug": "src-pages-products-code-defender-resources",
+        "route": "/src-pages-products-code-defender-resources",
+        "name": "Resources",
+        "menu": "",
+        "headings": []
+      }
+    },
+    {
+      "key": "src/pages/products/code-defender/technical-specifications.md",
+      "value": {
+        "template": "products/code-defender/technical-specifications",
+        "page_id": "code-defender-technical-specifications",
+        "title": "Code Defender Technical Specifications",
+        "heading": "Code Defender Technical Specifications Page",
+        "breadcrumbs": [
+          {
+            "name": "Home",
+            "path": "/"
+          },
+          {
+            "name": "Products",
+            "path": "/products/"
+          },
+          {
+            "name": "Code Defender",
+            "path": "/products/code-defender/"
+          },
+          {
+            "name": "Technical Specifications"
+          }
+        ],
+        "id": "b4335a531ece25cd189aa615c60c63b0",
+        "filepath": "src/pages/products/code-defender/technical-specifications.md",
+        "fullpath": "/Users/wernerglinka/Documents/Projects/1-SANDBOXES/gatsby-sandbox/newGatsbyStarter/src/pages/products/code-defender/technical-specifications.md",
+        "link": "",
+        "slug": "src-pages-products-code-defender-technical-specifications",
+        "route": "/src-pages-products-code-defender-technical-specifications",
+        "name": "Technical specifications",
+        "menu": "",
+        "headings": []
+      }
+    },
+    {
+      "key": "src/pages/products/technology-platform/index.md",
+      "value": {
+        "template": "products/technology-platform/index",
+        "page_id": "technology-platform",
+        "title": "Technology Platform",
+        "heading": "Technology Platform Page",
+        "breadcrumbs": [
+          {
+            "name": "Home",
+            "path": "/"
+          },
+          {
+            "name": "Products",
+            "path": "/products/"
+          },
+          {
+            "name": "Technology Platform"
+          }
+        ],
+        "id": "dc626506a74fb1d8cea57956a5edee5e",
+        "filepath": "src/pages/products/technology-platform/index.md",
+        "fullpath": "/Users/wernerglinka/Documents/Projects/1-SANDBOXES/gatsby-sandbox/newGatsbyStarter/src/pages/products/technology-platform/index.md",
+        "link": "",
+        "slug": "src-pages-products-technology-platform-index",
+        "route": "/src-pages-products-technology-platform-index",
+        "name": "Index",
+        "menu": "",
+        "headings": []
+      }
+    }
+  ],
+  "props": [
+    {
+      "key": "src/layouts/templates/modals/ModalContent.js",
+      "value": [
+        {
+          "description": "",
+          "displayName": "ModalContent",
+          "methods": [],
+          "actualName": "ModalContent",
+          "props": {
+            "modalData": {
+              "type": {
+                "name": "shape",
+                "value": {
+                  "title": {
+                    "name": "string",
+                    "required": true
+                  },
+                  "subTitle": {
+                    "name": "string",
+                    "required": true
+                  },
+                  "modalContent": {
+                    "name": "string",
+                    "required": true
+                  }
+                }
+              },
+              "required": true,
+              "description": ""
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "src/layouts/templates/modals/ModalVideo.js",
+      "value": [
+        {
+          "description": "",
+          "displayName": "ModalVideo",
+          "methods": [],
+          "actualName": "ModalVideo",
+          "props": {
+            "videoID": {
+              "type": {
+                "name": "string"
+              },
+              "required": true,
+              "description": ""
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

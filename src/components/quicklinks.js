@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Link } from "gatsby";
+import { Link, useStaticQuery, graphql } from "gatsby";
 import {
   FiMessageSquare,
   FiAlertTriangle,
@@ -9,7 +9,6 @@ import {
 } from "react-icons/fi";
 import styled from "@emotion/styled";
 import uuid from "uuid/v4";
-import useQuicklinks from "../hooks/useQuickLinks";
 
 const QuicklinksList = styled.ul`
   position: fixed;
@@ -51,7 +50,21 @@ const QuicklinksList = styled.ul`
 const Quicklinks = ({ moveOver }) => {
   const {
     allQuicklinksJson: { edges: quicklinks },
-  } = useQuicklinks();
+  } = useStaticQuery(
+    graphql`
+      query QuickLinksQuery1 {
+        allQuicklinksJson {
+          edges {
+            node {
+              name
+              link
+              icon
+            }
+          }
+        }
+      }
+    `
+  );
 
   return (
     <QuicklinksList className={moveOver ? "moveLeft" : null}>
