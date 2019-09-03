@@ -1,0 +1,65 @@
+[
+  {
+    "name_org": "CBInsights",
+    "news_org_logo": "cbinsights.jpeg",
+    "news_org_logo_wide": false,
+    "news_title": "AI 100: The Artificial Intelligence Startups Redefining Industries",
+    "news_url": "https://www.cbinsights.com/research/artificial-intelligence-top-startups/",
+    "news_date": "2018-02-06",
+    "news_type": "article"
+  },
+  {
+    "name_org": "Forbes",
+    "news_org_logo": "forbes.jpg",
+    "news_org_logo_wide": false,
+    "news_title": "A Massive Bump In Data Breaches Is Stoking Bot-Driven Attacks...",
+    "news_url": "https://www.forbes.com/sites/forbestechcouncil/2018/10/09/a-massive-bump-in-data-breaches-is-stoking-bot-driven-attacks-on-retailers/#4eec79ee66d8",
+    "news_date": "2019-10-09",
+    "news_type": "article"
+  },
+  {
+    "name_org": "Forbes",
+    "news_org_logo": "forbes.jpg",
+    "news_org_logo_wide": false,
+    "news_title": "Protect Your Site From Stealth Scraping Through Google Search",
+    "news_url": "https://www.forbes.com/sites/forbestechcouncil/2018/06/11/protect-your-site-from-stealth-scraping-through-google-search/#11cccc822188",
+    "news_date": "2018-06-11",
+    "news_type": "article"
+  },
+  {
+    "name_org": "Forbes",
+    "news_org_logo": "forbes.jpg",
+    "news_org_logo_wide": false,
+    "news_title": "Five Easy Ways To Identify Bot Attacks On Your Site",
+    "news_url": "https://www.forbes.com/sites/forbestechcouncil/2018/02/28/five-easy-ways-to-identify-bot-attacks-on-your-site/#5339528f8fa3",
+    "news_date": "2018-02-28",
+    "news_type": "article"
+  },
+  {
+    "name_org": "NBR",
+    "news_org_logo": "nightlybusinessreport.png",
+    "news_org_logo_wide": false,
+    "news_title": "PerimeterX CTO on @CNBC Nightly Business",
+    "news_url": "https://www.youtube.com/watch?v=qGcLTcIGaMQ&feature=youtu.be&t=1377",
+    "news_date": "2018-02-15",
+    "news_type": "video"
+  },
+  {
+    "name_org": "TechCrunch",
+    "news_org_logo": "techcrunch.png",
+    "news_org_logo_wide": true,
+    "news_title": "The state of Israel’s cybersecurity market",
+    "news_url": "https://techcrunch.com/2018/01/14/the-state-of-israels-cybersecurity-market/",
+    "news_date": "2018-01-14",
+    "news_type": "podcast"
+  },
+  {
+    "name_org": "Fortune",
+    "news_org_logo": "fortune.png",
+    "news_org_logo_wide": true,
+    "news_title": "These 100 Companies Are Leading the Way in A.I.",
+    "news_url": "http://fortune.com/2018/01/08/artificial-intelligence-ai-companies-invest-startups/",
+    "news_date": "2018-01-08",
+    "news_type": "article"
+  }
+]

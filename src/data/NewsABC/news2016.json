@@ -1,0 +1,263 @@
+[
+  {
+    "name_org": "DARKReading",
+    "news_org_logo": "darkreading.jpeg",
+    "news_org_logo_wide": false,
+    "news_title": "Brute-Force Botnet Attacks Now Elude Volumetric Detection",
+    "news_url": "http://www.darkreading.com/endpoint/brute-force-botnet-attacks-now-elude-volumetric-detection/a/d-id/1327742",
+    "news_date": "2016-12-19",
+    "news_type": "article"
+  },
+  {
+    "name_org": "Internet Retailer",
+    "news_org_logo": "digitalCommerce360.jpg",
+    "news_org_logo_wide": false,
+    "news_title": "How ‘hoarder’ bots steal sales from online retailers",
+    "news_url": "https://www.internetretailer.com/commentary/2016/12/16/how-hoarder-bots-steal-sales-online-retailers",
+    "news_date": "2016-12-16",
+    "news_type": "article"
+  },
+  {
+    "name_org": "CNBC",
+    "news_org_logo": "cnbc.png",
+    "news_org_logo_wide": false,
+    "news_title": "Why a criminal might want to hack into your email",
+    "news_url": "http://www.cnbc.com/2016/12/16/why-a-criminal-might-want-to-hack-into-your-email.html",
+    "news_date": "2016-12-16",
+    "news_type": "article"
+  },
+  {
+    "name_org": "NBR",
+    "news_org_logo": "nightlybusinessreport.png",
+    "news_org_logo_wide": false,
+    "news_title": "Nightly Business Report interview with Omri Iluz, PerimeterX CEO",
+    "news_url": "https://www.youtube.com/watch?v=nUlYg6sztJA&t=6m57s",
+    "news_date": "2016-12-15",
+    "news_type": "video"
+  },
+  {
+    "name_org": "cyberwire",
+    "news_org_logo": "cyberwire.jpg",
+    "news_org_logo_wide": false,
+    "news_title": "CEO Omri Iluz discussed the risks of gift card fraud",
+    "news_url": "https://thecyberwire.com/podcasts/cw-podcasts-daily-2016-12-14.html",
+    "news_date": "2016-12-14",
+    "news_type": "podcast"
+  },
+  {
+    "name_org": "TechBeacon",
+    "news_org_logo": "tech-beacon.png",
+    "news_org_logo_wide": false,
+    "news_title": "Make gradual software deployment risk-free with a real-time CDN",
+    "news_url": "https://techbeacon.com/make-gradual-software-deployment-risk-free-real-time-cdn",
+    "news_date": "2016-12-01",
+    "news_type": "podcast"
+  },
+  {
+    "name_org": "cyberwire",
+    "news_org_logo": "cyberwire.jpg",
+    "news_org_logo_wide": false,
+    "news_title": "Omri Iluz from PerimeterX provides background on botnets",
+    "news_url": "https://thecyberwire.com/podcasts/cw-podcasts-daily-2016-11-30.html",
+    "news_date": "2016-11-30",
+    "news_type": "podcast"
+  },
+  {
+    "name_org": "multichannel merchant",
+    "news_org_logo": "multichannelmerchant.png",
+    "news_org_logo_wide": false,
+    "news_title": "Holiday Ecommerce: The New Bot Threat, the New Defense",
+    "news_url": "http://multichannelmerchant.com/ecommerce/holiday-ecommerce-the-new-bot-threat-the-new-defense-28112016/",
+    "news_date": "2016-11-28",
+    "news_type": "podcast"
+  },
+  {
+    "name_org": "tech news world",
+    "news_org_logo": "technewsworld.png",
+    "news_org_logo_wide": false,
+    "news_title": "Cyber Grinches Could Disrupt Holidays' Biggest Shopping Weekend",
+    "news_url": "http://www.technewsworld.com/story/84109.html?rss=1",
+    "news_date": "2016-11-23",
+    "news_type": "article"
+  },
+  {
+    "name_org": "O'Reilly",
+    "news_org_logo": "oreillysecurity.png",
+    "news_org_logo_wide": false,
+    "news_title": "O'Reilly Security Conference NY interview with Ido Safruti, PerimeterX CTO",
+    "news_url": "https://www.youtube.com/watch?v=uwVN5Kaftp4",
+    "news_date": "2016-11-23",
+    "news_type": "video"
+  },
+  {
+    "name_org": "TechBeacon",
+    "news_org_logo": "tech-beacon.png",
+    "news_org_logo_wide": false,
+    "news_title": "Kafka, meet Bruce: How one service boosts app messaging reliability",
+    "news_url": "https://techbeacon.com/when-kafka-met-bruce-how-one-service-can-boost-app-messaging-reliability",
+    "news_date": "2016-11-01",
+    "news_type": "article"
+  },
+  {
+    "name_org": "eSecurity Planet",
+    "news_org_logo": "esecurityplanet.png",
+    "news_org_logo_wide": true,
+    "news_title": "Guide to Getting the Right Single Sign-on Solution",
+    "news_url": "http://www.esecurityplanet.com/network-security/guide-to-getting-the-right-single-sign-on-solution.html",
+    "news_date": "2016-09-29",
+    "news_type": "article"
+  },
+  {
+    "name_org": "Digital Forensic Magazine",
+    "news_org_logo": "digitalforensicsMag.png",
+    "news_org_logo_wide": false,
+    "news_title": "Senate hearing on BOT legislation to stop ticket-scalping bots",
+    "news_url": "https://digitalforensicsmagazine.com/blogs/?p=1465",
+    "news_date": "2016-09-29",
+    "news_type": "article"
+  },
+  {
+    "name_org": "CB Insights",
+    "news_org_logo": "cbinsights.jpeg",
+    "news_org_logo_wide": false,
+    "news_title": "The Periodic Table of Cybersecurity Startups",
+    "news_url": "https://www.cbinsights.com/blog/periodic-table-cybersecurity-startups/",
+    "news_date": "2016-09-12",
+    "news_type": "article"
+  },
+  {
+    "name_org": "Information Security Buzz",
+    "news_org_logo": "informationsecuritybuzz.jpeg",
+    "news_org_logo_wide": false,
+    "news_title": "4th Generation Bots Quietly Data Scraping",
+    "news_url": "http://www.informationsecuritybuzz.com/expert-comments/4th-generation-bots-quietly-data-scraping/",
+    "news_date": "2016-08-19",
+    "news_type": "article"
+  },
+  {
+    "name_org": "eSecurity Planet",
+    "news_org_logo": "esecurityplanet.png",
+    "news_org_logo_wide": true,
+    "news_title": "How to Mitigate Fourth-Party Security Risks",
+    "news_url": "http://www.esecurityplanet.com/network-security/how-to-mitigate-fourth-party-security-risks.html",
+    "news_date": "2016-08-14",
+    "news_type": "article"
+  },
+  {
+    "name_org": "TWit",
+    "news_org_logo": "twit.png",
+    "news_org_logo_wide": false,
+    "news_title": "PerimeterX CEO about behavioral based web security.",
+    "news_url": "https://www.youtube.com/watch?v=S_Oeoeg1CCY&feature=youtu.be&&t=1m37s",
+    "news_date": "2016-08-14",
+    "news_type": "video"
+  },
+  {
+    "name_org": "InfoWorld",
+    "news_org_logo": "infoworld.jpg",
+    "news_org_logo_wide": false,
+    "news_title": "3 ways websites get pwned -- and threaten you",
+    "news_url": "http://www.infoworld.com/article/3099847/security/3-ways-websites-get-pwned-and-threaten-you.html",
+    "news_date": "2016-07-26",
+    "news_type": "article"
+  },
+  {
+    "name_org": "Digital Forensics Magazine",
+    "news_org_logo": "digitalforensicsmag.png",
+    "news_org_logo_wide": false,
+    "news_title": "PerimeterX Security Researchers Discover Widespread Affiliate Marketing Fraud Attack",
+    "news_url": "https://digitalforensicsmagazine.com/blogs/?p=1369",
+    "news_date": "2016-07-22",
+    "news_type": "article"
+  },
+  {
+    "name_org": "A Journal of Musical Things",
+    "news_org_logo": "journalofmusicalthings.png",
+    "news_org_logo_wide": true,
+    "news_title": "Fighting Bots with Military Intelligence: PerimeterX",
+    "news_url": "http://ajournalofmusicalthings.com/fighting-bots-military-intelligence-perimeterx/",
+    "news_date": "2016-07-19",
+    "news_type": "article"
+  },
+  {
+    "name_org": "Mobile Advertising Watch",
+    "news_org_logo": "mobileadvertisingwatch.png",
+    "news_org_logo_wide": false,
+    "news_title": "PerimeterX Teams Up With ironSource to Battle Bot Fraud",
+    "news_url": "http://mobileadvertisingwatch.com/perimeterx-teams-up-with-ironsource-to-battle-bot-fraud-23765",
+    "news_date": "2016-07-17",
+    "news_type": "article"
+  },
+  {
+    "name_org": "Media Post",
+    "news_org_logo": "mediapost.jpg",
+    "news_org_logo_wide": false,
+    "news_title": "PerimeterX Partners With ironSource To Combat Rising Ad Fraud",
+    "news_url": "http://www.mediapost.com/publications/article/280025/perimeterx-partners-with-ironsource-to-combat-risi.html",
+    "news_date": "2016-07-12",
+    "news_type": "article"
+  },
+  {
+    "name_org": "IT Business Net",
+    "news_org_logo": "itbusinessnet.jpg",
+    "news_org_logo_wide": false,
+    "news_title": "Can't Get Your Hands On Popular Tickets or Merchandise?",
+    "news_url": "#",
+    "news_date": "2016-07-08",
+    "news_type": "article"
+  },
+  {
+    "name_org": "A Journal of Musical Things",
+    "news_org_logo": "journalofmusicalthings.png",
+    "news_org_logo_wide": true,
+    "news_title": "New York Considers Fines, Jail Time for Using Bots",
+    "news_url": "http://ajournalofmusicalthings.com/new-york-considers-fines-jail-time-using-bots/",
+    "news_date": "2016-06-22",
+    "news_type": "article"
+  },
+  {
+    "name_org": "Broadway World",
+    "news_org_logo": "broadwayworld.jpg",
+    "news_org_logo_wide": false,
+    "news_title": "Security Expert Omri Iluz's Guide To Bots: What They Are And How They Get The Tickets You Want",
+    "news_url": "http://www.broadwayworld.com/article/A-Security-Experts-Guide-To-Bots-What-They-Are-And-How-They-Get-The-Tickets-You-Want-20160620",
+    "news_date": "2016-06-20",
+    "news_type": "article"
+  },
+  {
+    "name_org": "Media Post",
+    "news_org_logo": "mediapost.jpg",
+    "news_org_logo_wide": false,
+    "news_title": "PerimeterX's New Tech Blocks Bot In Real Time",
+    "news_url": "http://www.mediapost.com/publications/article/273313/perimeterxs-new-tech-blocks-bot-in-real-time.html",
+    "news_date": "2016-04-13",
+    "news_type": "article"
+  },
+  {
+    "name_org": "Cloud Security Resource",
+    "news_org_logo": "cloudsecurityresource.png",
+    "news_org_logo_wide": false,
+    "news_title": "PerimeterX Bot Defender Protects Against Automated Web Attacks",
+    "news_url": "http://www.cloudsecurityresource.com/topics/cloud-security/articles/420116-perimeterx-bot-defender-protects-against-automated-web-attacks.htm",
+    "news_date": "2016-04-13",
+    "news_type": "article"
+  },
+  {
+    "name_org": "PE Hub",
+    "news_org_logo": "pehub.jpg",
+    "news_org_logo_wide": false,
+    "news_title": "PerimeterX, providing defense against automated attacks, launches anti-bot service",
+    "news_url": "https://www.pehub.com/2016/04/3325333/",
+    "news_date": "2016-04-12",
+    "news_type": "article"
+  },
+  {
+    "name_org": "Bizety",
+    "news_org_logo": "bizety.png",
+    "news_org_logo_wide": false,
+    "news_title": "PerimeterX Explodes Out of Stealth Mode with the Bot Defender",
+    "news_url": "https://www.bizety.com/2016/04/11/perimeterx-comes-stealth-mode-aiming-disrupt-edge-security-market/",
+    "news_date": "2016-04-12",
+    "news_type": "article"
+  }
+]

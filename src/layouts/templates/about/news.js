@@ -57,6 +57,7 @@ const News = props => {
     pageContext: { numNewsPages, currentNewsPage },
   } = props;
 
+  console.log(currentNewsPage);
   return (
     <Container>
       {currentNewsPage === 1 && (
@@ -93,11 +94,11 @@ const News = props => {
         ))}
       </NewsList>
 
-      {numNewsPages > 1 ? (
+      {numNewsPages > 0 ? (
         <Pager
           numPages={numNewsPages}
           currentPage={currentNewsPage}
-          pageType="news"
+          pageType="about/news"
         />
       ) : null}
     </Container>

@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { Link } from "gatsby";
 
 const PagerItem = ({ i, numPages, pageType }) => (
-  <Link to={`/${pageType}/${i === 0 ? "" : i}`}>
+  <Link to={`/${pageType}/${i + 1}`}>
     {(i === 0 && "First") ||
       (i !== 0 && i + 1 !== numPages && i + 1) ||
       (i + 1 === numPages && "Last")}

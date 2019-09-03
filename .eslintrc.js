@@ -9,7 +9,8 @@ module.exports = {
     "react/forbid-prop-types": 0,
     "react/jsx-wrap-multilines": 0,
     "no-unused-expressions": 0,
-    "no-restricted-syntax": 0
+    "no-restricted-syntax": 0,
+    "react/no-array-index-key": 0
   },
 };
 

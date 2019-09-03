@@ -46,7 +46,7 @@ const DesktopTop = () => {
    */
   function handleOutsideClick(e) {
     if (topMenuRef.current && !topMenuRef.current.contains(e.target)) {
-      dispatch({ type: "RESET", where: "top" });
+      // dispatch({ type: "RESET", where: "top" });
     }
   }
 

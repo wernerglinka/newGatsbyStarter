@@ -127,56 +127,13 @@ exports.createPages = ({ actions, graphql }) => {
 
     Array.from({ length: numPages }).forEach((a, i) => {
       createPage({
-        path: i === 0 ? "/blog" : `/blog/${i}`,
+        path: `/blog/${i + 1}/`,
         component: path.resolve("./src/layouts/templates/blog/index.js"),
         context: {
           limit: blogItemsPerPage,
           skip: i * blogItemsPerPage,
           numPages,
           currentPage: i + 1,
-          breadcrumbs,
-        },
-      });
-    });
-
-    /**
-     * section for creating news lists
-     */
-    // destructure totalCount variable from result object
-    const {
-      data: {
-        news: { totalNewsCount },
-      },
-    } = result;
-
-    // Create the news list pages
-    const newsItemsPerPage = 6;
-    const numNewsPages = Math.ceil(totalNewsCount / newsItemsPerPage);
-
-    // create blog landing page breadcrumbs
-    breadcrumbs = [
-      {
-        name: "Home",
-        path: "/",
-      },
-      {
-        name: "About",
-        path: "/who-we-are/",
-      },
-      {
-        name: "News",
-      },
-    ];
-
-    Array.from({ length: numNewsPages }).forEach((a, i) => {
-      createPage({
-        path: i === 0 ? "/about/news" : `/about/news/${i}`,
-        component: path.resolve("./src/layouts/templates/about/news.js"),
-        context: {
-          limit: newsItemsPerPage,
-          skip: i * newsItemsPerPage,
-          numNewsPages,
-          currentNewsPage: i + 1,
           breadcrumbs,
         },
       });
