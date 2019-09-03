@@ -3,6 +3,8 @@ import propTypes from "prop-types";
 import { Link } from "gatsby";
 import styled from "@emotion/styled";
 import uuid from "uuid/v4";
+import Modali, { useModali } from "modali";
+import VideoModal from "../../layouts/templates/modals/ModalVideo";
 
 import CloudinaryImage from "../cloudinary-image";
 import siteMetaData from "../../hooks/useSiteMetadata";
@@ -44,6 +46,7 @@ const TabPane = styled.div`
 const WhyPX = () => {
   const { cloudinaryBaseURL } = siteMetaData();
   const whyPXContent = useWhyPX();
+  const [videoModal, toggleVideoModal] = useModali({ animated: true });
 
   const initialTabsState = {
     tabPane1: false,
@@ -103,6 +106,15 @@ const WhyPX = () => {
                       ))}
                     </ul>
                     <Link to={content.link}>{content.linkText}</Link>
+                    <div>
+                      <button type="button" onClick={toggleVideoModal}>
+                        Click me to open the video modal
+                      </button>
+
+                      <Modali.Modal {...videoModal}>
+                        <VideoModal videoID={content.videoLink} />
+                      </Modali.Modal>
+                    </div>
                   </TabPane>
                 </Fade>
               )
