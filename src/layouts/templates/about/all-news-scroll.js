@@ -98,7 +98,7 @@ const NewsListPage = props => {
     <Container>
       <h1>{fields.heading}</h1>
       <h2>{fields.subheading}</h2>
-      <NewsList>
+      <NewsList id="newsList">
         {listItems.map(({ node: newsItem }, i) => (
           <li key={`${newsItem.news_title}${i}`}>
             <a

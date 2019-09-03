@@ -1,4 +1,4 @@
-/* global document, window */
+/* global document, window, IntersectionObserver */
 
 import { useState, useEffect } from "react";
 
@@ -16,6 +16,7 @@ const useIScroll = callback => {
     };
   };
 
+  /*
   function handleScroll() {
     // Safari report 0 for document.documentElement.scrollTop. This fix
     // will use the right scrollTop for all browsers
@@ -33,11 +34,27 @@ const useIScroll = callback => {
       return;
     setIsFetching(true);
   }
+  */
+
+  function handleScroll() {
+    const observer = new IntersectionObserver(updateList, {
+      root: document.body,
+      rootMargin: "150px",
+      threshold: 1,
+    });
+
+    const target = document.querySelector("#newsList");
+    observer.observe(target);
+
+    function updateList(entries, observer) {
+      setIsFetching(true);
+    }
+  }
 
   useEffect(() => {
-    window.addEventListener("scroll", debounce(handleScroll, 100));
+    window.addEventListener("scroll", debounce(handleScroll, 300));
     return () =>
-      window.removeEventListener("scroll", debounce(handleScroll, 100));
+      window.removeEventListener("scroll", debounce(handleScroll, 300));
   }, []);
 
   useEffect(() => {
