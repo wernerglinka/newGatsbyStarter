@@ -53,7 +53,6 @@ const NewsList = styled.ul`
 `;
 
 const NewsListPage = props => {
-  console.log(props);
   const allNewsList = props.data.allNewsJson.edges;
   const fields = props.data.allMarkdownRemark.edges[0].node.frontmatter;
   const allNewsListLength = allNewsList.length;
