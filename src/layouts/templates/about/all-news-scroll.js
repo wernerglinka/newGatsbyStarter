@@ -1,12 +1,12 @@
 /* global document, window */
 /* inspired by:  https://upmostly.com/tutorials/build-an-infinite-scroll-component-in-react-using-react-hooks */
 
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { graphql } from "gatsby";
 import PropTypes from "prop-types";
 import styled from "@emotion/styled";
 import Container from "../../../components/styles/container";
-import useInfiniteScroll from "../../../hooks/useIScroll";
+import useIObserver from "../../../hooks/useIObserver";
 
 const NewsList = styled.ul`
   width: 100%;
@@ -63,11 +63,16 @@ const NewsListPage = props => {
   let listItemsToDisplay = allNewsList.slice(0, chunk);
   const [listItems, setListItems] = useState(listItemsToDisplay);
   const [
+    ref,
     fetchingDone,
     setFetchingDone,
     isFetching,
     setIsFetching,
-  ] = useInfiniteScroll(fetchMoreListItems);
+  ] = useIObserver(fetchMoreListItems, {
+    root: document.body,
+    rootMargin: "200px",
+    threashold: 1,
+  });
 
   // Todo: add case for last chunk of items and then test on touch device
   function fetchMoreListItems() {
@@ -115,7 +120,7 @@ const NewsListPage = props => {
           </li>
         ))}
       </NewsList>
-      {!fetchingDone && isFetching && "Fetching more list items..."}
+      <div ref={ref} />
     </Container>
   );
 };
