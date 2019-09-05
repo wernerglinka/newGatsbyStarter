@@ -10,8 +10,10 @@ description: "Developing and managing a web application to scale has evolved in 
 breadcrumbs:
   - name: Home
     path: /
+  - name: Resources
+    path: /resources/
   - name: Blog
-    path: /blog/1/
+    path: /resources/blog/
   - name: "Client-Side The Security Blindspot..."
 
 # Fields

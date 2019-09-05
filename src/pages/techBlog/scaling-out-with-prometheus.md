@@ -8,10 +8,8 @@ description: "PerimeterX servers run in a multi-provider multi-region setup. Mos
 
 # Breadcrumbs
 breadcrumbs:
-  - name: Home
-    path: /
-  - name: Blog
-    path: /blog/1/
+  - name: TechBlog
+    path: /techBlog/
   - name: Scaling out with Prometheus
 
 # Fields

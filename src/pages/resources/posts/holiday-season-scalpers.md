@@ -10,8 +10,10 @@ description: "Learn how to block scalper bots with technology that detects and m
 breadcrumbs:
   - name: Home
     path: /
+  - name: Resources
+    path: /resources/
   - name: Blog
-    path: /blog/1/
+    path: /resources/blog/
   - name: Scalper Bots How To Stop...
 
 # Fields

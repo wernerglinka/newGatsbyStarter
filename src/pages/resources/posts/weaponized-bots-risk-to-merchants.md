@@ -10,8 +10,10 @@ description: "Online bot attacks are growing rapidly. Attempts to defraud appare
 breadcrumbs:
   - name: Home
     path: /
+  - name: Resources
+    path: /resources/
   - name: Blog
-    path: /blog/1/
+    path: /resources/blog/
   - name: Weaponized Bots And The Risk...
 
 # Fields

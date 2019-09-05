@@ -10,8 +10,10 @@ description: "We discuss the aftermath of Equifax data breach settlement, how th
 breadcrumbs:
   - name: Home
     path: /
+  - name: Resources
+    path: /resources/
   - name: Blog
-    path: /blog/1/
+    path: /resources/blog/
   - name: Regulators are cracking the whip...
 
 # Fields

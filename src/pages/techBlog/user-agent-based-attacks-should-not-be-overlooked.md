@@ -8,10 +8,8 @@ description: "It is a known fact that while the majority of vulnerabilities disc
 
 # Breadcrumbs
 breadcrumbs:
-  - name: Home
-    path: /
-  - name: Blog
-    path: /blog/1/
+  - name: TechBlog
+    path: /techBlog/
   - name: User-Agent based attacks...
 
 # Fields

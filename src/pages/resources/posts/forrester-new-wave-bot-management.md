@@ -10,8 +10,10 @@ description: "Forrester recently released a report, The Forrester New Wave™: B
 breadcrumbs:
   - name: Home
     path: /
+  - name: Resources
+    path: /resources/
   - name: Blog
-    path: /blog/1/
+    path: /resources/blog/
   - name: Forrester’s New Wave on Bot Management...
 
 # Fields

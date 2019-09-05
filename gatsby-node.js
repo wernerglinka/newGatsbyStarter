@@ -156,18 +156,12 @@ exports.createPages = ({ actions, graphql }) => {
       },
     ];
 
-    Array.from({ length: numPages }).forEach((a, i) => {
-      createPage({
-        path: `/resources/blog/${i + 1}/`,
-        component: path.resolve("./src/layouts/templates/blog/index.js"),
-        context: {
-          limit: blogItemsPerPage,
-          skip: i * blogItemsPerPage,
-          numPages,
-          currentPage: i + 1,
-          breadcrumbs,
-        },
-      });
+    createPage({
+      path: `/resources/blog/`,
+      component: path.resolve("./src/layouts/templates/blog/index.js"),
+      context: {
+        breadcrumbs,
+      },
     });
 
     /**

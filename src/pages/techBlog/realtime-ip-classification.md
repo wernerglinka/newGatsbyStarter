@@ -8,10 +8,8 @@ description: "This post details how we efficiently use MaxMind DB format to gene
 
 # Breadcrumbs
 breadcrumbs:
-  - name: Home
-    path: /
-  - name: Blog
-    path: /blog/1/
+  - name: TechBlog
+    path: /techBlog/
   - name: What is a Sneaker Bot...
 
 # Fields

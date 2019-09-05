@@ -10,8 +10,10 @@ description: "As people’s lives become more attached to the internet, cyber at
 breadcrumbs:
   - name: Home
     path: /
+  - name: Resources
+    path: /resources/
   - name: Blog
-    path: /blog/1/
+    path: /resources/blog/
   - name: When Bots Take Over Your Facebook Page
 
 # Fields

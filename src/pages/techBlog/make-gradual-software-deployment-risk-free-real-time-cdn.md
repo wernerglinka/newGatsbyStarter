@@ -8,10 +8,8 @@ description: "Giving a customer the ability to gradually roll out changes in you
 
 # Breadcrumbs
 breadcrumbs:
-  - name: Home
-    path: /
-  - name: Blog
-    path: /blog/1/
+  - name: TechBlog
+    path: /techBlog/
   - name: Make gradual software deployment...
 
 # Fields

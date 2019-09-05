@@ -8,10 +8,8 @@ description: "Perl is considered by some to be a “problematic” language. In 
 
 # Breadcrumbs
 breadcrumbs:
-  - name: Home
-    path: /
-  - name: Blog
-    path: /blog/1/
+  - name: TechBlog
+    path: /techBlog/
   - name: Bugzilla as a case study on Perl...
 
 # Fields

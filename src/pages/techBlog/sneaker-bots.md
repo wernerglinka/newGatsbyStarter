@@ -8,10 +8,8 @@ description: "Stop sneaker bots from buying and stealing your top online sneaker
 
 # Breadcrumbs
 breadcrumbs:
-  - name: Home
-    path: /
-  - name: Blog
-    path: /blog/1/
+  - name: TechBlog
+    path: /techBlog/
   - name: What is a Sneaker Bot...
 
 # Fields

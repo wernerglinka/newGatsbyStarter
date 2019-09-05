@@ -8,10 +8,8 @@ description: "For bot attacks looking to pull off account takeovers, the holiday
 
 # Breadcrumbs
 breadcrumbs:
-  - name: Home
-    path: /
-  - name: Blog
-    path: /blog/1/
+  - name: TechBlog
+    path: /techBlog/
   - name: Bot Attacks 2017 Holidays Saw Attacks Start...
 
 # Fields

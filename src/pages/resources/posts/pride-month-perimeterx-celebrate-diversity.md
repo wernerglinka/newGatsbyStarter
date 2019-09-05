@@ -10,8 +10,10 @@ description: "As PerimeterX celebrates Pride Month, our CEO Omri Iluz talks abou
 breadcrumbs:
   - name: Home
     path: /
+  - name: Resources
+    path: /resources/
   - name: Blog
-    path: /blog/1/
+    path: /resources/blog/
   - name: Pride Month bridges businesses...
 
 # Fields

@@ -10,8 +10,10 @@ description: "In 2016, the majority of visitors to websites were not humans but 
 breadcrumbs:
   - name: Home
     path: /
+  - name: Resources
+    path: /resources/
   - name: Blog
-    path: /blog/1/
+    path: /resources/blog/
   - name: 5 Ways to Identify a Bot Attack
 
 # Fields

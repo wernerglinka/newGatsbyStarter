@@ -10,8 +10,10 @@ description: "You’re sold out, but have sold nothing. Hoarders lock up your in
 breadcrumbs:
   - name: Home
     path: /
+  - name: Resources
+    path: /resources/
   - name: Blog
-    path: /blog/1/
+    path: /resources/blog/
   - name: "When 'Sold Out' Means You’ve Sold Nothing"
 
 # Fields

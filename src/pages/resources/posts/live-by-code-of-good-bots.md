@@ -10,8 +10,10 @@ description: "Are you the developer of a good bot? Check out our 'Code of Good B
 breadcrumbs:
   - name: Home
     path: /
+  - name: Resources
+    path: /resources/
   - name: Blog
-    path: /blog/1/
+    path: /resources/blog/
   - name: How We Define 'Good Bots' At PerimeterX
 
 # Fields

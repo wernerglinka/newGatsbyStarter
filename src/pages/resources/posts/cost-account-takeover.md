@@ -10,8 +10,10 @@ description: "The True (And Shockingly High) Cost of Account Takeover Attacks"
 breadcrumbs:
   - name: Home
     path: /
+  - name: Resources
+    path: /resources/
   - name: Blog
-    path: /blog/1/
+    path: /resources/blog/
   - name: The True (And Shockingly High) Cost of Account...
 
 # Fields

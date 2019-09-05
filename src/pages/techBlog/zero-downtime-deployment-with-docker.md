@@ -8,10 +8,8 @@ description: "In this post I will share the process we went through at Perimeter
 
 # Breadcrumbs
 breadcrumbs:
-  - name: Home
-    path: /
-  - name: Blog
-    path: /blog/1/
+  - name: TechBlog
+    path: /techBlog/
   - name: Zero-downtime deployment with Docker
 
 # Fields

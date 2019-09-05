@@ -8,10 +8,8 @@ description: "Read everything you need to know about skimming attacks or magecar
 
 # Breadcrumbs
 breadcrumbs:
-  - name: Home
-    path: /
-  - name: Blog
-    path: /blog/1/
+  - name: TechBlog
+    path: /techBlog/
   - name: All About Online Skimming...
 
 # Fields

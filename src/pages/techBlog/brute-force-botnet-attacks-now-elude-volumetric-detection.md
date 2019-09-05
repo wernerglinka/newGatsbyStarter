@@ -8,10 +8,8 @@ description: "It is harder to distinguish botnet behavior from human behavior no
 
 # Breadcrumbs
 breadcrumbs:
-  - name: Home
-    path: /
-  - name: Blog
-    path: /blog/1/
+  - name: TechBlog
+    path: /techBlog/
   - name: Brute-Force Botnet Attacks Now Elude...
 
 # Fields

@@ -10,8 +10,10 @@ description: "With the summer travel season coming quickly, airlines and hotels 
 breadcrumbs:
   - name: Home
     path: /
+  - name: Resources
+    path: /resources/
   - name: Blog
-    path: /blog/1/
+    path: /resources/blog/
   - name: Are Loyalty Points Replacing...
 
 # Fields

@@ -8,10 +8,8 @@ description: "A short post demonstrating a possible solution for performing cond
 
 # Breadcrumbs
 breadcrumbs:
-  - name: Home
-    path: /
-  - name: Blog
-    path: /blog/1/
+  - name: TechBlog
+    path: /techBlog/
   - name: What is a Sneaker Bot...
 
 # Fields

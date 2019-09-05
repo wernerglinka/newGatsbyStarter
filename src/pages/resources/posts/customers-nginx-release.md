@@ -10,8 +10,10 @@ description: "PerimeterX’s customers drive the integration with NGINX. Perimet
 breadcrumbs:
   - name: Home
     path: /
+  - name: Resources
+    path: /resources/
   - name: Blog
-    path: /blog/1/
+    path: /resources/blog/
   - name: PerimeterX Integrates With NGINX...
 
 # Fields

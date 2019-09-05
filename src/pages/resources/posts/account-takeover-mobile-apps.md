@@ -11,8 +11,10 @@ excerpt: "Automated attacks aren’t unique to websites alone. Running mobile ap
 breadcrumbs:
   - name: Home
     path: /
+  - name: Resources
+    path: /resources/
   - name: Blog
-    path: /blog/1/
+    path: /resources/blog/
   - name: Account Takeover on Mobile Apps
 
 # Fields

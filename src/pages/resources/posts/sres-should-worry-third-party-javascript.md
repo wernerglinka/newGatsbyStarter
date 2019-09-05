@@ -10,8 +10,10 @@ description: "Javascripts attacks are on the rise and the changing nature of web
 breadcrumbs:
   - name: Home
     path: /
+  - name: Resources
+    path: /resources/
   - name: Blog
-    path: /blog/1/
+    path: /resources/blog/
   - name: Why SREs Should Worry More...
 
 # Fields

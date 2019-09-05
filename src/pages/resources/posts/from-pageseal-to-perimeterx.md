@@ -10,8 +10,10 @@ description: "From Founding of PageSeal to Integration with PerimeterX"
 breadcrumbs:
   - name: Home
     path: /
+  - name: Resources
+    path: /resources/
   - name: Blog
-    path: /blog/1/
+    path: /resources/blog/
   - name: From Founding of PageSeal...
 
 # Fields

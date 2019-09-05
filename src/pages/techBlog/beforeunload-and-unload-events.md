@@ -8,10 +8,8 @@ description: "unload And beforeunload Events And How To Easily Debug Them Both!"
 
 # Breadcrumbs
 breadcrumbs:
-  - name: Home
-    path: /
-  - name: Blog
-    path: /blog/1/
+  - name: TechBlog
+    path: /techBlog/
   - name: unload And beforeunload Events...
 
 # Fields

@@ -10,8 +10,10 @@ description: "Black Hat 2019 survey of 304 attendees revealed that majority of s
 breadcrumbs:
   - name: Home
     path: /
+  - name: Resources
+    path: /resources/
   - name: Blog
-    path: /blog/1/
+    path: /resources/blog/
   - name: Black Hat 2019...
 
 # Fields

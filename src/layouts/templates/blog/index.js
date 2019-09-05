@@ -55,12 +55,10 @@ class BlogIndex extends React.Component {
 export default BlogIndex;
 
 export const pageQuery = graphql`
-  query ($skip: Int!, $limit: Int!) {
+  query blogQuery {
     allMarkdownRemark(
       filter: { fileAbsolutePath: { glob: "**/src/pages/resources/posts/**/*.md" },frontmatter: { draft: { ne: true } } }
       sort: { fields: [frontmatter___date], order: DESC }
-      limit: $limit
-      skip: $skip
     ) {
       edges {
         node {

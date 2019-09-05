@@ -8,10 +8,8 @@ description: "Learn how affiliate marketing fraud bots are attacking websites wi
 
 # Breadcrumbs
 breadcrumbs:
-  - name: Home
-    path: /
-  - name: Blog
-    path: /blog/1/
+  - name: TechBlog
+    path: /techBlog/
   - name: Affiliate Marketing Fraud...
 
 # Fields

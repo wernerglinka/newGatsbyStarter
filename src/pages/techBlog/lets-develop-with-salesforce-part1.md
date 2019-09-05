@@ -8,10 +8,8 @@ description: "A blog series about developing a cartridge for Salesforce Commerce
 
 # Breadcrumbs
 breadcrumbs:
-  - name: Home
-    path: /
-  - name: Blog
-    path: /blog/1/
+  - name: TechBlog
+    path: /techBlog/
   - name: Lets Develop With SFCC - Part 1
 
 # Fields

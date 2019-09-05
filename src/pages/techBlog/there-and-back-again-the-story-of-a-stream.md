@@ -8,10 +8,8 @@ description: "Stream processing is one of those nifty new big data buzz words. T
 
 # Breadcrumbs
 breadcrumbs:
-  - name: Home
-    path: /
-  - name: Blog
-    path: /blog/1/
+  - name: TechBlog
+    path: /techBlog/
   - name: There and Back Again...
 
 # Fields

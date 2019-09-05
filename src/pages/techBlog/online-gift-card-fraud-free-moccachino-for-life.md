@@ -8,10 +8,8 @@ description: "Online gift card fraud is easy to accomplish, and the potential lo
 
 # Breadcrumbs
 breadcrumbs:
-  - name: Home
-    path: /
-  - name: Blog
-    path: /blog/1/
+  - name: TechBlog
+    path: /techBlog/
   - name: Online Gift Card Fraud...
 
 # Fields

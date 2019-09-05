@@ -10,8 +10,10 @@ description: "When you hear about malicious scraping of website content, this ha
 breadcrumbs:
   - name: Home
     path: /
+  - name: Resources
+    path: /resources/
   - name: Blog
-    path: /blog/1/
+    path: /resources/blog/
   - name: A Massive Bump In Data Breaches...
 
 # Fields

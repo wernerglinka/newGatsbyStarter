@@ -10,8 +10,10 @@ description: "How Web Scraping Can Damage eCommerce Businesses And How Behavior 
 breadcrumbs:
   - name: Home
     path: /
+  - name: Resources
+    path: /resources/
   - name: Blog
-    path: /blog/1/
+    path: /resources/blog/
   - name: How Web Scraping Can Damage...
 
 # Fields

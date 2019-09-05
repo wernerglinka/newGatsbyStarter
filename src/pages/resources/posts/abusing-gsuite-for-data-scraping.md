@@ -10,8 +10,10 @@ description: "How scrapers abuse GSuite to scrape data from the web"
 breadcrumbs:
   - name: Home
     path: /
+  - name: Resources
+    path: /resources/
   - name: Blog
-    path: /blog/1/
+    path: /resources/blog/
   - name: Abusing GSuite for Data Scraping
 
 # Fields

@@ -10,8 +10,10 @@ description: "Guaranteed Scarcity Brings Sellouts, Frenzied Buyers, and Scalper 
 breadcrumbs:
   - name: Home
     path: /
+  - name: Resources
+    path: /resources/
   - name: Blog
-    path: /blog/1/
+    path: /resources/blog/
   - name: Guaranteed Scarcity Brings Sellouts...
 
 # Fields

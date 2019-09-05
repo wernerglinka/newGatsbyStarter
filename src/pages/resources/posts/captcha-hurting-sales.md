@@ -10,8 +10,10 @@ description: "Your CAPTCHA Could Be Hurting Your Sales. Rather than apply CAPTCH
 breadcrumbs:
   - name: Home
     path: /
+  - name: Resources
+    path: /resources/
   - name: Blog
-    path: /blog/1/
+    path: /resources/blog/
   - name: Your CAPTCHA Could Be Hurting Your Sales
 
 # Fields

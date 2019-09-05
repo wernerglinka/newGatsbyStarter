@@ -10,8 +10,10 @@ description: "As a result of the newly disclosed Yahoo breach last week about a 
 breadcrumbs:
   - name: Home
     path: /
+  - name: Resources
+    path: /resources/
   - name: Blog
-    path: /blog/1/
+    path: /resources/blog/
   - name: With a Billion Yahoo Accounts Exposed...
 
 # Fields

@@ -10,8 +10,10 @@ description: "Attacks on web applications intensify as the growth of ecommerce d
 breadcrumbs:
   - name: Home
     path: /
+  - name: Resources
+    path: /resources/
   - name: Blog
-    path: /blog/1/
+    path: /resources/blog/
   - name: Top 3 takeaways for retailers...
 
 # Fields

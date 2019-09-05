@@ -8,10 +8,8 @@ description: "HTTP/2 - The Reasons, The Features And The Node.js Support"
 
 # Breadcrumbs
 breadcrumbs:
-  - name: Home
-    path: /
-  - name: Blog
-    path: /blog/1/
+  - name: TechBlog
+    path: /techBlog/
   - name: HTTP/2 - The Reasons...
 
 # Fields

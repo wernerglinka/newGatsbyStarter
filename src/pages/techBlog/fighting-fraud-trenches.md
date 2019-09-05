@@ -8,10 +8,8 @@ description: "Fighting Fraud in the Trenches"
 
 # Breadcrumbs
 breadcrumbs:
-  - name: Home
-    path: /
-  - name: Blog
-    path: /blog/1/
+  - name: TechBlog
+    path: /techBlog/
   - name: Fighting Fraud in the Trenches
 
 # Fields

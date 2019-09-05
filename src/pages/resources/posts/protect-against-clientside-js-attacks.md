@@ -10,8 +10,10 @@ description: "Code Defender is the latest addition to our product portfolio to f
 breadcrumbs:
   - name: Home
     path: /
+  - name: Resources
+    path: /resources/
   - name: Blog
-    path: /blog/1/
+    path: /resources/blog/
   - name: PerimeterX Launches Solution...
 
 # Fields
@@ -20,7 +22,7 @@ author:
   - Trish Reilly
 
 blog_title: "PerimeterX Launches Solution To Protect Against Client-Side Javascript Attacks"
-categories: Research
+categories: Thought Leadership
 tags:
   - Client Side Data Protection
   - Javascript Security

@@ -8,10 +8,8 @@ description: "Social logins are very popular, but they can be abused by automate
 
 # Breadcrumbs
 breadcrumbs:
-  - name: Home
-    path: /
-  - name: Blog
-    path: /blog/1/
+  - name: TechBlog
+    path: /techBlog/
   - name: Social Media Login Security...
 
 # Fields

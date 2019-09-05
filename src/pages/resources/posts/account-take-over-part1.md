@@ -10,8 +10,10 @@ description: "This first blog in our ATO blog series defines account takeover at
 breadcrumbs:
   - name: Home
     path: /
+  - name: Resources
+    path: /resources/
   - name: Blog
-    path: /blog/1/
+    path: /resources/blog/
   - name: Guide to Account Takeover Attacks
 
 # Fields

@@ -10,8 +10,10 @@ description: "Armies of malicious bots are targeting airline mobile apps and web
 breadcrumbs:
   - name: Home
     path: /
+  - name: Resources
+    path: /resources/
   - name: Blog
-    path: /blog/1/
+    path: /resources/blog/
   - name: What is a Sneaker Bot...
 
 # Fields

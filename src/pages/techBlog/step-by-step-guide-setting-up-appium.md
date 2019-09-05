@@ -8,10 +8,8 @@ description: "Appium allows you to create automated tests for your app using Pyt
 
 # Breadcrumbs
 breadcrumbs:
-  - name: Home
-    path: /
-  - name: Blog
-    path: /blog/1/
+  - name: TechBlog
+    path: /techBlog/
   - name: The Super Awesome, Easy to Follow...
 
 # Fields

@@ -8,10 +8,8 @@ description: "Deriving a PBKDF2 key from a known set of parameters"
 
 # Breadcrumbs
 breadcrumbs:
-  - name: Home
-    path: /
-  - name: Blog
-    path: /blog/1/
+  - name: TechBlog
+    path: /techBlog/
   - name: Fun Times With WebCrypto...
 
 # Fields

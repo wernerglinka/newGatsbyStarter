@@ -8,10 +8,8 @@ description: "Online product hoarding continues to become a bigger problem for r
 
 # Breadcrumbs
 breadcrumbs:
-  - name: Home
-    path: /
-  - name: Blog
-    path: /blog/1/
+  - name: TechBlog
+    path: /techBlog/
   - name: Prevent Online Hoarding...
 
 # Fields

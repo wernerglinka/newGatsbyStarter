@@ -10,8 +10,10 @@ description: "Learn more about the 6 key threats to the security of your ecommer
 breadcrumbs:
   - name: Home
     path: /
+  - name: Resources
+    path: /resources/
   - name: Blog
-    path: /blog/1/
+    path: /resources/blog/
   - name: E Commerce Fraud Detection...
 
 # Fields

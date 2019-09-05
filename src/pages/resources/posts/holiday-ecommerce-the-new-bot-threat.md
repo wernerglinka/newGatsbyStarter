@@ -10,8 +10,10 @@ description: "Holiday Ecommerce: The New Bot Threat, the New Defense"
 breadcrumbs:
   - name: Home
     path: /
+  - name: Resources
+    path: /resources/
   - name: Blog
-    path: /blog/1/
+    path: /resources/blog/
   - name: Holiday Ecommerce The New Bot Threat...
 
 # Fields

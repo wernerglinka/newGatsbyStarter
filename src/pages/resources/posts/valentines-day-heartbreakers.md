@@ -10,8 +10,10 @@ description: "Approaching Valentine’s Day, or any other landmark sentimental d
 breadcrumbs:
   - name: Home
     path: /
+  - name: Resources
+    path: /resources/
   - name: Blog
-    path: /blog/1/
+    path: /resources/blog/
   - name: Valentines Day Heartbreakers...
 
 # Fields

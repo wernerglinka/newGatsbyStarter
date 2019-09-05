@@ -10,8 +10,10 @@ description: "Traditional methods can't block invisible users and bot attacks, b
 breadcrumbs:
   - name: Home
     path: /
+  - name: Resources
+    path: /resources/
   - name: Blog
-    path: /blog/1/
+    path: /resources/blog/
   - name: Bot Attacks Why Bot Detection...
 
 # Fields

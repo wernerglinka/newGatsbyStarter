@@ -8,10 +8,8 @@ description: "OK Let’s Go: Three Approaches to Structuring Go Code"
 
 # Breadcrumbs
 breadcrumbs:
-  - name: Home
-    path: /
-  - name: Blog
-    path: /blog/1/
+  - name: TechBlog
+    path: /techBlog/
   - name: OK Let’s Go...
 
 # Fields

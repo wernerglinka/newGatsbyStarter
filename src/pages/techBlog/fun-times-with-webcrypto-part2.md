@@ -8,10 +8,8 @@ description: "Encrpting and decrypting objects using WebCrypto"
 
 # Breadcrumbs
 breadcrumbs:
-  - name: Home
-    path: /
-  - name: Blog
-    path: /blog/1/
+  - name: TechBlog
+    path: /techBlog/
   - name: Fun Times With WebCrypto...
 
 # Fields

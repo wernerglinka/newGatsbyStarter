@@ -10,8 +10,10 @@ description: "The blog talks about javascript security. From methods used by hac
 breadcrumbs:
   - name: Home
     path: /
+  - name: Resources
+    path: /resources/
   - name: Blog
-    path: /blog/1/
+    path: /resources/blog/
   - name: The client-side battle against JavaScript...
 
 # Fields

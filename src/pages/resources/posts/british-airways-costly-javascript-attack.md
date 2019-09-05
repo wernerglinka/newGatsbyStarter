@@ -10,8 +10,10 @@ description: "We’ve previously covered why JavaScript attacks should be a majo
 breadcrumbs:
   - name: Home
     path: /
+  - name: Resources
+    path: /resources/
   - name: Blog
-    path: /blog/1/
+    path: /resources/blog/
   - name: $229 Million GDPR Fine for British Airways...
 
 # Fields

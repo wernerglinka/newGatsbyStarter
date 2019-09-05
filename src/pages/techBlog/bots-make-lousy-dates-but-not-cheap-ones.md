@@ -8,10 +8,8 @@ description: "The new, very real danger of online dating chat bots. PerimeterX r
 
 # Breadcrumbs
 breadcrumbs:
-  - name: Home
-    path: /
-  - name: Blog
-    path: /blog/1/
+ - name: TechBlog
+    path: /techBlog/
   - name: Online Dating Chat Bots...
 
 # Fields

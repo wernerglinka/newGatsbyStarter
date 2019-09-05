@@ -10,8 +10,10 @@ description: "Blocking Tor: A Case for Better Detection"
 breadcrumbs:
   - name: Home
     path: /
+  - name: Resources
+    path: /resources/
   - name: Blog
-    path: /blog/1/
+    path: /resources/blog/
   - name: "Blocking Tor: A Case for Better Detection"
 
 # Fields

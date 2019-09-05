@@ -10,8 +10,10 @@ description: "Today, we are proud to be launching PerimeterX Bot Defender, the e
 breadcrumbs:
   - name: Home
     path: /
+  - name: Resources
+    path: /resources/
   - name: Blog
-    path: /blog/1/
+    path: /resources/blog/
   - name: Launching PerimeterX Bot Defender
 
 # Fields

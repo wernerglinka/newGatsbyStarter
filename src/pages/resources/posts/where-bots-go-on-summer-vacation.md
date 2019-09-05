@@ -10,8 +10,10 @@ description: "Bots are impacting our everyday lives, now competing with us on ou
 breadcrumbs:
   - name: Home
     path: /
+  - name: Resources
+    path: /resources/
   - name: Blog
-    path: /blog/1/
+    path: /resources/blog/
   - name: Where Bots Go On Summer Vacation
 
 # Fields

@@ -8,10 +8,8 @@ description: "List EVERY event that exists in the browser"
 
 # Breadcrumbs
 breadcrumbs:
-  - name: Home
-    path: /
-  - name: Blog
-    path: /blog/1/
+  - name: TechBlog
+    path: /techBlog/
   - name: List EVERY event ...in the browser
 
 # Fields

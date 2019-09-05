@@ -8,10 +8,8 @@ description: "Steps every retailer should take to prevent brute force attacks of
 
 # Breadcrumbs
 breadcrumbs:
-  - name: Home
-    path: /
-  - name: Blog
-    path: /blog/1/
+  - name: TechBlog
+    path: /techBlog/
   - name: Prevent Brute Force Attacks...
 
 # Fields

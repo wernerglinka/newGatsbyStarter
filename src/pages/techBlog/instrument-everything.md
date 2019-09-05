@@ -8,10 +8,8 @@ description: "Instrument Everything - Achieving Test Coverage using Instrumentat
 
 # Breadcrumbs
 breadcrumbs:
-  - name: Home
-    path: /
-  - name: Blog
-    path: /blog/1/
+  - name: TechBlog
+    path: /techBlog/
   - name: Instrument Everything...
 
 # Fields

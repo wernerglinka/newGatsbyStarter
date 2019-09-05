@@ -8,10 +8,8 @@ description: "Given massive scale and many producers, we saw the need to develop
 
 # Breadcrumbs
 breadcrumbs:
-  - name: Home
-    path: /
-  - name: Blog
-    path: /blog/1/
+  - name: TechBlog
+    path: /techBlog/
   - name: When Kafka met Bruce...
 
 # Fields

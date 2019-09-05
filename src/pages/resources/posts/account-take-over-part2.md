@@ -10,8 +10,10 @@ description: "Learn ways to identify and prevent account takeover (ATO) attacks.
 breadcrumbs:
   - name: Home
     path: /
+  - name: Resources
+    path: /resources/
   - name: Blog
-    path: /blog/1/
+    path: /resources/blog/
   - name: Guide to Account Takeover Attacks 2
 
 # Fields
