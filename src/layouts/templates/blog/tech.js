@@ -38,6 +38,8 @@ class BlogIndex extends React.Component {
     // Get pager info from page context
     const { pageContext : { numPages, currentPage}} = this.props;
 
+    console.log(imageData);
+
     return (
       <Container>
         <Headline>Blogposts</Headline>
@@ -45,7 +47,7 @@ class BlogIndex extends React.Component {
           {posts.map(({ node }) => <PostPreview post={node} imageData={imageData} key={node.fields.slug} />)}
         </ul>
 
-        {numPages > 1 ? <Pager numPages={numPages} currentPage={currentPage} pageType="resources/blog" /> : null}
+        {numPages > 1 ? <Pager numPages={numPages} currentPage={currentPage} pageType="blog" /> : null}
             
       </Container>
     );
@@ -55,16 +57,13 @@ class BlogIndex extends React.Component {
 export default BlogIndex;
 
 export const pageQuery = graphql`
-  query ($skip: Int!, $limit: Int!) {
+  query techBlogListQuery{
     allMarkdownRemark(
-      filter: { fileAbsolutePath: { glob: "**/src/pages/resources/posts/**/*.md" },frontmatter: { draft: { ne: true } } }
+      filter: { fileAbsolutePath: { glob: "**/src/pages/techBlog/**/*.md" },frontmatter: { draft: { ne: true } } }
       sort: { fields: [frontmatter___date], order: DESC }
-      limit: $limit
-      skip: $skip
     ) {
       edges {
         node {
-          excerpt
           fields {
             slug
           }

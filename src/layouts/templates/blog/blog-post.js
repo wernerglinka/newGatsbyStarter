@@ -3,6 +3,8 @@ import PropTypes from "prop-types";
 import { graphql, Link } from "gatsby";
 import styled from "@emotion/styled";
 import PostBody from "../../../components/blog-post";
+import RelatedBlogPosts from "../../../components/blog-post/related-blog-posts";
+import Container from "../../../components/styles/container";
 
 const NextPreviousPager = styled.ul`
   display: flex;
@@ -20,23 +22,16 @@ const BlogPageTemplate = props => {
     pageContext: { previous, next },
   } = props;
 
-  // deconstruct all post fields
+  // deconstruct all post content
   const {
     data: {
-      markdownRemark: { frontmatter: fields },
-    },
-  } = props;
-
-  // deconstruct post body
-  const {
-    data: {
-      markdownRemark: { html: content },
+      markdownRemark: { frontmatter: fields, html },
     },
   } = props;
 
   return (
-    <>
-      <PostBody fields={fields} content={content} />
+    <Container>
+      <PostBody fields={fields} content={html} />
 
       <NextPreviousPager>
         {previous && (
@@ -54,7 +49,8 @@ const BlogPageTemplate = props => {
           </li>
         )}
       </NextPreviousPager>
-    </>
+      <RelatedBlogPosts posts={fields.related_posts} />
+    </Container>
   );
 };
 
@@ -97,6 +93,7 @@ export const pageQuery = graphql`
         title
         description
         tags
+        related_posts
         thumbnail
         breadcrumbs {
           name

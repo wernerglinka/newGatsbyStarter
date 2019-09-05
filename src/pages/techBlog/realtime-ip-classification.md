@@ -17,17 +17,17 @@ breadcrumbs:
 # Fields
 date: 2018-05-08
 author:
-	- Barak Amar
-	- Yael Fraiman
+  - Barak Amar
+  - Yael Fraiman
 
 blog_title: "How to efficiently classify IP addresses in real time using a self made IP DB"
 categories: Engineering
-tags: 
-	- MaxMindDB 
-	- IP
-	- Classification
-	- Golang
-	- Perl
+tags:
+  - MaxMindD
+  - IP
+  - Classificatio
+  - Golan
+  - Perl
 
 thumbnail: bad_good.jpg
 ---

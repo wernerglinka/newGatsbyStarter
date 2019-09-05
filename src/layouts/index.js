@@ -52,8 +52,6 @@ const Layout = ({ children, location }) => {
     pageContext: { breadcrumbs },
   } = children.props;
 
-  console.log(breadcrumbs);
-
   const toTopIsVisible = useToTop();
 
   return (

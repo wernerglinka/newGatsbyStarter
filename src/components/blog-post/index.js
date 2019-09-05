@@ -3,7 +3,6 @@ import PropTypes from "prop-types";
 import styled from "@emotion/styled";
 
 import Head from "../head";
-import Container from "../styles/container";
 import Headline from "../styles/page-headline";
 import Bio from "../bio";
 
@@ -44,31 +43,30 @@ const BlogPost = ({ fields, content }) => {
   return (
     <>
       <Head metaData={siteMetadata} />
-      <Container>
-        <BlogLayout>
-          <section id="content">
-            <article itemScope itemType="http://schema.org/BlogPosting">
-              <header>
-                <Headline itemProp="headline">{fields.title}</Headline>
-                <p>
-                  <time itemProp="datePublished" dateTime={fields.date}>
-                    {fields.date}
-                  </time>
-                </p>
-              </header>
-              <ResponsiveImage>
-                <img src={fields.featuredimage} alt="" />
-              </ResponsiveImage>
 
-              <div dangerouslySetInnerHTML={{ __html: content }} />
-            </article>
-          </section>
+      <BlogLayout>
+        <section id="content">
+          <article itemScope itemType="http://schema.org/BlogPosting">
+            <header>
+              <Headline itemProp="headline">{fields.title}</Headline>
+              <p>
+                <time itemProp="datePublished" dateTime={fields.date}>
+                  {fields.date}
+                </time>
+              </p>
+            </header>
+            <ResponsiveImage>
+              <img src={fields.featuredimage} alt="" />
+            </ResponsiveImage>
 
-          <aside id="sidebar">
-            <Bio author={author} />
-          </aside>
-        </BlogLayout>
-      </Container>
+            <div dangerouslySetInnerHTML={{ __html: content }} />
+          </article>
+        </section>
+
+        <aside id="sidebar">
+          <Bio author={author} />
+        </aside>
+      </BlogLayout>
     </>
   );
 };

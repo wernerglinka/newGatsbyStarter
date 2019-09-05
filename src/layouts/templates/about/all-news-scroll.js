@@ -2,7 +2,7 @@
 /* inspired by:  https://upmostly.com/tutorials/build-an-infinite-scroll-component-in-react-using-react-hooks */
 
 import React, { useState, useRef, useEffect } from "react";
-import { graphql } from "gatsby";
+import { Link, graphql } from "gatsby";
 import PropTypes from "prop-types";
 import styled from "@emotion/styled";
 import Container from "../../../components/styles/container";
@@ -105,18 +105,29 @@ const NewsListPage = props => {
       <NewsList id="newsList">
         {listItems.map(({ node: newsItem }, i) => (
           <li key={`${newsItem.news_title}${i}`}>
-            <a
-              href={newsItem.news_url}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <div>{newsItem.news_date}</div>
-              <div>
-                <p className="type">{newsItem.news_type}</p>
-                <p className="org">{newsItem.name_org}</p>
-              </div>
-              <div>{newsItem.news_title}</div>
-            </a>
+            {newsItem.news_type === "press release" ? (
+              <Link to={newsItem.news_url}>
+                <div>{newsItem.news_date}</div>
+                <div>
+                  <p className="type">{newsItem.news_type}</p>
+                  <p className="org">{newsItem.name_org}</p>
+                </div>
+                <div>{newsItem.news_title}</div>
+              </Link>
+            ) : (
+              <a
+                href={newsItem.news_url}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div>{newsItem.news_date}</div>
+                <div>
+                  <p className="type">{newsItem.news_type}</p>
+                  <p className="org">{newsItem.name_org}</p>
+                </div>
+                <div>{newsItem.news_title}</div>
+              </a>
+            )}
           </li>
         ))}
       </NewsList>

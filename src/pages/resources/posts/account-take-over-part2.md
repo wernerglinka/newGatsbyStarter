@@ -25,6 +25,9 @@ tags:
   - account takeover
   - bot management
 
+related_posts:
+  - Guide to Account Takeover Attacks
+
 thumbnail: ato-2.jpg
 ---
 

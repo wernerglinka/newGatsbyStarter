@@ -17,15 +17,15 @@ breadcrumbs:
 # Fields
 date: 2019-05-15
 author:
-	- Aviv Carmi
-	
+  - Aviv Carmi
+
 blog_title: "OK Let’s Go: Three Approaches to Structuring Go Code"
 categories: Engineering
-tags: 
-	- Go
-	-	Golang
-	-	Code Project Structure
-	-	Software Engineering
+tags:
+  - Go
+  - Golang
+  - Code Project Structure
+  - Software Engineering
 
 thumbnail: ok-lets-go.png
 ---
