@@ -1,5 +1,95 @@
 [
   {
+    "name_org": "FierceTelecom",
+    "news_org_logo": "fiercetelecom.jpg",
+    "news_org_logo_wide": false,
+    "news_title": "Deutsche Telekom Capital Partners and Salesforce invest in PerimeterX",
+    "news_url": "https://www.fiercetelecom.com/financial/deutsche-telecom-and-salesforce-invest-bot-detection-vendor-perimeterx",
+    "news_date": "2019-09-04",
+    "news_type": "article"
+  },
+  {
+    "name_org": "CALACLISTECH",
+    "news_org_logo": "calcalistech.jpg",
+    "news_org_logo_wide": false,
+    "news_title": "Deutsche Telekom, Salesforce Back Information Security Startup PerimeterX",
+    "news_url": "https://www.calcalistech.com/ctech/articles/0,7340,L-3769658,00.html",
+    "news_date": "2019-09-04",
+    "news_type": "article"
+  },
+  {
+    "name_org": "PerimeterX",
+    "news_org_logo": "px.png",
+    "news_org_logo_wide": false,
+    "news_title": "PerimeterX Extends Series C to $57M to Expand Web Application Protection Platform and Fuel Go-To-Market Growth",
+    "news_url": "/about/press/2019/2019-09-04-perimeterx-extends-series-c-to-$57m/",
+    "news_date": "2019-09-04",
+    "news_type": "press release"
+  },
+  {
+    "name_org": "Information Security Buzz",
+    "news_org_logo": "informationsecuritybuzz.jpeg",
+    "news_org_logo_wide": false,
+    "news_title": "New Botnet Revealed, Takes Over Malware Web Servers",
+    "news_url": "https://www.informationsecuritybuzz.com/expert-comments/new-botnet-revealed-takes-over-malware-web-servers/",
+    "news_date": "2019-08-23",
+    "news_type": "article"
+  },
+  {
+    "name_org": "siliconANGLE",
+    "news_org_logo": "silicon-angle.png",
+    "news_org_logo_wide": false,
+    "news_title": "PerimeterX acquires fellow security startup PageSeal to expand product lineup",
+    "news_url": "https://siliconangle.com/2019/08/20/perimeterx-acquires-fellow-security-startup-pageseal-expand-product-lineup/",
+    "news_date": "2019-08-20",
+    "news_type": "article"
+  },
+  {
+    "name_org": "CALACLISTECH",
+    "news_org_logo": "calcalistech.jpg",
+    "news_org_logo_wide": false,
+    "news_title": "PerimeterX Acquires Network Security Startup PageSeal",
+    "news_url": "https://www.calcalistech.com/ctech/articles/0,7340,L-3768620,00.html",
+    "news_date": "2019-08-19",
+    "news_type": "article"
+  },
+  {
+    "name_org": "PerimeterX",
+    "news_org_logo": "px.png",
+    "news_org_logo_wide": false,
+    "news_title": "PerimeterX Expands Offerings for eCommerce with Acquisition of PageSeal",
+    "news_url": "/about/press/2019/2019-08-20-perimeterx-expands-offerings-for-ecommerce-with-acquisition-of-pageseal/",
+    "news_date": "2019-08-20",
+    "news_type": "press release"
+  },
+  {
+    "name_org": "American Express",
+    "news_org_logo": "amex.jpg",
+    "news_org_logo_wide": false,
+    "news_title": "11 Cybersecurity Experts Share Tips for Preventing and Minimizing Data Breaches",
+    "news_url": "https://www.americanexpress.com/en-us/business/trends-and-insights/articles/11-cybersecurity-experts-share-tips-for-preventing-and-minimizing-data-breaches/",
+    "news_date": "2019-08-09",
+    "news_type": "article"
+  },
+  {
+    "name_org": "Forbes",
+    "news_org_logo": "forbes.jpg",
+    "news_org_logo_wide": false,
+    "news_title": "Your CAPTCHA Could Be Hurting Your Sales",
+    "news_url": "https://www.forbes.com/sites/forbestechcouncil/2019/08/07/your-captcha-could-be-hurting-your-sales/#1931e80833c8",
+    "news_date": "2019-08-07",
+    "news_type": "article"
+  },
+  {
+    "name_org": "PerimeterX",
+    "news_org_logo": "px.png",
+    "news_org_logo_wide": false,
+    "news_title": "Contrast Security and PerimeterX Team to Advance Application Security for Modern Applications",
+    "news_url": "/about/press/2019/2019-07-15-perimeterx-contrast-security-advance-security/",
+    "news_date": "2019-07-17",
+    "news_type": "press release"
+  },
+  {
     "name_org": "digitalCommerce360",
     "news_org_logo": "digitalCommerce360.jpg",
     "news_org_logo_wide": false,
@@ -76,9 +166,18 @@
     "news_org_logo": "calcalistech.jpg",
     "news_org_logo_wide": false,
     "news_title": "Information Security Startup PerimeterX Raises $43 Million",
-    "news_url": "Information Security Startup PerimeterX Raises $43 Million",
+    "news_url": "https://www.calcalistech.com/ctech/articles/0,7340,L-3756119,00.html",
     "news_date": "2019-02-11",
     "news_type": "article"
+  },
+  {
+    "name_org": "PerimeterX",
+    "news_org_logo": "px.png",
+    "news_org_logo_wide": false,
+    "news_title": "PerimeterX Raises $43M In Series C Funding To Fuel Expansion into New Markets and Accelerate Product Development",
+    "news_url": "/about/press/2019/2019-02-11-perimeterx-raises-$43m-series-c/",
+    "news_date": "2019-02-11",
+    "news_type": "press release"
   },
   {
     "name_org": "VentureBeat",
@@ -279,6 +378,15 @@
     "news_type": "article"
   },
   {
+    "name_org": "PerimeterX",
+    "news_org_logo": "px.png",
+    "news_org_logo_wide": false,
+    "news_title": "PerimeterX Raises $23M In Series B Funding To Expand Platform That Prevents Bot Attacks",
+    "news_url": "/about/press/2017/2017-07-25-perimeterx-raises-$23m/",
+    "news_date": "2017-07-25",
+    "news_type": "press release"
+  },
+  {
     "name_org": "DARKReading",
     "news_org_logo": "darkreading.jpeg",
     "news_org_logo_wide": false,
@@ -322,6 +430,15 @@
     "news_url": "/about/press/2017/2017-05-17-perimeterx-named-a-2017-cool-vendor/",
     "news_date": "2017-05-19",
     "news_type": "article"
+  },
+  {
+    "name_org": "PerimeterX",
+    "news_org_logo": "px.png",
+    "news_org_logo_wide": false,
+    "news_title": "PerimeterX Named A 2017 Gartner Cool Vendor In Unified Retail Commerce",
+    "news_url": "/about/press/2017/2017-05-17-perimeterx-named-a-2017-cool-vendor/",
+    "news_date": "2017-05-17",
+    "news_type": "press release"
   },
   {
     "name_org": "CSOonline",
@@ -504,6 +621,15 @@
     "news_type": "article"
   },
   {
+    "name_org": "PerimeterX",
+    "news_org_logo": "px.png",
+    "news_org_logo_wide": false,
+    "news_title": "O'Reilly 2016 Security Conference: PerimeterX presenting on Detecting and Blocking Advanced Bot Attacks",
+    "news_url": "/about/press/2016/2016-10-26-perimeterx-cto-to-present-on-latest-bot-threats/",
+    "news_date": "2016-10-26",
+    "news_type": "press release"
+  },
+  {
     "name_org": "eSecurity Planet",
     "news_org_logo": "esecurityplanet.png",
     "news_org_logo_wide": true,
@@ -603,6 +729,15 @@
     "news_type": "article"
   },
   {
+    "name_org": "PerimeterX",
+    "news_org_logo": "px.png",
+    "news_org_logo_wide": false,
+    "news_title": "PerimeterX Partners with ironSource to Combat Bot Fraud",
+    "news_url": "/about/press/2016/2016-07-12-perimeterx-partners-with-ironsource/",
+    "news_date": "2016-07-12",
+    "news_type": "press release"
+  },
+  {
     "name_org": "IT Business Net",
     "news_org_logo": "itbusinessnet.jpg",
     "news_org_logo_wide": false,
@@ -664,5 +799,14 @@
     "news_url": "https://www.bizety.com/2016/04/11/perimeterx-comes-stealth-mode-aiming-disrupt-edge-security-market/",
     "news_date": "2016-04-12",
     "news_type": "article"
+  },
+  {
+    "name_org": "PerimeterX",
+    "news_org_logo": "px.png",
+    "news_org_logo_wide": false,
+    "news_title": "PerimeterX Launches and Introduces PerimeterX Bot Defender Service",
+    "news_url": "/about/press/2016/2016-04-12-perimeterx-launches/",
+    "news_date": "2016-04-12",
+    "news_type": "press release"
   }
 ]

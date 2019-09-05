@@ -9,6 +9,6 @@ breadcrumbs:
   - name: Home
     path: "/"
   - name: About
-    path: "/who-we-are/"
+    path: "/about/"
   - name: Careers
 ---
