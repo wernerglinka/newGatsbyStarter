@@ -10,11 +10,48 @@ import { useEffect, useRef, useState } from "react";
  *
  * @param {function} callback  function to load more items
  */
-const useAddToList = (callback, { root = null, rootMargin, threshold = 0 }) => {
+const useAddToList = (allNewsList, chunk, { root, rootMargin, threshold }) => {
   const [isFetching, setIsFetching] = useState(false);
   const [fetchingDone, setFetchingDone] = useState(false);
   const [node, setNode] = useState(null);
+  const displayLengthRef = useRef(chunk);
+  // use state to hold the list of items to be displayed, this
+  // so every time we update the list we cause a new render
+  let listItemsToDisplay = allNewsList.slice(0, chunk);
+  const [listItems, setListItems] = useState(listItemsToDisplay);
+  let addItems;
 
+  /**
+   * fetchMoreListItems()
+   * Add a new chunk or whatever remains to the display list
+   */
+  function fetchMoreListItems() {
+    const displayLength = displayLengthRef.current;
+    const remainingItems = allNewsList.length - displayLength;
+
+    if (remainingItems > 0) {
+      if (remainingItems > chunk) {
+        addItems = chunk;
+      } else {
+        addItems = remainingItems;
+        setFetchingDone(true);
+      }
+    }
+
+    listItemsToDisplay = allNewsList.slice(
+      displayLength,
+      displayLength + addItems
+    );
+    displayLengthRef.current += addItems;
+
+    setListItems(prevState => [...prevState, ...listItemsToDisplay]);
+    setIsFetching(false);
+  }
+
+  /**
+   * updateList()
+   * Called from the intersection observer when list end approached viewport bottom
+   */
   function updateList() {
     setIsFetching(true);
   }
@@ -36,9 +73,9 @@ const useAddToList = (callback, { root = null, rootMargin, threshold = 0 }) => {
 
   useEffect(() => {
     if (!isFetching || fetchingDone) return;
-    callback();
+    fetchMoreListItems();
   }, [isFetching]);
 
-  return [setNode, fetchingDone, setFetchingDone, isFetching, setIsFetching];
+  return [setNode, listItems];
 };
 export default useAddToList;

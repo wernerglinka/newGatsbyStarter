@@ -6,7 +6,7 @@ import { Link, graphql } from "gatsby";
 import PropTypes from "prop-types";
 import styled from "@emotion/styled";
 import Container from "../../../components/styles/container";
-import useIObserver from "../../../hooks/useIObserver";
+import useAddToList from "../../../hooks/useAddToList";
 
 const NewsList = styled.ul`
   width: 100%;
@@ -55,48 +55,15 @@ const NewsList = styled.ul`
 const NewsListPage = props => {
   const allNewsList = props.data.allNewsJson.edges;
   const fields = props.data.allMarkdownRemark.edges[0].node.frontmatter;
-  const allNewsListLength = allNewsList.length;
   const chunk = 8;
-  const displayLengthRef = useRef(chunk);
-  let addItems;
 
-  let listItemsToDisplay = allNewsList.slice(0, chunk);
-  const [listItems, setListItems] = useState(listItemsToDisplay);
-  const [
-    ref,
-    fetchingDone,
-    setFetchingDone,
-    isFetching,
-    setIsFetching,
-  ] = useIObserver(fetchMoreListItems, {
+  // useAddToList provides  ref for the element after the list that will be lazy loaded
+  // and the listItems to build the list
+  const [ref, listItems] = useAddToList(allNewsList, chunk, {
     root: document.body,
     rootMargin: "200px",
     threashold: 1,
   });
-
-  // Todo: add case for last chunk of items and then test on touch device
-  function fetchMoreListItems() {
-    const displayLength = displayLengthRef.current;
-    const remainingItems = allNewsListLength - displayLength;
-
-    if (remainingItems > 0) {
-      if (remainingItems > chunk) {
-        addItems = chunk;
-      } else {
-        addItems = remainingItems;
-        setFetchingDone(true);
-      }
-    }
-
-    listItemsToDisplay = allNewsList.slice(
-      displayLength,
-      displayLength + addItems
-    );
-    displayLengthRef.current += addItems;
-
-    setListItems(prevState => [...prevState, ...listItemsToDisplay]);
-    setIsFetching(false);
-  }
 
   return (
     <Container>

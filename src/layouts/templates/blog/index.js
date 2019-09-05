@@ -9,6 +9,7 @@ import PostPreview from "../../../components/blog-post/post-preview";
 import Pager from "../../../components/pager";
 import Container from "../../../components/styles/container";
 import Headline from "../../../components/styles/page-headline";
+import useAddToList from "../../../hooks/useAddToList";
 
 /**
  * Listing page for Blogposts
@@ -62,7 +63,6 @@ export const pageQuery = graphql`
     ) {
       edges {
         node {
-          excerpt
           fields {
             slug
           }
