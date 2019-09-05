@@ -1,6 +1,6 @@
 ---
 template: "blog/blog-post"
-#draft:true
+draft: false
 
 # Metadata
 title: "Abusing GSuite for Data Scraping"
@@ -9,22 +9,26 @@ description: "How scrapers abuse GSuite to scrape data from the web"
 # Breadcrumbs
 breadcrumbs:
   - name: Home
-    path: "/"
+    path: /
   - name: Blog
-    path: "/blog/"
-  - name: "Abusing GSuite for Data Scraping"
+    path: /blog/1/
+  - name: Abusing GSuite for Data Scraping
 
 # Fields
 date: 2019-02-24
-author: [Barack Obama]
+author:
+  - Raz Avizemel
 
 blog_title: "Abusing GSuite for Data Scraping"
 categories: Research
-tags: [GSuite, Google Spreadsheet, Scraping, Abuse, Google]
+tags:
+  - GSuite
+  - Google Spreadsheet
+  - Scraping
+  - Abuse
+  - Google
 
-image:
-  feature: randy-fath-711941-unsplash.jpg
-  thumb: blog/blog-thumbnails/randy-fath-711941-unsplash.jpg
+thumbnail: randy-fath-711941-unsplash.jpg
 ---
 
 Millions of requests are made by Google’s bots and services on a daily basis. The famous search engine has become such an important part of the internet that it can even get some places where humans are blocked – login pages, filtered content and more. Some websites don’t even check the users’ profiles if they claim they’re associated with Google (easy to do by simply changing the user-agent you’re requesting the page with). This is a threat that more experienced website managers are aware of. However, fewer people are aware of the many ways a hacker can identify themselves as Google, or even worse, hide behind a legitimate services, which may not be suspected because of the company’s reputation.

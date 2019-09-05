@@ -70,10 +70,13 @@ export const pageQuery = graphql`
           }
           frontmatter {
             title
+            description
+            blog_title
+            categories
+            tags
             date(formatString: "MMMM DD, YYYY")
             author
-            featuredImage
-            altText
+            thumbnail
           }
         }
       }

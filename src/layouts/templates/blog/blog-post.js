@@ -97,7 +97,7 @@ export const pageQuery = graphql`
         title
         description
         tags
-        featuredImage
+        thumbnail
         breadcrumbs {
           name
           path

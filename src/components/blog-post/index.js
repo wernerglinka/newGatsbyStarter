@@ -14,6 +14,7 @@ const BlogLayout = styled.div`
 
   section {
     flex: 0 0 ${props => props.theme.mainWidth};
+    max-width: ${props => props.theme.mainWidth};
     padding-right: 30px;
   }
   aside {

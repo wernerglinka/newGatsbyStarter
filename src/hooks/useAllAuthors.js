@@ -6,10 +6,20 @@ const useGetAllAuthors = () => {
       allAuthorsJson {
         edges {
           node {
+            key
             name
-            title
-            avatar
+            email
+            position
             bio
+            avatar
+            twitter
+            other {
+              forbes_tech_council {
+                logo
+                name
+                url
+              }
+            }
           }
         }
       }

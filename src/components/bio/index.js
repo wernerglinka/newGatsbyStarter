@@ -24,7 +24,7 @@ const Bio = ({ author }) => {
   return (
     <Author>
       {allAuthorsInfo.map(thisAuthor => (
-        <li key={thisAuthor.title}>
+        <li key={thisAuthor.name}>
           {thisAuthor.avatar && (
             <CloudinaryImage
               baseURL={cloudinaryBaseURL}
