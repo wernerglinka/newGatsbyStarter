@@ -1,5 +1,6 @@
 const _ = require("lodash");
 const path = require("path");
+const slash = require("slash");
 const { createFilePath } = require("gatsby-source-filesystem");
 
 const siteValues = require("./src/data/site-globals");
@@ -7,342 +8,387 @@ const siteValues = require("./src/data/site-globals");
 exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions;
 
-  // query by different content types: blog, news, page etc...
-  // all blog posts are located in src/pages/blogs
-  // all other pages are located in src/pages
-  return graphql(`
-    {
-      blogs: allMarkdownRemark(
-        filter: {
-          fileAbsolutePath: { glob: "**/src/pages/resources/posts/**/*.md" }
-          frontmatter: {
-            draft: { ne: true }
-            categories: { ne: "Engineering" }
-          }
-        }
-        sort: { order: DESC, fields: frontmatter___date }
-      ) {
-        edges {
-          node {
-            id
-            fields {
-              slug
+  return new Promise((resolve, reject) => {
+    // query by different content types: blog, news, page etc...
+    // all blog posts are located in src/pages/blogs
+    // all other pages are located in src/pages
+    return graphql(`
+      {
+        blogs: allMarkdownRemark(
+          filter: {
+            fileAbsolutePath: { glob: "**/src/pages/resources/posts/**/*.md" }
+            frontmatter: {
+              draft: { ne: true }
+              categories: { ne: "Engineering" }
             }
-            frontmatter {
-              template
-              title
-              tags
-              breadcrumbs {
-                name
-                path
+          }
+          sort: { order: DESC, fields: frontmatter___date }
+        ) {
+          edges {
+            node {
+              id
+              fields {
+                slug
+              }
+              frontmatter {
+                template
+                title
+                tags
+                breadcrumbs {
+                  name
+                  path
+                }
+              }
+            }
+          }
+          totalCount
+        }
+        techblogs: allMarkdownRemark(
+          filter: {
+            fileAbsolutePath: { glob: "**/src/pages/techblog/**/*.md" }
+            frontmatter: {
+              draft: { ne: true }
+              categories: { eq: "Engineering" }
+            }
+          }
+          sort: { order: DESC, fields: frontmatter___date }
+        ) {
+          edges {
+            node {
+              id
+              fields {
+                slug
+              }
+              frontmatter {
+                template
+                title
+                tags
+                breadcrumbs {
+                  name
+                  path
+                }
+              }
+            }
+          }
+          totalCount
+        }
+        pages: allMarkdownRemark(
+          filter: {
+            fileAbsolutePath: {
+              glob: "**/src/pages/**/*.md|!**/src/pages/techBlog/**/*.md|!**/src/pages/resources/posts/**/*.md"
+            }
+          }
+          sort: { order: DESC, fields: frontmatter___date }
+        ) {
+          edges {
+            node {
+              id
+              fields {
+                slug
+              }
+              frontmatter {
+                template
+                title
+                breadcrumbs {
+                  name
+                  path
+                }
               }
             }
           }
         }
-        totalCount
-      }
-      techblogs: allMarkdownRemark(
-        filter: {
-          fileAbsolutePath: { glob: "**/src/pages/techblog/**/*.md" }
-          frontmatter: {
-            draft: { ne: true }
-            categories: { eq: "Engineering" }
-          }
+        news: allNewsJson {
+          totalNewsCount: totalCount
         }
-        sort: { order: DESC, fields: frontmatter___date }
-      ) {
-        edges {
-          node {
-            id
-            fields {
-              slug
-            }
-            frontmatter {
-              template
-              title
-              tags
-              breadcrumbs {
-                name
-                path
-              }
-            }
-          }
-        }
-        totalCount
-      }
-      pages: allMarkdownRemark(
-        filter: {
-          fileAbsolutePath: {
-            glob: "**/src/pages/**/*.md|!**/src/pages/techBlog/**/*.md|!**/src/pages/resources/posts/**/*.md"
-          }
-        }
-        sort: { order: DESC, fields: frontmatter___date }
-      ) {
-        edges {
-          node {
-            id
-            fields {
-              slug
-            }
-            frontmatter {
-              template
-              title
-              breadcrumbs {
-                name
-                path
-              }
+        allLever {
+          edges {
+            node {
+              id
             }
           }
         }
       }
-      news: allNewsJson {
-        totalNewsCount: totalCount
-      }
-    }
-  `).then(result => {
-    if (result.errors) {
-      result.errors.forEach(e => console.error(e.toString()));
-      return Promise.reject(result.errors);
-    }
+    `)
+      .then(result => {
+        if (result.errors) {
+          result.errors.forEach(e => console.error(e.toString()));
+          return Promise.reject(result.errors);
+        }
 
-    /** ********************************************************************************
-     * Regular blog
-     ********************************************************************************* */
-    /**
-     * Build the regular blog pages
-     * All blog posts are located in 'src/pages/blogs'
-     */
-    const posts = result.data.blogs.edges;
-    const tags = [];
+        /** ********************************************************************************
+         * Regular blog
+         ********************************************************************************* */
+        /**
+         * Build the regular blog pages
+         * All blog posts are located in 'src/pages/blogs'
+         */
+        const posts = result.data.blogs.edges;
+        const tags = [];
 
-    posts.forEach((edge, index) => {
-      if (edge.node.frontmatter.tags) {
-        // accumulate all tags in allTags
-        edge.node.frontmatter.tags.forEach(tag => tags.push(tag));
-      }
+        posts.forEach((edge, index) => {
+          if (edge.node.frontmatter.tags) {
+            // accumulate all tags in allTags
+            edge.node.frontmatter.tags.forEach(tag => tags.push(tag));
+          }
 
-      const id = edge.node.id;
+          const id = edge.node.id;
 
-      // create the previous / next links
-      const previous =
-        index === posts.length - 1 ? null : posts[index + 1].node;
-      const next = index === 0 ? null : posts[index - 1].node;
+          // create the previous / next links
+          const previous =
+            index === posts.length - 1 ? null : posts[index + 1].node;
+          const next = index === 0 ? null : posts[index - 1].node;
 
-      // inject frontmatter breadcrumbs into the page context so we access in layout
-      const breadcrumbs = edge.node.frontmatter.breadcrumbs;
+          // inject frontmatter breadcrumbs into the page context so we access in layout
+          const breadcrumbs = edge.node.frontmatter.breadcrumbs;
 
-      createPage({
-        path: edge.node.fields.slug,
-        tags: edge.node.frontmatter.tags,
-        component: path.resolve(
-          `src/layouts/templates/${String(edge.node.frontmatter.template)}.js`
-        ),
-        // pass links via page context
-        context: {
-          id,
-          previous,
-          next,
-          breadcrumbs,
-        },
-      });
-    });
+          createPage({
+            path: edge.node.fields.slug,
+            tags: edge.node.frontmatter.tags,
+            component: path.resolve(
+              `src/layouts/templates/${String(
+                edge.node.frontmatter.template
+              )}.js`
+            ),
+            // pass links via page context
+            context: {
+              id,
+              previous,
+              next,
+              breadcrumbs,
+            },
+          });
+        });
 
-    /**
-     * Build the regular blog index page
-     */
-    // destructure totalCount variable from result object
-    let totalCount = result.data.blogs.totalCount;
+        /**
+         * Build the regular blog index page
+         */
+        // destructure totalCount variable from result object
+        let totalCount = result.data.blogs.totalCount;
 
-    // create the blog list pages
-    const blogItemsPerPage = siteValues.list_blogs_per_page;
-    const numPages = Math.ceil(totalCount / blogItemsPerPage);
+        // create the blog list pages
+        const blogItemsPerPage = siteValues.list_blogs_per_page;
+        const numPages = Math.ceil(totalCount / blogItemsPerPage);
 
-    // create blog landing page breadcrumbs
-    let breadcrumbs = [
-      {
-        name: "Home",
-        path: "/",
-      },
-      {
-        name: "Resources",
-        path: "/resources/",
-      },
-      {
-        name: "Blog",
-      },
-    ];
+        // create blog landing page breadcrumbs
+        let breadcrumbs = [
+          {
+            name: "Home",
+            path: "/",
+          },
+          {
+            name: "Resources",
+            path: "/resources/",
+          },
+          {
+            name: "Blog",
+          },
+        ];
 
-    let countTags = tags.reduce((prev, curr) => {
-      prev[curr] = (prev[curr] || 0) + 1;
-      return prev;
-    }, {});
-    const allTags = Object.keys(countTags);
+        let countTags = tags.reduce((prev, curr) => {
+          prev[curr] = (prev[curr] || 0) + 1;
+          return prev;
+        }, {});
+        const allTags = Object.keys(countTags);
 
-    createPage({
-      path: `/resources/blog/`,
-      component: path.resolve("./src/layouts/templates/blog/index.js"),
-      context: {
-        breadcrumbs,
-        allTags,
-      },
-    });
+        createPage({
+          path: `/resources/blog/`,
+          component: path.resolve("./src/layouts/templates/blog/index.js"),
+          context: {
+            breadcrumbs,
+            allTags,
+          },
+        });
 
-    /**
-     * Build the tag pages
-     */
-    allTags.forEach((tag, i) => {
-      breadcrumbs = [
-        {
-          name: "Home",
-          path: "/",
-        },
-        {
-          name: "Resources",
-          path: "/resources/",
-        },
-        {
-          name: "Blog",
-          path: "/resources/blog/",
-        },
-        {
-          name: `Tag: ${tag}`,
-        },
-      ];
+        /**
+         * Build the tag pages
+         */
+        allTags.forEach((tag, i) => {
+          breadcrumbs = [
+            {
+              name: "Home",
+              path: "/",
+            },
+            {
+              name: "Resources",
+              path: "/resources/",
+            },
+            {
+              name: "Blog",
+              path: "/resources/blog/",
+            },
+            {
+              name: `Tag: ${tag}`,
+            },
+          ];
 
-      createPage({
-        path: `/resources/blog/tags/${tag.replace(/\s+/g, "-").toLowerCase()}`,
-        component: path.resolve("./src/layouts/templates/blog/tags.js"),
-        context: {
-          allTags,
-          tag,
-          breadcrumbs,
-          layout: "tags",
-        },
-      });
-    });
+          createPage({
+            path: `/resources/blog/tags/${tag
+              .replace(/\s+/g, "-")
+              .toLowerCase()}`,
+            component: path.resolve("./src/layouts/templates/blog/tags.js"),
+            context: {
+              allTags,
+              tag,
+              breadcrumbs,
+              layout: "tags",
+            },
+          });
+        });
 
-    /** ********************************************************************************
-     * TechBlog
-     ********************************************************************************* */
+        /** ********************************************************************************
+         * TechBlog
+         ********************************************************************************* */
 
-    /**
-     * Build the tech blog pages
-     * All blog posts are located in 'src/pages/blogs'
-     */
-    const techPosts = result.data.techblogs.edges;
-    const techTags = [];
+        /**
+         * Build the tech blog pages
+         * All blog posts are located in 'src/pages/blogs'
+         */
+        const techPosts = result.data.techblogs.edges;
+        const techTags = [];
 
-    techPosts.forEach((edge, index) => {
-      if (edge.node.frontmatter.tags) {
-        // accumulate all tags in allTags
-        edge.node.frontmatter.tags.forEach(tag => techTags.push(tag));
-      }
-      const id = edge.node.id;
+        techPosts.forEach((edge, index) => {
+          if (edge.node.frontmatter.tags) {
+            // accumulate all tags in allTags
+            edge.node.frontmatter.tags.forEach(tag => techTags.push(tag));
+          }
+          const id = edge.node.id;
 
-      // create the previous / next links
-      const previous =
-        index === techPosts.length - 1 ? null : techPosts[index + 1].node;
-      const next = index === 0 ? null : techPosts[index - 1].node;
+          // create the previous / next links
+          const previous =
+            index === techPosts.length - 1 ? null : techPosts[index + 1].node;
+          const next = index === 0 ? null : techPosts[index - 1].node;
 
-      // inject frontmatter breadcrumbs into the page context so we access in layout
-      breadcrumbs = edge.node.frontmatter.breadcrumbs;
+          // inject frontmatter breadcrumbs into the page context so we access in layout
+          breadcrumbs = edge.node.frontmatter.breadcrumbs;
 
-      createPage({
-        path: edge.node.fields.slug,
-        tags: edge.node.frontmatter.tags,
-        component: path.resolve(
-          `src/layouts/templates/${String(edge.node.frontmatter.template)}.js`
-        ),
-        // pass links via page context
-        context: {
-          id,
-          previous,
-          next,
-          breadcrumbs,
-          layout: "techblog",
-        },
-      });
-    });
+          createPage({
+            path: edge.node.fields.slug,
+            tags: edge.node.frontmatter.tags,
+            component: path.resolve(
+              `src/layouts/templates/${String(
+                edge.node.frontmatter.template
+              )}.js`
+            ),
+            // pass links via page context
+            context: {
+              id,
+              previous,
+              next,
+              breadcrumbs,
+              layout: "techblog",
+            },
+          });
+        });
 
-    /**
-     * Build the tech blog index page
-     */
-    // destructure totalCount variable from result object
-    totalCount = result.data.techblogs.totalCount;
+        /**
+         * Build the tech blog index page
+         */
+        // destructure totalCount variable from result object
+        totalCount = result.data.techblogs.totalCount;
 
-    countTags = techTags.reduce((prev, curr) => {
-      prev[curr] = (prev[curr] || 0) + 1;
-      return prev;
-    }, {});
-    const allTechTags = Object.keys(countTags);
+        countTags = techTags.reduce((prev, curr) => {
+          prev[curr] = (prev[curr] || 0) + 1;
+          return prev;
+        }, {});
+        const allTechTags = Object.keys(countTags);
 
-    createPage({
-      path: `/techblog/`,
-      component: path.resolve("./src/layouts/templates/blog/tech.js"),
-      context: {
-        layout: "techblogList",
-        allTechTags,
-      },
-    });
+        createPage({
+          path: `/techblog/`,
+          component: path.resolve("./src/layouts/templates/blog/tech.js"),
+          context: {
+            layout: "techblogList",
+            allTechTags,
+          },
+        });
 
-    /**
-     * Build the tech blog tag pages
-     */
+        /**
+         * Build the tech blog tag pages
+         */
 
-    allTechTags.forEach((tag, i) => {
-      breadcrumbs = [
-        {
-          name: "TechBlog",
-          path: "/techblog/",
-        },
-        {
-          name: `Tag: ${tag}`,
-        },
-      ];
-      createPage({
-        path: `/techblog/tags/${tag.replace(/\s+/g, "-").toLowerCase()}`,
-        component: path.resolve(
-          "./src/layouts/templates/blog/techblog-tags.js"
-        ),
-        context: {
-          allTechTags,
-          tag,
-          breadcrumbs,
-          layout: "tags",
-        },
-      });
-    });
+        allTechTags.forEach((tag, i) => {
+          breadcrumbs = [
+            {
+              name: "TechBlog",
+              path: "/techblog/",
+            },
+            {
+              name: `Tag: ${tag}`,
+            },
+          ];
+          createPage({
+            path: `/techblog/tags/${tag.replace(/\s+/g, "-").toLowerCase()}`,
+            component: path.resolve(
+              "./src/layouts/templates/blog/techblog-tags.js"
+            ),
+            context: {
+              allTechTags,
+              tag,
+              breadcrumbs,
+              layout: "tags",
+            },
+          });
+        });
 
-    /** ********************************************************************************
-     * Pages
-     ********************************************************************************* */
+        /** ********************************************************************************
+         * Pages
+         ********************************************************************************* */
 
-    /**
-     * Build the site pages
-     * Site pages are all page other than
-     * - blog posts
-     * - news items
-     */
-    const pages = result.data.pages.edges;
+        /**
+         * Build the site pages
+         * Site pages are all page other than
+         * - blog posts
+         * - news items
+         */
+        const pages = result.data.pages.edges;
 
-    pages.forEach((edge, index) => {
-      const id = edge.node.id;
-      // inject frontmatter breadcrumbs into the page context so we access in layout
-      breadcrumbs = edge.node.frontmatter.breadcrumbs;
+        pages.forEach((edge, index) => {
+          const id = edge.node.id;
+          // inject frontmatter breadcrumbs into the page context so we access in layout
+          breadcrumbs = edge.node.frontmatter.breadcrumbs;
 
-      createPage({
-        path: edge.node.fields.slug,
-        tags: edge.node.frontmatter.tags,
-        page_id: edge.node.frontmatter.page_id,
-        component: path.resolve(
-          `src/layouts/templates/${String(edge.node.frontmatter.template)}.js`
-        ),
-        context: {
-          id,
-          breadcrumbs,
-        },
-      });
-    });
+          createPage({
+            path: edge.node.fields.slug,
+            tags: edge.node.frontmatter.tags,
+            page_id: edge.node.frontmatter.page_id,
+            component: path.resolve(
+              `src/layouts/templates/${String(
+                edge.node.frontmatter.template
+              )}.js`
+            ),
+            context: {
+              id,
+              breadcrumbs,
+            },
+          });
+        });
+
+        /** ********************************************************************************
+         * Lever Job Pages
+         ********************************************************************************* */
+
+        const pageTemplate = path.resolve(
+          "./src/layouts/templates/about/job.js"
+        );
+        // We want to create a detailed page for each
+        // lever node. We'll just use the ID for the slug.
+        _.each(result.data.allLever.edges, edge => {
+          // Gatsby uses Redux to manage its internal state.
+          // Plugins and sites can use functions like "createPage"
+          // to interact with Gatsby.
+          createPage({
+            // Each page is required to have a `path` as well
+            // as a template component. The `context` is
+            // optional but is often necessary so the template
+            // can query data specific to each page.
+            path: `/${edge.node.id}/`,
+            component: slash(pageTemplate),
+            context: {
+              id: edge.node.id,
+            },
+          });
+        });
+      })
+      .then(resolve());
   });
 };
 

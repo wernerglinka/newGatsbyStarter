@@ -23,6 +23,7 @@
     "gatsby-remark-relative-images": "^0.2.3",
     "gatsby-remark-responsive-iframe": "^2.2.4",
     "gatsby-source-filesystem": "^2.1.6",
+    "gatsby-source-lever": "^2.1.8",
     "gatsby-transformer-json": "^2.2.2",
     "gatsby-transformer-remark": "^2.6.21",
     "gatsby-transformer-sharp": "^2.2.5",
@@ -41,6 +42,7 @@
     "react-slick": "^0.25.2",
     "react-spring": "^8.0.27",
     "react-transition-group": "^4.2.2",
+    "slash": "^3.0.0",
     "slick-carousel": "^1.8.1",
     "uuid": "^3.3.2"
   },

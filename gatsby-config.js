@@ -114,5 +114,15 @@ module.exports = {
         ],
       },
     },
+    {
+      resolve: "gatsby-source-lever",
+      options: {
+        // Your Lever site instance name.
+        site: "perimeterx",
+        // Set verboseOutput to true to display a verbose output on `npm run develop` or `npm run build`
+        // It can help you debug specific API Endpoints problems
+        verboseOutput: false,
+      },
+    },
   ],
 };

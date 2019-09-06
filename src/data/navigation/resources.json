@@ -40,14 +40,6 @@
     "category": "Blog"
   },
   {
-    "name": "By Topic",
-    "link": "/resources/blog/by-topic/"
-  },
-  {
-    "name": "by Author",
-    "link": "/resources/blog/by-author/"
-  },
-  {
     "name": "See All Blog Posts",
     "link": "/resources/blog/"
   },

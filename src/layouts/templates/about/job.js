@@ -30,7 +30,7 @@ LandingPageTemplate.propTypes = {
 export default LandingPageTemplate;
 
 export const pageQuery = graphql`
-  query AboutCareersPageTemplate {
+  query JobPageTemplate {
     markdownRemark(frontmatter: { template: { eq: "about/careers" } }) {
       frontmatter {
         title
