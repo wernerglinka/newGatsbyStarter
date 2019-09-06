@@ -27,6 +27,8 @@ tags:
   - hoarder
   - bots
 
+related_posts:
+
 thumbnail: not-sold-out.jpg
 ---
 

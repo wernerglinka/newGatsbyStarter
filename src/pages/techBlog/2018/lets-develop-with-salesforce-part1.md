@@ -9,7 +9,7 @@ description: "A blog series about developing a cartridge for Salesforce Commerce
 # Breadcrumbs
 breadcrumbs:
   - name: TechBlog
-    path: /techBlog/
+    path: /techblog/
   - name: Lets Develop With SFCC - Part 1
 
 # Fields
@@ -22,6 +22,8 @@ categories: Engineering
 tags:
   - JavaScript
   - SFCC
+
+related_posts:
 
 thumbnail: sfcc-1.jpg
 ---

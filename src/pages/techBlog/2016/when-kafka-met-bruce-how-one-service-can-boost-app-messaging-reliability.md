@@ -9,7 +9,7 @@ description: "Given massive scale and many producers, we saw the need to develop
 # Breadcrumbs
 breadcrumbs:
   - name: TechBlog
-    path: /techBlog/
+    path: /techblog/
   - name: When Kafka met Bruce...
 
 # Fields
@@ -25,6 +25,8 @@ tags:
   - kafka
   - bruce
   - bigdata
+
+related_posts:
 
 thumbnail: when-kafka-met-bruce.png
 ---

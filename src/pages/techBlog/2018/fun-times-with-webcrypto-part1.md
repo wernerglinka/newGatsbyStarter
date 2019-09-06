@@ -9,7 +9,7 @@ description: "Deriving a PBKDF2 key from a known set of parameters"
 # Breadcrumbs
 breadcrumbs:
   - name: TechBlog
-    path: /techBlog/
+    path: /techblog/
   - name: Fun Times With WebCrypto...
 
 # Fields
@@ -22,6 +22,8 @@ categories: Engineering
 tags:
   - WebCrypto
   - JavaScript
+
+related_posts:
 
 thumbnail: webcrypto1-logo.jpg
 ---

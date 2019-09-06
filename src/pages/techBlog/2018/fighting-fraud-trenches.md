@@ -9,7 +9,7 @@ description: "Fighting Fraud in the Trenches"
 # Breadcrumbs
 breadcrumbs:
   - name: TechBlog
-    path: /techBlog/
+    path: /techblog/
   - name: Fighting Fraud in the Trenches
 
 # Fields
@@ -21,6 +21,8 @@ blog_title: "Fighting Fraud in the Trenches"
 categories: Research
 tags:
   - account-takeover
+
+related_posts:
 
 thumbnail: fighting-fraud-in-trenches.jpg
 

@@ -31,7 +31,7 @@ const BlogIndex = props => {
   const imageData = siteMetaData[0].node.siteMetadata;
   // Get pager info from page context
   const {
-    pageContext: { allTechTags },
+    pageContext: { tag, allTags },
   } = props;
 
   const chunk = 8;
@@ -46,8 +46,8 @@ const BlogIndex = props => {
 
   return (
     <Container>
-      <Headline>TechBlog</Headline>
-      <SelectTag pathPrefix="/techblog/tags/" tagsList={allTechTags} />
+      <Headline>Blog Posts with Tag: {tag}</Headline>
+      <SelectTag pathPrefix="/resources/blog/tags/" tagsList={allTags} />
       <ul>
         {listItems.map(({ node }) => (
           <PostPreview
@@ -75,16 +75,17 @@ BlogIndex.propTypes = {
 export default BlogIndex;
 
 export const pageQuery = graphql`
-  query techBlogListQuery {
+  query tagsBlogQuery($tag: String!) {
     allMarkdownRemark(
       filter: {
-        fileAbsolutePath: { glob: "**/src/pages/techblog/**/*.md" }
-        frontmatter: { draft: { ne: true } }
+        fileAbsolutePath: { glob: "**/src/pages/resources/posts/**/*.md" }
+        frontmatter: { draft: { ne: true }, tags: { in: [$tag] } }
       }
       sort: { fields: [frontmatter___date], order: DESC }
     ) {
       edges {
         node {
+          excerpt
           fields {
             slug
           }

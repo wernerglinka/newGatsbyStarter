@@ -9,7 +9,7 @@ description: "The new, very real danger of online dating chat bots. PerimeterX r
 # Breadcrumbs
 breadcrumbs:
   - name: TechBlog
-    path: /techBlog/
+    path: /techblog/
   - name: Online Dating Chat Bots...
 
 # Fields
@@ -21,6 +21,8 @@ blog_title: "Romance Meets Bad Finance: Don’t Date Bots"
 categories: Research
 tags:
   - dating bots
+
+related_posts:
 
 thumbnail: dating-bot.png
 

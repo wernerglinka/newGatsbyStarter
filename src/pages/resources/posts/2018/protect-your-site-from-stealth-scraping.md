@@ -29,6 +29,8 @@ tags:
   - e-commerce security
   - vulnerability
 
+related_posts:
+
 thumbnail: stealth-scraping.jpg
 
 canonical_overwrite: "https://www.forbes.com/sites/forbestechcouncil/2018/06/11/protect-your-site-from-stealth-scraping-through-google-search/#15b7323e2188"

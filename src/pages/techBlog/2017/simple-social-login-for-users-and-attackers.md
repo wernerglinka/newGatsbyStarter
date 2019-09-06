@@ -9,7 +9,7 @@ description: "Social logins are very popular, but they can be abused by automate
 # Breadcrumbs
 breadcrumbs:
   - name: TechBlog
-    path: /techBlog/
+    path: /techblog/
   - name: Social Media Login Security...
 
 # Fields
@@ -22,6 +22,8 @@ categories: Research
 tags:
   - social
   - login
+
+related_posts:
 
 thumbnail: social-login.png
 

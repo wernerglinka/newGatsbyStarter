@@ -29,6 +29,8 @@ tags:
   - e-commerce security
   - vulnerability
 
+related_posts:
+
 thumbnail: bitcoins.jpg
 
 canonical_overwrite: "https://www.forbes.com/sites/forbestechcouncil/2019/05/23/are-loyalty-points-replacing-bitcoin-as-the-favored-dark-web-currency/#649ad30262cf"

@@ -9,7 +9,7 @@ description: "It is a known fact that while the majority of vulnerabilities disc
 # Breadcrumbs
 breadcrumbs:
   - name: TechBlog
-    path: /techBlog/
+    path: /techblog/
   - name: User-Agent based attacks...
 
 # Fields
@@ -21,6 +21,8 @@ blog_title: "User-Agent based attacks are a low-key risk that shouldn't be overl
 categories: Research
 tags:
   - commerce security
+
+related_posts:
 
 thumbnail: user-agent-based-attacks.jpg
 

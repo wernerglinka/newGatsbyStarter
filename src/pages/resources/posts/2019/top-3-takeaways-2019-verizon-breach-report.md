@@ -29,8 +29,8 @@ tags:
   - loyalty points
 
 related_posts:
-  - Client-Side - The Security Blindspot of your Website
-  - The client-side battle against JavaScript attacks is already here
+  - "Client-Side - The Security Blindspot of your Website"
+  - "The client-side battle against JavaScript attacks is already here"
 
 thumbnail: top-3-takeaways-verizon.jpg
 

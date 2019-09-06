@@ -10,6 +10,7 @@ import PostPreview from "../../../components/blog-post/post-preview";
 import Container from "../../../components/styles/container";
 import Headline from "../../../components/styles/page-headline";
 import useAddToList from "../../../hooks/useAddToList";
+import SelectTag from "../../../components/select-tag";
 
 /**
  * Listing page for Blogposts
@@ -30,7 +31,7 @@ const BlogIndex = props => {
   const imageData = siteMetaData[0].node.siteMetadata;
   // Get pager info from page context
   const {
-    pageContext: { numPages, currentPage },
+    pageContext: { allTags },
   } = props;
 
   const chunk = 8;
@@ -46,6 +47,7 @@ const BlogIndex = props => {
   return (
     <Container>
       <Headline>Blogposts</Headline>
+      <SelectTag pathPrefix="/resources/blog/tags/" tagsList={allTags} />
       <ul>
         {listItems.map(({ node }) => (
           <PostPreview
@@ -93,6 +95,7 @@ export const pageQuery = graphql`
             blog_title
             categories
             tags
+            related_posts
             date(formatString: "MMMM DD, YYYY")
             author
             thumbnail

@@ -9,7 +9,7 @@ description: "Stop sneaker bots from buying and stealing your top online sneaker
 # Breadcrumbs
 breadcrumbs:
   - name: TechBlog
-    path: /techBlog/
+    path: /techblog/
   - name: What is a Sneaker Bot...
 
 # Fields
@@ -24,6 +24,8 @@ tags:
   - sneakers
   - sneakerbot
   - scalping
+
+related_posts:
 
 image:
   feature: sneakerbots-stealing.jpg

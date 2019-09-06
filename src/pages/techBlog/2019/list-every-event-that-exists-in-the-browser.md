@@ -9,7 +9,7 @@ description: "List EVERY event that exists in the browser"
 # Breadcrumbs
 breadcrumbs:
   - name: TechBlog
-    path: /techBlog/
+    path: /techblog/
   - name: List EVERY event ...in the browser
 
 # Fields
@@ -26,6 +26,8 @@ tags:
   - event listeners
   - research
   - browsers
+
+related_posts:
 
 thumbnail: every-event-ui.png
 ---

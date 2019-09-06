@@ -29,6 +29,8 @@ tags:
   - e-commerce security
   - vulnerability
 
+related_posts:
+
 thumbnail: data-breaches-retailers.jpg
 
 canonical_overwrite: "https://www.forbes.com/sites/forbestechcouncil/2018/10/09/a-massive-bump-in-data-breaches-is-stoking-bot-driven-attacks-on-retailers/#4eec79ee66d8"

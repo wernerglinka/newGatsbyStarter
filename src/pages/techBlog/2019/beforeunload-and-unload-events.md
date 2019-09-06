@@ -9,7 +9,7 @@ description: "unload And beforeunload Events And How To Easily Debug Them Both!"
 # Breadcrumbs
 breadcrumbs:
   - name: TechBlog
-    path: /techBlog/
+    path: /techblog/
   - name: unload And beforeunload Events...
 
 # Fields
@@ -23,6 +23,8 @@ tags:
   - javascript
   - debugging
   - research
+
+related_posts:
 
 thumbnail: unload-events.jpg
 ---

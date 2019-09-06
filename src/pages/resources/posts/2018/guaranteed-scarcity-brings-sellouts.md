@@ -27,6 +27,8 @@ tags:
   - scalping
   - scalperbots
 
+related_posts:
+
 thumbnail: ido-nbr-feb-2018.jpg
 ---
 

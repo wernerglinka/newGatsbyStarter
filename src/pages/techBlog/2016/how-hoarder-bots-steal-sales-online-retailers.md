@@ -9,7 +9,7 @@ description: "Online product hoarding continues to become a bigger problem for r
 # Breadcrumbs
 breadcrumbs:
   - name: TechBlog
-    path: /techBlog/
+    path: /techblog/
   - name: Prevent Online Hoarding...
 
 # Fields
@@ -24,6 +24,8 @@ tags:
   - scalping,
   - application layer denial of service
   - e-commerce security
+
+related_posts:
 
 thumbnail: how-hoarder-bots-steal.png
 

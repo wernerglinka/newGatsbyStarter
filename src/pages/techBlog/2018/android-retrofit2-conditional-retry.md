@@ -9,8 +9,8 @@ description: "A short post demonstrating a possible solution for performing cond
 # Breadcrumbs
 breadcrumbs:
   - name: TechBlog
-    path: /techBlog/
-  - name: What is a Sneaker Bot...
+    path: /techblog/
+  - name: Conditionally Retry Asynchronous...
 
 # Fields
 date: 2018-05-08
@@ -23,6 +23,8 @@ tags:
   - Java
   - Android
   - Retrofit
+
+related_posts:
 
 thumbnail: blog/blog-thumbnails/retrofit-1.jpg
 ---

@@ -9,7 +9,7 @@ description: "Appium allows you to create automated tests for your app using Pyt
 # Breadcrumbs
 breadcrumbs:
   - name: TechBlog
-    path: /techBlog/
+    path: /techblog/
   - name: The Super Awesome, Easy to Follow...
 
 # Fields
@@ -21,6 +21,8 @@ blog_title: "The Super Awesome, Easy to Follow, Step-by-Step Guide for Setting U
 categories: Engineering
 tags:
   - Appium
+
+related_posts:
 
 thumbnail: setup-appium.png
 ---

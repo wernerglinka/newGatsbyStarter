@@ -29,6 +29,8 @@ tags:
   - e-commerce security
   - vulnerability
 
+related_posts:
+
 thumbnail: unwanted-bots.jpg
 
 canonical_overwrite: https://www.forbes.com/sites/forbestechcouncil/2018/02/28/five-easy-ways-to-identify-bot-attacks-on-your-site/#79c42da68fa3

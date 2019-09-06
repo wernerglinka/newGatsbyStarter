@@ -9,7 +9,7 @@ description: "Steps every retailer should take to prevent brute force attacks of
 # Breadcrumbs
 breadcrumbs:
   - name: TechBlog
-    path: /techBlog/
+    path: /techblog/
   - name: Prevent Brute Force Attacks...
 
 # Fields
@@ -21,6 +21,8 @@ blog_title: "Stopping fraud from brute-force attacks against online coupons"
 categories: Research
 tags:
   - e-commerce security
+
+related_posts:
 
 thumbnail: How-to-prevent-fraud-from-brute-force-online-coupon-and-gift-card-attacks.jpg
 

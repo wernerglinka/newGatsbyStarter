@@ -9,7 +9,7 @@ description: "For bot attacks looking to pull off account takeovers, the holiday
 # Breadcrumbs
 breadcrumbs:
   - name: TechBlog
-    path: /techBlog/
+    path: /techblog/
   - name: Bot Attacks 2017 Holidays Saw Attacks Start...
 
 # Fields
@@ -27,6 +27,8 @@ tags:
   - holiday ecommerce
   - holiday season
   - vulnerability
+
+related_posts:
 
 thumbnail: overall-login-traffic-tn.jpg
 ---

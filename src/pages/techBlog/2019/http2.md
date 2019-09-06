@@ -9,7 +9,7 @@ description: "HTTP/2 - The Reasons, The Features And The Node.js Support"
 # Breadcrumbs
 breadcrumbs:
   - name: TechBlog
-    path: /techBlog/
+    path: /techblog/
   - name: HTTP/2 - The Reasons...
 
 # Fields
@@ -27,6 +27,8 @@ tags:
   - Node.js
   - Node
   - Javascript
+
+related_posts:
 
 thumbnail: marc-olivier-jodoin-291607-unsplash.jpg
 ---

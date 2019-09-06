@@ -9,7 +9,7 @@ description: "Stream processing is one of those nifty new big data buzz words. T
 # Breadcrumbs
 breadcrumbs:
   - name: TechBlog
-    path: /techBlog/
+    path: /techblog/
   - name: There and Back Again...
 
 # Fields
@@ -24,6 +24,8 @@ tags:
   - scale
   - kafka
   - stream-processing
+
+related_posts:
 
 thumbnail: there-and-back-again.jpg
 ---

@@ -9,7 +9,7 @@ description: "Online gift card fraud is easy to accomplish, and the potential lo
 # Breadcrumbs
 breadcrumbs:
   - name: TechBlog
-    path: /techBlog/
+    path: /techblog/
   - name: Online Gift Card Fraud...
 
 # Fields
@@ -21,6 +21,8 @@ blog_title: "Online Gift Card Fraud: Free Moccachino for Life?"
 categories: Research
 tags:
   - gift card fraud
+
+related_posts:
 
 thumbnail: gift-card-fraud.png
 ---

@@ -26,6 +26,8 @@ categories: Thought Leadership
 tags:
   - gift card fraud
 
+related_posts:
+
 thumbnail: check-gift-card-balance.png
 ---
 

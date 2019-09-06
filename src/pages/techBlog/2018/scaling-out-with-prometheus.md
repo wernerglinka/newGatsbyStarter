@@ -9,7 +9,7 @@ description: "PerimeterX servers run in a multi-provider multi-region setup. Mos
 # Breadcrumbs
 breadcrumbs:
   - name: TechBlog
-    path: /techBlog/
+    path: /techblog/
   - name: Scaling out with Prometheus
 
 # Fields
@@ -27,6 +27,8 @@ tags:
   - datadog
   - docker
   - redundancy
+
+related_posts:
 
 thumbnmail: prometheus.png
 ---

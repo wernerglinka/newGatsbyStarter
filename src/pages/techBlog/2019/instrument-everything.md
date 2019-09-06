@@ -9,7 +9,7 @@ description: "Instrument Everything - Achieving Test Coverage using Instrumentat
 # Breadcrumbs
 breadcrumbs:
   - name: TechBlog
-    path: /techBlog/
+    path: /techblog/
   - name: Instrument Everything...
 
 # Fields
@@ -28,6 +28,8 @@ tags:
   - VCL
   - Varnish
   - Fastly
+
+related_posts:
 
 thumbnail: instrument-everything-thumbnail.png
 ---

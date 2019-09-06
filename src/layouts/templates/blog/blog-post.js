@@ -93,7 +93,6 @@ export const pageQuery = graphql`
         title
         description
         tags
-        related_posts
         thumbnail
         breadcrumbs {
           name

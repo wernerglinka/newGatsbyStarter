@@ -29,6 +29,8 @@ tags:
   - 4th generation
   - bots
 
+related_posts:
+
 thumbnail: holiday-ecommerce-the-new-bot-threat.jpg
 
 canonical_overwrite: https://multichannelmerchant.com/ecommerce/holiday-ecommerce-the-new-bot-threat-the-new-defense-28112016/

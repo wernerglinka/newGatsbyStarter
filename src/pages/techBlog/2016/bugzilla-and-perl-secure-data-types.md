@@ -9,7 +9,7 @@ description: "Perl is considered by some to be a “problematic” language. In 
 # Breadcrumbs
 breadcrumbs:
   - name: TechBlog
-    path: /techBlog/
+    path: /techblog/
   - name: Bugzilla as a case study on Perl...
 
 # Fields
@@ -23,6 +23,8 @@ tags:
   - bugzilla
   - research
   - perl
+
+related_posts:
 
 thumbnail: bugzilla-and-perl.png
 ---

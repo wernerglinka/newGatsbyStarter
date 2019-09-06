@@ -5,7 +5,8 @@
 */
 import React from "react";
 import PropTypes from "prop-types";
-import { graphql } from "gatsby";
+import { graphql, Link } from "gatsby";
+import styled from "@emotion/styled";
 import PostPreview from "../../../components/blog-post/post-preview";
 import Container from "../../../components/styles/container";
 import Headline from "../../../components/styles/page-headline";
@@ -31,7 +32,7 @@ const BlogIndex = props => {
   const imageData = siteMetaData[0].node.siteMetadata;
   // Get pager info from page context
   const {
-    pageContext: { allTechTags },
+    pageContext: { tag, allTechTags },
   } = props;
 
   const chunk = 8;
@@ -46,8 +47,9 @@ const BlogIndex = props => {
 
   return (
     <Container>
-      <Headline>TechBlog</Headline>
+      <Headline>Blog Posts with Tag: {tag}</Headline>
       <SelectTag pathPrefix="/techblog/tags/" tagsList={allTechTags} />
+
       <ul>
         {listItems.map(({ node }) => (
           <PostPreview
@@ -75,16 +77,17 @@ BlogIndex.propTypes = {
 export default BlogIndex;
 
 export const pageQuery = graphql`
-  query techBlogListQuery {
+  query tagsTechBlogQuery($tag: String!) {
     allMarkdownRemark(
       filter: {
         fileAbsolutePath: { glob: "**/src/pages/techblog/**/*.md" }
-        frontmatter: { draft: { ne: true } }
+        frontmatter: { draft: { ne: true }, tags: { in: [$tag] } }
       }
       sort: { fields: [frontmatter___date], order: DESC }
     ) {
       edges {
         node {
+          excerpt
           fields {
             slug
           }

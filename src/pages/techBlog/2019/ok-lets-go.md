@@ -9,7 +9,7 @@ description: "OK Let’s Go: Three Approaches to Structuring Go Code"
 # Breadcrumbs
 breadcrumbs:
   - name: TechBlog
-    path: /techBlog/
+    path: /techblog/
   - name: OK Let’s Go...
 
 # Fields
@@ -24,6 +24,8 @@ tags:
   - Golang
   - Code Project Structure
   - Software Engineering
+
+related_posts:
 
 thumbnail: ok-lets-go.png
 ---

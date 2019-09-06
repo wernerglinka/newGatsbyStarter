@@ -9,7 +9,7 @@ description: "Deriving a PBKDF2 key from a known set of parameters"
 # Breadcrumbs
 breadcrumbs:
   - name: TechBlog
-    path: /techBlog/
+    path: /techblog/
   - name: Certificate Pinning on Mobile Applications...
 
 # Fields
@@ -26,6 +26,8 @@ tags:
   - SSL Pinning
   - Mobile Security
   - Best Practice
+
+related_posts:
 
 thumbnail: adrien-296945-unsplash.jpg
 ---

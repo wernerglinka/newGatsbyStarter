@@ -9,7 +9,7 @@ description: "Encrpting and decrypting objects using WebCrypto"
 # Breadcrumbs
 breadcrumbs:
   - name: TechBlog
-    path: /techBlog/
+    path: /techblog/
   - name: Fun Times With WebCrypto...
 
 # Fields
@@ -24,7 +24,7 @@ tags:
   - JavaScript
 
 related_posts:
-  - Fun Times With WebCrypto — Part 1: PBKDF2
+  - "Fun Times With WebCrypto — Part 1: PBKDF2"
 
 thumbnail: jason-blackeye-198848-unsplash.jpg
 ---

@@ -29,6 +29,8 @@ tags:
   - bot attacks
   - e-commerce-security
 
+related_posts:
+
 thumbnail: bot-vacation.jpg
 ---
 

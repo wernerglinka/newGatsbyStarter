@@ -27,6 +27,8 @@ tags:
   - account-takeover
   - brute-force
 
+related_posts:
+
 thumbnail: bots-take-over-facebook.png
 
 canonical_overwrite: https://www.thecipherbrief.com/when-bots-take-over-your-facebook-page

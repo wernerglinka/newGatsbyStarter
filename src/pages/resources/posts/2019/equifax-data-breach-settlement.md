@@ -28,9 +28,9 @@ tags:
   - e-commerce-security
 
 related_posts:
-  - $229 Million GDPR Fine for British Airways Shows How Costly JavaScript Attacks Can Be
-  - Why SREs Should Worry More About Third-Party JavaScript
-  - Top 3 takeaways for retailers from the 2019 Verizon breach report
+  - "$229 Million GDPR Fine for British Airways Shows How Costly JavaScript Attacks Can Be"
+  - "Why SREs Should Worry More About Third-Party JavaScript"
+  - "Top 3 takeaways for retailers from the 2019 Verizon breach report"
 
 thumbnail: equifax-data-breach-settlement.jpg
 ---

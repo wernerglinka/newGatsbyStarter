@@ -26,6 +26,8 @@ categories: Thought Leadership
 tags:
   - good bots
 
+related_posts:
+
 thumbnail: good-bots.png
 
 canonical_overwrite: https://www.darkreading.com/cloud/how-to-live-by-the-code-of-good-bots/a/d-id/1329979

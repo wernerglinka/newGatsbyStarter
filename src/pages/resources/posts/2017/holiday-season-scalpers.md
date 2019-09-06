@@ -34,6 +34,8 @@ tags:
   - bots
   - e-commerce security
 
+related_posts:
+
 thumbnail: sold-out.jpg
 ---
 

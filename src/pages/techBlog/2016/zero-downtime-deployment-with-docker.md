@@ -9,7 +9,7 @@ description: "In this post I will share the process we went through at Perimeter
 # Breadcrumbs
 breadcrumbs:
   - name: TechBlog
-    path: /techBlog/
+    path: /techblog/
   - name: Zero-downtime deployment with Docker
 
 # Fields
@@ -25,6 +25,8 @@ tags:
   - deployment
   - rolling update
   - HAProxy socket commands
+
+related_posts:
 
 thumbnail: zero-downtime-with-docker.png
 ---

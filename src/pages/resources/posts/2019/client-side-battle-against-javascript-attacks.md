@@ -28,8 +28,8 @@ tags:
   - Javascript Security
 
 related_posts:
-  - Why SREs Should Worry More About Third-Party JavaScript
-  - Client-Side - The Security Blindspot of your Website
+  - "Why SREs Should Worry More About Third-Party JavaScript"
+  - "Client-Side - The Security Blindspot of your Website"
 
 thumbnail: client-side-2.jpg
 ---

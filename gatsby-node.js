@@ -31,6 +31,7 @@ exports.createPages = ({ actions, graphql }) => {
             frontmatter {
               template
               title
+              tags
               breadcrumbs {
                 name
                 path
@@ -42,7 +43,7 @@ exports.createPages = ({ actions, graphql }) => {
       }
       techblogs: allMarkdownRemark(
         filter: {
-          fileAbsolutePath: { glob: "**/src/pages/techBlog/**/*.md" }
+          fileAbsolutePath: { glob: "**/src/pages/techblog/**/*.md" }
           frontmatter: {
             draft: { ne: true }
             categories: { eq: "Engineering" }
@@ -59,6 +60,7 @@ exports.createPages = ({ actions, graphql }) => {
             frontmatter {
               template
               title
+              tags
               breadcrumbs {
                 name
                 path
@@ -103,18 +105,29 @@ exports.createPages = ({ actions, graphql }) => {
       return Promise.reject(result.errors);
     }
 
+    /** ********************************************************************************
+     * Regular blog
+     ********************************************************************************* */
     /**
      * Build the regular blog pages
      * All blog posts are located in 'src/pages/blogs'
      */
     const posts = result.data.blogs.edges;
+    const tags = [];
 
     posts.forEach((edge, index) => {
+      if (edge.node.frontmatter.tags) {
+        // accumulate all tags in allTags
+        edge.node.frontmatter.tags.forEach(tag => tags.push(tag));
+      }
+
       const id = edge.node.id;
+
       // create the previous / next links
       const previous =
         index === posts.length - 1 ? null : posts[index + 1].node;
       const next = index === 0 ? null : posts[index - 1].node;
+
       // inject frontmatter breadcrumbs into the page context so we access in layout
       const breadcrumbs = edge.node.frontmatter.breadcrumbs;
 
@@ -135,15 +148,14 @@ exports.createPages = ({ actions, graphql }) => {
     });
 
     /**
-     * Build the regular blog index pages
-     * This includes the variables for the full pager
+     * Build the regular blog index page
      */
     // destructure totalCount variable from result object
     let totalCount = result.data.blogs.totalCount;
 
     // create the blog list pages
-    let blogItemsPerPage = siteValues.list_blogs_per_page;
-    let numPages = Math.ceil(totalCount / blogItemsPerPage);
+    const blogItemsPerPage = siteValues.list_blogs_per_page;
+    const numPages = Math.ceil(totalCount / blogItemsPerPage);
 
     // create blog landing page breadcrumbs
     let breadcrumbs = [
@@ -152,30 +164,86 @@ exports.createPages = ({ actions, graphql }) => {
         path: "/",
       },
       {
+        name: "Resources",
+        path: "/resources/",
+      },
+      {
         name: "Blog",
       },
     ];
+
+    let countTags = tags.reduce((prev, curr) => {
+      prev[curr] = (prev[curr] || 0) + 1;
+      return prev;
+    }, {});
+    const allTags = Object.keys(countTags);
 
     createPage({
       path: `/resources/blog/`,
       component: path.resolve("./src/layouts/templates/blog/index.js"),
       context: {
         breadcrumbs,
+        allTags,
       },
     });
+
+    /**
+     * Build the tag pages
+     */
+    allTags.forEach((tag, i) => {
+      breadcrumbs = [
+        {
+          name: "Home",
+          path: "/",
+        },
+        {
+          name: "Resources",
+          path: "/resources/",
+        },
+        {
+          name: "Blog",
+          path: "/resources/blog/",
+        },
+        {
+          name: `Tag: ${tag}`,
+        },
+      ];
+
+      createPage({
+        path: `/resources/blog/tags/${tag.replace(/\s+/g, "-").toLowerCase()}`,
+        component: path.resolve("./src/layouts/templates/blog/tags.js"),
+        context: {
+          allTags,
+          tag,
+          breadcrumbs,
+          layout: "tags",
+        },
+      });
+    });
+
+    /** ********************************************************************************
+     * TechBlog
+     ********************************************************************************* */
 
     /**
      * Build the tech blog pages
      * All blog posts are located in 'src/pages/blogs'
      */
     const techPosts = result.data.techblogs.edges;
+    const techTags = [];
 
     techPosts.forEach((edge, index) => {
+      if (edge.node.frontmatter.tags) {
+        // accumulate all tags in allTags
+        edge.node.frontmatter.tags.forEach(tag => techTags.push(tag));
+      }
       const id = edge.node.id;
+
       // create the previous / next links
       const previous =
         index === techPosts.length - 1 ? null : techPosts[index + 1].node;
       const next = index === 0 ? null : techPosts[index - 1].node;
+
       // inject frontmatter breadcrumbs into the page context so we access in layout
       breadcrumbs = edge.node.frontmatter.breadcrumbs;
 
@@ -191,41 +259,63 @@ exports.createPages = ({ actions, graphql }) => {
           previous,
           next,
           breadcrumbs,
-          layout: "techBlog",
+          layout: "techblog",
         },
       });
     });
 
     /**
-     * Build the tech blog index pages
-     * This includes the variables for the full pager
+     * Build the tech blog index page
      */
     // destructure totalCount variable from result object
     totalCount = result.data.techblogs.totalCount;
 
-    // create the blog list pages
-    blogItemsPerPage = siteValues.list_blogs_per_page;
-    numPages = Math.ceil(totalCount / blogItemsPerPage);
-
-    // create blog landing page breadcrumbs
-    breadcrumbs = [
-      {
-        name: "Home",
-        path: "/",
-      },
-      {
-        name: "Blog",
-      },
-    ];
+    countTags = techTags.reduce((prev, curr) => {
+      prev[curr] = (prev[curr] || 0) + 1;
+      return prev;
+    }, {});
+    const allTechTags = Object.keys(countTags);
 
     createPage({
-      path: `/techBlog/`,
+      path: `/techblog/`,
       component: path.resolve("./src/layouts/templates/blog/tech.js"),
       context: {
-        breadcrumbs,
-        layout: "techBlog",
+        layout: "techblogList",
+        allTechTags,
       },
     });
+
+    /**
+     * Build the tech blog tag pages
+     */
+
+    allTechTags.forEach((tag, i) => {
+      breadcrumbs = [
+        {
+          name: "TechBlog",
+          path: "/techblog/",
+        },
+        {
+          name: `Tag: ${tag}`,
+        },
+      ];
+      createPage({
+        path: `/techblog/tags/${tag.replace(/\s+/g, "-").toLowerCase()}`,
+        component: path.resolve(
+          "./src/layouts/templates/blog/techblog-tags.js"
+        ),
+        context: {
+          allTechTags,
+          tag,
+          breadcrumbs,
+          layout: "tags",
+        },
+      });
+    });
+
+    /** ********************************************************************************
+     * Pages
+     ********************************************************************************* */
 
     /**
      * Build the site pages

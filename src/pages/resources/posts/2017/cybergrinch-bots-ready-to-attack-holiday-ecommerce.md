@@ -27,6 +27,8 @@ tags:
   - holiday ecommerce
   - cyber grinch
 
+related_posts:
+
 thumbnail: cyber-grinch.png
 ---
 

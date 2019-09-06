@@ -9,7 +9,7 @@ description: "Read everything you need to know about skimming attacks or magecar
 # Breadcrumbs
 breadcrumbs:
   - name: TechBlog
-    path: /techBlog/
+    path: /techblog/
   - name: All About Online Skimming...
 
 # Fields
@@ -24,9 +24,9 @@ tags:
   - online skimming attacks
 
 related_posts:
-  - Client-Side - The Security Blindspot of your Website
-  - $229 Million GDPR Fine for British Airways Shows How Costly JavaScript Attacks Can Be
-  - Why SREs Should Worry More About Third-Party JavaScript
+  - "Client-Side - The Security Blindspot of your Website"
+  - "$229 Million GDPR Fine for British Airways Shows How Costly JavaScript Attacks Can Be"
+  - "Why SREs Should Worry More About Third-Party JavaScript"
 
 thumbnail: digital-skimming.jpg
 ---

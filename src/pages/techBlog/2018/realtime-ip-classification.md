@@ -9,7 +9,7 @@ description: "This post details how we efficiently use MaxMind DB format to gene
 # Breadcrumbs
 breadcrumbs:
   - name: TechBlog
-    path: /techBlog/
+    path: /techblog/
   - name: What is a Sneaker Bot...
 
 # Fields
@@ -26,6 +26,8 @@ tags:
   - Classificatio
   - Golan
   - Perl
+
+related_posts:
 
 thumbnail: bad_good.jpg
 ---

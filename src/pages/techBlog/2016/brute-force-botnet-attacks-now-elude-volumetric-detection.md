@@ -9,7 +9,7 @@ description: "It is harder to distinguish botnet behavior from human behavior no
 # Breadcrumbs
 breadcrumbs:
   - name: TechBlog
-    path: /techBlog/
+    path: /techblog/
   - name: Brute-Force Botnet Attacks Now Elude...
 
 # Fields
@@ -26,6 +26,8 @@ tags:
   - IOT
   - ATO
   - account-takeover
+
+related_posts:
 
 thumbnail: brute-force-botnets.png
 

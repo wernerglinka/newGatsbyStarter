@@ -30,8 +30,8 @@ tags:
   - javascript
 
 related_posts:
-  - Why SREs Should Worry More About Third-Party
-  - The client-side battle against JavaScript attacks is already here
+  - "Why SREs Should Worry More About Third-Party"
+  - "The client-side battle against JavaScript attacks is already here"
 
 thumbnail: client-side.jpg
 ---

@@ -26,6 +26,8 @@ categories: Thought Leadership
 tags:
   - bots
 
+related_posts:
+
 thumbnail: airlines-bot-attack.jpg
 ---
 

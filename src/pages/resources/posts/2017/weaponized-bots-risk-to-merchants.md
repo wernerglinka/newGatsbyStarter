@@ -25,6 +25,8 @@ blog_title: "Weaponized Bots And The Risk To Merchants"
 categories: Thought Leadership
 tags:
 
+related_posts:
+
 thumbnail: weaponized-bots.jpg
 
 canonical_overwrite: https://retailtouchpoints.tumblr.com/post/161239158397/weaponized-bots-and-the-risk-to-merchants

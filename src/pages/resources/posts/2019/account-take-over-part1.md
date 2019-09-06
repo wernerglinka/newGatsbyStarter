@@ -28,7 +28,7 @@ tags:
   - bot management
 
 related_posts:
-  - The Best Way to Identify and Prevent Account Takeover Attacks
+  - "The Best Way to Identify and Prevent Account Takeover Attacks"
 
 thumbnail: ato-1.jpg
 ---

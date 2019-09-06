@@ -26,6 +26,8 @@ categories: Thought Leadership
 tags:
   - bot defender
 
+related_posts:
+
 thumbnail: trish.jpg
 ---
 

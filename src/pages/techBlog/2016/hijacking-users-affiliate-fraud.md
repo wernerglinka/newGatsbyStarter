@@ -9,7 +9,7 @@ description: "Learn how affiliate marketing fraud bots are attacking websites wi
 # Breadcrumbs
 breadcrumbs:
   - name: TechBlog
-    path: /techBlog/
+    path: /techblog/
   - name: Affiliate Marketing Fraud...
 
 # Fields
@@ -23,6 +23,8 @@ tags:
   - fraud
   - affiliate fraud
   - malicious extensions
+
+related_posts:
 
 thumbnail: hijacking-a-users-shadow.jpg
 

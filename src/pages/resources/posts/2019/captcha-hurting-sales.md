@@ -29,6 +29,8 @@ tags:
   - bot
   - bot attacks
 
+related_posts:
+
 thumbnail: captcha-hurting-sales.jpg
 
 canonical_overwrite: "https://www.forbes.com/sites/forbestechcouncil/2019/08/07/your-captcha-could-be-hurting-your-sales/#416253b433c8"

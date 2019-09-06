@@ -9,7 +9,7 @@ description: "Giving a customer the ability to gradually roll out changes in you
 # Breadcrumbs
 breadcrumbs:
   - name: TechBlog
-    path: /techBlog/
+    path: /techblog/
   - name: Make gradual software deployment...
 
 # Fields
@@ -25,6 +25,8 @@ tags:
   - gradual deployment
   - ab testing
   - ab
+
+related_posts:
 
 thumbnail: make-gradual-software-deployment.png
 
