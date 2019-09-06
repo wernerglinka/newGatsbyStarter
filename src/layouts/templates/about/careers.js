@@ -6,15 +6,28 @@ import styled from "@emotion/styled";
 import Container from "../../../components/styles/container";
 
 const LandingPageTemplate = props => {
+  console.log(props);
   const {
     data: {
       markdownRemark: { frontmatter: fields },
     },
   } = props;
-  console.log(fields);
+  const {
+    data: {
+      allLever: { edges: jobs },
+    },
+  } = props;
+
   return (
     <Container>
       <h1>{fields.heading}</h1>
+      <ul>
+        {jobs.map(({ node: job }) => (
+          <li key={job.id}>
+            {job.text}, {job.categories.location}
+          </li>
+        ))}
+      </ul>
     </Container>
   );
 };
@@ -24,6 +37,7 @@ LandingPageTemplate.propTypes = {
     markdownRemark: PropTypes.shape({
       frontmatter: PropTypes.object,
     }),
+    allLever: PropTypes.shape(),
   }).isRequired,
 };
 
