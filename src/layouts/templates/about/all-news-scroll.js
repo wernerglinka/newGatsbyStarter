@@ -60,7 +60,7 @@ const NewsListPage = props => {
   // useAddToList provides  ref for the element after the list that will be lazy loaded
   // and the listItems to build the list
   const [ref, listItems] = useAddToList(allNewsList, chunk, {
-    root: document.body,
+    root: null,
     rootMargin: "200px",
     threashold: 1,
   });

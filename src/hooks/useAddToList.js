@@ -1,4 +1,4 @@
-/* global IntersectionObserver */
+/* global IntersectionObserver, window */
 import { useEffect, useRef, useState } from "react";
 
 /**
@@ -56,7 +56,10 @@ const useAddToList = (allNewsList, chunk, { root, rootMargin, threshold }) => {
     setIsFetching(true);
   }
 
-  const observer = useRef(new IntersectionObserver(updateList), {
+  const temp =
+    typeof window !== "undefined" ? new IntersectionObserver(updateList) : null;
+
+  const observer = useRef(temp, {
     root,
     rootMargin,
     threshold,
