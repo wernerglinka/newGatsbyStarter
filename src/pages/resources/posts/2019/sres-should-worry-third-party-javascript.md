@@ -27,6 +27,10 @@ tags:
   - Client Side Data Protection
   - Javascript Security
 
+related_posts:
+  - Client-Side - The Security Blindspot of your Website
+  - The client-side battle against JavaScript attacks is already here
+
 thumbnail: sres-should-worry-third-party-js.jpg
 
 canonical_overwrite: "https://www.forbes.com/sites/forbestechcouncil/2019/06/12/why-sres-should-worry-more-about-third-party-javascript/#3c9f6fb2f525"

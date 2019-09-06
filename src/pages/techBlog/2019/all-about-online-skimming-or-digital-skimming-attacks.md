@@ -23,6 +23,11 @@ tags:
   - client side data protection
   - online skimming attacks
 
+related_posts:
+  - Client-Side - The Security Blindspot of your Website
+  - $229 Million GDPR Fine for British Airways Shows How Costly JavaScript Attacks Can Be
+  - Why SREs Should Worry More About Third-Party JavaScript
+
 thumbnail: digital-skimming.jpg
 ---
 

@@ -28,6 +28,10 @@ tags:
   - account-takeover,
   - loyalty points
 
+related_posts:
+  - Client-Side - The Security Blindspot of your Website
+  - The client-side battle against JavaScript attacks is already here
+
 thumbnail: top-3-takeaways-verizon.jpg
 
 canonical_overwrite: "https://www.digitalcommerce360.com/2019/06/27/top-3-takeaways-for-retailers-from-the-2019-verizon-breach-report/"
