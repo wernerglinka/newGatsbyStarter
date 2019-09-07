@@ -6,7 +6,6 @@ import styled from "@emotion/styled";
 import Container from "../../../components/styles/container";
 import SharePage from "../../../components/share-page";
 import LinkDropdown from "../../../components/link-dropdown";
-import getLocationTeamLinks from "../../../utilities/get-location-team-links";
 
 const JobsList = styled.ul`
   list-style: none;
@@ -27,20 +26,18 @@ const JobsList = styled.ul`
 const LandingPageTemplate = props => {
   const {
     data: {
-      markdownRemark: { frontmatter: fields },
-    },
-  } = props;
-  const {
-    data: {
       allLever: { edges: jobs },
     },
   } = props;
+  const {
+    pageContext: { team, locationLinks, teamLinks },
+  } = props;
 
-  const [locationLinks, teamLinks] = getLocationTeamLinks(jobs);
+  console.log(props.pageContext);
 
   return (
     <Container>
-      <h1>{fields.heading}</h1>
+      <h1>{team}</h1>
       <LinkDropdown
         header="View by Location"
         pathPrefix="/about/careers/"
@@ -71,29 +68,22 @@ const LandingPageTemplate = props => {
 
 LandingPageTemplate.propTypes = {
   data: PropTypes.shape({
-    markdownRemark: PropTypes.shape({
-      frontmatter: PropTypes.object,
-    }),
     allLever: PropTypes.shape(),
   }).isRequired,
+  pageContext: PropTypes.shape().isRequired,
 };
 
 export default LandingPageTemplate;
 
 export const pageQuery = graphql`
-  query AboutCareersPageTemplate {
-    markdownRemark(frontmatter: { template: { eq: "about/careers" } }) {
-      frontmatter {
-        title
-        heading
-      }
-    }
-    allLever {
+  query CareersTeamPageTemplate($team: String!) {
+    allLever(filter: { categories: { team: { eq: $team } } }) {
       edges {
         node {
           id
           text
           categories {
+            commitment
             location
             team
           }

@@ -397,6 +397,25 @@ exports.createPages = ({ actions, graphql }) => {
           []
         );
 
+        const locationLinks = allLocations.map(loc => ({
+          name: loc,
+          path: `${loc
+            .replace(/\s+/g, "-")
+            .replace(/,/g, "")
+            .toLowerCase()}/`,
+        }));
+
+        const teamLinks = allTeams.map(team => ({
+          name: team,
+          path: `${team
+            .replace(/\s+/g, "-")
+            .replace(/,/g, "")
+            .toLowerCase()}/`,
+        }));
+
+        /**
+         * Build the job detail pages
+         */
         leverPages.forEach(edge => {
           const id = edge.node.id;
 
@@ -424,8 +443,84 @@ exports.createPages = ({ actions, graphql }) => {
             context: {
               id,
               breadcrumbs,
-              allLocations,
-              allTeams,
+              locationLinks,
+              teamLinks,
+            },
+          });
+        });
+
+        /**
+         * Build the job list pages by location
+         */
+        leverLocations.forEach(location => {
+          breadcrumbs = [
+            {
+              name: "Home",
+              path: "/",
+            },
+            {
+              name: "About",
+              path: "/about/",
+            },
+            {
+              name: "Careers",
+              path: "/about/careers/",
+            },
+            {
+              name: `${location}`,
+            },
+          ];
+
+          createPage({
+            path: `/about/careers/${location
+              .replace(/\s+/g, "-")
+              .replace(/,/g, "")
+              .toLowerCase()}/`,
+            component: path.resolve(
+              "./src/layouts/templates/about/locations.js"
+            ),
+            context: {
+              breadcrumbs,
+              location,
+              locationLinks,
+              teamLinks,
+            },
+          });
+        });
+
+        /**
+         * Build the job list pages by team
+         */
+        leverTeams.forEach(team => {
+          breadcrumbs = [
+            {
+              name: "Home",
+              path: "/",
+            },
+            {
+              name: "About",
+              path: "/about/",
+            },
+            {
+              name: "Careers",
+              path: "/about/careers/",
+            },
+            {
+              name: `${team}`,
+            },
+          ];
+
+          createPage({
+            path: `/about/careers/${team
+              .replace(/\s+/g, "-")
+              .replace(/,/g, "")
+              .toLowerCase()}/`,
+            component: path.resolve("./src/layouts/templates/about/teams.js"),
+            context: {
+              breadcrumbs,
+              team,
+              locationLinks,
+              teamLinks,
             },
           });
         });
