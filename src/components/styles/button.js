@@ -16,7 +16,7 @@ const StyledButton = styled.div`
 `;
 
 const Button = ({ to, type, external, text }) => (
-  <StyledButton type={type}>
+  <StyledButton className="buttonContainer" type={type}>
     {external ? (
       <a href={to} target="_blank" rel="noopener noreferrer">
         {text}

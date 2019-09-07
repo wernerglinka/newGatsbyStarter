@@ -104,6 +104,10 @@ exports.createPages = ({ actions, graphql }) => {
           edges {
             node {
               id
+              categories {
+                location
+                team
+              }
             }
           }
         }
@@ -367,6 +371,32 @@ exports.createPages = ({ actions, graphql }) => {
          ********************************************************************************* */
         const leverPages = result.data.allLever.edges;
 
+        const leverLocations = [];
+        const leverTeams = [];
+
+        leverPages.forEach((edge, index) => {
+          if (edge.node.categories.location) {
+            // accumulate all locations
+            leverLocations.push(edge.node.categories.location);
+          }
+          if (edge.node.categories.team) {
+            // accumulate all team names
+            leverTeams.push(edge.node.categories.team);
+          }
+        });
+
+        const allLocations = leverLocations.reduce(
+          (unique, item) =>
+            unique.includes(item) ? unique : [...unique, item],
+          []
+        );
+
+        const allTeams = leverTeams.reduce(
+          (unique, item) =>
+            unique.includes(item) ? unique : [...unique, item],
+          []
+        );
+
         leverPages.forEach(edge => {
           const id = edge.node.id;
 
@@ -389,11 +419,13 @@ exports.createPages = ({ actions, graphql }) => {
           ];
 
           createPage({
-            path: `/about/careers/${edge.node.id}/`,
+            path: `/about/careers/${id}/`,
             component: path.resolve("./src/layouts/templates/about/job.js"),
             context: {
               id,
               breadcrumbs,
+              allLocations,
+              allTeams,
             },
           });
         });

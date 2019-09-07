@@ -14,7 +14,7 @@ const JobListing = styled.article`
     span {
       font-size: 0.8em;
     }
-    a {
+    .buttonContainer {
       position: absolute;
       top: 0;
       right: 0;
@@ -22,7 +22,6 @@ const JobListing = styled.article`
       padding: 5px 10px;
       border: 1px solid #ccc;
       font-size: 0.8em;
-      text-decoration: none;
     }
   }
 
@@ -31,75 +30,50 @@ const JobListing = styled.article`
   }
 `;
 
-const LandingPageTemplate = props => {
-  console.log(props);
-
-  const {
-    pageContext: { id: jobID },
-  } = props;
-
-  const {
-    data: {
-      allLever: { edges: allJobs },
-    },
-  } = props;
+const LandingPageTemplate = ({ data }) => {
+  const job = data.allLever.edges[0].node;
 
   return (
     <Container>
-      {allJobs.map(({ node: job }) => {
-        return job.id === jobID ? (
-          <JobListing key={job.id}>
-            <h1>
-              {job.text} -{" "}
-              <span>
-                {job.categories.location},{job.categories.team},
-                {job.categories.commitment}
-              </span>
-              <Button
-                to={job.applyUrl}
-                type="secondary"
-                external
-                text="Apply"
-              />
-            </h1>
-            <section>{job.descriptionPlain}</section>
-            <section>
-              {job.lists.map(item => (
-                <div key={item.text}>
-                  <h2>{item.text}</h2>
-                  <div dangerouslySetInnerHTML={{ __html: item.content }} />
-                </div>
-              ))}
-            </section>
-            <section>{job.additionalPlain}</section>
-            <Button
-              to={job.applyUrl}
-              type="primary"
-              external
-              text="Apply Now"
-            />
-            <SocialShare
-              pageURL={`about/careers/${job.id}`}
-              title={job.text}
-              description={job.descriptionPlain}
-            />
-          </JobListing>
-        ) : null;
-      })}
+      <JobListing key={job.id}>
+        <h1>
+          {job.text} -{" "}
+          <span>
+            {job.categories.location},{job.categories.team},
+            {job.categories.commitment}
+          </span>
+          <Button to={job.applyUrl} type="secondary" external text="Apply" />
+        </h1>
+        <section>{job.descriptionPlain}</section>
+        <section>
+          {job.lists.map(item => (
+            <div key={item.text}>
+              <h2>{item.text}</h2>
+              <div dangerouslySetInnerHTML={{ __html: item.content }} />
+            </div>
+          ))}
+        </section>
+        <section>{job.additionalPlain}</section>
+        <Button to={job.applyUrl} type="primary" external text="Apply Now" />
+        <SocialShare
+          pageURL={`about/careers/${job.id}`}
+          title={job.text}
+          description={job.descriptionPlain}
+        />
+      </JobListing>
     </Container>
   );
 };
 
 LandingPageTemplate.propTypes = {
   data: PropTypes.shape().isRequired,
-  pageContext: PropTypes.shape().isRequired,
 };
 
 export default LandingPageTemplate;
 
 export const pageQuery = graphql`
-  query JobPageTemplate {
-    allLever {
+  query JobPageTemplate($id: String!) {
+    allLever(filter: { id: { eq: $id } }) {
       edges {
         node {
           id
