@@ -1,4 +1,4 @@
-const _ = require("lodash");
+// const _ = require("lodash");
 const path = require("path");
 const slash = require("slash");
 const { createFilePath } = require("gatsby-source-filesystem");
@@ -365,25 +365,35 @@ exports.createPages = ({ actions, graphql }) => {
         /** ********************************************************************************
          * Lever Job Pages
          ********************************************************************************* */
+        const leverPages = result.data.allLever.edges;
 
-        const pageTemplate = path.resolve(
-          "./src/layouts/templates/about/job.js"
-        );
-        // We want to create a detailed page for each
-        // lever node. We'll just use the ID for the slug.
-        _.each(result.data.allLever.edges, edge => {
-          // Gatsby uses Redux to manage its internal state.
-          // Plugins and sites can use functions like "createPage"
-          // to interact with Gatsby.
+        leverPages.forEach(edge => {
+          const id = edge.node.id;
+
+          breadcrumbs = [
+            {
+              name: "Home",
+              path: "/",
+            },
+            {
+              name: "About",
+              path: "/about/",
+            },
+            {
+              name: "Careers",
+              path: "/about/careers/",
+            },
+            {
+              name: `${id}`,
+            },
+          ];
+
           createPage({
-            // Each page is required to have a `path` as well
-            // as a template component. The `context` is
-            // optional but is often necessary so the template
-            // can query data specific to each page.
-            path: `/${edge.node.id}/`,
-            component: slash(pageTemplate),
+            path: `/about/careers/${edge.node.id}/`,
+            component: path.resolve("./src/layouts/templates/about/job.js"),
             context: {
-              id: edge.node.id,
+              id,
+              breadcrumbs,
             },
           });
         });

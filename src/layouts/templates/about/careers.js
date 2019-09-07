@@ -4,6 +4,23 @@ import { Link, graphql } from "gatsby";
 import styled from "@emotion/styled";
 
 import Container from "../../../components/styles/container";
+import SharePage from "../../../components/share-page";
+
+const JobsList = styled.ul`
+  list-style: none;
+
+  li {
+    display: flex;
+    justify-content: flex-start;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+
+    span {
+      min-width: 20%;
+    }
+  }
+`;
 
 const LandingPageTemplate = props => {
   console.log(props);
@@ -21,13 +38,20 @@ const LandingPageTemplate = props => {
   return (
     <Container>
       <h1>{fields.heading}</h1>
-      <ul>
+      <JobsList>
         {jobs.map(({ node: job }) => (
           <li key={job.id}>
-            {job.text}, {job.categories.location}
+            <span className="location">{job.categories.location}</span>
+            <span className="team">{job.categories.team}</span>
+            <Link to={`/about/careers/${job.id}`}>{job.text}</Link>
           </li>
         ))}
-      </ul>
+      </JobsList>
+      <SharePage
+        pageURL="/about/careers/"
+        title="Jobs at PerimeterX"
+        description="Jobs at PerimeterX"
+      />
     </Container>
   );
 };
