@@ -6,6 +6,7 @@ import styled from "@emotion/styled";
 import Container from "../../../components/styles/container";
 import Button from "../../../components/styles/button";
 import SocialShare from "../../../components/share-page";
+import LinkDropdown from "../../../components/link-dropdown";
 
 const JobListing = styled.article`
   h1 {
@@ -30,14 +31,28 @@ const JobListing = styled.article`
   }
 `;
 
-const LandingPageTemplate = ({ data }) => {
-  const job = data.allLever.edges[0].node;
+const LandingPageTemplate = props => {
+  const job = props.data.allLever.edges[0].node;
+
+  const {
+    pageContext: { locationLinks, teamLinks },
+  } = props;
 
   return (
     <Container>
+      <LinkDropdown
+        header="View by Location"
+        pathPrefix="/about/careers/"
+        linksList={locationLinks}
+      />
+      <LinkDropdown
+        header="View by Team"
+        pathPrefix="/about/careers/"
+        linksList={teamLinks}
+      />
       <JobListing key={job.id}>
         <h1>
-          {job.text} -{" "}
+          {job.text} -
           <span>
             {job.categories.location},{job.categories.team},
             {job.categories.commitment}
@@ -67,6 +82,7 @@ const LandingPageTemplate = ({ data }) => {
 
 LandingPageTemplate.propTypes = {
   data: PropTypes.shape().isRequired,
+  pageContext: PropTypes.shape().isRequired,
 };
 
 export default LandingPageTemplate;

@@ -81,7 +81,6 @@ export const pageQuery = graphql`
           id
           text
           categories {
-            commitment
             location
             team
           }

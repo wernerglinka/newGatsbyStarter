@@ -33,8 +33,6 @@ const LandingPageTemplate = props => {
     pageContext: { team, locationLinks, teamLinks },
   } = props;
 
-  console.log(props.pageContext);
-
   return (
     <Container>
       <h1>{team}</h1>
@@ -83,7 +81,6 @@ export const pageQuery = graphql`
           id
           text
           categories {
-            commitment
             location
             team
           }
