@@ -1,0 +1,3 @@
+# default so all branches are protected
+[build]
+  command = "npm run build"
