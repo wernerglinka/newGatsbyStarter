@@ -124,13 +124,6 @@ module.exports = {
         verboseOutput: false,
       },
     },
-    // {
-    //  resolve: "gatsby-source-rss-feed",
-    //  options: {
-    //    url: "https://www.gatsbyjs.org/blog/rss.xml",
-    //    // url: "https://www.brighttalk.com/channel/17706/feed",
-    //    name: "BrightTalkContent",
-    //  },
-    // },
+    "gatsby-source-brighttalk",
   ],
 };

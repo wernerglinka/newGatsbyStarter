@@ -542,7 +542,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     });
   }
 };
-
+/*
 exports.sourceNodes = (
   { actions, createNodeId, createContentDigest },
   _,
@@ -574,7 +574,7 @@ exports.sourceNodes = (
           }
         });
         const node = {
-          title: webinar.title.join().substring(0, 33),
+          title: webinar.title,
           description: webinar.summary.join().substring(0, 80),
           linkURL: webinarLinkURL,
           thumbnail: webinarTn,
@@ -593,3 +593,4 @@ exports.sourceNodes = (
     cb();
   });
 };
+*/

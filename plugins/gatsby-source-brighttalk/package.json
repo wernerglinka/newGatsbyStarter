@@ -1,0 +1,11 @@
+{
+  "name": "gatsby-source-brighttalk",
+  "private": true,
+  "description": "BrightTalk source plugin",
+  "version": "1.0.0",
+  "author": "werner@glinka.co",
+  "dependencies": {
+    "request": "^2.88.0",
+    "xml2js": "^0.4.22"
+  }
+}

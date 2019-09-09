@@ -11,10 +11,25 @@ const LandingPageTemplate = props => {
       markdownRemark: { frontmatter: fields },
     },
   } = props;
-  console.log(fields);
+  const {
+    data: {
+      allBrightTalkWebinar: { edges: webinars },
+    },
+  } = props;
+
   return (
     <Container>
       <h1>{fields.heading}</h1>
+      {webinars.map(({ node: webinar }) => (
+        <div key={webinar.linkURL}>
+          <img src={webinar.thumbnail} alt={webinar.title} />
+          <h2>{webinar.title}</h2>
+          <p>{webinar.description}</p>
+          <a href={webinar.linkURL} target="_blank" rel="noopener noreferrer">
+            Watch Webinar
+          </a>
+        </div>
+      ))}
     </Container>
   );
 };
@@ -37,6 +52,16 @@ export const pageQuery = graphql`
       frontmatter {
         title
         heading
+      }
+    }
+    allBrightTalkWebinar {
+      edges {
+        node {
+          description
+          linkURL
+          thumbnail
+          title
+        }
       }
     }
   }
