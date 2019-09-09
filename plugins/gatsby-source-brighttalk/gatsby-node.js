@@ -1,6 +1,9 @@
 const request = require("request");
 const parseString = require("xml2js").parseString;
 
+/**
+ * Plugin to get all webinars from BrightTalk RSS feed
+ */
 exports.sourceNodes = (
   { actions, createNodeId, createContentDigest },
   _,
@@ -33,7 +36,7 @@ exports.sourceNodes = (
         });
         const node = {
           title: webinar.title,
-          description: webinar.summary.join().substring(0, 80),
+          description: webinar.summary,
           linkURL: webinarLinkURL,
           thumbnail: webinarTn,
           id: createNodeId(webinarLinkURL),
