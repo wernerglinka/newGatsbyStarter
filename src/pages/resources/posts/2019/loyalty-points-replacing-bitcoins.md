@@ -1,46 +1,39 @@
 ---
-template: "blog/blog-post"
+template: blog/blog-post
 draft: false
-
-# Metadata
-title: "Are Loyalty Points Replacing Bitcoin As The Favored Dark Web Currency?"
-description: "With the summer travel season coming quickly, airlines and hotels are bracing for a big spike in traffic — bot traffic, that is. Travel sites are the new target of choice for cybercriminals looking to take over users accounts — called account takeover, or ATO attacks — and steal loyalty points."
-
-# Breadcrumbs
+title: Are Loyalty Points Replacing Bitcoin As The Favored Dark Web Currency?
+description: With the summer travel season coming quickly, airlines and hotels are
+  bracing for a big spike in traffic — bot traffic, that is. Travel sites are the
+  new target of choice for cybercriminals looking to take over users accounts — called
+  account takeover, or ATO attacks — and steal loyalty points.
 breadcrumbs:
-  - name: Home
-    path: /
-  - name: Resources
-    path: /resources/
-  - name: Blog
-    path: /resources/blog/
-  - name: Are Loyalty Points Replacing...
-
-# Fields
+- name: Home
+  path: "/"
+- name: Resources
+  path: "/resources/"
+- name: Blog
+  path: "/resources/blog/"
+- name: Are Loyalty Points Replacing...
 date: 2019-05-23
 author:
-  - Ido Safruti
-
-blog_title: "Are Loyalty Points Replacing Bitcoin As The Favored Dark Web Currency?"
+- Ido Safruti
+blog_title: Are Loyalty Points Replacing Bitcoin As The Favored Dark Web Currency?
 categories: Thought Leadership
 tags:
-  - account-takeover
-  - loyalty points
-  - e-commerce security
-  - vulnerability
-
-related_posts:
-
+- account-takeover
+- loyalty points
+- e-commerce security
+- vulnerability
+related_posts: 
 thumbnail: bitcoins.jpg
+canonical_overwrite: https://www.forbes.com/sites/forbestechcouncil/2019/05/23/are-loyalty-points-replacing-bitcoin-as-the-favored-dark-web-currency/#649ad30262cf
 
-canonical_overwrite: "https://www.forbes.com/sites/forbestechcouncil/2019/05/23/are-loyalty-points-replacing-bitcoin-as-the-favored-dark-web-currency/#649ad30262cf"
 ---
-
 As Originally published in [Forbes](https://www.forbes.com/sites/forbestechcouncil/2019/05/23/are-loyalty-points-replacing-bitcoin-as-the-favored-dark-web-currency/#649ad30262cf)
 
 ![Are Loyalty Points Replacing Bitcoin As The Favored Dark Web Currency?](/assets/images/blog/bitcoins.jpg)<br>
 
-With the summer travel season coming quickly, airlines and hotels are bracing for a big spike in traffic — bot traffic, that is. Travel sites are the new target of choice for cybercriminals looking to take over users accounts — called account takeover, or ATO attacks — and steal loyalty points. It’s a [big business](https://www.vice.com/en_us/article/wj35yb/how-hackers-sell-luxury-hotels-cheap-discount-loyalty-points-airlines), with huge sums of money exchanged annually. According to our most recent data looking at tens of billions of daily interactions with websites and mobile apps, ATO attacks are up 65% year-over-year in 2019. That is off of an already large increase from 2017 to 2018.
+With the summer travel season coming quickly, airlines and hotels are bracing for a big spike in traffic — bot traffic, that is. Travel sites are the new target of choice for cybercriminals looking to take over users accounts — called account takeover, or ATO attacks — and steal loyalty points. It’s a [big business](https://www.vice.com/en_us/article/wj35yb/how-hackers-sell-luxury-hotels-cheap-discount-loyalty-points-airlines), with huge sums of money exchanged annually. [According to our most](//test-title-for-test-page/ "this is a test link") recent data looking at tens of billions of daily interactions with websites and mobile apps, ATO attacks are up 65% year-over-year in 2019. That is off of an already large increase from 2017 to 2018.
 
 ## Loyalty Points For Sale On The Dark Web
 
@@ -62,7 +55,7 @@ Despite the increase in breaches, user behavior has not changed to improve secur
 
 ## How Travel Sites Must Fight Back
 
-The risks to travel sites go beyond monetary losses they must restore to wronged users. The average breach cost is increasing each year, according [to a study by the Ponemon Institute](https://venturebeat.com/2018/07/10/ibm-security-study-mega-data-breaches-cost-40-million-to-350-million/). The average in 2018 was nearly $4 million. But the cost of what the study calls  “mega-breaches,” where accounts stolen range from 1 million to 50 million, can cost between $40 million and \$350 million. These costs include remediation of infrastructure, extra time spent by personnel and lost business due to reputation risk. The travel business does not enjoy fat margins, and brand equity is a significant part of the value of any travel firm. To protect themselves, their bottom lines, their shareholders and their customers, travel companies need to do a better job of fighting off these bot attacks and ATOs.
+The risks to travel sites go beyond monetary losses they must restore to wronged users. The average breach cost is increasing each year, according [to a study by the Ponemon Institute](https://venturebeat.com/2018/07/10/ibm-security-study-mega-data-breaches-cost-40-million-to-350-million/). The average in 2018 was nearly $4 million. But the cost of what the study calls  “mega-breaches,” where accounts stolen range from 1 million to 50 million, can cost between $40 million and $350 million. These costs include remediation of infrastructure, extra time spent by personnel and lost business due to reputation risk. The travel business does not enjoy fat margins, and brand equity is a significant part of the value of any travel firm. To protect themselves, their bottom lines, their shareholders and their customers, travel companies need to do a better job of fighting off these bot attacks and ATOs.
 
 Basic steps include enhanced password security for account holders. These might include adding multifactor authentication of any account changes, via email, text and other means. For better login security, the travel sites should make 2FA mandatory for users. The points are already in the accounts, so the likelihood that users will abandon them is small.
 
