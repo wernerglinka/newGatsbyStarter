@@ -6,5 +6,7 @@ heading: Curabitur blandit tempus porttitor.
 breadcrumbs:
 - name: Home
   path: "/"
+- name: Solutions
+  path: "/solutions/"
 
 ---
