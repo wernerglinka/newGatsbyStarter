@@ -24,3 +24,5 @@ fields:
   - type: text
     name: path
     label: path
+pages:
+- src/pages/test-title-for-test-page.md
