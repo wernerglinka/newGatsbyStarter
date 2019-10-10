@@ -8,5 +8,7 @@ breadcrumbs:
   path: "/"
 - name: Solutions
   path: "/solutions/"
+- name: Another Media Page
+  path: ''
 
 ---
