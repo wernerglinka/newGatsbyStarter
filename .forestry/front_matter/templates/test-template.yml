@@ -1,0 +1,26 @@
+---
+label: Test Template
+hide_body: true
+fields:
+- type: text
+  name: template
+  label: template
+- type: text
+  name: page_id
+  label: page_id
+- type: text
+  name: title
+  label: title
+- type: text
+  name: heading
+  label: heading
+- type: field_group_list
+  name: breadcrumbs
+  label: breadcrumbs
+  fields:
+  - type: text
+    name: name
+    label: name
+  - type: text
+    name: path
+    label: path

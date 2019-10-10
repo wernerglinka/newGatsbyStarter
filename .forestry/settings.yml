@@ -9,7 +9,7 @@ sections:
   label: Pages
   create: all
   match: "**/*.md"
-  new_doc_ext: ".md"
+  new_doc_ext: md
 - type: directory
   path: src/data
   label: Data
