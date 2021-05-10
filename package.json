@@ -29,7 +29,7 @@
     "gatsby-transformer-remark": "^2.6.21",
     "gatsby-transformer-sharp": "^2.2.5",
     "lines-to-paragraphs": "^1.0.3",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.21",
     "lodash-webpack-plugin": "^0.11.5",
     "modali": "^1.2.0",
     "node-sass": "^4.12.0",
