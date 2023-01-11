@@ -26,7 +26,7 @@
     "gatsby-source-lever": "^2.1.8",
     "gatsby-source-rss-feed": "^1.1.1",
     "gatsby-transformer-json": "^2.2.2",
-    "gatsby-transformer-remark": "^2.6.21",
+    "gatsby-transformer-remark": "^5.25.1",
     "gatsby-transformer-sharp": "^2.2.5",
     "lines-to-paragraphs": "^1.0.3",
     "lodash": "^4.17.15",
